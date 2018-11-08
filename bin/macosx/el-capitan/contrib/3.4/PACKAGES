@@ -755,16 +755,16 @@ Archs: openxlsx.so.dSYM
 MD5sum: fd157a098023c4400a7fe77d93a71d08
 
 Package: pander
-Version: 0.6.2
+Version: 0.6.3
 Depends: R (>= 2.15.0)
 Imports: grDevices, graphics, methods, utils, stats, digest, tools, Rcpp
 LinkingTo: Rcpp
-Suggests: grid, lattice, ggplot2 (>= 0.9.2), koRpus, futile.logger, survival,
+Suggests: grid, lattice, ggplot2 (>= 0.9.2), sylly, sylly.en, futile.logger, survival,
          microbenchmark, zoo, nlme, descr, MASS, knitr, rmarkdown, tables, reshape,
          memisc, Epi, randomForest, tseries, gtable, rms, forecast, data.table
 License: AGPL-3 | file LICENSE
 Archs: pander.so.dSYM
-MD5sum: 630bdd12fbe701d1d59238cf9699781c
+MD5sum: 65a76622c36a643d8aa87637dcc3bc9a
 
 Package: pbkrtest
 Version: 0.4-7
@@ -850,12 +850,12 @@ Archs: pryr.so.dSYM
 MD5sum: 1321be9634815412f66715b4ab294c71
 
 Package: ps
-Version: 1.2.0
+Version: 1.2.1
 Depends: R (>= 3.1)
 Imports: utils
 Suggests: callr, covr, curl, pingr, processx (>= 3.1.0), R6, rlang, testthat, tibble
 License: BSD_3_clause + file LICENSE
-MD5sum: b89b1674b450eab9e835679fd512e5cf
+MD5sum: 938dc99afb0ec91974c5dbf2118207bc
 
 Package: psych
 Version: 1.8.10

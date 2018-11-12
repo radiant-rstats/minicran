@@ -897,13 +897,13 @@ License: AGPL-3 | file LICENSE
 MD5sum: 47720d0baa49936e00149ce089c16d78
 
 Package: radiant.multivariate
-Version: 0.9.7.3
+Version: 0.9.7.4
 Depends: R (>= 3.4.0), radiant.data (>= 0.9.7.3)
 Imports: radiant.model (>= 0.9.7), shiny (>= 1.1.0), dplyr (>= 0.7.5), rlang (>= 0.2.0), ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales (>= 0.4.0), magrittr (>= 1.5), psych (>= 1.8.4), GPArotation (>= 2014.11-1), car (>=
                          2.1.1), MASS (>= 7.3), import (>= 1.1.0), Gmedian (>= 1.2.3), ggrepel (>= 0.8)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: ffa6e740641f131c3439b9026a611fb7
+MD5sum: a02c5c2dbbae4b84852239b53abf7608
 
 Package: radiant.update
 Version: 0.6.3

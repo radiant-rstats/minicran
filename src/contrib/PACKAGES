@@ -1658,7 +1658,7 @@ Imports: radiant.model (>= 0.9.7), shiny (>= 1.1.0), dplyr (>= 0.7.5), rlang (>=
                          2.1.1), MASS (>= 7.3), import (>= 1.1.0), Gmedian (>= 1.2.3), ggrepel (>= 0.8)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 5ff3c389b4ef3b0ca9ab954236c397e3
+MD5sum: d5d6f3d6091d1e62cc60bb117b34fcea
 NeedsCompilation: no
 
 Package: radiant.update

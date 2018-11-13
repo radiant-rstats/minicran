@@ -441,15 +441,15 @@ MD5sum: bc8081563e49bf85d1b720b21b938af1
 NeedsCompilation: yes
 
 Package: dimRed
-Version: 0.2.1
+Version: 0.2.2
 Depends: R (>= 3.0.0), DRR
-Imports: NMF, magrittr, methods, bigmemory, Biobase
-Suggests: cccd, MASS, Matrix, RANN, RSpectra, Rtsne, coRanking, diffusionMap, energy,
-         fastICA, ggplot2, graphics, igraph, keras, kernlab, knitr, lle, loe, optimx,
-         pcaL1, pcaPP, reticulate, rgl, scales, scatterplot3d, stats, tensorflow,
-         testthat, tidyr, tinytex, umap, vegan
+Imports: magrittr, methods
+Suggests: NMF, MASS, Matrix, RANN, RSpectra, Rtsne, cccd, coRanking, diffusionMap,
+         energy, fastICA, ggplot2, graphics, igraph, keras, kernlab, knitr, lle, loe,
+         optimx, pcaL1, pcaPP, reticulate, rgl, scales, scatterplot3d, stats,
+         tensorflow, testthat, tidyr, tinytex, umap, vegan
 License: GPL-3 | file LICENSE
-MD5sum: c6d02b0df8028868486eb057c5d2043a
+MD5sum: 8c1bb02dc5dfa573819e407ab185dcba
 NeedsCompilation: yes
 
 Package: doParallel

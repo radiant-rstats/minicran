@@ -775,9 +775,9 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0), odbc (>= 1.1.4), w
 License: AGPL-3 | file LICENSE
 
 Package: radiant.design
-Version: 0.9.7.2
+Version: 0.9.7.3
 Depends: R (>= 3.4.0), radiant.data (>= 0.9.7.3), mvtnorm
-Imports: dplyr (>= 0.7.6), shiny (>= 1.1.0), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), polycor
+Imports: dplyr (>= 0.7.6), shiny (>= 1.1.0), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), pwr (>= 1.1.2), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 

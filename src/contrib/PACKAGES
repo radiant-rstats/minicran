@@ -1638,7 +1638,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 0.9.7.3), mvtnorm
 Imports: dplyr (>= 0.7.6), shiny (>= 1.1.0), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), pwr (>= 1.1.2), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 88ef02f27ce1fcea8a29228f9fa0d95f
+MD5sum: 85cca7c27f7519d97d304ab885178f9e
 NeedsCompilation: no
 
 Package: radiant.model

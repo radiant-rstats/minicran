@@ -985,14 +985,14 @@ Archs: RcppArmadillo.so.dSYM
 MD5sum: dfe17851a4084987d415e325bcc3ee38
 
 Package: RcppEigen
-Version: 0.3.3.4.0
+Version: 0.3.3.5.0
 Depends: R (>= 2.15.1)
 Imports: Matrix (>= 1.1-0), Rcpp (>= 0.11.0), stats, utils
 LinkingTo: Rcpp
-Suggests: inline, RUnit, pkgKitten
+Suggests: inline, RUnit, pkgKitten, microbenchmark
 License: GPL (>= 2) | file LICENSE
 Archs: RcppEigen.so.dSYM
-MD5sum: e930bcf24e58dbb174f6947b9f62c9f8
+MD5sum: a7d9afedc365146b4b1b3aa8ce2160ec
 
 Package: RCurl
 Version: 1.95-4.11
@@ -1051,14 +1051,14 @@ Archs: rgexf.so.dSYM
 MD5sum: 8b8b5bb61b9855c4c24fccb56d432ed2
 
 Package: rio
-Version: 0.5.10
+Version: 0.5.15
 Depends: R (>= 2.15.0)
 Imports: tools, stats, utils, foreign, haven (>= 1.1.0), curl (>= 0.6), data.table (>= 1.9.8), readxl (>=
             0.1.1), openxlsx, tibble
-Suggests: datasets, bit64, testthat, knitr, magrittr, clipr, csvy, feather, fst, jsonlite, readODS (>= 1.6.4),
-            readr, rmatio, xml2 (>= 1.2.0), yaml
+Suggests: datasets, bit64, testthat, knitr, magrittr, clipr, csvy, feather, fst, hexView, jsonlite, readODS (>=
+            1.6.4), readr, rmatio, xml2 (>= 1.2.0), yaml
 License: GPL-2
-MD5sum: c8d06ffe76c5bfce7346b46a721ab353
+MD5sum: 35944213bb3f44db0c43d8efb920decf
 
 Package: rlang
 Version: 0.3.0.1

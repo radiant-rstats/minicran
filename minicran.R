@@ -46,7 +46,7 @@ pkgs_src <- c(
 ## gtrendsR will be updated to the github version in the radiant docker
 pkgs_src <- c(
   pkgs_src, "ggmap", "leaflet", "tm", "wordcloud", "rvest", "tidytext",
-  "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal"
+  "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal", "topicmodels"
 )
 
 # building minicran for source packages

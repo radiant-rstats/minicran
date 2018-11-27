@@ -873,11 +873,11 @@ License: GPL (>= 2)
 Archs: i386, x64
 
 Package: RcppEigen
-Version: 0.3.3.4.0
+Version: 0.3.3.5.0
 Depends: R (>= 2.15.1)
 Imports: Matrix (>= 1.1-0), Rcpp (>= 0.11.0), stats, utils
 LinkingTo: Rcpp
-Suggests: inline, RUnit, pkgKitten
+Suggests: inline, RUnit, pkgKitten, microbenchmark
 License: GPL (>= 2) | file LICENSE
 Archs: i386, x64
 
@@ -932,12 +932,12 @@ License: GPL (>= 3)
 Archs: i386, x64
 
 Package: rio
-Version: 0.5.10
+Version: 0.5.16
 Depends: R (>= 2.15.0)
 Imports: tools, stats, utils, foreign, haven (>= 1.1.0), curl (>= 0.6), data.table (>= 1.9.8), readxl (>=
             0.1.1), openxlsx, tibble
-Suggests: datasets, bit64, testthat, knitr, magrittr, clipr, csvy, feather, fst, jsonlite, readODS (>= 1.6.4),
-            readr, rmatio, xml2 (>= 1.2.0), yaml
+Suggests: datasets, bit64, testthat, knitr, magrittr, clipr, csvy, feather, fst, hexView, jsonlite, readODS (>=
+            1.6.4), readr, rmatio, xml2 (>= 1.2.0), yaml
 License: GPL-2
 
 Package: rlang

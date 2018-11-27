@@ -873,11 +873,11 @@ License: GPL (>= 2)
 Archs: i386, x64
 
 Package: RcppEigen
-Version: 0.3.3.4.0
+Version: 0.3.3.5.0
 Depends: R (>= 2.15.1)
 Imports: Matrix (>= 1.1-0), Rcpp (>= 0.11.0), stats, utils
 LinkingTo: Rcpp
-Suggests: inline, RUnit, pkgKitten
+Suggests: inline, RUnit, pkgKitten, microbenchmark
 License: GPL (>= 2) | file LICENSE
 Archs: i386, x64
 
@@ -889,7 +889,7 @@ License: BSD
 Archs: i386, x64
 
 Package: readr
-Version: 1.2.0
+Version: 1.2.1
 Depends: R (>= 3.0.2)
 Imports: Rcpp (>= 0.12.0.5), tibble, hms (>= 0.4.1), R6, clipr
 LinkingTo: Rcpp, BH

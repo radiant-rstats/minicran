@@ -972,14 +972,14 @@ MD5sum: 771938f25d0983763369b48a1153b26c
 NeedsCompilation: no
 
 Package: lava
-Version: 1.6.3
+Version: 1.6.4
 Depends: R (>= 3.0)
 Imports: grDevices, graphics, methods, numDeriv, stats, survival, SQUAREM, utils
 Suggests: KernSmooth, Matrix, Rgraphviz, ascii, data.table, ellipse, fields, foreach, geepack, gof (>= 0.9),
             graph, igraph (>= 0.6), lava.tobit (>= 0.4.7), lme4, mets (>= 1.1), nlme, optimx, polycor,
             quantreg, rgl, testthat (>= 0.11), visNetwork, zoo
 License: GPL-3
-MD5sum: 4bc25864b5ed98880376786b4f76594d
+MD5sum: 9546653eeed2ed7ebf10ccf9a1fe93cc
 NeedsCompilation: no
 
 Package: lazyeval
@@ -1192,6 +1192,14 @@ Imports: broom, dplyr, magrittr, purrr (>= 0.2.2), tibble, tidyr (>= 0.8.0), rla
 Suggests: compiler, covr, ggplot2, testthat
 License: GPL-3
 MD5sum: bc73689405b0fe90851c7f8f3539e843
+NeedsCompilation: no
+
+Package: modeltools
+Version: 0.2-22
+Depends: stats, stats4
+Imports: methods
+License: GPL-2
+MD5sum: 7c9f85cb8655cd4947b90e79ea6e4cad
 NeedsCompilation: no
 
 Package: munsell
@@ -1903,14 +1911,14 @@ MD5sum: aacfc30608ca7d2131c8bb59f77b235e
 NeedsCompilation: no
 
 Package: rio
-Version: 0.5.10
+Version: 0.5.16
 Depends: R (>= 2.15.0)
 Imports: tools, stats, utils, foreign, haven (>= 1.1.0), curl (>= 0.6), data.table (>= 1.9.8), readxl (>=
             0.1.1), openxlsx, tibble
-Suggests: datasets, bit64, testthat, knitr, magrittr, clipr, csvy, feather, fst, jsonlite, readODS (>= 1.6.4),
-            readr, rmatio, xml2 (>= 1.2.0), yaml
+Suggests: datasets, bit64, testthat, knitr, magrittr, clipr, csvy, feather, fst, hexView, jsonlite, readODS (>=
+            1.6.4), readr, rmatio, xml2 (>= 1.2.0), yaml
 License: GPL-2
-MD5sum: c2578de45fdd19e68802e53aea937c7a
+MD5sum: a23fa8859da2e03946e650d71ced5935
 NeedsCompilation: no
 
 Package: rjson
@@ -2276,12 +2284,12 @@ MD5sum: ceb98dd45194ffcc62c750f9c5550762
 NeedsCompilation: no
 
 Package: survival
-Version: 2.43-1
+Version: 2.43-3
 Priority: recommended
 Depends: R (>= 2.13.0)
 Imports: graphics, Matrix, methods, splines, stats, utils
 License: LGPL (>= 2)
-MD5sum: 745c0581df5647f209cbb3af14e7f05f
+MD5sum: 2198f2e8502317258f511a8f19f4f7ab
 NeedsCompilation: yes
 
 Package: svglite
@@ -2421,6 +2429,15 @@ LinkingTo: Rcpp
 Suggests: covr, knitr, rmarkdown, stopwords (>= 0.9.0), testthat
 License: MIT + file LICENSE
 MD5sum: b4150c88809cb15cf6a14bda287ed342
+NeedsCompilation: yes
+
+Package: topicmodels
+Version: 0.2-7
+Depends: R (>= 2.15.0)
+Imports: stats4, methods, modeltools, slam, tm (>= 0.6)
+Suggests: lasso2, lattice, lda, OAIHarvester, SnowballC, XML, corpus.JSS.papers
+License: GPL-2
+MD5sum: 5bd4fe4b7e70b7984db98181817f867f
 NeedsCompilation: yes
 
 Package: usethis

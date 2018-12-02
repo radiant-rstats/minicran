@@ -901,7 +901,7 @@ License: AGPL-3 | file LICENSE
 MD5sum: 15156cb3db864c067043ee7039d96bc8
 
 Package: radiant.data
-Version: 0.9.7.11
+Version: 0.9.7.12
 Depends: R (>= 3.4.0), magrittr (>= 1.5), ggplot2 (>= 2.2.1), lubridate (>= 1.7.4), tidyr (>= 0.8.0), dplyr (>=
             0.7.6)
 Imports: tibble (>= 1.4.2), rlang (>= 0.2.2), broom (>= 0.4.3), car (>= 3.0-0), grid (>= 3.3.1), gridExtra (>=
@@ -912,7 +912,7 @@ Imports: tibble (>= 1.4.2), rlang (>= 0.2.2), broom (>= 0.4.3), car (>= 3.0-0), 
 Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0), odbc (>= 1.1.4), webshot (>= 0.5.0), testthat (>=
             2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 603a7d14a3ad0b63ca10c719d3f709b2
+MD5sum: bfff77b66159ea681435c8a32be38b05
 
 Package: radiant.design
 Version: 0.9.7.6

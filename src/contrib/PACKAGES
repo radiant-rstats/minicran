@@ -121,9 +121,9 @@ MD5sum: 4aaca5e6ec145e0fc0fe6375ce1f3806
 NeedsCompilation: no
 
 Package: broom
-Version: 0.5.0
+Version: 0.5.1
 Depends: R (>= 3.1)
-Imports: backports, dplyr, methods, nlme, purrr, reshape2, stringr, tibble, tidyr
+Imports: backports, dplyr, generics (>= 0.0.2), methods, nlme, purrr, reshape2, stringr, tibble, tidyr
 Suggests: AER, akima, AUC, bbmle, betareg, biglm, binGroup, boot, brms, btergm, car, caret, coda, covr, e1071,
             emmeans, ergm, gam (>= 1.15), gamlss, gamlss.data, gamlss.dist, geepack, ggplot2, glmnet, gmm,
             Hmisc, irlba, joineRML, Kendall, knitr, ks, Lahman, lavaan, lfe, lme4, lmodel2, lmtest, lsmeans,
@@ -131,7 +131,7 @@ Suggests: AER, akima, AUC, bbmle, betareg, biglm, binGroup, boot, brms, btergm, 
             ordinal, plm, plyr, poLCA, psych, quantreg, rgeos, rmarkdown, robust, rsample, rstan, rstanarm, sp,
             speedglm, statnet.common, survey, survival, testthat, tseries, xergm, zoo
 License: MIT + file LICENSE
-MD5sum: 9ac7d592c175e334b5f28fe4a2ebf930
+MD5sum: 87cc6538d38ddad2fc6c8246c9afcde4
 NeedsCompilation: no
 
 Package: callr
@@ -964,11 +964,11 @@ MD5sum: 696007451d14395b1ed1d0e9af667a57
 NeedsCompilation: yes
 
 Package: jsonlite
-Version: 1.5
+Version: 1.6
 Depends: methods
 Suggests: httr, curl, plyr, testthat, knitr, rmarkdown, R.rsp, sp
 License: MIT + file LICENSE
-MD5sum: 2a81c261a702fccbbd5d2b32df108f76
+MD5sum: a9cd554c212dd8db93b157932fcb4f8d
 NeedsCompilation: yes
 
 Package: keras
@@ -1148,12 +1148,12 @@ MD5sum: 8facd2f50c7d1d37c74da5e2df43fb3b
 NeedsCompilation: yes
 
 Package: markdown
-Version: 0.8
+Version: 0.9
 Depends: R (>= 2.11.1)
 Imports: utils, mime (>= 0.3)
 Suggests: knitr, RCurl
 License: GPL-2
-MD5sum: 5dde829a865ad65bab37a2b9d243b071
+MD5sum: eecc5cce41ffaa3bb0fbede85d59d769
 NeedsCompilation: yes
 
 Package: MASS
@@ -1520,11 +1520,11 @@ MD5sum: 04dc00fba3ab7550633be10feddc55de
 NeedsCompilation: yes
 
 Package: processx
-Version: 3.2.0
-Imports: assertthat, crayon, ps, R6, utils
-Suggests: callr, covr, debugme, parallel, testthat, withr
+Version: 3.2.1
+Imports: ps, R6, utils
+Suggests: callr, covr, crayon, debugme, parallel, testthat, withr
 License: MIT + file LICENSE
-MD5sum: 29ee94b1792e317623bcecee7124371d
+MD5sum: 6765b4443740d85e555125b4dda969a6
 NeedsCompilation: yes
 
 Package: prodlim
@@ -2021,13 +2021,13 @@ MD5sum: f2cfb8d125978b5a2d0d6c9484b62ea5
 NeedsCompilation: yes
 
 Package: rmarkdown
-Version: 1.10
+Version: 1.11
 Depends: R (>= 3.0)
-Imports: tools, utils, knitr (>= 1.18), yaml (>= 2.1.5), htmltools (>= 0.3.5), evaluate (>= 0.8), base64enc,
-            jsonlite, rprojroot, mime, tinytex (>= 0.3), methods, stringr (>= 1.2.0)
-Suggests: shiny (>= 0.11), tufte, testthat, digest, dygraphs, tibble
+Imports: tools, utils, knitr (>= 1.18), yaml (>= 2.1.19), htmltools (>= 0.3.5), evaluate (>= 0.8), base64enc,
+            jsonlite, mime, tinytex (>= 0.3), methods, stringr (>= 1.2.0)
+Suggests: shiny (>= 0.11), tufte, testthat, digest, dygraphs, tibble, callr (>= 2.0.0)
 License: GPL-3
-MD5sum: 1c923705dc968e04455b72723bd9fdb1
+MD5sum: 2cd7453bcdd3954d4378fb07ebfe6f7b
 NeedsCompilation: no
 
 Package: robustbase
@@ -2094,12 +2094,12 @@ MD5sum: 0294465b441e9b9ce3364e155000bd62
 NeedsCompilation: no
 
 Package: rsconnect
-Version: 0.8.11
+Version: 0.8.12
 Depends: R (>= 3.0.0)
 Imports: openssl, RCurl, jsonlite, packrat (>= 0.4.8-1), yaml (>= 2.1.5), rstudioapi (>= 0.5)
 Suggests: knitr, testthat, rmarkdown (>= 1.1), plumber (>= 0.3.2), shiny, sourcetools, xtable
 License: GPL-2
-MD5sum: 35085158ed15fdf226ea8030419d18fa
+MD5sum: aad9f8481d872c794a1c9f296d092e49
 NeedsCompilation: no
 
 Package: RSpectra
@@ -2672,13 +2672,13 @@ MD5sum: 3a3fbfd0267589d9b5c12fd9d2eebfc2
 NeedsCompilation: no
 
 Package: visNetwork
-Version: 2.0.4
+Version: 2.0.5
 Depends: R (>= 3.0)
 Imports: htmlwidgets, htmltools, jsonlite, magrittr, utils, methods, grDevices, stats
 Suggests: knitr, rmarkdown, webshot, igraph, rpart, shiny, shinyWidgets, colourpicker, sparkline, ggraph,
             flashClust
 License: MIT + file LICENSE
-MD5sum: 498f36bb3400fde21dac9c373f1c90cf
+MD5sum: e062784765e8efdee30774504fcc97c3
 NeedsCompilation: no
 
 Package: webshot
@@ -2717,10 +2717,10 @@ MD5sum: d672262f7673d26c469c12cd3e296ac7
 NeedsCompilation: yes
 
 Package: writexl
-Version: 1.0
-Suggests: spelling, readxl, nycflights13, testthat
+Version: 1.1
+Suggests: spelling, readxl, nycflights13, testthat, bit64
 License: BSD_2_clause + file LICENSE
-MD5sum: c8980d53f0d22e8f9d4035385d657472
+MD5sum: 5f1b42bf15f66c57947dfc8fb5a8e7d1
 NeedsCompilation: yes
 
 Package: xfun

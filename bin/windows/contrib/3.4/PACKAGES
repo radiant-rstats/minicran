@@ -56,9 +56,9 @@ Version: 1.0-6
 License: GPL-2
 
 Package: broom
-Version: 0.5.0
+Version: 0.5.1
 Depends: R (>= 3.1)
-Imports: backports, dplyr, methods, nlme, purrr, reshape2, stringr, tibble, tidyr
+Imports: backports, dplyr, generics (>= 0.0.2), methods, nlme, purrr, reshape2, stringr, tibble, tidyr
 Suggests: AER, akima, AUC, bbmle, betareg, biglm, binGroup, boot, brms, btergm, car, caret, coda, covr, e1071,
             emmeans, ergm, gam (>= 1.15), gamlss, gamlss.data, gamlss.dist, geepack, ggplot2, glmnet, gmm,
             Hmisc, irlba, joineRML, Kendall, knitr, ks, Lahman, lavaan, lfe, lme4, lmodel2, lmtest, lsmeans,
@@ -277,6 +277,13 @@ LinkingTo: Rcpp
 Suggests: htmltools, testthat, fontquiver (>= 0.2.0), curl
 License: GPL-3 | file LICENSE
 Archs: i386, x64
+
+Package: generics
+Version: 0.0.2
+Depends: R (>= 3.1)
+Imports: methods
+Suggests: covr, pkgload, testthat, tibble
+License: GPL-2
 
 Package: ggplot2
 Version: 3.1.0
@@ -715,9 +722,9 @@ Imports: stats, mvtnorm, Matrix
 License: GPL (>= 2)
 
 Package: processx
-Version: 3.2.0
-Imports: assertthat, crayon, ps, R6, utils
-Suggests: callr, covr, debugme, parallel, testthat, withr
+Version: 3.2.1
+Imports: ps, R6, utils
+Suggests: callr, covr, crayon, debugme, parallel, testthat, withr
 License: MIT + file LICENSE
 Archs: i386, x64
 
@@ -1153,7 +1160,7 @@ Suggests: hexbin (>= 1.27.0), ggplot2 (>= 1.0.1), testthat, covr
 License: MIT + file LICENSE
 
 Package: visNetwork
-Version: 2.0.4
+Version: 2.0.5
 Depends: R (>= 3.0)
 Imports: htmlwidgets, htmltools, jsonlite, magrittr, utils, methods, grDevices, stats
 Suggests: knitr, rmarkdown, webshot, igraph, rpart, shiny, shinyWidgets, colourpicker, sparkline, ggraph,
@@ -1180,8 +1187,8 @@ Suggests: testthat, covr, lattice, DBI, RSQLite, methods, knitr, rmarkdown
 License: GPL (>= 2)
 
 Package: writexl
-Version: 1.0
-Suggests: spelling, readxl, nycflights13, testthat
+Version: 1.1
+Suggests: spelling, readxl, nycflights13, testthat, bit64
 License: BSD_2_clause + file LICENSE
 Archs: i386, x64
 

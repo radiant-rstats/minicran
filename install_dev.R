@@ -109,7 +109,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
       if (length(gfortran) == 0) {
         # URL <- "https://cloud.r-project.org/bin/macosx/tools/gfortran-4.2.3.pkg"
         URL <- "https://cran.r-project.org/bin/macosx/tools/gfortran-6.1.pkg"
-        setwd("~/Desktop")
+        setwd(tempdir())
         download.file(URL, "gfortran.pkg")
         system("open gfortran.pkg")
         cat("Please use gfortran.pkg to install gfortran on your Mac\n")
@@ -121,7 +121,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
       if (length(clang) == 0) {
         # URL <- "https://www.dropbox.com/s/3i77fzmxzx7koat/clang4-r.pkg?dl=1"
         URL <- "https://cran.r-project.org/bin/macosx/tools/clang-6.0.0.pkg"
-        setwd("~/Desktop")
+        setwd(tempdir())
         download.file(URL, "clang4.pkg")
         system("open clang4-r.pkg")
         cat("Please use clang4.pkg to install clang on your Mac\n")

@@ -110,9 +110,9 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
       pat <- "//s3.amazonaws.com/rstudio-ide-build/desktop/macos/RStudio-[0-9.]+dmg"
       URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
 
-      setwd("~/Desktop")
+      setwd(tempdir())
       download.file(URL,"Rstudio.dmg")
-      system("open RStudio.dmg")
+      system("open Rstudio.dmg")
       cat("Please drag-and-drop the Rstudio image to the Applications folder on your Mac\n")
 
       pl <- suppressWarnings(system("which pdflatex", intern = TRUE))

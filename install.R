@@ -1,5 +1,5 @@
 ## install script for R(adiant) @ Rady School of Management
-cdir <- getwd()
+owd <- getwd()
 repos <- c("https://radiant-rstats.github.io/minicran/", "https://cran.rstudio.com")
 options(repos = c(CRAN = repos))
 
@@ -110,7 +110,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
       pat <- "//s3.amazonaws.com/rstudio-ide-build/desktop/macos/RStudio-[0-9.]+dmg"
       URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
 
-      setwd(tempdir())
+      setwd("~/Desktop")
       download.file(URL,"Rstudio.dmg")
       system("open RStudio.dmg")
       cat("Please drag-and-drop the Rstudio image to the Applications folder on your Mac\n")
@@ -139,4 +139,4 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
   }
 }
 
-setwd(cdir)
+setwd(owd)

@@ -123,7 +123,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
         URL <- "https://cran.r-project.org/bin/macosx/tools/clang-6.0.0.pkg"
         setwd(tempdir())
         download.file(URL, "clang4.pkg")
-        system("open clang4-r.pkg")
+        system("open clang4.pkg")
         cat("Please use clang4.pkg to install clang on your Mac\n")
       } else {
         cat("Clang is already installed\n")
@@ -145,7 +145,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
       cat("\n\nInstallation on Mac complete. Close R and (re)start Rstudio\n\n")
     }
   } else {
-    cat("\n\nThe install script only partially supports your OS\n\n")
+    cat("\n\nThe install script is only partially supported on your OS\n\n")
     build(type = "source")
   }
 }

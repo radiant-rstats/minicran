@@ -385,6 +385,16 @@ Imports: grid
 Suggests: testthat, covr
 License: GPL-2
 
+Package: haven
+Version: 2.0.0
+Depends: R (>= 3.1)
+Imports: forcats (>= 0.2.0), hms, Rcpp (>= 0.11.4), readr (>= 0.1.0),
+        tibble
+LinkingTo: Rcpp
+Suggests: covr, fs, knitr, rmarkdown, testthat
+License: MIT + file LICENSE
+Archs: i386, x64
+
 Package: hexbin
 Version: 1.27.2
 Depends: R (>= 2.0.1), methods

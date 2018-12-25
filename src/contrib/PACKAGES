@@ -251,11 +251,11 @@ MD5sum: 0c5d6b732fe5bcb7a8e52ae3ae6a311f
 NeedsCompilation: no
 
 Package: codetools
-Version: 0.2-15
+Version: 0.2-16
 Priority: recommended
 Depends: R (>= 2.1)
 License: GPL
-MD5sum: 37419cbc3de81984cf6d9b207d4f62d4
+MD5sum: 0f04011ff13aa9df73195efa9e71bed9
 NeedsCompilation: no
 
 Package: colorspace

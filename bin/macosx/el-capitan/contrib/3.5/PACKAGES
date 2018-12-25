@@ -140,11 +140,11 @@ License: MIT + file LICENSE
 MD5sum: 44678254a1997715dedd22bc1d6c7044
 
 Package: codetools
-Version: 0.2-15
+Version: 0.2-16
 Priority: recommended
 Depends: R (>= 2.1)
 License: GPL
-MD5sum: b77393772c12b207d291f5b432ab8d28
+MD5sum: b6a9bdbca5b6de55b4ec5260b14ba7ad
 
 Package: colorspace
 Version: 1.3-2

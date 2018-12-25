@@ -121,7 +121,7 @@ Suggests: testthat
 License: MIT + file LICENSE
 
 Package: codetools
-Version: 0.2-15
+Version: 0.2-16
 Priority: recommended
 Depends: R (>= 2.1)
 License: GPL

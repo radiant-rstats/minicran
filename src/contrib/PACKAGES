@@ -1681,7 +1681,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 0.9.7.4), radiant.design (>= 0.9.7), rad
 Imports: shiny (>= 1.1.0), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
-MD5sum: a899475243b1ab3b83f1bc14fcf9f33c
+MD5sum: 08a6f494c2a212861930f6c73be6b180
 NeedsCompilation: no
 
 Package: radiant.basics
@@ -1691,7 +1691,7 @@ Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>= 
             (>= 1.5), shiny (>= 1.1.0), psych (>= 1.8.3.3), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 796a1036c43c4c314efa653a1255a8ae
+MD5sum: cacb8b2510495c033ea52618a21e930b
 NeedsCompilation: no
 
 Package: radiant.data
@@ -1706,7 +1706,7 @@ Imports: tibble (>= 1.4.2), rlang (>= 0.2.2), broom (>= 0.4.3), car (>= 3.0-0), 
 Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0), odbc (>= 1.1.4), webshot (>= 0.5.0), testthat (>=
             2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 7755dbe070d197b98843035b1f5765cb
+MD5sum: 78cdd634cccf0186ec6f35357eded152
 NeedsCompilation: no
 
 Package: radiant.design
@@ -1715,7 +1715,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 0.9.8.0), mvtnorm
 Imports: dplyr (>= 0.7.6), shiny (>= 1.1.0), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), pwr (>= 1.1.2), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 3ebdfb1943aefcb79b3ad20130ea9d90
+MD5sum: 9e8f30d23f501e274befd1a461881c93
 NeedsCompilation: no
 
 Package: radiant.model
@@ -1727,7 +1727,7 @@ Imports: radiant.basics (>= 0.9.8.0), shiny (>= 1.1.0), nnet (>= 7.3.12), Neural
             DiagrammeR (>= 1.0.0), import (>= 1.1.0), psych (>= 1.8.4), e1071 (>= 1.6.8), rpart (>= 4.1.11), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 8f119f67806313016208fcbf6f14fd53
+MD5sum: c4a40fd89e7f2245fe92c693f84ac9a2
 NeedsCompilation: no
 
 Package: radiant.multivariate
@@ -1738,7 +1738,7 @@ Imports: radiant.model (>= 0.9.8.0), shiny (>= 1.1.0), dplyr (>= 0.7.5), rlang (
             2014.11-1), car (>= 2.1.1), MASS (>= 7.3), import (>= 1.1.0), Gmedian (>= 1.2.3), ggrepel (>= 0.8)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 5944235316a0a1844fcef8b42ff633f3
+MD5sum: ad59d976d53f7b4589df9593002226cd
 NeedsCompilation: no
 
 Package: radiant.update
@@ -1747,7 +1747,7 @@ Depends: R (>= 3.4.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 62a66cebb0d63e2a74d6d3d922fafc07
+MD5sum: b560935fc69fc9063a36ec1a96d70c2a
 NeedsCompilation: no
 
 Package: randomForest
@@ -2234,7 +2234,7 @@ Depends: R (>= 3.4.0)
 Imports: shiny (>= 1.0.5), jsonlite
 Suggests: testthat (>= 2.0.0), dplyr (>= 0.7.4)
 License: MIT + file LICENSE
-MD5sum: e10b5ace180cf020cadb983390f651c6
+MD5sum: 6e1f6cb463554526a73ce1066c0f1bb6
 NeedsCompilation: no
 
 Package: shinydashboard

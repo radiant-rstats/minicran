@@ -1679,7 +1679,7 @@ Imports: radiant.basics (>= 0.9.8.0), shiny (>= 1.1.0), nnet (>= 7.3.12), Neural
                          lubridate (>= 1.7.2), tidyr (>= 0.8.0), dplyr (>= 0.7.6), rlang (>= 0.2.2), magrittr (>= 1.5), DiagrammeR (>= 1.0.0), import (>= 1.1.0), psych (>= 1.8.4), e1071 (>= 1.6.8), rpart (>= 4.1.11), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: e47765db52f0d1c2d1dae767f7de26cc
+MD5sum: abd963e744bd70b9d3ff986d767b74aa
 NeedsCompilation: no
 
 Package: radiant.multivariate

@@ -39,7 +39,7 @@ pkgs_src <- c(
   "gbm", "dbplyr", "DBI", "RSQLite", "RPostgreSQL", "pool", "odbc", "xgboost",
   "png", "shinydashboard", "flexdashboard", "reticulate", "styler", "caTools",
   "rstan", "greta", "tidyverse", "testthat", "tfestimators", "keras", "packrat",
-  "sparklyr", "tidymodels"
+  "sparklyr", "tidymodels", "gganimate"
 )
 
 ## for khansen

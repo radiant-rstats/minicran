@@ -924,6 +924,20 @@ Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 MD5sum: a2cc2d0ad1b4e30fe4edad94d5df4eaa
 
+Package: radiant.data
+Version: 0.9.8.3
+Depends: R (>= 3.4.0), magrittr (>= 1.5), ggplot2 (>= 2.2.1), lubridate (>= 1.7.4), tidyr (>= 0.8.0), dplyr (>=
+            0.7.6)
+Imports: tibble (>= 1.4.2), rlang (>= 0.2.2), broom (>= 0.4.3), car (>= 3.0-0), grid (>= 3.3.1), gridExtra (>=
+            2.0.0), knitr (>= 1.20), markdown (>= 0.8), rmarkdown(>= 1.9), shiny (>= 1.2.0), jsonlite (>= 1.0),
+            shinyAce (>= 0.3.3), psych (>= 1.8.4), DT (>= 0.5), readr (>= 1.1.1), readxl (>= 1.0.0), writexl (>=
+            0.2), scales (>= 0.4.0), curl (>= 2.5), rstudioapi (>= 0.7), import (>= 1.1.0), plotly (>= 4.7.1),
+            glue (>= 1.3.0), shinyFiles (>= 0.7.2), summarytools (>= 0.8.8), base64enc
+Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0), odbc (>= 1.1.4), webshot (>= 0.5.0), testthat (>=
+            2.0.0), pkgdown (>= 1.1.0)
+License: AGPL-3 | file LICENSE
+MD5sum: 59402138a04b76dcbb4ca86b15c960e0
+
 Package: radiant.design
 Version: 0.9.8.0
 Depends: R (>= 3.4.0), radiant.data (>= 0.9.8.0), mvtnorm

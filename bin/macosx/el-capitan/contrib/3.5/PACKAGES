@@ -35,9 +35,9 @@ Archs: base64enc.so.dSYM
 MD5sum: b645b64198a3630857e955eed8b321a6
 
 Package: BH
-Version: 1.66.0-1
+Version: 1.69.0-1
 License: BSL-1.0
-MD5sum: 26772e5b1f496557d63f1656978385fa
+MD5sum: 0731ed01af9c7ebfa3760b9a129301b5
 
 Package: bindr
 Version: 0.1.1
@@ -127,11 +127,11 @@ License: MIT + file LICENSE
 MD5sum: c97943840bbbc957e609580a09429afb
 
 Package: clipr
-Version: 0.4.1
+Version: 0.5.0
 Imports: utils
-Suggests: rstudioapi (>= 0.5), testthat, covr
+Suggests: covr, rstudioapi (>= 0.5), testthat (>= 2.0.0)
 License: GPL-3
-MD5sum: f917e0a9ee5f59e060521ee26bc1e0dc
+MD5sum: 112fde8e1fc98347f1aa2b1866b6ddee
 
 Package: clisymbols
 Version: 1.2.0
@@ -147,13 +147,14 @@ License: GPL
 MD5sum: b6a9bdbca5b6de55b4ec5260b14ba7ad
 
 Package: colorspace
-Version: 1.3-2
-Depends: R (>= 2.13.0), methods
-Imports: graphics, grDevices
-Suggests: datasets, stats, utils, KernSmooth, MASS, kernlab, mvtnorm, vcd, dichromat, tcltk, shiny, shinyjs
+Version: 1.4-0
+Depends: R (>= 3.0.0), methods
+Imports: graphics, grDevices, stats
+Suggests: datasets, utils, KernSmooth, MASS, kernlab, mvtnorm, vcd, tcltk, shiny, shinyjs, ggplot2, dplyr, scales,
+            grid, png, jpeg, knitr, rmarkdown, RColorBrewer, rcartocolor, scico, viridis
 License: BSD_3_clause + file LICENSE
 Archs: colorspace.so.dSYM
-MD5sum: bd1e913eeba7f39d9058586c94dc686c
+MD5sum: aa43892c9e28f55b11943c496f4f189b
 
 Package: crayon
 Version: 1.3.4
@@ -169,21 +170,21 @@ License: MIT + file LICENSE
 MD5sum: 1f9eeadb3643c2228421894768eacef7
 
 Package: curl
-Version: 3.2
+Version: 3.3
 Depends: R (>= 3.0.0)
-Suggests: spelling, testthat (>= 1.0.0), knitr, jsonlite, rmarkdown, magrittr, httpuv, webutils
+Suggests: spelling, testthat (>= 1.0.0), knitr, jsonlite, rmarkdown, magrittr, httpuv (>= 1.4.4), webutils
 License: MIT + file LICENSE
 Archs: curl.so.dSYM
-MD5sum: bd6e1f02f8b9762e24b295cfa5ceddf3
+MD5sum: f6040aa30fdd2e60706a219a13990596
 
 Package: data.table
-Version: 1.11.8
+Version: 1.12.0
 Depends: R (>= 3.1.0)
 Imports: methods
 Suggests: bit64, curl, R.utils, knitr, xts, nanotime, zoo
 License: MPL-2.0 | file LICENSE
 Archs: datatable.so.dSYM
-MD5sum: 94f28f6e74915284600633e20caaf67d
+MD5sum: b0f636f3b62c61c2b2d7735ccd5ed4ad
 
 Package: data.tree
 Version: 0.7.8
@@ -355,13 +356,13 @@ License: MIT + file LICENSE
 MD5sum: a1d4ec2c1ac72230c99bd0903966cdd2
 
 Package: git2r
-Version: 0.23.0
+Version: 0.24.0
 Depends: R (>= 3.1)
 Imports: graphics, utils
 Suggests: getPass
 License: GPL-2
 Archs: git2r.so.dSYM
-MD5sum: d947326bf4adcc0406720912f65dc77e
+MD5sum: 3bb6e5b55cf4a45ea729e3a1192e91b3
 
 Package: gitgadget
 Version: 0.3.3
@@ -866,12 +867,12 @@ License: BSD_3_clause + file LICENSE
 MD5sum: becbc32ca0bd3354b6c2e5c2874e5ac5
 
 Package: psych
-Version: 1.8.10
+Version: 1.8.12
 Depends: R (>= 2.10)
 Imports: mnormt,parallel,stats,graphics,grDevices,methods,foreign,lattice,nlme
 Suggests: GPArotation, lavaan, sem, lme4,Rcsdp, graph, Rgraphviz
 License: GPL (>= 2)
-MD5sum: 6cb748476d6b36647fb01103026c930f
+MD5sum: 8ccc542cae6c611003b3ec713867c223
 
 Package: purrr
 Version: 0.2.5
@@ -922,20 +923,6 @@ Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>= 
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 MD5sum: a2cc2d0ad1b4e30fe4edad94d5df4eaa
-
-Package: radiant.data
-Version: 0.9.8.2
-Depends: R (>= 3.4.0), magrittr (>= 1.5), ggplot2 (>= 2.2.1), lubridate (>= 1.7.4), tidyr (>= 0.8.0), dplyr (>=
-            0.7.6)
-Imports: tibble (>= 1.4.2), rlang (>= 0.2.2), broom (>= 0.4.3), car (>= 3.0-0), grid (>= 3.3.1), gridExtra (>=
-            2.0.0), knitr (>= 1.20), markdown (>= 0.8), rmarkdown(>= 1.9), shiny (>= 1.2.0), jsonlite (>= 1.0),
-            shinyAce (>= 0.3.3), psych (>= 1.8.4), DT (>= 0.5), readr (>= 1.1.1), readxl (>= 1.0.0), writexl (>=
-            0.2), scales (>= 0.4.0), curl (>= 2.5), rstudioapi (>= 0.7), import (>= 1.1.0), plotly (>= 4.7.1),
-            glue (>= 1.3.0), shinyFiles (>= 0.7.2), summarytools (>= 0.8.8), base64enc
-Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0), odbc (>= 1.1.4), webshot (>= 0.5.0), testthat (>=
-            2.0.0), pkgdown (>= 1.1.0)
-License: AGPL-3 | file LICENSE
-MD5sum: d86d6b105d09c850cae4502145464369
 
 Package: radiant.design
 Version: 0.9.8.0
@@ -1083,12 +1070,12 @@ License: GPL-2
 MD5sum: e69a85afd154074d8fe016352597bffe
 
 Package: rlang
-Version: 0.3.0.1
+Version: 0.3.1
 Depends: R (>= 3.1.0)
 Suggests: crayon, magrittr, methods, pillar, testthat (>= 2.0.0), covr
 License: GPL-3
 Archs: rlang.so.dSYM
-MD5sum: e92f915474fd3abe9773e0ef94fbe5fe
+MD5sum: 668a768e012a3d60b7051d0dfb0509fc
 
 Package: rmarkdown
 Version: 1.11
@@ -1145,10 +1132,10 @@ Archs: RSpectra.so.dSYM
 MD5sum: 6d8936f355c17560762d3d9e6cf4067c
 
 Package: rstudioapi
-Version: 0.8
+Version: 0.9.0
 Suggests: testthat, knitr, rmarkdown
 License: MIT + file LICENSE
-MD5sum: ed5e9ddaa201e9e26a10c4a852969189
+MD5sum: 147bb4ed5c7a3a30bf35428f5969751b
 
 Package: sandwich
 Version: 2.5-0
@@ -1251,13 +1238,16 @@ Archs: svglite.so.dSYM
 MD5sum: fce27264853ec1007b8dc30741c75b6f
 
 Package: tibble
-Version: 1.4.2
+Version: 2.0.1
 Depends: R (>= 3.1.0)
-Imports: cli, crayon, methods, pillar (>= 1.1.0), rlang, utils
-Suggests: covr, dplyr, import, knitr (>= 1.5.32), microbenchmark, mockr, nycflights13, rmarkdown, testthat, withr
+Imports: cli (>= 1.0.1), crayon (>= 1.3.4), fansi (>= 0.4.0), methods, pillar (>= 1.3.1), pkgconfig (>= 2.0.2),
+            rlang (>= 0.3.1), utils
+Suggests: bench (>= 1.0.1), covr (>= 3.2.1), dplyr (>= 0.7.8), htmltools (>= 0.3.6), import (>= 1.1.0), knitr (>=
+            1.21), mockr (>= 0.1), nycflights13 (>= 1.0.0), rmarkdown (>= 1.11), testthat (>= 2.0.1), withr (>=
+            2.1.2)
 License: MIT + file LICENSE
 Archs: tibble.so.dSYM
-MD5sum: 06cf35c1f7cddcedf9f5424fe83ccc0f
+MD5sum: 50852271fdeb1d0c500ce6a59e17b52b
 
 Package: tidyr
 Version: 0.8.2
@@ -1280,11 +1270,11 @@ Archs: tidyselect.so.dSYM
 MD5sum: b3f81341bc547ddeedd78c39c00ed5fb
 
 Package: tinytex
-Version: 0.9
+Version: 0.10
 Imports: xfun (>= 0.3)
 Suggests: testit, rstudioapi
 License: MIT + file LICENSE
-MD5sum: 7e1dcb1582b9acf74f10feaeb717e621
+MD5sum: 6c86a4a5d934852af2939844b9252293
 
 Package: usethis
 Version: 1.4.0

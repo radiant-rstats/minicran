@@ -30,7 +30,7 @@ License: GPL-2 | GPL-3
 Archs: i386, x64
 
 Package: BH
-Version: 1.66.0-1
+Version: 1.69.0-1
 License: BSL-1.0
 
 Package: bindr
@@ -110,9 +110,9 @@ Suggests: covr, fansi, mockery, testthat, webshot, withr
 License: MIT + file LICENSE
 
 Package: clipr
-Version: 0.4.1
+Version: 0.5.0
 Imports: utils
-Suggests: rstudioapi (>= 0.5), testthat, covr
+Suggests: covr, rstudioapi (>= 0.5), testthat (>= 2.0.0)
 License: GPL-3
 
 Package: clisymbols
@@ -146,9 +146,9 @@ Imports: htmltools (>= 0.3.5), jsonlite, lazyeval, R6, shiny (>= 0.11), ggplot2
 License: MIT + file LICENSE
 
 Package: curl
-Version: 3.2
+Version: 3.3
 Depends: R (>= 3.0.0)
-Suggests: spelling, testthat (>= 1.0.0), knitr, jsonlite, rmarkdown, magrittr, httpuv, webutils
+Suggests: spelling, testthat (>= 1.0.0), knitr, jsonlite, rmarkdown, magrittr, httpuv (>= 1.4.4), webutils
 License: MIT + file LICENSE
 Archs: i386, x64
 
@@ -311,7 +311,7 @@ Suggests: covr, pingr, testthat
 License: MIT + file LICENSE
 
 Package: git2r
-Version: 0.23.0
+Version: 0.24.0
 Depends: R (>= 3.1)
 Imports: graphics, utils
 Suggests: getPass
@@ -815,19 +815,6 @@ Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>= 
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 
-Package: radiant.data
-Version: 0.9.8.2
-Depends: R (>= 3.4.0), magrittr (>= 1.5), ggplot2 (>= 2.2.1), lubridate (>= 1.7.4), tidyr (>= 0.8.0), dplyr (>=
-            0.7.6)
-Imports: tibble (>= 1.4.2), rlang (>= 0.2.2), broom (>= 0.4.3), car (>= 3.0-0), grid (>= 3.3.1), gridExtra (>=
-            2.0.0), knitr (>= 1.20), markdown (>= 0.8), rmarkdown(>= 1.9), shiny (>= 1.2.0), jsonlite (>= 1.0),
-            shinyAce (>= 0.3.3), psych (>= 1.8.4), DT (>= 0.5), readr (>= 1.1.1), readxl (>= 1.0.0), writexl (>=
-            0.2), scales (>= 0.4.0), curl (>= 2.5), rstudioapi (>= 0.7), import (>= 1.1.0), plotly (>= 4.7.1),
-            glue (>= 1.3.0), shinyFiles (>= 0.7.2), summarytools (>= 0.8.8), base64enc
-Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0), odbc (>= 1.1.4), webshot (>= 0.5.0), testthat (>=
-            2.0.0), pkgdown (>= 1.1.0)
-License: AGPL-3 | file LICENSE
-
 Package: radiant.design
 Version: 0.9.8.0
 Depends: R (>= 3.4.0), radiant.data (>= 0.9.8.0), mvtnorm
@@ -958,7 +945,7 @@ Suggests: datasets, bit64, testthat, knitr, magrittr, clipr, csvy, feather, fst,
 License: GPL-2
 
 Package: rlang
-Version: 0.3.0.1
+Version: 0.3.1
 Depends: R (>= 3.1.0)
 Suggests: crayon, magrittr, methods, pillar, testthat (>= 2.0.0), covr
 License: GPL-3
@@ -1013,7 +1000,7 @@ License: MPL (>= 2)
 Archs: i386, x64
 
 Package: rstudioapi
-Version: 0.8
+Version: 0.9.0
 Suggests: testthat, knitr, rmarkdown
 License: MIT + file LICENSE
 
@@ -1107,10 +1094,13 @@ License: GPL (>= 2)
 Archs: i386, x64
 
 Package: tibble
-Version: 1.4.2
+Version: 2.0.1
 Depends: R (>= 3.1.0)
-Imports: cli, crayon, methods, pillar (>= 1.1.0), rlang, utils
-Suggests: covr, dplyr, import, knitr (>= 1.5.32), microbenchmark, mockr, nycflights13, rmarkdown, testthat, withr
+Imports: cli (>= 1.0.1), crayon (>= 1.3.4), fansi (>= 0.4.0), methods, pillar (>= 1.3.1), pkgconfig (>= 2.0.2),
+            rlang (>= 0.3.1), utils
+Suggests: bench (>= 1.0.1), covr (>= 3.2.1), dplyr (>= 0.7.8), htmltools (>= 0.3.6), import (>= 1.1.0), knitr (>=
+            1.21), mockr (>= 0.1), nycflights13 (>= 1.0.0), rmarkdown (>= 1.11), testthat (>= 2.0.1), withr (>=
+            2.1.2)
 License: MIT + file LICENSE
 Archs: i386, x64
 
@@ -1133,7 +1123,7 @@ License: GPL-3
 Archs: i386, x64
 
 Package: tinytex
-Version: 0.9
+Version: 0.10
 Imports: xfun (>= 0.3)
 Suggests: testit, rstudioapi
 License: MIT + file LICENSE

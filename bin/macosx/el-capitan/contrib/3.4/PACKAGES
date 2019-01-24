@@ -35,9 +35,9 @@ Archs: base64enc.so.dSYM
 MD5sum: e25019100dc734e8cf5e3533e99eb101
 
 Package: BH
-Version: 1.66.0-1
+Version: 1.69.0-1
 License: BSL-1.0
-MD5sum: 867520759973cda8fb3b8d084af9011a
+MD5sum: 5353e55bfab1224ba8dfe34c980a9f9d
 
 Package: bindr
 Version: 0.1.1
@@ -108,13 +108,13 @@ License: MIT + file LICENSE
 MD5sum: 0ae79c6783fd4054aeb287881ba3f8db
 
 Package: class
-Version: 7.3-14
+Version: 7.3-15
 Priority: recommended
 Depends: R (>= 3.0.0), stats, utils
 Imports: MASS
 License: GPL-2 | GPL-3
 Archs: class.so.dSYM
-MD5sum: ecf674ba177b3e2358b73b7b9b7a9702
+MD5sum: 89031ad3584b7725543e3ca168a37376
 
 Package: cli
 Version: 1.0.1
@@ -125,11 +125,11 @@ License: MIT + file LICENSE
 MD5sum: 869a766e5fce617a84b989da4eb3c97f
 
 Package: clipr
-Version: 0.4.1
+Version: 0.5.0
 Imports: utils
-Suggests: rstudioapi (>= 0.5), testthat, covr
+Suggests: covr, rstudioapi (>= 0.5), testthat (>= 2.0.0)
 License: GPL-3
-MD5sum: 17ee92ef2eeaad1f1521a54f334495eb
+MD5sum: 8a329b72e5ac99a50cb56c08afb1f8fb
 
 Package: clisymbols
 Version: 1.2.0
@@ -138,20 +138,21 @@ License: MIT + file LICENSE
 MD5sum: 3feb7a90e55443c7acd030135ed0dc74
 
 Package: codetools
-Version: 0.2-15
+Version: 0.2-16
 Priority: recommended
 Depends: R (>= 2.1)
 License: GPL
-MD5sum: 591e4d4161c32bea86a076d98db62f55
+MD5sum: 7ee3aa62ae124c0705f2c42904e421fe
 
 Package: colorspace
-Version: 1.3-2
-Depends: R (>= 2.13.0), methods
-Imports: graphics, grDevices
-Suggests: datasets, stats, utils, KernSmooth, MASS, kernlab, mvtnorm, vcd, dichromat, tcltk, shiny, shinyjs
+Version: 1.4-0
+Depends: R (>= 3.0.0), methods
+Imports: graphics, grDevices, stats
+Suggests: datasets, utils, KernSmooth, MASS, kernlab, mvtnorm, vcd, tcltk, shiny, shinyjs, ggplot2, dplyr,
+            scales, grid, png, jpeg, knitr, rmarkdown, RColorBrewer, rcartocolor, scico, viridis
 License: BSD_3_clause + file LICENSE
 Archs: colorspace.so.dSYM
-MD5sum: d12a00dfb588f5ff322647fc2a5f6ff6
+MD5sum: 900c2038508b7bd5f964720b2ac2979e
 
 Package: crayon
 Version: 1.3.4
@@ -167,21 +168,21 @@ License: MIT + file LICENSE
 MD5sum: 7f7caa928a5e4f168de3c9e389c09c65
 
 Package: curl
-Version: 3.2
+Version: 3.3
 Depends: R (>= 3.0.0)
-Suggests: spelling, testthat (>= 1.0.0), knitr, jsonlite, rmarkdown, magrittr, httpuv, webutils
+Suggests: spelling, testthat (>= 1.0.0), knitr, jsonlite, rmarkdown, magrittr, httpuv (>= 1.4.4), webutils
 License: MIT + file LICENSE
 Archs: curl.so.dSYM
-MD5sum: ca66fa81cf38073af687455edd422e86
+MD5sum: 9ca1cba09fa591d78be60b18dbc058d5
 
 Package: data.table
-Version: 1.11.8
+Version: 1.12.0
 Depends: R (>= 3.1.0)
 Imports: methods
 Suggests: bit64, curl, R.utils, knitr, xts, nanotime, zoo
 License: MPL-2.0 | file LICENSE
 Archs: datatable.so.dSYM
-MD5sum: ae7bd88b1c7b920ab63ab635b66a447d
+MD5sum: 841fe6155285a79207daa13305844be9
 
 Package: data.tree
 Version: 0.7.8
@@ -257,12 +258,12 @@ License: GPL-3 | file LICENSE
 MD5sum: 0b43e107c2e23c1a5adb209dbfd6af93
 
 Package: e1071
-Version: 1.7-0
+Version: 1.7-0.1
 Imports: graphics, grDevices, class, stats, methods, utils
 Suggests: cluster, mlbench, nnet, randomForest, rpart, SparseM, xtable, Matrix, MASS
 License: GPL-2
 Archs: e1071.so.dSYM
-MD5sum: 3955943f315060dc18ecd65ebeab42f8
+MD5sum: c81c46624bd7b90fa3dcf8e0a887297e
 
 Package: evaluate
 Version: 0.12
@@ -346,13 +347,13 @@ License: MIT + file LICENSE
 MD5sum: a2c3e9e7a4c80b08c9986b32f347ed3c
 
 Package: git2r
-Version: 0.23.0
+Version: 0.24.0
 Depends: R (>= 3.1)
 Imports: graphics, utils
 Suggests: getPass
 License: GPL-2
 Archs: git2r.so.dSYM
-MD5sum: a9dfd6d751eba1990b0d33053b8731a6
+MD5sum: e5a6b3ae7d84da15fb2e72a64bc3a98a
 
 Package: gitgadget
 Version: 0.3.3
@@ -859,12 +860,12 @@ License: BSD_3_clause + file LICENSE
 MD5sum: 45d8faea7270250e4a5ffa99b2cf8ae8
 
 Package: psych
-Version: 1.8.10
+Version: 1.8.12
 Depends: R (>= 2.10)
 Imports: mnormt,parallel,stats,graphics,grDevices,methods,foreign,lattice,nlme
 Suggests: GPArotation, lavaan, sem, lme4,Rcsdp, graph, Rgraphviz
 License: GPL (>= 2)
-MD5sum: 5ebad51c8a2fe941be43773fd882ea74
+MD5sum: ca4a96d1a421f998ecb0e682685ab5e3
 
 Package: purrr
 Version: 0.2.5
@@ -993,14 +994,14 @@ Archs: Rcpp.so.dSYM
 MD5sum: c50dffd11034c8af16941b04200a9c80
 
 Package: RcppArmadillo
-Version: 0.9.200.5.0
+Version: 0.9.200.7.0
 Depends: R (>= 3.3.0)
 Imports: Rcpp (>= 0.11.0), stats, utils, methods
 LinkingTo: Rcpp
 Suggests: RUnit, Matrix, pkgKitten, reticulate, rmarkdown, knitr, pinp, slam
 License: GPL (>= 2)
 Archs: RcppArmadillo.so.dSYM
-MD5sum: 656c69e96ddf0075e37b58dbe07bea33
+MD5sum: 5a992703f610fd86d5d3a3a8d9b89a66
 
 Package: RcppEigen
 Version: 0.3.3.5.0
@@ -1079,12 +1080,12 @@ License: GPL-2
 MD5sum: a09af2ce3e9b36dc909c9513613ae7df
 
 Package: rlang
-Version: 0.3.0.1
+Version: 0.3.1
 Depends: R (>= 3.1.0)
 Suggests: crayon, magrittr, methods, pillar, testthat (>= 2.0.0), covr
 License: GPL-3
 Archs: rlang.so.dSYM
-MD5sum: 5021f9243c91de8218a095a0ccf9e464
+MD5sum: cdb95cd7e6a2173949170b8d1ac5512a
 
 Package: rmarkdown
 Version: 1.11
@@ -1141,10 +1142,10 @@ Archs: RSpectra.so.dSYM
 MD5sum: d494d1d1959e232e9efac5e480073ada
 
 Package: rstudioapi
-Version: 0.8
+Version: 0.9.0
 Suggests: testthat, knitr, rmarkdown
 License: MIT + file LICENSE
-MD5sum: 943cd31dbe29af523ce3f4da30b6c577
+MD5sum: 71cff0d74574baffb5354ad3a4a18c44
 
 Package: sandwich
 Version: 2.5-0
@@ -1247,14 +1248,16 @@ Archs: svglite.so.dSYM
 MD5sum: 9025b30fa884dd50f966160ca7e6c6f0
 
 Package: tibble
-Version: 1.4.2
+Version: 2.0.1
 Depends: R (>= 3.1.0)
-Imports: cli, crayon, methods, pillar (>= 1.1.0), rlang, utils
-Suggests: covr, dplyr, import, knitr (>= 1.5.32), microbenchmark, mockr, nycflights13, rmarkdown, testthat,
-            withr
+Imports: cli (>= 1.0.1), crayon (>= 1.3.4), fansi (>= 0.4.0), methods, pillar (>= 1.3.1), pkgconfig (>=
+            2.0.2), rlang (>= 0.3.1), utils
+Suggests: bench (>= 1.0.1), covr (>= 3.2.1), dplyr (>= 0.7.8), htmltools (>= 0.3.6), import (>= 1.1.0), knitr
+            (>= 1.21), mockr (>= 0.1), nycflights13 (>= 1.0.0), rmarkdown (>= 1.11), testthat (>= 2.0.1),
+            withr (>= 2.1.2)
 License: MIT + file LICENSE
 Archs: tibble.so.dSYM
-MD5sum: e9bc9786e27ce06bad3cc1d538c49b20
+MD5sum: 08b54a7f70a009cb50bd01a7c89f2bb5
 
 Package: tidyr
 Version: 0.8.2
@@ -1277,11 +1280,11 @@ Archs: tidyselect.so.dSYM
 MD5sum: 5fbc36ccf1504598416676197c2b86f8
 
 Package: tinytex
-Version: 0.9
+Version: 0.10
 Imports: xfun (>= 0.3)
 Suggests: testit, rstudioapi
 License: MIT + file LICENSE
-MD5sum: 8fa80f0d947afb57586b6a3579679cf3
+MD5sum: e6b80db997cf5491b3cd1e561143a674
 
 Package: usethis
 Version: 1.4.0

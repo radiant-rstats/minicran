@@ -268,12 +268,12 @@ License: GPL-3 | file LICENSE
 MD5sum: 14415925abc4e0cb0b71aae0dd8bb4b3
 
 Package: e1071
-Version: 1.7-0
+Version: 1.7-0.1
 Imports: graphics, grDevices, class, stats, methods, utils
 Suggests: cluster, mlbench, nnet, randomForest, rpart, SparseM, xtable, Matrix, MASS
 License: GPL-2
 Archs: e1071.so.dSYM
-MD5sum: 4f0b43963726bc3e0392d8fa36db80b2
+MD5sum: eeb78466dd8b9e4ec16935cac48a4d34
 
 Package: evaluate
 Version: 0.12

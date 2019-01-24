@@ -640,12 +640,12 @@ MD5sum: aaf7efeb2000bfffec64c8ba2f5e987d
 NeedsCompilation: no
 
 Package: ggmap
-Version: 2.6.1
+Version: 2.6.2
 Depends: R (>= 2.14.0), ggplot2 (>= 2.0.0)
 Imports: proto, RgoogleMaps, png, plyr, reshape2, rjson, mapproj, jpeg, geosphere, digest, scales
 Suggests: MASS, stringr, hexbin, dplyr
 License: GPL-2
-MD5sum: 25ad414a3a1c6d59a227a9f22601211a
+MD5sum: fbe61aded34cccb5f5b29c93b7e9dd1c
 NeedsCompilation: no
 
 Package: ggplot2

@@ -2295,10 +2295,10 @@ MD5sum: 1c101a508e42923a6377a1e0ba996c2c
 NeedsCompilation: no
 
 Package: shinyFiles
-Version: 0.7.2
+Version: 0.7.2.1
 Imports: htmltools, jsonlite, tools, shiny (>= 1.1.0), fs (>= 1.2.6), tibble (>= 1.4.2)
 License: GPL (>= 2)
-MD5sum: 8d951c6fee5822254a9cb24c3e441c2f
+MD5sum: d81f0d651377dc23fcb69eb9166525e8
 NeedsCompilation: no
 
 Package: shinyjs

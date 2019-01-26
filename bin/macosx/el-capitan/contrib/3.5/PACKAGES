@@ -1203,10 +1203,10 @@ License: MIT + file LICENSE
 MD5sum: 34b3286a1882159748cfcb2d98175061
 
 Package: shinyFiles
-Version: 0.7.2
+Version: 0.7.2.1
 Imports: htmltools, jsonlite, tools, shiny (>= 1.1.0), fs (>= 1.2.6), tibble (>= 1.4.2)
 License: GPL (>= 2)
-MD5sum: 4ac2dfd0c0fb7ab3cc51cfacad23efca
+MD5sum: 10d851e1500f11ffcf660fd7006b69c7
 
 Package: sourcetools
 Version: 0.1.7

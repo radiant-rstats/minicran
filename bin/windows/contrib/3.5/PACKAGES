@@ -1064,7 +1064,7 @@ Suggests: testthat (>= 2.0.0), dplyr (>= 0.7.4)
 License: MIT + file LICENSE
 
 Package: shinyFiles
-Version: 0.7.2
+Version: 0.7.2.1
 Imports: htmltools, jsonlite, tools, shiny (>= 1.1.0), fs (>= 1.2.6), tibble (>= 1.4.2)
 License: GPL (>= 2)
 

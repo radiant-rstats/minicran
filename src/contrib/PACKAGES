@@ -1869,7 +1869,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 0.9.7.4),
 Imports: shiny (>= 1.1.0), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
-MD5sum: 55bd8f0aa3e231863b6244e07c351ef2
+MD5sum: 41de47ab7f869f8479a1b57f256425f1
 NeedsCompilation: no
 
 Package: radiant.basics
@@ -1881,7 +1881,7 @@ Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales
       1.8.3.3), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 1411852ca01ea30ffdd96db6b84672cc
+MD5sum: 5081722aaadefddf5d304fb4e52193d8
 NeedsCompilation: no
 
 Package: radiant.data
@@ -1904,7 +1904,7 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>=
       2.0), odbc (>= 1.1.4), webshot (>= 0.5.0), testthat
       (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: aaa4e660ba2afc913ccc5dbd2feafbbf
+MD5sum: 65afa52900593245e78497464b6d23e9
 NeedsCompilation: no
 
 Package: radiant.design
@@ -1914,7 +1914,7 @@ Imports: dplyr (>= 0.7.6), shiny (>= 1.1.0), AlgDesign (>=
       1.1.7.3), import (>= 1.1.0), pwr (>= 1.1.2), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: d6fcf799337c92a9ebff34dc634b777a
+MD5sum: 5c2e327c4bebb13fd6ce82078b50fdf7
 NeedsCompilation: no
 
 Package: radiant.model
@@ -1930,7 +1930,7 @@ Imports: radiant.basics (>= 0.9.8.0), shiny (>= 1.1.0), nnet
       1.8.4), e1071 (>= 1.6.8), rpart (>= 4.1.11), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 43999bc689525093c6d3511aacf943da
+MD5sum: 8ffdeb81e623805c33c62d2edb1fc687
 NeedsCompilation: no
 
 Package: radiant.multivariate
@@ -1944,7 +1944,7 @@ Imports: radiant.model (>= 0.9.8.0), shiny (>= 1.1.0), dplyr
       Gmedian (>= 1.2.3), ggrepel (>= 0.8)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: f1559316b1ac76cf058900d5b4a49db3
+MD5sum: 42877211d08ee9a60b53a75b2588c601
 NeedsCompilation: no
 
 Package: radiant.update
@@ -1953,7 +1953,7 @@ Depends: R (>= 3.4.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: ed308bc9ae6ae9f11365bc5833fc1952
+MD5sum: 8d3af0769f31381128a5e6747e29c6e3
 NeedsCompilation: no
 
 Package: randomForest

@@ -526,7 +526,7 @@ License: GPL-3
 Archs: i386, x64
 
 Package: lme4
-Version: 1.1-19
+Version: 1.1-20
 Depends: R (>= 3.2.0), Matrix (>= 1.2-1), methods, stats
 Imports: graphics, grid, splines, utils, parallel, MASS, lattice, nlme (>=
          3.1-123), minqa (>= 1.1.15), nloptr (>= 1.0.4)
@@ -602,11 +602,11 @@ License: Artistic-2.0
 Archs: i386, x64
 
 Package: mgcv
-Version: 1.8-26
+Version: 1.8-27
 Priority: recommended
 Depends: R (>= 2.14.0), nlme (>= 3.1-64)
-Imports: methods, stats, graphics, Matrix
-Suggests: splines, parallel, survival, MASS
+Imports: methods, stats, graphics, Matrix, splines, utils
+Suggests: parallel, survival, MASS
 License: GPL (>= 2)
 Archs: i386, x64
 
@@ -1282,7 +1282,7 @@ Suggests: testit, parallel, rstudioapi, tinytex, mime, markdown, knitr,
 License: MIT + file LICENSE
 
 Package: XML
-Version: 3.98-1.16
+Version: 3.98-1.17
 Depends: R (>= 2.13.0), methods, utils
 Suggests: bitops, RCurl
 License: BSD_2_clause + file LICENSE

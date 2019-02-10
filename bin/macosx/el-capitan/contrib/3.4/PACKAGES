@@ -584,7 +584,7 @@ Archs: lazyeval.so.dSYM
 MD5sum: 030ba5d7060091cdbd90156946972e0a
 
 Package: lme4
-Version: 1.1-19
+Version: 1.1-20
 Depends: R (>= 3.2.0), Matrix (>= 1.2-1), methods, stats
 Imports: graphics, grid, splines, utils, parallel, MASS, lattice, nlme (>=
          3.1-123), minqa (>= 1.1.15), nloptr (>= 1.0.4)
@@ -593,7 +593,7 @@ Suggests: knitr, boot, PKPDmodels, MEMSS, testthat (>= 0.8.1), ggplot2, mlmRev,
          optimx (>= 2013.8.6), gamm4, pbkrtest, HSAUR2, numDeriv, car, dfoptim
 License: GPL (>= 2)
 Archs: lme4.so.dSYM
-MD5sum: 8175d0ac1467c245e77893ac53d38552
+MD5sum: 4b9b9650afb4aa91298c9e965893dd79
 
 Package: lubridate
 Version: 1.7.4
@@ -669,14 +669,14 @@ Archs: matrixStats.so.dSYM
 MD5sum: 4eb5beb16c22b74c50c521679357af3c
 
 Package: mgcv
-Version: 1.8-26
+Version: 1.8-27
 Priority: recommended
 Depends: R (>= 2.14.0), nlme (>= 3.1-64)
-Imports: methods, stats, graphics, Matrix
-Suggests: splines, parallel, survival, MASS
+Imports: methods, stats, graphics, Matrix, splines, utils
+Suggests: parallel, survival, MASS
 License: GPL (>= 2)
 Archs: mgcv.so.dSYM
-MD5sum: 3f8c509191f4396e081c35c34a85967f
+MD5sum: a18efe83e06f83f3f3c0b381cd154ce0
 
 Package: mime
 Version: 0.6

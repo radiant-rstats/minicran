@@ -1714,7 +1714,7 @@ Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>= 
                 psych (>= 1.8.3.3), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: e4997946a832807d1e8cde2f339594bb
+MD5sum: 10f9a1578e9139e4e7b28f60ac302b1d
 NeedsCompilation: no
 
 Package: radiant.data

@@ -240,7 +240,7 @@ License: GPL-2
 MD5sum: 4e1a3e1300c9be148ac4518b6bed9290
 
 Package: dplyr
-Version: 0.8.0
+Version: 0.8.0.1
 Depends: R (>= 3.1.2)
 Imports: assertthat (>= 0.2.0), glue (>= 1.1.1), magrittr (>= 1.5), methods, pkgconfig (>= 2.0.1), R6 (>= 2.2.2), Rcpp (>= 1.0.0),
               rlang (>= 0.3.0), tibble (>= 2.0.0), tidyselect (>= 0.2.5), utils
@@ -252,7 +252,7 @@ Suggests: bit64 (>= 0.9.7), callr (>= 3.1.1), covr (>= 3.0.1), DBI (>= 0.7.14), 
               (>= 1.3.4)
 License: MIT + file LICENSE
 Archs: dplyr.so.dSYM
-MD5sum: 7e892505ca0edb35c74be826f2646e9e
+MD5sum: 7e1e5f9aa2ad873638247e13de1286a1
 
 Package: DT
 Version: 0.5
@@ -1026,13 +1026,13 @@ License: GPL (>= 2) | file LICENSE
 MD5sum: ce04d1bed80466212eddca54623498a1
 
 Package: readxl
-Version: 1.2.0
-Imports: cellranger, progress, Rcpp (>= 0.12.18), tibble (>= 1.3.1), utils
+Version: 1.3.0
+Imports: cellranger, Rcpp (>= 0.12.18), tibble (>= 1.3.1), utils
 LinkingTo: progress, Rcpp
 Suggests: covr, knitr, rmarkdown, rprojroot (>= 1.1), testthat
 License: GPL-3
 Archs: readxl.so.dSYM
-MD5sum: 46bb5a8ac61cd24dcf9bad6fb3a883d9
+MD5sum: cec5a591ccfe439e0653afd766a40b1b
 
 Package: rematch
 Version: 1.0.1

@@ -39,14 +39,14 @@ pkgs_src <- c(
   "gbm", "dbplyr", "DBI", "RSQLite", "RPostgreSQL", "pool", "odbc", "xgboost",
   "png", "shinydashboard", "flexdashboard", "reticulate", "styler", "caTools",
   "rstan", "greta", "tidyverse", "testthat", "tfestimators", "keras", "packrat",
-  "sparklyr", "tidymodels", "gganimate", "gifski", "here"
+  "sparklyr", "tidymodels", "gganimate", "gifski", "here", "zipcode", "forcats"
 )
 
 ## for khansen
 ## gtrendsR will be updated to the github version in the radiant docker
 pkgs_src <- c(
   pkgs_src, "ggmap", "leaflet", "tm", "wordcloud", "rvest", "tidytext",
-  "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal", "topicmodels", "zipcode"
+  "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal", "topicmodels"
 )
 
 # building minicran for source packages

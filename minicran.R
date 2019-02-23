@@ -5,16 +5,16 @@
 # repos <- c("file:///Users/vnijs/Desktop/Github/minicran/",
 
 minicran <- "https://radiant-rstats.github.io/minicran/"
-repos <- c(
-  minicran,
-  "https://cloud.r-project.org",
-  "https://cran.r-project.org"
-)
 # repos <- c(
+#   minicran,
 #   "https://cloud.r-project.org",
-#   "https://cran.r-project.org",
-#   minicran
+#   "https://cran.r-project.org"
 # )
+repos <- c(
+  "https://cloud.r-project.org",
+  "https://cran.r-project.org",
+  minicran
+)
 options(repos = c(CRAN = repos))
 
 library(devtools)
@@ -49,25 +49,32 @@ pkgs_src <- c(
   "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal", "topicmodels"
 )
 
+
+pkgs_rem <- c("checkmate", "magick", "matrixStats", "pander", "pryr", "rapportools", "summarytools")
+
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
-# pkgList[order(pkgList)]
+pkgList <- setdiff(pkgList, pkgs_rem)
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "source")
 
 # building minicran for windows binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = "3.4")
+pkgList <- setdiff(pkgList, pkgs_rem)
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.binary", Rversion = "3.4")
 
 # building minicran for windows binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = "3.5")
+pkgList <- setdiff(pkgList, pkgs_rem)
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.binary", Rversion = "3.5")
 
 # building minicran for mac el-capitan binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = "3.4")
+pkgList <- setdiff(pkgList, pkgs_rem)
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = "3.4")
 
 # building minicran for mac el-capitan binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = "3.5")
+pkgList <- setdiff(pkgList, pkgs_rem)
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = "3.5")
 
 library(dplyr)

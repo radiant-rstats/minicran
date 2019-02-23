@@ -50,11 +50,12 @@ pkgs_src <- c(
 )
 
 ## anything to remove?
-pkgs_rem <- c("checkmate", "magick", "matrixStats", "pander", "pryr", "rapportools", "summarytools", "rstan", "greta", "rstanarm", "rstantools")
+pkgs_rem <- c("checkmate", "magick", "matrixStats", "pander", "pryr", "rapportools", "summarytools", "rstan", "greta", "rstanarm", "rstantools", "listenv")
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
 pkgList <- setdiff(pkgList, pkgs_rem)
+
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "source")
 
 # building minicran for windows binaries

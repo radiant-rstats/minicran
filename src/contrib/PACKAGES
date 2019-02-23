@@ -2189,18 +2189,6 @@ License: AGPL-3
 MD5sum: fde0bc493677dfda5257644acde0c25c
 NeedsCompilation: no
 
-Package: shinystan
-Version: 2.5.0
-Depends: R (>= 3.1.0), shiny (>= 1.0.3)
-Imports: bayesplot (>= 1.5.0), colourpicker, DT (>= 0.2), dygraphs (>= 1.1.1.2), ggplot2 (>= 2.1.1),
-           gridExtra, gtools, markdown (>= 0.7.4), methods, reshape2, rsconnect (>= 0.4.2), rstan (>=
-           2.17.1), stats, shinyjs (>= 0.6.0), shinythemes (>= 1.0.1), threejs (>= 0.2.1), utils,
-           xtable, xts (>= 0.9-7)
-Suggests: coda, knitr (>= 1.9), rmarkdown (>= 0.8.1), rstanarm (>= 2.17.4), testthat
-License: GPL (>= 3)
-MD5sum: d98fd95494c0748f01454d5b707d9485
-NeedsCompilation: no
-
 Package: shinythemes
 Version: 1.1.2
 Depends: R (>= 3.0.0)

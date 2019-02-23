@@ -5,16 +5,16 @@
 # repos <- c("file:///Users/vnijs/Desktop/Github/minicran/",
 
 minicran <- "https://radiant-rstats.github.io/minicran/"
-# repos <- c(
-#   minicran,
-#   "https://cloud.r-project.org",
-#   "https://cran.r-project.org"
-# )
 repos <- c(
+  minicran,
   "https://cloud.r-project.org",
-  "https://cran.r-project.org",
-  minicran
+  "https://cran.r-project.org"
 )
+# repos <- c(
+#   "https://cloud.r-project.org",
+#   "https://cran.r-project.org",
+#   minicran
+# )
 options(repos = c(CRAN = repos))
 
 library(devtools)
@@ -38,8 +38,8 @@ pkgs_src <- c(
   pkgs, "gitgadget", "devtools", "roxygen2", "caret", "ranger", "randomForest",
   "gbm", "dbplyr", "DBI", "RSQLite", "RPostgreSQL", "pool", "odbc", "xgboost",
   "png", "shinydashboard", "flexdashboard", "reticulate", "styler", "caTools",
-  "rstan", "greta", "tidyverse", "testthat", "tfestimators", "keras", "packrat",
-  "sparklyr", "tidymodels", "gganimate", "gifski", "here", "zipcode", "forcats"
+  "tidyverse", "testthat", "tfestimators", "keras", "packrat", "sparklyr",
+  "tidymodels", "gganimate", "gifski", "here", "zipcode", "forcats", "future"
 )
 
 ## for khansen
@@ -49,8 +49,8 @@ pkgs_src <- c(
   "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal", "topicmodels"
 )
 
-
-pkgs_rem <- c("checkmate", "magick", "matrixStats", "pander", "pryr", "rapportools", "summarytools")
+## anything to remove?
+pkgs_rem <- c("checkmate", "magick", "matrixStats", "pander", "pryr", "rapportools", "summarytools", "rstan", "greta", "rstanarm", "rstantools")
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)

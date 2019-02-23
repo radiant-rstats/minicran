@@ -40,19 +40,6 @@ Package: BH
 Version: 1.69.0-1
 License: BSL-1.0
 
-Package: bindr
-Version: 0.1.1
-Suggests: testthat
-License: MIT + file LICENSE
-
-Package: bindrcpp
-Version: 0.2.2
-Imports: bindr (>= 0.1.1), Rcpp (>= 0.12.16)
-LinkingTo: plogr, Rcpp
-Suggests: testthat
-License: MIT + file LICENSE
-Archs: i386, x64
-
 Package: bitops
 Version: 1.0-6
 License: GPL (>= 2)

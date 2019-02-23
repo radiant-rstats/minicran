@@ -5,16 +5,16 @@
 # repos <- c("file:///Users/vnijs/Desktop/Github/minicran/",
 
 minicran <- "https://radiant-rstats.github.io/minicran/"
-# repos <- c(
-#   minicran,
-#   "https://cloud.r-project.org",
-#   "https://cran.r-project.org"
-# )
 repos <- c(
+  minicran,
   "https://cloud.r-project.org",
-  "https://cran.r-project.org",
-  minicran
+  "https://cran.r-project.org"
 )
+# repos <- c(
+#   "https://cloud.r-project.org",
+#   "https://cran.r-project.org",
+#   minicran
+# )
 options(repos = c(CRAN = repos))
 
 library(devtools)
@@ -51,6 +51,7 @@ pkgs_src <- c(
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
+# pkgList[order(pkgList)]
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "source")
 
 # building minicran for windows binaries

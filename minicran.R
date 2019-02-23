@@ -39,7 +39,7 @@ pkgs_src <- c(
   "gbm", "dbplyr", "DBI", "RSQLite", "RPostgreSQL", "pool", "odbc", "xgboost",
   "png", "shinydashboard", "flexdashboard", "reticulate", "styler", "caTools",
   "tidyverse", "testthat", "tfestimators", "keras", "packrat", "sparklyr",
-  "tidymodels", "rstan", "gganimate", "gifski", "here", "zipcode", "forcats", "future"
+  "gganimate", "gifski", "here", "zipcode", "forcats", "future"
 )
 
 ## for khansen
@@ -50,15 +50,17 @@ pkgs_src <- c(
 )
 
 ## anything to remove?
-# pkgs_rem <- c(
-#   "checkmate", "magick", "matrixStats", "pander", "pryr", "rapportools",
-#   "summarytools", "rstan", "greta", "rstanarm", "rstantools", "listenv",
-#   "shinystan"
-# )
 pkgs_rem <- c(
   "checkmate", "magick", "matrixStats", "pander", "pryr", "rapportools",
-  "summarytools", "greta", "listenv"
+  "summarytools", "rstan", "greta", "rstanarm", "rstantools", "listenv",
+  "shinystan", "tidymodels", "tidyposterior", "tidypredict", "yardstick",
+  "parsnip"
 )
+
+# pkgs_rem <- c(
+#   "checkmate", "magick", "matrixStats", "pander", "pryr", "rapportools",
+#   "summarytools", "greta", "listenv"
+# )
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)

@@ -61,17 +61,6 @@ License: GPL-2 | GPL-3
 MD5sum: 0f476dacdd11a3e0ad56d13f5bc2f190
 NeedsCompilation: yes
 
-Package: bayesplot
-Version: 1.6.0
-Depends: R (>= 3.1.0)
-Imports: dplyr (>= 0.7.1), ggplot2 (>= 2.2.1), reshape2, stats, utils, rlang, ggridges
-Suggests: arm, gridExtra (>= 2.2.1), knitr (>= 1.16), loo (>= 2.0.0), rmarkdown (>= 1.0.0), rstan (>=
-           2.17.1), rstanarm (>= 2.17.4), rstantools (>= 1.5.0), scales, shinystan (>= 2.3.0),
-           testthat (>= 2.0.0), vdiffr
-License: GPL (>= 3)
-MD5sum: da63b1645548d3c6990cc707b871d305
-NeedsCompilation: no
-
 Package: BH
 Version: 1.69.0-1
 License: BSL-1.0
@@ -253,16 +242,6 @@ License: BSD_3_clause + file LICENSE
 MD5sum: 121120c1686dddd41f7fe4c176565216
 NeedsCompilation: yes
 
-Package: colourpicker
-Version: 1.0
-Depends: R (>= 3.1.0)
-Imports: ggplot2, htmltools, htmlwidgets (>= 0.7), jsonlite, miniUI (>= 0.1.1), shiny (>= 0.11.1),
-           shinyjs, utils
-Suggests: knitr (>= 1.7), rmarkdown, rstudioapi (>= 0.5)
-License: MIT + file LICENSE
-MD5sum: 424d7335415a54843292728e7df352cd
-NeedsCompilation: no
-
 Package: commonmark
 Version: 1.7
 Suggests: curl, testthat, xml2
@@ -382,15 +361,6 @@ Imports: dplyr (>= 0.7.4), downloader (>= 0.4), glue (>= 1.2.0), htmltools (>= 0
 Suggests: covr, DiagrammeRsvg, rsvg, knitr, testthat
 License: MIT + file LICENSE
 MD5sum: 129ec44576845beaa4c2dc7f54211841
-NeedsCompilation: no
-
-Package: dials
-Version: 0.0.2
-Depends: scales
-Imports: glue, purrr, rlang, tibble, dplyr, utils, withr
-Suggests: testthat, knitr, rpart, covr, kernlab
-License: GPL-2
-MD5sum: 4f373dd77346c8e3d63cc42adfc0627d
 NeedsCompilation: no
 
 Package: digest
@@ -650,16 +620,6 @@ License: GPL-3 | file LICENSE
 MD5sum: f3274ed2738647c04239a23d9798742f
 NeedsCompilation: yes
 
-Package: ggridges
-Version: 0.5.1
-Depends: R (>= 3.2)
-Imports: ggplot2 (>= 2.2.0), grid (>= 3.0.0), plyr (>= 1.8.0), scales (>= 0.4.1), withr (>= 2.1.1)
-Suggests: covr, dplyr, gridExtra, ggplot2movies, DAAG, forcats, knitr, rmarkdown, testthat, vdiffr,
-           viridis
-License: GPL-2 | file LICENSE
-MD5sum: 108906f030aae8a362c8af8da4192c50
-NeedsCompilation: no
-
 Package: gh
 Version: 1.0.1
 Imports: ini, jsonlite, httr
@@ -760,13 +720,6 @@ Suggests: testthat, covr
 License: GPL-2
 MD5sum: 124090ae40b2dd3170ae11180e0d4cab
 NeedsCompilation: no
-
-Package: gtools
-Version: 3.8.1
-Depends: methods, stats, utils
-License: GPL-2
-MD5sum: df4bee0a17bc18d00660b81ce9365426
-NeedsCompilation: yes
 
 Package: gtrendsR
 Version: 1.4.2
@@ -904,16 +857,6 @@ License: MIT + file LICENSE
 MD5sum: 0886abb54f2a9fa16b2d22a558f09cca
 NeedsCompilation: no
 
-Package: infer
-Version: 0.4.0
-Depends: R (>= 3.1.2)
-Imports: dplyr (>= 0.7.0), methods, tibble, rlang (>= 0.2.0), ggplot2, magrittr, glue (>= 1.3.0),
-           grDevices
-Suggests: broom, devtools (>= 1.12.0), knitr, rmarkdown, nycflights13, stringr, testthat, covr
-License: CC0
-MD5sum: 670b694d7da243502ce9e3d0d2b26162
-NeedsCompilation: no
-
 Package: influenceR
 Version: 0.1.0
 Depends: R (>= 3.2.0)
@@ -928,15 +871,6 @@ Version: 0.3.1
 Suggests: testthat
 License: GPL-3
 MD5sum: b0e2d7388fc69327d3c4bbaab9067f3d
-NeedsCompilation: no
-
-Package: inline
-Version: 0.3.15
-Depends: R (>= 2.4.0)
-Imports: methods
-Suggests: Rcpp (>= 0.11.0)
-License: LGPL
-MD5sum: 8f0de494120ecd628fa7a2e6d4af98cb
 NeedsCompilation: no
 
 Package: ipred
@@ -1099,15 +1033,6 @@ Suggests: knitr, boot, PKPDmodels, MEMSS, testthat (>= 0.8.1), ggplot2, mlmRev, 
 License: GPL (>= 2)
 MD5sum: c60120e411645d2cf697741e352beb40
 NeedsCompilation: yes
-
-Package: loo
-Version: 2.0.0
-Depends: R (>= 3.1.2)
-Imports: graphics, matrixStats (>= 0.52), parallel, stats
-Suggests: bayesplot (>= 1.5.0), knitr, rmarkdown, rstan, rstanarm, rstantools, testthat
-License: GPL (>= 3)
-MD5sum: d45d11ec3b0d08e2d35be3c5afa02ce6
-NeedsCompilation: no
 
 Package: lubridate
 Version: 1.7.4
@@ -1360,16 +1285,6 @@ Imports: tools, utils
 Suggests: testthat (>= 0.7), devtools, httr, knitr, rmarkdown
 License: GPL-2
 MD5sum: 59a312ef8146a54f7020ad72d540b5ca
-NeedsCompilation: no
-
-Package: parsnip
-Version: 0.0.1
-Depends: R (>= 2.10)
-Imports: dplyr, rlang (>= 0.3.0.1), purrr, utils, tibble, generics, glue, magrittr, stats, tidyr,
-           globals
-Suggests: testthat, knitr, rmarkdown, survival, keras, xgboost, covr, sparklyr
-License: GPL-2
-MD5sum: c94dfdbb827bbe98f6f7ef5bd5555492
 NeedsCompilation: no
 
 Package: pbkrtest
@@ -2037,15 +1952,6 @@ License: GPL-3
 MD5sum: 030a1d238d41ee1e5e21e55eba8403b2
 NeedsCompilation: no
 
-Package: rsample
-Version: 0.0.4
-Depends: R (>= 3.1), tidyr
-Imports: dplyr, purrr, tibble (>= 2.0.0), rlang, methods, generics
-Suggests: ggplot2, testthat, rmarkdown, knitr, AmesHousing, recipes (>= 0.1.4), broom
-License: GPL-2
-MD5sum: bb310346f19896d5c39077f16c853f7f
-NeedsCompilation: no
-
 Package: rsconnect
 Version: 0.8.13
 Depends: R (>= 3.0.0)
@@ -2215,15 +2121,6 @@ License: GPL (>= 2)
 MD5sum: 8d951c6fee5822254a9cb24c3e441c2f
 NeedsCompilation: no
 
-Package: shinyjs
-Version: 1.0
-Depends: R (>= 3.1.0)
-Imports: digest (>= 0.6.8), htmltools (>= 0.2.9), jsonlite, shiny (>= 1.0.0)
-Suggests: knitr (>= 1.7), rmarkdown, shinyAce, testthat (>= 0.9.1), V8 (>= 0.6)
-License: AGPL-3
-MD5sum: fde0bc493677dfda5257644acde0c25c
-NeedsCompilation: no
-
 Package: shinystan
 Version: 2.5.0
 Depends: R (>= 3.1.0), shiny (>= 1.0.3)
@@ -2320,14 +2217,6 @@ Suggests: setRNG
 License: GPL (>= 2)
 MD5sum: df052fd66b10f10780b34b3e5fa72f8e
 NeedsCompilation: no
-
-Package: StanHeaders
-Version: 2.18.1
-Depends: R (>= 3.4.0)
-Suggests: Rcpp, RcppEigen, BH (>= 1.69.0), knitr (>= 1.15.1), rmarkdown
-License: BSD_3_clause + file LICENSE
-MD5sum: 393320839abd6c4b53724f983fbed8e5
-NeedsCompilation: yes
 
 Package: statnet.common
 Version: 4.2.0
@@ -2451,16 +2340,6 @@ License: Apache License 2.0
 MD5sum: c0182b89b42f36e31b665d8e00930403
 NeedsCompilation: no
 
-Package: threejs
-Version: 0.3.1
-Depends: R (>= 3.0.0), igraph (>= 1.0.0)
-Imports: htmlwidgets (>= 0.3.2), base64enc, crosstalk, methods, stats
-Suggests: maps
-Enhances: knitr, shiny
-License: MIT + file LICENSE
-MD5sum: 69cc915dcccdc59e527f3397dc1e185d
-NeedsCompilation: no
-
 Package: tibble
 Version: 2.0.1
 Depends: R (>= 3.1.0)
@@ -2472,39 +2351,6 @@ Suggests: bench (>= 1.0.1), covr (>= 3.2.1), dplyr (>= 0.7.8), htmltools (>= 0.3
 License: MIT + file LICENSE
 MD5sum: 1c00f14fa05507df47de4e38263d2773
 NeedsCompilation: yes
-
-Package: tidymodels
-Version: 0.0.2
-Depends: R (>= 3.1)
-Imports: broom (>= 0.5.0), cli (>= 1.0.1), crayon (>= 1.3.4), dials (>= 0.0.1), dplyr (>= 0.7.8),
-           ggplot2 (>= 3.1.0), infer (>= 0.4.0), magrittr (>= 1.5), parsnip (>= 0.0.1), pillar (>=
-           1.3.0), purrr (>= 0.2.5), recipes (>= 0.1.4), rlang (>= 0.3.0.1), rsample (>= 0.0.3),
-           rstudioapi (>= 0.8), tibble (>= 1.4.2), tidytext (>= 0.2.0), tidypredict (>= 0.2.0),
-           tidyposterior (>= 0.0.2), yardstick (>= 0.0.2)
-Suggests: covr, knitr, rmarkdown, testthat
-License: GPL-3 | file LICENSE
-MD5sum: e681f569a2c6615899c0d610a95b7ae4
-NeedsCompilation: no
-
-Package: tidyposterior
-Version: 0.0.2
-Depends: R (>= 2.10)
-Imports: rsample (>= 0.0.2), tidyr (>= 0.7.1), dplyr, rstanarm (>= 2.15.3), rlang, utils, purrr,
-           tibble, generics, ggplot2,
-Suggests: knitr, testthat, covr
-License: GPL-2
-MD5sum: 7b71568d2c7a3c1134af657e7f9896ae
-NeedsCompilation: no
-
-Package: tidypredict
-Version: 0.3.0
-Depends: R (>= 3.1)
-Imports: dplyr(>= 0.7), rlang, purrr, knitr
-Suggests: dbplyr, testthat, randomForest, ranger, earth, rmarkdown, nycflights13, RSQLite, methods,
-           DBI, covr
-License: GPL-3
-MD5sum: 8c6a774c1ac634894e1bf26580afccdc
-NeedsCompilation: no
 
 Package: tidyr
 Version: 0.8.2
@@ -2765,16 +2611,6 @@ Version: 2.2.0
 Suggests: RUnit
 License: BSD_3_clause + file LICENSE
 MD5sum: 245c28af4248974a445e8a79b7ea2f0f
-NeedsCompilation: yes
-
-Package: yardstick
-Version: 0.0.2
-Depends: R (>= 2.10)
-Imports: dplyr, utils, pROC, rlang, tidyselect, Rcpp, generics
-LinkingTo: Rcpp
-Suggests: testthat, covr, purrr, tidyr, ggplot2, knitr, kableExtra, rmarkdown
-License: GPL-2
-MD5sum: 5e09477218e967e736cd155b9f39c614
 NeedsCompilation: yes
 
 Package: zeallot

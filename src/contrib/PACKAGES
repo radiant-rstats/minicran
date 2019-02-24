@@ -659,13 +659,14 @@ MD5sum: 8afdc5035909e2855fca8222a13bff7d
 NeedsCompilation: yes
 
 Package: gitgadget
-Version: 0.2.1
-Depends: R (>= 3.3.0)
-Imports: shiny (>= 0.14), miniUI (>= 0.1.1), rstudioapi (>= 0.6), curl (>= 0.9),
-         jsonlite (>= 1.0), dplyr (>= 0.5), methods
+Version: 0.3.3
+Depends: R (>= 3.4.0)
+Imports: shiny (>= 1.1.0), miniUI (>= 0.1.1.1), rstudioapi (>= 0.7), curl (>= 3.2),
+         jsonlite (>= 1.5), dplyr (>= 0.7.6), shinyFiles (>= 0.7.0), callr (>=
+         2.0.4), usethis (>= 1.4.0), markdown
 Suggests: knitr, rmarkdown
 License: GPL-3
-MD5sum: 1446f8e221fd1ed7ceb761c784794861
+MD5sum: 4cdb55dcd2e8ad3681c6c41527116b06
 NeedsCompilation: no
 
 Package: glmnet

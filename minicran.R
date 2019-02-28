@@ -40,7 +40,7 @@ pkgs_src <- c(
   "png", "shinydashboard", "flexdashboard", "reticulate", "styler", "caTools",
   "tidyverse", "testthat", "tfestimators", "keras", "packrat", "sparklyr",
   "gganimate", "gifski", "here", "zipcode", "forcats", "future", "parsnip",
-  "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes"
+  "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip"
 )
 
 ## for khansen

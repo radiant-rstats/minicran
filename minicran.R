@@ -80,6 +80,7 @@ to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.b
 # building minicran for mac el-capitan binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = "3.5")
 pkgList <- setdiff(pkgList, pkgs_rem)
+cat(paste0("pkgs <- c('", paste0(pkgList, collapse = "', '"), "')"), file = "pkgs.R")
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = "3.5")
 
 library(dplyr)

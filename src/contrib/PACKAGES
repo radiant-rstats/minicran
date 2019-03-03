@@ -1665,7 +1665,7 @@ Imports: tibble (>= 1.4.2), rlang (>= 0.3.1), broom (>= 0.4.5), car (>= 3.0-0), 
 Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0), odbc (>= 1.1.4), webshot (>= 0.5.0), testthat (>= 2.0.0),
              pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 27ff197f19d1766a5d1cf9d6f837b179
+MD5sum: be3cb9d543e63715b099646f0a8c7935
 NeedsCompilation: no
 
 Package: radiant.design

@@ -2253,7 +2253,14 @@ NeedsCompilation: no
 Package: shinythemes
 Version: 1.1.2
 Depends: R (>= 3.0.0)
-Imports: shiny (>= 0.11)
+Imports: shiny (>= 0.11)sudo apt-get purge texlive*
+sudo rm -rf /usr/local/texlive/* and rm -rf ~/.texlive*
+sudo rm -rf /usr/local/share/texmf
+sudo rm -rf /var/lib/texmf
+sudo rm -rf /etc/texmf
+sudo apt-get remove tex-common --purge
+rm -rf ~/.texlive
+find -L /usr/local/bin/ -lname /usr/local/texlive/*/bin/* | xargs rm
 License: GPL-3 | file LICENSE
 MD5sum: 428af1e94f2337bf5dcbb7cd3ac94001
 NeedsCompilation: no

@@ -59,27 +59,38 @@ pkgs_rem <- c(
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
-pkgList <- setdiff(pkgList, pkgs_rem)
+# length(pkgList)
+# pkgList <- setdiff(pkgList, pkgs_rem)
+# length(pkgList)
+# pkgs_rem[pkgs_rem %in% pkgList]
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "source")
 
 # building minicran for windows binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = "3.4")
+length(pkgList)
 pkgList <- setdiff(pkgList, pkgs_rem)
+length(pkgList)
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.binary", Rversion = "3.4")
 
 # building minicran for windows binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = "3.5")
+length(pkgList)
 pkgList <- setdiff(pkgList, pkgs_rem)
+length(pkgList)
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.binary", Rversion = "3.5")
 
 # building minicran for mac el-capitan binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = "3.4")
+length(pkgList)
 pkgList <- setdiff(pkgList, pkgs_rem)
+length(pkgList)
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = "3.4")
 
 # building minicran for mac el-capitan binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = "3.5")
+length(pkgList)
 pkgList <- setdiff(pkgList, pkgs_rem)
+length(pkgList)
 cat(paste0("pkgs <- c('", paste0(pkgList, collapse = "', '"), "')"), file = "pkgs.R")
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = "3.5")
 

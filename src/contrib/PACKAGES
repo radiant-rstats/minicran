@@ -95,6 +95,15 @@ License: GPL-3
 MD5sum: d30b62fbb81b7c61593043f2e67b4a6f
 NeedsCompilation: no
 
+Package: boot
+Version: 1.3-21
+Priority: recommended
+Depends: R (>= 3.0.0), graphics, stats
+Suggests: MASS, survival
+License: Unlimited
+MD5sum: 14bb6c665b78ba81379a0abd760c1ea8
+NeedsCompilation: no
+
 Package: brew
 Version: 1.0-6
 License: GPL-2
@@ -174,6 +183,16 @@ Suggests: covr, testthat (>= 1.0.0), knitr, rmarkdown
 License: MIT + file LICENSE
 MD5sum: 1abcfea6af5ab2e277cb99e86880456f
 NeedsCompilation: no
+
+Package: checkmate
+Version: 1.9.1
+Depends: R (>= 3.0.0)
+Imports: backports (>= 1.1.0), utils
+Suggests: R6, bit, fastmatch, data.table (>= 1.9.8), devtools, ggplot2, knitr,
+         magrittr, microbenchmark, rmarkdown, testthat (>= 0.11.0), tibble
+License: BSD_3_clause + file LICENSE
+MD5sum: c6e32bae0f6bc86b1f9204dd2785c2f5
+NeedsCompilation: yes
 
 Package: class
 Version: 7.3-15
@@ -1084,6 +1103,14 @@ License: MIT + file LICENSE
 MD5sum: 85f7d62be28fbb8c44c0cdb2815875b8
 NeedsCompilation: yes
 
+Package: listenv
+Version: 0.7.0
+Depends: R (>= 3.1.2)
+Suggests: R.utils, R.rsp, markdown
+License: LGPL (>= 2.1)
+MD5sum: 9127343884893edff66f6b41b6d37139
+NeedsCompilation: no
+
 Package: lme4
 Version: 1.1-20
 Depends: R (>= 3.2.0), Matrix (>= 1.2-1), methods, stats
@@ -1171,6 +1198,14 @@ Imports: stats, methods, Matrix (>= 1.1-5)
 License: GPL (>= 2)
 MD5sum: 65b3ab56650c62bf1046a3eb1f1e19a0
 NeedsCompilation: no
+
+Package: matrixStats
+Version: 0.54.0
+Depends: R (>= 2.12.0)
+Suggests: base64enc, ggplot2, knitr, microbenchmark, R.devices, R.rsp
+License: Artistic-2.0
+MD5sum: bb752e0e4a1c8ef78f3ed99e918d1a17
+NeedsCompilation: yes
 
 Package: memoise
 Version: 1.1.0
@@ -1696,7 +1731,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 0.9.9), radiant.design (>= 0.9.9),
 Imports: shiny (>= 1.2.0), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
-MD5sum: ac2d7b13ebbd90fe48c7e143fb9965a4
+MD5sum: 4da182e463b02c8dc022378570d40f2e
 NeedsCompilation: no
 
 Package: radiant.basics
@@ -1707,7 +1742,7 @@ Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>=
          1.8.3.3), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: e9736aa8ae2943163c1767e44b5a28fb
+MD5sum: 60530d24f22125bddcb58075f868488b
 NeedsCompilation: no
 
 Package: radiant.data
@@ -1725,7 +1760,7 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0), RPostgreSQL (>=
          0.6.2), odbc (>= 1.1.4), webshot (>= 0.5.0), testthat (>= 2.0.0), pkgdown
          (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: aa6d51b44667eaf31319dfd86c3344fe
+MD5sum: fe04ecac9cc036ff2eb94525c87fee10
 NeedsCompilation: no
 
 Package: radiant.design
@@ -1735,7 +1770,7 @@ Imports: dplyr (>= 0.8.0), shiny (>= 1.2.0), AlgDesign (>= 1.1.7.3), import (>=
          1.1.0), pwr (>= 1.1.2), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: caec98f3bf486da588f5372722b14152
+MD5sum: 3c0a4de37c0a9d666089613c858e282d
 NeedsCompilation: no
 
 Package: radiant.model
@@ -1749,7 +1784,7 @@ Imports: radiant.basics (>= 0.9.7), shiny (>= 1.1.0), nnet (>= 7.3.12),
          1.8.4), e1071 (>= 1.6.8), rpart (>= 4.1.11), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 19b2df3614c0793bee9aff38c86e66fd
+MD5sum: 8946126c7729840ad65035c3bd1a6608
 NeedsCompilation: no
 
 Package: radiant.multivariate
@@ -1762,7 +1797,7 @@ Imports: radiant.model (>= 0.9.7), shiny (>= 1.2.0), dplyr (>= 0.8.0), rlang (>=
          0.8)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 27970d4a69bc1a80f76f434b49feaf1d
+MD5sum: 11847328764888fd532d09f91c073ffe
 NeedsCompilation: no
 
 Package: radiant.update
@@ -1771,7 +1806,7 @@ Depends: R (>= 3.4.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: d0a2aaf9ba32570f44d73cb3ca4485af
+MD5sum: 26f3387835b65e36d7615f74ac36c9ff
 NeedsCompilation: no
 
 Package: randomForest
@@ -1880,14 +1915,6 @@ License: GPL (>= 2)
 MD5sum: 20b1dca034a1d18f63c07201736943c7
 NeedsCompilation: yes
 
-Package: RCurl
-Version: 1.95-4.11
-Depends: R (>= 3.0.0), methods, bitops
-Suggests: Rcompression, XML
-License: BSD
-MD5sum: 6218087742f61ab2dfbbe4b18ac248a0
-NeedsCompilation: yes
-
 Package: readr
 Version: 1.3.1
 Depends: R (>= 3.1)
@@ -1954,14 +1981,6 @@ Suggests: covr, devtools, fortunes, knitr, miniUI, rprojroot, rstudioapi, shiny,
 License: MIT + file LICENSE
 MD5sum: c0afa805a5f5b7350d637463edff517e
 NeedsCompilation: no
-
-Package: reshape
-Version: 0.8.8
-Depends: R (>= 2.6.1)
-Imports: plyr
-License: MIT + file LICENSE
-MD5sum: 91d3accf0a36d467d0f64eb94223e601
-NeedsCompilation: yes
 
 Package: reshape2
 Version: 1.4.3
@@ -2112,17 +2131,6 @@ License: GPL-2
 MD5sum: bb310346f19896d5c39077f16c853f7f
 NeedsCompilation: no
 
-Package: rsconnect
-Version: 0.8.13
-Depends: R (>= 3.0.0)
-Imports: openssl, RCurl, jsonlite, packrat (>= 0.4.8-1), yaml (>= 2.1.5), rstudioapi
-         (>= 0.5)
-Suggests: knitr, testthat, rmarkdown (>= 1.1), plumber (>= 0.3.2), reticulate,
-         shiny, sourcetools, xtable
-License: GPL-2
-MD5sum: d58028b83f590824803c53f807a85e7b
-NeedsCompilation: no
-
 Package: RSpectra
 Version: 0.13-1
 Depends: R (>= 3.0.2)
@@ -2253,14 +2261,7 @@ NeedsCompilation: no
 Package: shinythemes
 Version: 1.1.2
 Depends: R (>= 3.0.0)
-Imports: shiny (>= 0.11)sudo apt-get purge texlive*
-sudo rm -rf /usr/local/texlive/* and rm -rf ~/.texlive*
-sudo rm -rf /usr/local/share/texmf
-sudo rm -rf /var/lib/texmf
-sudo rm -rf /etc/texmf
-sudo apt-get remove tex-common --purge
-rm -rf ~/.texlive
-find -L /usr/local/bin/ -lname /usr/local/texlive/*/bin/* | xargs rm
+Imports: shiny (>= 0.11)
 License: GPL-3 | file LICENSE
 MD5sum: 428af1e94f2337bf5dcbb7cd3ac94001
 NeedsCompilation: no
@@ -2566,7 +2567,7 @@ Version: 0.10.11
 Imports: xfun (>= 0.3)
 Suggests: testit, rstudioapi
 License: MIT + file LICENSE
-MD5sum: 4d7a9536b110653a807940cf468c2f3d
+MD5sum: 728d0025ba142b634de7122378f1b543
 NeedsCompilation: no
 
 Package: tm

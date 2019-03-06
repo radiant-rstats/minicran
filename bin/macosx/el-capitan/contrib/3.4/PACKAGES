@@ -904,7 +904,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 0.9.9), radiant.design (>= 0.9.9),
 Imports: shiny (>= 1.2.0), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
-MD5sum: 1764955cefe88f687888417eb8855931
+MD5sum: 431965bf108ee6906708d1768c8a7b32
 
 Package: radiant.basics
 Version: 0.9.9
@@ -914,7 +914,7 @@ Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>=
          1.8.3.3), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 865f72752a27c1f7e5a5562441220053
+MD5sum: 920fc1f209a7f4f2fa97aa1f11156edc
 
 Package: radiant.data
 Version: 0.9.9
@@ -931,7 +931,7 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0), RPostgreSQL (>=
          0.6.2), odbc (>= 1.1.4), webshot (>= 0.5.0), testthat (>= 2.0.0), pkgdown
          (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 9fcd4a402236ee2f51193d9044857ba7
+MD5sum: 6add672f3e9988e97b0b5aa00e43141e
 
 Package: radiant.design
 Version: 0.9.9
@@ -940,7 +940,7 @@ Imports: dplyr (>= 0.8.0), shiny (>= 1.2.0), AlgDesign (>= 1.1.7.3), import (>=
          1.1.0), pwr (>= 1.1.2), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 8223ee34cbc1f45c82cd288ae617548e
+MD5sum: e576c7a8ebaf9d1437f341d645033bce
 
 Package: radiant.model
 Version: 0.9.9
@@ -953,7 +953,7 @@ Imports: radiant.basics (>= 0.9.7), shiny (>= 1.1.0), nnet (>= 7.3.12),
          1.8.4), e1071 (>= 1.6.8), rpart (>= 4.1.11), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 36ac0ab5f9cc64eb5906b8b8737b1634
+MD5sum: 7a972ec6dfc311b1ee4ffad6c12084a7
 
 Package: radiant.multivariate
 Version: 0.9.9
@@ -965,7 +965,7 @@ Imports: radiant.model (>= 0.9.7), shiny (>= 1.2.0), dplyr (>= 0.8.0), rlang (>=
          0.8)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 67ea15d7159bf52d00cf505f4334fcb5
+MD5sum: f016919acd600b81ce308530afb94b69
 
 Package: radiant.update
 Version: 0.9.9
@@ -973,7 +973,7 @@ Depends: R (>= 3.4.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: e98f836655ddaf0b1e3e016f254bce96
+MD5sum: 5c6d9770b1aab779e2d746925a9451ba
 
 Package: RColorBrewer
 Version: 1.1-2
@@ -1285,11 +1285,11 @@ Archs: tidyselect.so.dSYM
 MD5sum: 5fbc36ccf1504598416676197c2b86f8
 
 Package: tinytex
-Version: 0.10
+Version: 0.10.11
 Imports: xfun (>= 0.3)
 Suggests: testit, rstudioapi
 License: MIT + file LICENSE
-MD5sum: e6b80db997cf5491b3cd1e561143a674
+MD5sum: 3d6c0d0bca5d649d8127aa1d5908b987
 
 Package: usethis
 Version: 1.4.0

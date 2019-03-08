@@ -40,7 +40,7 @@ pkgs_src <- c(
   "png", "shinydashboard", "flexdashboard", "reticulate", "styler", "caTools",
   "tidyverse", "testthat", "tfestimators", "keras", "packrat", "sparklyr",
   "gganimate", "gifski", "here", "zipcode", "forcats", "future", "parsnip",
-  "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip"
+  "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip", "kableExtra"
 )
 
 ## for khansen
@@ -59,9 +59,9 @@ pkgs_rem <- c(
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
-# length(pkgList)
-# pkgList <- setdiff(pkgList, pkgs_rem)
-# length(pkgList)
+#length(pkgList)
+#pkgList <- setdiff(pkgList, pkgs_rem)
+#length(pkgList)
 # pkgs_rem[pkgs_rem %in% pkgList]
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "source")
 

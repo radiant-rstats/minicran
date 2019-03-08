@@ -986,6 +986,17 @@ License: MIT + file LICENSE
 MD5sum: a9cd554c212dd8db93b157932fcb4f8d
 NeedsCompilation: yes
 
+Package: kableExtra
+Version: 1.0.1
+Depends: R (>= 3.1.0)
+Imports: knitr (>= 1.16), magrittr, stringr (>= 1.0), xml2 (>= 1.1.1), rvest,
+         rmarkdown (>= 1.6.0), readr, scales, viridisLite, stats, grDevices,
+         htmltools, rstudioapi, glue, tools, webshot, digest
+Suggests: testthat, magick, formattable, dplyr
+License: MIT + file LICENSE
+MD5sum: 799181a66755f8947daf4033e0100115
+NeedsCompilation: no
+
 Package: keras
 Version: 2.2.4
 Depends: R (>= 3.2)

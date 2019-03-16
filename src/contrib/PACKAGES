@@ -536,12 +536,12 @@ MD5sum: 2a694a712337294679b20f0033d0e265
 NeedsCompilation: yes
 
 Package: forge
-Version: 0.1.0
+Version: 0.2.0
 Depends: R (>= 3.1.2)
-Imports: rlang
+Imports: rlang (>= 0.3.1), magrittr
 Suggests: testthat, covr
 License: Apache License (>= 2.0)
-MD5sum: 11c8b26e22bd55e2a232e4c00f7a77fb
+MD5sum: 4078784d52bb5d072ed2b44beaa72111
 NeedsCompilation: no
 
 Package: Formula

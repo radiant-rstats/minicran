@@ -39,7 +39,7 @@ pkgs_src <- c(
   "gbm", "dbplyr", "DBI", "RSQLite", "RPostgreSQL", "pool", "odbc", "xgboost",
   "png", "shinydashboard", "flexdashboard", "reticulate", "styler", "caTools",
   "tidyverse", "testthat", "tfestimators", "keras", "packrat", "sparklyr", "sparkxgb",
-  "gganimate", "gifski", "here", "zipcode", "forcats", "future", "parsnip",
+  "forge", "gganimate", "gifski", "here", "zipcode", "forcats", "future", "parsnip",
   "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip", "kableExtra",
   "ggraph", "tidygraph"
 )

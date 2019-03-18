@@ -95,6 +95,14 @@ License: GPL-3
 MD5sum: d30b62fbb81b7c61593043f2e67b4a6f
 NeedsCompilation: no
 
+Package: bookdown
+Version: 0.9
+Imports: htmltools (>= 0.3.6), knitr (>= 1.16), rmarkdown (>= 1.9), xfun (>= 0.2), tinytex, yaml (>= 2.1.14)
+Suggests: htmlwidgets, rstudioapi, miniUI, rsconnect (>= 0.4.3), servr (>= 0.3), shiny, testit (>= 0.5), tufte, webshot
+License: GPL-3
+MD5sum: 8922ec18c346271b5dd342958efbe4ec
+NeedsCompilation: no
+
 Package: boot
 Version: 1.3-21
 Priority: recommended

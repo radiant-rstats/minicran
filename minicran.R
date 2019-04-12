@@ -41,7 +41,7 @@ pkgs_src <- c(
   "tidyverse", "testthat", "tfestimators", "keras", "packrat", "sparklyr", "sparkxgb",
   "forge", "gganimate", "gifski", "here", "zipcode", "forcats", "future", "parsnip",
   "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip", "kableExtra",
-  "ggraph", "tidygraph", "bookdown"
+  "ggraph", "tidygraph", "bookdown", "lintr"
 )
 
 ## for khansen

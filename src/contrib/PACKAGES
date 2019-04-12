@@ -1102,6 +1102,15 @@ License: MIT + file LICENSE
 MD5sum: 85f7d62be28fbb8c44c0cdb2815875b8
 NeedsCompilation: yes
 
+Package: lintr
+Version: 1.0.3
+Depends: R (>= 3.1.1)
+Imports: rex, crayon, codetools, stringdist, testthat, digest, igraph, rstudioapi (>= 0.2), httr, jsonlite, knitr, stats, utils
+Suggests: rmarkdown, mockery
+License: MIT + file LICENSE
+MD5sum: 2ad7192e572b4fc93a882f4985324836
+NeedsCompilation: no
+
 Package: listenv
 Version: 0.7.0
 Depends: R (>= 3.1.2)
@@ -1974,6 +1983,14 @@ License: Apache License 2.0
 MD5sum: 3adf539a8486720971389d82e98c3518
 NeedsCompilation: yes
 
+Package: rex
+Version: 1.1.2
+Imports: magrittr, lazyeval
+Suggests: testthat, knitr, rmarkdown, dplyr, ggplot2, Hmisc, stringr, rvest, roxygen2, covr
+License: MIT + file LICENSE
+MD5sum: 8820b4d4fe3718f275847b6f2cf83689
+NeedsCompilation: no
+
 Package: rgdal
 Version: 1.3-9
 Depends: R (>= 3.3.0), methods, sp (>= 1.1-0)
@@ -2343,6 +2360,15 @@ Suggests: quanteda, testthat, covr
 License: MIT + file LICENSE
 MD5sum: 39d5afd711e2a3677ac7ddc869e2e2ef
 NeedsCompilation: no
+
+Package: stringdist
+Version: 0.9.5.1
+Depends: R (>= 2.15.3)
+Imports: parallel
+Suggests: testthat
+License: GPL-3
+MD5sum: a1cf825039e43e36a368e00986396559
+NeedsCompilation: yes
 
 Package: stringi
 Version: 1.3.1

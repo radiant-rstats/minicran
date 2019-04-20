@@ -254,6 +254,15 @@ License: GPL
 MD5sum: 0f04011ff13aa9df73195efa9e71bed9
 NeedsCompilation: no
 
+Package: collections
+Version: 0.1.6
+Depends: R (>= 3.4.0)
+Imports: R6
+Suggests: testthat
+License: MIT + file LICENSE
+MD5sum: 184e07753faa9c5120e73489230a5c41
+NeedsCompilation: yes
+
 Package: colorspace
 Version: 1.4-0
 Depends: R (>= 3.0.0), methods
@@ -1025,6 +1034,15 @@ Version: 0.3
 License: MIT + file LICENSE | Unlimited
 MD5sum: ccd7082ec0b211aba8a89d85176bb534
 NeedsCompilation: no
+
+Package: languageserver
+Version: 0.2.9
+Depends: R (>= 3.4.0)
+Imports: callr (>= 3.0.0), collections, desc, jsonlite, lintr (>= 1.0.3), R6, repr, stringr, styler (>= 1.0.2), tools, utils
+Suggests: processx, knitr, testthat
+License: MIT + file LICENSE
+MD5sum: e195a9cd233d0240fb6527d5855528de
+NeedsCompilation: yes
 
 Package: later
 Version: 0.8.0
@@ -1952,6 +1970,16 @@ Imports: methods, utils
 Suggests: curl, covr, git2r (>= 0.23.0), knitr, mockery, pkgbuild (>= 1.0.1), pingr, rmarkdown, testthat, withr
 License: GPL (>= 2)
 MD5sum: acb1db953159b5bbde5aea9bd5a63379
+NeedsCompilation: no
+
+Package: repr
+Version: 0.19.2
+Depends: R (>= 3.0.1)
+Imports: utils, grDevices, htmltools, jsonlite, base64enc
+Suggests: methods, highr, Cairo, stringr, testthat, leaflet
+Enhances: data.table, dplyr, htmlwidgets, vegalite, plotly, geojsonio
+License: GPL-3
+MD5sum: 7adb2232478382bff3d37eb984949b2e
 NeedsCompilation: no
 
 Package: reprex

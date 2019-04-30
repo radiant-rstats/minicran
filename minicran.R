@@ -53,6 +53,7 @@ pkgs_src <- c(
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
+# download <- makeRepo(pkgs, path = pth, type = "source", Rversion = "3.6")
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "source")
 
 # building minicran for windows binaries

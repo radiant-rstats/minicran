@@ -748,6 +748,12 @@ Suggests: covr, testthat, disposables (>= 1.0.3)
 License: MIT + file LICENSE
 MD5sum: b376b95046d40f7b6bfa3d2e7405d792
 
+Package: plogr
+Version: 0.2.0
+Suggests: Rcpp
+License: MIT + file LICENSE
+MD5sum: fa556463f5f2a506a8a6a519a42d2acd
+
 Package: plotly
 Version: 4.9.0
 Depends: R (>= 3.2.0), ggplot2 (>= 3.0.0)
@@ -775,12 +781,26 @@ Imports: stats, mvtnorm, Matrix
 License: GPL (>= 2)
 MD5sum: 77ccd7b6e09bbd0337827eb39a098e74
 
+Package: prettyunits
+Version: 1.0.2
+Imports: magrittr, assertthat, methods
+Suggests: testthat
+License: MIT + file LICENSE
+MD5sum: f25551d1194ebf112a2227a2c75a5164
+
 Package: processx
 Version: 3.3.0
 Imports: ps (>= 1.2.0), R6, utils
 Suggests: callr, covr, crayon, debugme, parallel, testthat, withr
 License: MIT + file LICENSE
 MD5sum: ec7de48f5a05f8a3f2ff7896a3cec610
+
+Package: progress
+Version: 1.2.0
+Imports: hms, prettyunits, R6, crayon
+Suggests: Rcpp, testthat, withr
+License: MIT + file LICENSE
+MD5sum: d1cb03ceb6cc8bf297fb5fc6c86673f2
 
 Package: promises
 Version: 1.0.1
@@ -914,6 +934,26 @@ Suggests: RUnit, inline, rbenchmark, knitr, rmarkdown, pinp, pkgKitten (>= 0.1.2
 License: GPL (>= 2)
 Archs: Rcpp.so.dSYM
 MD5sum: 9f3df0172546ab014034f6b14d3ce768
+
+Package: RcppArmadillo
+Version: 0.9.300.2.0
+Depends: R (>= 3.3.0)
+Imports: Rcpp (>= 0.11.0), stats, utils, methods
+LinkingTo: Rcpp
+Suggests: RUnit, Matrix, pkgKitten, reticulate, rmarkdown, knitr, pinp, slam
+License: GPL (>= 2)
+Archs: RcppArmadillo.so.dSYM
+MD5sum: 78dca9eecbefa3974841220a52a675e1
+
+Package: RcppEigen
+Version: 0.3.3.5.0
+Depends: R (>= 2.15.1)
+Imports: Matrix (>= 1.1-0), Rcpp (>= 0.11.0), stats, utils
+LinkingTo: Rcpp
+Suggests: inline, RUnit, pkgKitten, microbenchmark
+License: GPL (>= 2) | file LICENSE
+Archs: RcppEigen.so.dSYM
+MD5sum: a58245d94db2e811bceaba463dddfc2c
 
 Package: readr
 Version: 1.3.1

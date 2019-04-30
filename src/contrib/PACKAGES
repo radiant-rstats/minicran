@@ -1781,7 +1781,7 @@ Depends: R (>= 3.4.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: f5568aca8a30ee37199c3b7f0dd8380c
+MD5sum: 33d0a0babf061f0f8194c34a5d4ed306
 NeedsCompilation: no
 
 Package: randomForest

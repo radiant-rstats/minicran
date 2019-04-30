@@ -802,6 +802,13 @@ Imports: radiant.model (>= 0.9.7), shiny (>= 1.2.0), dplyr (>= 0.8.0), rlang (>=
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 
+Package: radiant.update
+Version: 0.9.9
+Depends: R (>= 3.4.0)
+Imports: utils, import
+Suggests: testthat (>= 2.0.0)
+License: AGPL-3 | file LICENSE
+
 Package: RColorBrewer
 Version: 1.1-2
 Depends: R (>= 2.0.0)

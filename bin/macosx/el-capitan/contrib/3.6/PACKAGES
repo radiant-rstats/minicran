@@ -918,7 +918,7 @@ Depends: R (>= 3.4.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 909907dd51ac4d62677aa34b36d8455f
+MD5sum: bb823f0f54dec19ddb38bb2fbbdac616
 
 Package: RColorBrewer
 Version: 1.1-2

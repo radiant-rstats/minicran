@@ -66,8 +66,8 @@ to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.b
 # building minicran for windows binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = "3.6")
 ## only needed when a new major version comes out
-download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "3.6")
-# to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.binary", Rversion = "3.6")
+# download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "3.6")
+to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.binary", Rversion = "3.6")
 
 # building minicran for mac el-capitan binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = "3.4")
@@ -80,8 +80,8 @@ to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.b
 
 # building minicran for mac el-capitan binaries
 pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = "3.6")
-download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "3.6")
-# to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = "3.6")
+# download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "3.6")
+to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = "3.6")
 
 
 library(dplyr)

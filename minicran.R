@@ -124,7 +124,7 @@ tools::write_PACKAGES("bin/macosx/el-capitan/contrib/3.5/", type = "mac.binary")
 tools::write_PACKAGES("src/contrib/", type = "source")
 
 ## push to github
-rstudioapi::documentSaveAll()
+# rstudioapi::documentSaveAll()
 system("git add --all .")
 mess <- paste0("update for: ", paste0(pkgs, collapse = ", "), " (", format(Sys.Date(), format = "%m-%d-%Y"), ")")
 system(paste0("git commit -m '", mess, "'"))

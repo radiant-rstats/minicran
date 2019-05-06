@@ -4,24 +4,21 @@
 # installing and loading packages
 # repos <- c("file:///Users/vnijs/Desktop/Github/minicran/",
 
+# install.packages("rprojroot")
 minicran <- "https://radiant-rstats.github.io/minicran/"
 repos <- c(
-  minicran,
   "https://cloud.r-project.org",
-  "https://cran.r-project.org"
+  "https://cran.r-project.org",
+  minicran
 )
-# repos <- c(
-#   "https://cloud.r-project.org",
-#   "https://cran.r-project.org",
-#   minicran
-# )
 options(repos = c(CRAN = repos))
 
 library(devtools)
 library(miniCRAN)
 source("selMakeRepo.R", local = TRUE)
 
-pth <- rstudioapi::getActiveProject()
+# pth <- rstudioapi::getActiveProject()
+pth <- rprojroot::find_root(rprojroot::has_file("README.md"))
 pkgs <- c(
   "radiant", "miniUI", "webshot", "tinytex",
   "usethis", "radiant.update", "svglite"
@@ -41,8 +38,10 @@ pkgs_src <- c(
   "tidyverse", "testthat", "tfestimators", "keras", "packrat", "sparklyr", "sparkxgb",
   "forge", "gganimate", "gifski", "here", "zipcode", "forcats", "future", "parsnip",
   "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip", "kableExtra",
-  "ggraph", "tidygraph", "bookdown", "lintr", "languageserver"
+  "ggraph", "tidygraph", "bookdown", "lintr", "languageserver", "rprojroot"
 )
+
+
 
 ## for khansen
 ## gtrendsR will be updated to the github version in the radiant docker
@@ -50,6 +49,8 @@ pkgs_src <- c(
   pkgs_src, "ggmap", "leaflet", "tm", "wordcloud", "rvest", "tidytext",
   "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal", "topicmodels"
 )
+
+
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
@@ -84,7 +85,7 @@ pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests 
 # download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "3.6")
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = "3.6")
 
-
+## cleanup 
 library(dplyr)
 library(magrittr)
 

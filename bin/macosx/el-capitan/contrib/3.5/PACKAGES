@@ -259,13 +259,13 @@ Archs: dplyr.so.dSYM
 MD5sum: e2d74d884c1725a2f5c6eb9d7294d421
 
 Package: DT
-Version: 0.5
+Version: 0.6
 Imports: htmltools (>= 0.3.6), htmlwidgets (>= 1.3), magrittr,
         crosstalk, promises
 Suggests: jsonlite (>= 0.9.16), knitr (>= 1.8), rmarkdown, shiny (>=
-        0.12.1)
+        1.1.0)
 License: GPL-3 | file LICENSE
-MD5sum: 14415925abc4e0cb0b71aae0dd8bb4b3
+MD5sum: 9ab70b0d6fe3efa396d47830fb25a366
 
 Package: e1071
 Version: 1.7-1
@@ -318,7 +318,7 @@ Archs: foreign.so.dSYM
 MD5sum: b6e4841b8af0db9405adfc4c1d72145f
 
 Package: fs
-Version: 1.3.0
+Version: 1.3.1
 Depends: R (>= 3.1)
 Imports: methods, Rcpp
 LinkingTo: Rcpp
@@ -326,7 +326,7 @@ Suggests: testthat, covr, pillar (>= 1.0.0), crayon, rmarkdown, knitr,
         withr, spelling
 License: GPL-3
 Archs: fs.so.dSYM
-MD5sum: 0abbc0c9979201e25b9006e0bdb2710a
+MD5sum: f965cdd12c448a277e79ff60250e0ffe
 
 Package: gdtools
 Version: 0.1.8
@@ -360,14 +360,14 @@ License: GPL-2 | file LICENSE
 MD5sum: efba47a051a956d7d8c0e3cc1823a69b
 
 Package: ggrepel
-Version: 0.8.0
+Version: 0.8.1
 Depends: R (>= 3.0.0), ggplot2 (>= 2.2.0)
 Imports: grid, Rcpp, scales (>= 0.3.0)
 LinkingTo: Rcpp
 Suggests: knitr, rmarkdown, testthat, gridExtra, devtools, prettydoc
 License: GPL-3 | file LICENSE
 Archs: ggrepel.so.dSYM
-MD5sum: ed81633aa30763a8222c9d2abca44fe5
+MD5sum: ec2cf99f658b2bb020c998991a1e63e9
 
 Package: gh
 Version: 1.0.1
@@ -848,11 +848,11 @@ License: MIT + file LICENSE
 MD5sum: 2517ff0ddd4cd413712a7108dfb806ad
 
 Package: processx
-Version: 3.3.0
+Version: 3.3.1
 Imports: ps (>= 1.2.0), R6, utils
-Suggests: callr, covr, crayon, debugme, parallel, testthat, withr
+Suggests: callr, covr, crayon, curl, debugme, parallel, testthat, withr
 License: MIT + file LICENSE
-MD5sum: 5a3d21fab45802927b41856644ebb2a8
+MD5sum: 7b6303fafdf7d8903848c20eba7c2667
 
 Package: progress
 Version: 1.2.0

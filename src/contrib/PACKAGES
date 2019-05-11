@@ -96,13 +96,13 @@ MD5sum: d30b62fbb81b7c61593043f2e67b4a6f
 NeedsCompilation: no
 
 Package: bookdown
-Version: 0.9
+Version: 0.10
 Imports: htmltools (>= 0.3.6), knitr (>= 1.16), rmarkdown (>= 1.9),
         xfun (>= 0.2), tinytex, yaml (>= 2.1.14)
 Suggests: htmlwidgets, rstudioapi, miniUI, rsconnect (>= 0.4.3), servr
         (>= 0.3), shiny, testit (>= 0.5), tufte, webshot
 License: GPL-3
-MD5sum: 8922ec18c346271b5dd342958efbe4ec
+MD5sum: 70d3df95c152b503dfc73d8196a49a92
 NeedsCompilation: no
 
 Package: boot
@@ -458,13 +458,13 @@ MD5sum: 92e005af7d2759a7e679f0da0a831b5d
 NeedsCompilation: yes
 
 Package: DT
-Version: 0.5
+Version: 0.6
 Imports: htmltools (>= 0.3.6), htmlwidgets (>= 1.3), magrittr,
         crosstalk, promises
 Suggests: jsonlite (>= 0.9.16), knitr (>= 1.8), rmarkdown, shiny (>=
-        0.12.1)
+        1.1.0)
 License: GPL-3 | file LICENSE
-MD5sum: e7d1074021168776f2bac89071c694b5
+MD5sum: 8d8b423d0d0699a507c78580599edad9
 NeedsCompilation: no
 
 Package: dygraphs
@@ -618,23 +618,23 @@ MD5sum: 6a6977d175ad963d9675736a8f8d41f7
 NeedsCompilation: yes
 
 Package: fs
-Version: 1.3.0
+Version: 1.3.1
 Depends: R (>= 3.1)
 Imports: methods, Rcpp
 LinkingTo: Rcpp
 Suggests: testthat, covr, pillar (>= 1.0.0), crayon, rmarkdown, knitr,
         withr, spelling
 License: GPL-3
-MD5sum: 2d6c15c1142026ab6ae7f6a74be93dee
+MD5sum: 77015cf58e80bc80f6c849e5d7749828
 NeedsCompilation: yes
 
 Package: future
-Version: 1.12.0
+Version: 1.13.0
 Imports: digest, globals (>= 0.12.4), listenv (>= 0.7.0), parallel,
         utils
 Suggests: R.rsp, markdown
 License: LGPL (>= 2.1)
-MD5sum: 66a0de2d62d00e6314bc2881ae1b6b99
+MD5sum: af7ce3095af907bdeb394dac1d68c857
 NeedsCompilation: no
 
 Package: gbm
@@ -726,13 +726,13 @@ MD5sum: 2c369b6df6eedc0090f49ece536b3eb0
 NeedsCompilation: yes
 
 Package: ggrepel
-Version: 0.8.0
+Version: 0.8.1
 Depends: R (>= 3.0.0), ggplot2 (>= 2.2.0)
 Imports: grid, Rcpp, scales (>= 0.3.0)
 LinkingTo: Rcpp
 Suggests: knitr, rmarkdown, testthat, gridExtra, devtools, prettydoc
 License: GPL-3 | file LICENSE
-MD5sum: f3274ed2738647c04239a23d9798742f
+MD5sum: 8029787cc43a34d387f71b3f9fe24677
 NeedsCompilation: yes
 
 Package: gh
@@ -1687,11 +1687,11 @@ MD5sum: fe14293c7de7f7b684dd15538927471d
 NeedsCompilation: yes
 
 Package: processx
-Version: 3.3.0
+Version: 3.3.1
 Imports: ps (>= 1.2.0), R6, utils
-Suggests: callr, covr, crayon, debugme, parallel, testthat, withr
+Suggests: callr, covr, crayon, curl, debugme, parallel, testthat, withr
 License: MIT + file LICENSE
-MD5sum: bfa31c4bd0d23b02f2fea0f6177cb998
+MD5sum: d06e51ebe7de95251a689f08e024fde1
 NeedsCompilation: yes
 
 Package: prodlim
@@ -1759,10 +1759,10 @@ MD5sum: 04744536b7ba35ce3d97aa119d4004b1
 NeedsCompilation: no
 
 Package: quadprog
-Version: 1.5-6
-Depends: R (>= 3.6.0)
+Version: 1.5-7
+Depends: R (>= 3.1.0)
 License: GPL (>= 2)
-MD5sum: 30e58c770a4cd798272b7556c32c2cc1
+MD5sum: 336292e718bd2e52680a85d82df57884
 NeedsCompilation: yes
 
 Package: Quandl
@@ -1984,13 +1984,13 @@ MD5sum: c65e7db7413a25c050a1706bbfa18d0a
 NeedsCompilation: yes
 
 Package: rcmdcheck
-Version: 1.3.2
-Imports: callr (>= 2.0.0), cli, crayon, desc (>= 1.2.0), digest,
-        pkgbuild, prettyunits, R6, rprojroot, sessioninfo (>= 1.1.1),
-        utils, withr, xopen
+Version: 1.3.3
+Imports: callr (>= 3.1.1.9000), cli (>= 1.1.0), crayon, desc (>=
+        1.2.0), digest, pkgbuild, prettyunits, R6, rprojroot,
+        sessioninfo (>= 1.1.1), utils, withr, xopen
 Suggests: covr, knitr, mockery, rmarkdown, testthat
 License: MIT + file LICENSE
-MD5sum: c783f9a1d7de4ec36f3c23bad824dbef
+MD5sum: f24d6bc8edc505543c3878f3f6411505
 NeedsCompilation: no
 
 Package: RColorBrewer
@@ -2576,13 +2576,15 @@ MD5sum: 1c3e0267af33d829b842de9fa68853e2
 NeedsCompilation: no
 
 Package: styler
-Version: 1.1.0
-Imports: backports, cli, magrittr, purrr (>= 0.2.3), rematch2, rlang,
-        rprojroot, tibble (>= 1.4.2), tools, withr, xfun
-Suggests: data.tree, dplyr, here, knitr, prettycode, rmarkdown,
-        rstudioapi, testthat
+Version: 1.1.1
+Imports: backports (>= 1.1.0), cli (>= 1.1.0), magrittr (>= 1.0.1),
+        purrr (>= 0.2.3), rematch2 (>= 2.0.1), rlang (>= 0.1.1),
+        rprojroot (>= 1.1), tibble (>= 1.4.2), tools, withr (>= 1.0.0),
+        xfun (>= 0.1)
+Suggests: data.tree (>= 0.1.6), dplyr, here, knitr, prettycode,
+        rmarkdown, rstudioapi (>= 0.7), testthat
 License: GPL-3
-MD5sum: dca29177a49e680a0c9a6820c04f5644
+MD5sum: 6ff19334c95548e58d44e5b168efa554
 NeedsCompilation: no
 
 Package: survival

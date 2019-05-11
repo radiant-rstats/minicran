@@ -24,9 +24,9 @@ pkgs <- c(
   "usethis", "radiant.update", "svglite"
 )
 
-## check only files that needed updating or adding
-## see PR https://github.com/RevolutionAnalytics/miniCRAN/pull/15/files
-## not sure if ever merged
+# check only files that needed updating or adding
+# see PR https://github.com/RevolutionAnalytics/miniCRAN/pull/15/files
+# not sure if ever merged
 # pdb_local <- pkgAvail(repos = repos[1], type="source")
 # pdb_remote <- pkgAvail(repos = repos[3:4], type="source")
 # pkgList <- pkgDep(pkgs, availPkgs=pdb, repos=revolution, type="source", suggests=FALSE)
@@ -41,16 +41,12 @@ pkgs_src <- c(
   "ggraph", "tidygraph", "bookdown", "lintr", "languageserver", "rprojroot"
 )
 
-
-
-## for khansen
-## gtrendsR will be updated to the github version in the radiant docker
+# for khansen
+# gtrendsR will be updated to the github version in the radiant docker
 pkgs_src <- c(
   pkgs_src, "ggmap", "leaflet", "tm", "wordcloud", "rvest", "tidytext",
   "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal", "topicmodels"
 )
-
-
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
@@ -85,7 +81,7 @@ pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests 
 # download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "3.6")
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = "3.6")
 
-## cleanup 
+# cleanup 
 library(dplyr)
 library(magrittr)
 

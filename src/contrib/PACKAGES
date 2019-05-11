@@ -976,6 +976,17 @@ License: GPL (>= 2)
 MD5sum: eabac29603d0db7c4ad302f839cfefca
 NeedsCompilation: yes
 
+Package: iml
+Version: 0.9.0
+Imports: R6, checkmate, ggplot2, partykit, glmnet, Metrics, data.table,
+        foreach, yaImpute, prediction, Formula, gridExtra
+Suggests: randomForest, gower, testthat, rpart, MASS, caret, e1071,
+        knitr, mlr, covr, rmarkdown, devtools, doParallel, ALEPlot,
+        ranger
+License: MIT + file LICENSE
+MD5sum: a26157fede1c8975a851cf650690ef32
+NeedsCompilation: no
+
 Package: import
 Version: 1.1.0
 Suggests: knitr
@@ -1008,6 +1019,14 @@ Version: 0.3.1
 Suggests: testthat
 License: GPL-3
 MD5sum: b0e2d7388fc69327d3c4bbaab9067f3d
+NeedsCompilation: no
+
+Package: inum
+Version: 1.0-1
+Depends: R (>= 3.3.0)
+Imports: stats, libcoin (>= 1.0-0)
+License: GPL-2
+MD5sum: 2533893a597d56eef43123499eda3373
 NeedsCompilation: no
 
 Package: ipred
@@ -1187,6 +1206,16 @@ License: GPL-3
 MD5sum: 0a1e00b2a4fc505e821fd2621fe97693
 NeedsCompilation: no
 
+Package: libcoin
+Version: 1.0-4
+Depends: R (>= 3.4.0)
+Imports: stats, mvtnorm
+LinkingTo: mvtnorm
+Suggests: coin
+License: GPL-2
+MD5sum: 0dd735f0327e2241c159c723e66291f4
+NeedsCompilation: yes
+
 Package: lime
 Version: 0.4.1
 Imports: glmnet, stats, ggplot2, tools, stringi, Matrix, Rcpp,
@@ -1321,6 +1350,13 @@ Imports: digest (>= 0.6.3)
 Suggests: testthat, aws.s3, httr, covr
 License: MIT + file LICENSE
 MD5sum: 493209ee04673f0fcab473c3dd80fb8c
+NeedsCompilation: no
+
+Package: Metrics
+Version: 0.1.4
+Suggests: testthat
+License: BSD_3_clause + file LICENSE
+MD5sum: b2202269b66cd891b834d742cfd937ba
 NeedsCompilation: no
 
 Package: mgcv
@@ -1527,6 +1563,19 @@ License: GPL-2
 MD5sum: 72d6c8b46bb63cc44c0dea2d0736089e
 NeedsCompilation: no
 
+Package: partykit
+Version: 1.2-3
+Depends: R (>= 3.1.0), graphics, grid, libcoin (>= 1.0-0), mvtnorm
+Imports: grDevices, stats, utils, survival, Formula (>= 1.2-1), inum
+        (>= 1.0-0), rpart (>= 4.1-11)
+Suggests: XML, pmml, rJava, sandwich, strucchange, vcd, AER, mlbench,
+        TH.data (>= 1.0-3), coin (>= 1.1-0), RWeka (>= 0.4-19),
+        datasets, parallel, psychotools (>= 0.3-0), psychotree, party
+        (>= 1.3-0)
+License: GPL-2 | GPL-3
+MD5sum: ae3b8c0fe2eddf7ad3fcee48d8585c81
+NeedsCompilation: yes
+
 Package: pbkrtest
 Version: 0.4-7
 Depends: R (>= 3.2.3), lme4 (>= 1.1.10)
@@ -1665,6 +1714,19 @@ Version: 1.0.0
 Suggests: testthat
 License: MIT + file LICENSE
 MD5sum: 9318724cec0454884b5f762bee2da6a1
+NeedsCompilation: no
+
+Package: prediction
+Version: 0.3.6.2
+Imports: utils, stats, data.table
+Suggests: datasets, methods, testthat
+Enhances: AER, aod, betareg, biglm, brglm, caret, crch, e1071, earth,
+        ff, ffbase, gam (>= 1.15), gee, glmnet, glmx, kernlab, lme4,
+        MASS, mclogit, mda, mlogit, MNP, nlme, nnet, ordinal, plm,
+        pscl, quantreg, rpart, sampleSelection, speedglm, survey (>=
+        3.31-5), survival, truncreg, VGAM
+License: MIT + file LICENSE
+MD5sum: 5cf9423ce61b25b64adcee31d54b20c0
 NeedsCompilation: no
 
 Package: prettyunits
@@ -3010,6 +3072,15 @@ LinkingTo: zoo
 Suggests: timeSeries, timeDate, tseries, chron, fts, tis, RUnit
 License: GPL (>= 2)
 MD5sum: eadcf6a4b389a4367588bd7b080810c7
+NeedsCompilation: yes
+
+Package: yaImpute
+Version: 1.0-31
+Depends: R (>= 3.0.0)
+Imports: grDevices, graphics, stats, utils
+Suggests: vegan, ccaPP, randomForest, gam, fastICA, parallel, gower
+License: GPL (>= 2)
+MD5sum: 66d208541ddc357a549c148584862f7d
 NeedsCompilation: yes
 
 Package: yaml

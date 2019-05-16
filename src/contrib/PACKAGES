@@ -2008,7 +2008,7 @@ Imports: radiant.model (>= 0.9.9), shiny (>= 1.2.0), dplyr (>=
        0.8)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 678e295454749fced7cf38e2434fe4ce
+MD5sum: f5a44e6024d93b96246ce3ddbf822588
 NeedsCompilation: no
 
 Package: radiant.update

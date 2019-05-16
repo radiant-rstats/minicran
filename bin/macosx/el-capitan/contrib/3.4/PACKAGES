@@ -978,8 +978,8 @@ MD5sum: c2ca2d6a438b72a782d99908bbcff090
 
 Package: radiant.multivariate
 Version: 0.9.9.1
-Depends: R (>= 3.4.0), radiant.data (>= 0.9.7)
-Imports: radiant.model (>= 0.9.7), shiny (>= 1.2.0), dplyr (>=
+Depends: R (>= 3.4.0), radiant.data (>= 0.9.9)
+Imports: radiant.model (>= 0.9.9), shiny (>= 1.2.0), dplyr (>=
        0.8.0), rlang (>= 0.3.1), ggplot2 (>= 2.2.1), gridExtra (>=
        2.0.0), scales (>= 0.4.0), magrittr (>= 1.5), psych (>=
        1.8.4), GPArotation (>= 2014.11-1), car (>= 2.1.1), MASS (>=
@@ -987,7 +987,7 @@ Imports: radiant.model (>= 0.9.7), shiny (>= 1.2.0), dplyr (>=
        0.8)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: f0483dd0cc11e088079693965bc5131e
+MD5sum: 5e55943722a5a3b18df182967cf856dc
 
 Package: radiant.update
 Version: 0.9.9

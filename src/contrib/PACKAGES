@@ -701,13 +701,13 @@ MD5sum: 307447a45411409a4c96cce45ac4a4ca
 NeedsCompilation: yes
 
 Package: gitgadget
-Version: 0.4.0
+Version: 0.4.1
 Depends: R (>= 3.4.0)
 Imports: shiny (>= 1.1.0), miniUI (>= 0.1.1.1), rstudioapi (>= 0.7), curl (>= 3.2), jsonlite (>= 1.5), dplyr (>= 0.7.6), shinyFiles (>= 0.7.0),
                 callr (>= 2.0.4), usethis (>= 1.4.0), markdown
 Suggests: knitr, rmarkdown
 License: GPL-3
-MD5sum: f61cf8986b2f1ddc49cd8382b2553003
+MD5sum: 795b90ad16f4228b55b4eb3002d9b8b4
 NeedsCompilation: no
 
 Package: glmnet

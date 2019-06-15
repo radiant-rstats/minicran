@@ -356,13 +356,13 @@ Archs: git2r.so.dSYM
 MD5sum: 842f43b5ade18cb9360be2363c28bbcb
 
 Package: gitgadget
-Version: 0.4.0
+Version: 0.4.1
 Depends: R (>= 3.4.0)
 Imports: shiny (>= 1.1.0), miniUI (>= 0.1.1.1), rstudioapi (>= 0.7), curl (>= 3.2), jsonlite (>= 1.5), dplyr (>= 0.7.6), shinyFiles (>= 0.7.0),
                 callr (>= 2.0.4), usethis (>= 1.4.0), markdown
 Suggests: knitr, rmarkdown
 License: GPL-3
-MD5sum: 26b80b9f0a1b582b508db3aa64107361
+MD5sum: 71b94de218467d7296129cf3e286fedc
 
 Package: glue
 Version: 1.3.1

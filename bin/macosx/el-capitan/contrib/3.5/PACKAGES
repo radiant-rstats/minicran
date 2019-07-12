@@ -430,11 +430,11 @@ License: GPL
 MD5sum: c778757a55e90c637587fda55f8de625
 
 Package: hms
-Version: 0.4.2
-Imports: methods, pkgconfig, rlang
+Version: 0.5.0
+Imports: methods, pkgconfig, rlang, vctrs (>= 0.2.0)
 Suggests: crayon, lubridate, pillar (>= 1.1.0), testthat
 License: GPL-3
-MD5sum: b513d74af79a00afe59d89fc291f4ab2
+MD5sum: 5263e77301a5a16f8f444531251b1f94
 
 Package: htmltools
 Version: 0.3.6
@@ -1114,12 +1114,12 @@ License: GPL-3 | file LICENSE
 MD5sum: 52d5afba3b2a225f6e86f0f12d4e3c5c
 
 Package: shinyAce
-Version: 0.3.3
-Depends: R (>= 3.4.0)
+Version: 0.4.0
+Depends: R (>= 3.3.0)
 Imports: shiny (>= 1.0.5), jsonlite
-Suggests: testthat (>= 2.0.0), dplyr (>= 0.7.4)
+Suggests: testthat (>= 2.0.0), dplyr (>= 0.8.3)
 License: MIT + file LICENSE
-MD5sum: 34b3286a1882159748cfcb2d98175061
+MD5sum: 13fc69bcbad06aeffb23cbc5f1f961a0
 
 Package: shinyFiles
 Version: 0.7.3

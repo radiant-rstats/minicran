@@ -377,8 +377,8 @@ Suggests: knitr, testit
 License: GPL
 
 Package: hms
-Version: 0.4.2
-Imports: methods, pkgconfig, rlang
+Version: 0.5.0
+Imports: methods, pkgconfig, rlang, vctrs (>= 0.2.0)
 Suggests: crayon, lubridate, pillar (>= 1.1.0), testthat
 License: GPL-3
 
@@ -983,10 +983,10 @@ Suggests: datasets, Cairo (>= 1.5-5), testthat, knitr (>= 1.6), markdown, rmarkd
 License: GPL-3 | file LICENSE
 
 Package: shinyAce
-Version: 0.3.3
-Depends: R (>= 3.4.0)
+Version: 0.4.0
+Depends: R (>= 3.3.0)
 Imports: shiny (>= 1.0.5), jsonlite
-Suggests: testthat (>= 2.0.0), dplyr (>= 0.7.4)
+Suggests: testthat (>= 2.0.0), dplyr (>= 0.8.3)
 License: MIT + file LICENSE
 
 Package: shinyFiles

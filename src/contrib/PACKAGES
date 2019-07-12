@@ -96,11 +96,11 @@ MD5sum: 43d9d80b6217e6de6ebfdb7a072bd52f
 NeedsCompilation: no
 
 Package: bookdown
-Version: 0.11
+Version: 0.12
 Imports: htmltools (>= 0.3.6), knitr (>= 1.22), rmarkdown (>= 1.12), xfun (>= 0.6), tinytex (>= 0.12)
 Suggests: htmlwidgets, rstudioapi, miniUI, rsconnect (>= 0.4.3), servr (>= 0.13), shiny, testit (>= 0.9), tufte, webshot
 License: GPL-3
-MD5sum: c7906fbb6950b7ed193833854a37b8ad
+MD5sum: 0aa4a71e818fac1e5746c103c5f57134
 NeedsCompilation: no
 
 Package: boot
@@ -1902,13 +1902,13 @@ MD5sum: fbbdceda2aa49374e61c7d387bf9ea21
 NeedsCompilation: yes
 
 Package: raster
-Version: 2.9-22
+Version: 2.9-23
 Depends: sp (>= 1.2-0), R (>= 3.0.0)
 Imports: Rcpp, methods
 LinkingTo: Rcpp
 Suggests: rgdal (>= 0.9-1), rgeos (>= 0.3-8), ncdf4, igraph, tcltk, parallel, rasterVis, MASS, sf, testthat
 License: GPL (>= 3)
-MD5sum: 21503be56fc971814389ea42fd1e3554
+MD5sum: 5bfbaaa388b929e042dcfb1386ca85d5
 NeedsCompilation: yes
 
 Package: rcmdcheck
@@ -2012,11 +2012,11 @@ MD5sum: 5271666295e232931f21499522489dd3
 NeedsCompilation: no
 
 Package: rematch2
-Version: 2.0.1
+Version: 2.1.0
 Imports: tibble
 Suggests: covr, testthat
 License: MIT + file LICENSE
-MD5sum: a82ee9c7d0061361a9dc53005e3d793f
+MD5sum: 6295dbd6916857c723a11ab294e90e7a
 NeedsCompilation: no
 
 Package: remotes
@@ -2127,13 +2127,13 @@ MD5sum: 51dfcd0c8e46902a6be97d41639910d5
 NeedsCompilation: yes
 
 Package: rmarkdown
-Version: 1.13
+Version: 1.14
 Depends: R (>= 3.0)
 Imports: tools, utils, knitr (>= 1.22), yaml (>= 2.1.19), htmltools (>= 0.3.5), evaluate (>= 0.13), base64enc, jsonlite, mime, tinytex (>=
                 0.11), xfun, methods, stringr (>= 1.2.0)
-Suggests: shiny (>= 0.11), tufte, testthat, digest, dygraphs, tibble, fs, callr (>= 2.0.0)
+Suggests: shiny (>= 0.11), tufte, testthat, digest, dygraphs, tibble, fs, pkgdown, callr (>= 2.0.0)
 License: GPL-3
-MD5sum: 262b1f55d31229cf0c05ed328c8edd08
+MD5sum: af11a912fc7e6a8da7de0e409557ebd4
 NeedsCompilation: no
 
 Package: robustbase

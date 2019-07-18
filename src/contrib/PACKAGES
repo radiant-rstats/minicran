@@ -140,12 +140,12 @@ MD5sum: 1234d0cb7c470eb9be7e2a8ca17c9a28
 NeedsCompilation: no
 
 Package: callr
-Version: 3.3.0
+Version: 3.3.1
 Imports: processx (>= 3.4.0), R6, utils
 Suggests: cliapp, covr, crayon, knitr, pingr, ps, rmarkdown,
        rprojroot, spelling, testthat, tibble, withr
 License: MIT + file LICENSE
-MD5sum: ff33ec70ae48fe52b5566c0d78dea91d
+MD5sum: c42a80f6cd6cb4c628977b5ce8533f98
 NeedsCompilation: no
 
 Package: car
@@ -1525,11 +1525,11 @@ MD5sum: 4c9fdb7b1bbce118b01128c928a846f1
 NeedsCompilation: yes
 
 Package: openssl
-Version: 1.4
+Version: 1.4.1
 Imports: askpass
 Suggests: testthat, digest, knitr, rmarkdown, jsonlite, jose, sodium
 License: MIT + file LICENSE
-MD5sum: ba9a80c68c348a5a78b234053c840c61
+MD5sum: 776426687d74e645334542f30757f5a6
 NeedsCompilation: yes
 
 Package: openxlsx
@@ -1575,7 +1575,7 @@ MD5sum: 72d6c8b46bb63cc44c0dea2d0736089e
 NeedsCompilation: no
 
 Package: partykit
-Version: 1.2-4
+Version: 1.2-5
 Depends: R (>= 3.1.0), graphics, grid, libcoin (>= 1.0-0), mvtnorm
 Imports: grDevices, stats, utils, survival, Formula (>= 1.2-1), inum
        (>= 1.0-0), rpart (>= 4.1-11)
@@ -1584,7 +1584,7 @@ Suggests: XML, pmml, rJava, sandwich, strucchange, vcd, AER, mlbench,
        datasets, parallel, psychotools (>= 0.3-0), psychotree, party
        (>= 1.3-0)
 License: GPL-2 | GPL-3
-MD5sum: aed2642c1091db2ec687952f812c35be
+MD5sum: f08fbda98a5761998d564b82b91bb387
 NeedsCompilation: yes
 
 Package: pbkrtest
@@ -1760,12 +1760,12 @@ MD5sum: 0ee5f7339bd0670b72ace44f6f9dfc28
 NeedsCompilation: yes
 
 Package: processx
-Version: 3.4.0
+Version: 3.4.1
 Imports: ps (>= 1.2.0), R6, utils
 Suggests: callr (>= 3.2.0), codetools, covr, crayon, curl, debugme,
        parallel, testthat, withr
 License: MIT + file LICENSE
-MD5sum: a562a8a3f513a6ed1acdd5811d4f1736
+MD5sum: c9d5036937e2c6138748cc944c8046c2
 NeedsCompilation: yes
 
 Package: prodlim

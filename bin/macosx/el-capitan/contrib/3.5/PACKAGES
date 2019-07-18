@@ -904,14 +904,14 @@ License: GPL (>= 3)
 MD5sum: 5ed4a15ad94611fff481aec81047350a
 
 Package: quantreg
-Version: 5.41
+Version: 5.42
 Depends: R (>= 2.6), stats, SparseM
 Imports: methods, graphics, Matrix, MatrixModels
 Suggests: tripack, akima, MASS, survival, rgl, logspline, nor1mix,
-       Formula, zoo
+       Formula, zoo, R.rsp
 License: GPL (>= 2)
 Archs: quantreg.so.dSYM
-MD5sum: 12760bf029585f22d1cfd8f337b03618
+MD5sum: 11009d0f5081e0553818028eddda7a86
 
 Package: R6
 Version: 2.4.0
@@ -1019,7 +1019,7 @@ Archs: Rcpp.so.dSYM
 MD5sum: 1e01c87385657aa6ec50f57b66ccb6f7
 
 Package: RcppArmadillo
-Version: 0.9.500.2.0
+Version: 0.9.600.4.0
 Depends: R (>= 3.3.0)
 Imports: Rcpp (>= 0.11.0), stats, utils, methods
 LinkingTo: Rcpp
@@ -1027,7 +1027,7 @@ Suggests: RUnit, Matrix, pkgKitten, reticulate, rmarkdown, knitr,
        pinp, slam
 License: GPL (>= 2)
 Archs: RcppArmadillo.so.dSYM
-MD5sum: 7341f57475895e93cc75fd705cf2a1dd
+MD5sum: c5651d2ccc3f1c92440e1fec162eedda
 
 Package: RcppEigen
 Version: 0.3.3.5.0

@@ -79,12 +79,12 @@ License: MIT + file LICENSE
 MD5sum: 33edc0bc2cb42419d9daa503ab180a30
 
 Package: callr
-Version: 3.3.0
+Version: 3.3.1
 Imports: processx (>= 3.4.0), R6, utils
 Suggests: cliapp, covr, crayon, knitr, pingr, ps, rmarkdown,
        rprojroot, spelling, testthat, tibble, withr
 License: MIT + file LICENSE
-MD5sum: f9a0afd51f700b4c3b5a4d51acc9c903
+MD5sum: 35f3a241ab801e8160e5938a3b87b094
 
 Package: car
 Version: 3.0-3
@@ -128,12 +128,12 @@ License: MIT + file LICENSE
 MD5sum: 5238f70d5b46db8bd82ef5814d2e1040
 
 Package: clipr
-Version: 0.6.0
+Version: 0.7.0
 Imports: utils
 Suggests: covr, knitr, rmarkdown, rstudioapi (>= 0.5), testthat (>=
        2.0.0)
 License: GPL-3
-MD5sum: 32bbe7cb3bbb5d92aa7ab09188fea55a
+MD5sum: f300580f7ac775c39050949f57a8b31e
 
 Package: clisymbols
 Version: 1.2.0
@@ -168,13 +168,13 @@ License: MIT + file LICENSE
 MD5sum: 803b4b5a63050664a7740f7d333c2c1d
 
 Package: curl
-Version: 3.3
+Version: 4.0
 Depends: R (>= 3.0.0)
-Suggests: spelling, testthat (>= 1.0.0), knitr, jsonlite, rmarkdown,
-       magrittr, httpuv (>= 1.4.4), webutils
+Suggests: askpass, spelling, testthat (>= 1.0.0), knitr, jsonlite,
+       rmarkdown, magrittr, httpuv (>= 1.4.4), webutils
 License: MIT + file LICENSE
 Archs: curl.so.dSYM
-MD5sum: 42e6d2476226843da00889aba06a3044
+MD5sum: 6d9b04d12dbc9864205b8e3e49d20f0d
 
 Package: data.table
 Version: 1.12.2
@@ -760,12 +760,12 @@ Archs: nnet.so.dSYM
 MD5sum: b607043497169cf5ab3aedae3ccee359
 
 Package: openssl
-Version: 1.4
+Version: 1.4.1
 Imports: askpass
 Suggests: testthat, digest, knitr, rmarkdown, jsonlite, jose, sodium
 License: MIT + file LICENSE
 Archs: openssl.so.dSYM
-MD5sum: 34b09efc3b45ed0994f8cd54c7000b5d
+MD5sum: 78273773439bbf439864a9d2974e4727
 
 Package: openxlsx
 Version: 4.1.0.1
@@ -846,12 +846,12 @@ License: MIT + file LICENSE
 MD5sum: f25551d1194ebf112a2227a2c75a5164
 
 Package: processx
-Version: 3.4.0
+Version: 3.4.1
 Imports: ps (>= 1.2.0), R6, utils
 Suggests: callr (>= 3.2.0), codetools, covr, crayon, curl, debugme,
        parallel, testthat, withr
 License: MIT + file LICENSE
-MD5sum: 338aa574a1d375f13564753d51b286fc
+MD5sum: 4d53c90e248d44f8f81d7c806ac4c7f0
 
 Package: progress
 Version: 1.2.2
@@ -1010,14 +1010,14 @@ License: Apache License 2.0
 MD5sum: 1fa78e4fd5b41e53193f80560b312529
 
 Package: Rcpp
-Version: 1.0.1
+Version: 1.0.2
 Depends: R (>= 3.0.0)
 Imports: methods, utils
 Suggests: RUnit, inline, rbenchmark, knitr, rmarkdown, pinp,
        pkgKitten (>= 0.1.2)
 License: GPL (>= 2)
 Archs: Rcpp.so.dSYM
-MD5sum: 9f3df0172546ab014034f6b14d3ce768
+MD5sum: a84da2e82f4dab60eeb1b25f76113e64
 
 Package: RcppArmadillo
 Version: 0.9.600.4.0

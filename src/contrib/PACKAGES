@@ -1997,7 +1997,7 @@ Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales (>=
        1.1.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: d97228c56cc3b31dc405b9c708f97686
+MD5sum: c0433b2f486c0c9c1c585407ceee1b0c
 NeedsCompilation: no
 
 Package: radiant.data

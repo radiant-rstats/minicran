@@ -706,7 +706,7 @@ MD5sum: 1e7b2ac16fa534ba73977920754bfbe2
 NeedsCompilation: no
 
 Package: ggplot2
-Version: 3.2.0
+Version: 3.2.1
 Depends: R (>= 3.2)
 Imports: digest, grDevices, grid, gtable (>= 0.1.1), lazyeval, MASS,
        mgcv, reshape2, rlang (>= 0.3.0), scales (>= 0.5.0), stats,
@@ -717,7 +717,7 @@ Suggests: covr, dplyr, ggplot2movies, hexbin, Hmisc, knitr, lattice,
        1.2.0.9001), testthat (>= 0.11.0), vdiffr (>= 0.3.0)
 Enhances: sp
 License: GPL-2 | file LICENSE
-MD5sum: 11bdbfbfda4373d221aff262f948f97b
+MD5sum: c25ec933439e5219fa3fa925d83868be
 NeedsCompilation: no
 
 Package: ggraph

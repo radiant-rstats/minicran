@@ -225,11 +225,10 @@ License: MIT + file LICENSE
 Archs: i386, x64
 
 Package: DT
-Version: 0.7
-Imports: htmltools (>= 0.3.6), htmlwidgets (>= 1.3), magrittr,
-       crosstalk, promises
-Suggests: jsonlite (>= 0.9.16), knitr (>= 1.8), rmarkdown, shiny (>=
-       1.1.0)
+Version: 0.8
+Imports: htmltools (>= 0.3.6), htmlwidgets (>= 1.3), jsonlite (>=
+       0.9.16), magrittr, crosstalk, promises
+Suggests: knitr (>= 1.8), rmarkdown, shiny (>= 1.1.0)
 License: GPL-3 | file LICENSE
 
 Package: e1071
@@ -270,7 +269,7 @@ Suggests: covr, ggplot2, testthat, readr, knitr, rmarkdown, dplyr
 License: GPL-3
 
 Package: foreign
-Version: 0.8-71
+Version: 0.8-72
 Priority: recommended
 Depends: R (>= 3.0.0)
 Imports: methods, utils, stats
@@ -442,9 +441,9 @@ License: GPL (>= 2) | file LICENSE
 Archs: i386, x64
 
 Package: httr
-Version: 1.4.0
-Depends: R (>= 3.1)
-Imports: curl (>= 0.9.1), jsonlite, mime, openssl (>= 0.8), R6
+Version: 1.4.1
+Depends: R (>= 3.2)
+Imports: curl (>= 3.0.0), jsonlite, mime, openssl (>= 0.8), R6
 Suggests: covr, httpuv, jpeg, knitr, png, readr, rmarkdown, testthat
        (>= 0.8.0), xml2
 License: MIT + file LICENSE
@@ -485,7 +484,7 @@ License: MIT + file LICENSE
 Archs: i386, x64
 
 Package: knitr
-Version: 1.23
+Version: 1.24
 Depends: R (>= 3.2.3)
 Imports: evaluate (>= 0.10), highr, markdown, stringr (>= 0.6), yaml
        (>= 2.1.19), methods, xfun, tools
@@ -564,9 +563,9 @@ License: GPL (>= 2)
 Archs: i386, x64
 
 Package: markdown
-Version: 1.0
+Version: 1.1
 Depends: R (>= 2.11.1)
-Imports: utils, mime (>= 0.3)
+Imports: utils, xfun, mime (>= 0.3)
 Suggests: knitr, RCurl
 License: GPL-2
 Archs: i386, x64
@@ -737,7 +736,7 @@ License: MIT + file LICENSE
 Archs: i386, x64
 
 Package: polycor
-Version: 0.7-9
+Version: 0.7-10
 Depends: R (>= 3.3.0)
 Imports: stats, mvtnorm, Matrix
 License: GPL (>= 2)
@@ -803,7 +802,7 @@ Suggests: ggplot2, scales, knitr, rmarkdown
 License: GPL (>= 3)
 
 Package: quantreg
-Version: 5.42.1
+Version: 5.51
 Depends: R (>= 2.6), stats, SparseM
 Imports: methods, graphics, Matrix, MatrixModels
 Suggests: tripack, akima, MASS, survival, rgl, logspline, nor1mix,
@@ -1165,7 +1164,7 @@ License: GPL-3
 Archs: i386, x64
 
 Package: tinytex
-Version: 0.14
+Version: 0.15
 Imports: xfun (>= 0.5)
 Suggests: testit, rstudioapi
 License: MIT + file LICENSE

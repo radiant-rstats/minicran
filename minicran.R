@@ -38,7 +38,8 @@ pkgs_src <- c(
   "tidyverse", "testthat", "tfestimators", "keras", "packrat", "sparklyr", "sparkxgb",
   "forge", "gganimate", "gifski", "here", "zipcode", "forcats", "future", "parsnip",
   "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip", "kableExtra",
-  "ggraph", "tidygraph", "bookdown", "lintr", "languageserver", "rprojroot", "iml"
+  "ggraph", "tidygraph", "bookdown", "lintr", "languageserver", "rprojroot", "iml",
+  "xaringan"
 )
 
 # for khansen
@@ -81,7 +82,7 @@ pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests 
 # download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "3.6")
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = "3.6")
 
-# cleanup 
+# cleanup
 library(dplyr)
 library(magrittr)
 

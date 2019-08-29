@@ -787,7 +787,7 @@ Imports: shiny (>= 1.1.0), miniUI (>= 0.1.1.1), rstudioapi (>=
        1.5.1), markdown
 Suggests: knitr, rmarkdown
 License: GPL-3
-MD5sum: f66b16a1e55267f05791fce4adaa439c
+MD5sum: 675cc8a344b8e99577ed115999a9d22d
 NeedsCompilation: no
 
 Package: glmnet

@@ -90,8 +90,10 @@ pdirs <- c(
   "src/contrib",
   "bin/windows/contrib/3.4",
   "bin/windows/contrib/3.5",
+  "bin/windows/contrib/3.6",
   "bin/macosx/el-capitan/contrib/3.4",
-  "bin/macosx/el-capitan/contrib/3.5"
+  "bin/macosx/el-capitan/contrib/3.5",
+  "bin/macosx/el-capitan/contrib/3.6"
 )
 
 for (pdir in pdirs) {

@@ -86,15 +86,9 @@ to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.b
 library(dplyr)
 library(magrittr)
 
-pdirs <- c(
-  "src/contrib",
-  "bin/windows/contrib/3.4",
-  "bin/windows/contrib/3.5",
-  "bin/windows/contrib/3.6",
-  "bin/macosx/el-capitan/contrib/3.4",
-  "bin/macosx/el-capitan/contrib/3.5",
-  "bin/macosx/el-capitan/contrib/3.6"
-)
+win_dirs <- list.dirs("bin/windows/contrib")[-1]
+mac_dirs <- list.dirs("bin/macosx/el-capitan/contrib")[-1]
+pdirs <- c("src/contrib", win_dirs, mac_dirs)
 
 for (pdir in pdirs) {
   print(pdir)
@@ -116,11 +110,9 @@ for (pdir in pdirs) {
 }
 
 ## needed to update PACKAGES after deleting old versions
-tools::write_PACKAGES("bin/windows/contrib/3.4/", type = "win.binary")
-tools::write_PACKAGES("bin/windows/contrib/3.5/", type = "win.binary")
-tools::write_PACKAGES("bin/macosx/el-capitan/contrib/3.4/", type = "mac.binary")
-tools::write_PACKAGES("bin/macosx/el-capitan/contrib/3.5/", type = "mac.binary")
 tools::write_PACKAGES("src/contrib/", type = "source")
+sapply(win_dirs, tools::write_PACKAGES, type = "win.binary")
+sapply(mac_dirs, tools::write_PACKAGES, type = "mac.binary")
 
 ## push to github
 # rstudioapi::documentSaveAll()

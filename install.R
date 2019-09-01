@@ -124,7 +124,7 @@ if (as.numeric(rv$major) < 3 || (as.numeric(rv$major) == 3 && as.numeric(rv$mino
     }
   } else {
     cat("\n\nThe install script only partially supports your OS\n")
-    cat("You may prefer to use a docker image of Radiant and related software\nSee https://github.com/radiant-rstats/docker/blob/master/install/rsm-msba-linux.md for details")
+    cat("You may prefer to use a docker image of Radiant and related software\nSee https://github.com/radiant-rstats/docker/blob/master/install/rsm-msba-linux.md for details\n\n")
     inp <- readliner("Do wish to proceed with the local install of Radiant and its dependencies? Press y or n and then press return: ")
     if (grepl("[yY]", inp)) {
       build(type = "source")

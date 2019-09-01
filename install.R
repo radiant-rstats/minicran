@@ -78,7 +78,7 @@ if (as.numeric(rv$major) < 3 || (as.numeric(rv$major) == 3 && as.numeric(rv$mino
       cat("\nTo generate PDF reports in Radiant you will need TinyTex (or MikTex).\n")
       inp <- readliner("Proceed with the download and install of TinyTex? Press y or n and then press return: ")
       if (grepl("[yY]", inp)) {
-        tinytex::reinstall_tinytex()
+        tinytex::install_tinytex()
       }
       cat("\n\nInstallation on Windows complete. Close R, (re)start Rstudio, and select 'Start radiant'\nfrom the Addins menu to get started\n\n")
     }
@@ -117,7 +117,7 @@ if (as.numeric(rv$major) < 3 || (as.numeric(rv$major) == 3 && as.numeric(rv$mino
         cat("To generate PDF reports in Radiant (Report > Rmd) you will need TinyTex (or MacTex).")
         inp <- readliner("Proceed with the TinyTex download and install? Press y or n and then press return: ")
         if (grepl("[yY]", inp)) {
-          tinytex::reinstall_tinytex()
+          tinytex::install_tinytex()
         }
       }
       cat("\n\nInstallation on Mac complete. Close R, (re)start Rstudio, and select 'Start radiant'\nfrom the Addins menu to get started\n\n")
@@ -133,7 +133,7 @@ if (as.numeric(rv$major) < 3 || (as.numeric(rv$major) == 3 && as.numeric(rv$mino
         cat("To generate PDF reports in Radiant (Report > Rmd) you will need TinyTex (or LaTex).")
         inp <- readliner("Proceed with the TinyTex download and install? Press y or n and then press return: ")
         if (grepl("[yY]", inp)) {
-          tinytex::reinstall_tinytex()
+          tinytex::install_tinytex()
         }
       }
     }

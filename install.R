@@ -8,10 +8,7 @@ build <- function(type = "binary") {
 
   install <- function(x) if (!x %in% installed.packages()) install.packages(x, lib = .libPaths()[1], type = type)
   resp <- sapply(
-    c(
-      "radiant", "gitgadget", "miniUI", "webshot",
-      "tinytex", "usethis", "radiant.update", "svglite"
-    ),
+    c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "radiant.update", "svglite"),
     install
   )
 
@@ -32,8 +29,8 @@ readliner <- function(text, inp = "", resp = "[yYnN]") {
 
 rv <- R.Version()
 
-if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
-  cat("Radiant requires R-3.4.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
+if (as.numeric(rv$major) < 3 || (as.numeric(rv$major) == 3 && as.numeric(rv$minor) < 5)) {
+  cat("Radiant requires R-3.5.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
 } else {
 
   os <- Sys.info()["sysname"]
@@ -48,13 +45,18 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
     } else {
       build()
       install.packages("installr")
+
       ## get rstudio - release
-      # page <- readLines("https://www.rstudio.com/ide/download/desktop", warn = FALSE)
-      # pat <- "//download1.rstudio.org/RStudio-[0-9.]+.exe";
-      ## get rstudio - preview
-      page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
-      pat <- "//s3.amazonaws.com/rstudio-ide-build/desktop/windows/RStudio-[0-9.]+exe"
+      page <- readLines("https://www.rstudio.com/products/rstudio/download", warn = FALSE)
+      pat <- "//download1.rstudio.org/desktop/windows/RStudio-[0-9.]+.exe";
       URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+
+      ## get rstudio - preview
+      # page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
+      # pat <- "//s3.amazonaws.com/rstudio-ide-build/desktop/windows/RStudio-[0-9.]+exe"
+      # URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+
+      ## install
       installr::install.URL(URL, installer_option = "/S")
 
       wz <- suppressWarnings(system("where R", intern = TRUE))
@@ -73,18 +75,6 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
         }
       }
 
-      # cat("\nTo generate PDF reports in Radiant you will need MikTex. This is a large\ndownload (approx 100MB).\n")
-      # inp <- readliner("Proceed with the install? Press y or n and then press return: ")
-      # if (grepl("[yY]", inp)) {
-      #   if (grepl("64",Sys.getenv()["PROCESSOR_IDENTIFIER"])) {
-      #     URL <- "http://rady.ucsd.edu/faculty/directory/nijs/pub/docs/radiant/basic-miktex-2.9.6520-x64.exe"
-      #   } else {
-      #     URL <- "http://rady.ucsd.edu/faculty/directory/nijs/pub/docs/radiant/basic-miktex-2.9.6520.exe"
-      #   }
-      #
-      #   installr::install.URL(URL)
-      # }
-
       cat("\nTo generate PDF reports in Radiant you will need TinyTex (or MikTex).\n")
       inp <- readliner("Proceed with the download and install of TinyTex? Press y or n and then press return: ")
       if (grepl("[yY]", inp)) {
@@ -102,40 +92,51 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
       build()
 
       ##  based on https://github.com/talgalili/installr/blob/82bf5b542ce6d2ef4ebc6359a4772e0c87427b64/R/install.R#L805-L813
-      ## get rstudio
-      # page <- readLines("https://www.rstudio.com/ide/download/desktop", warn = FALSE)
-      # pat <- "//download1.rstudio.org/RStudio-[0-9.]+.dmg";
-      ## get rstudio - preview
-      page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
-      pat <- "//s3.amazonaws.com/rstudio-ide-build/desktop/macos/RStudio-[0-9.]+dmg"
+
+      ## get rstudio - release
+      page <- readLines("https://www.rstudio.com/products/rstudio/download", warn = FALSE)
+      pat <- "//download1.rstudio.org/desktop/macos/RStudio-[0-9.]+.dmg";
       URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+
+      ## get rstudio - preview
+      # page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
+      # pat <- "//s3.amazonaws.com/rstudio-ide-build/desktop/macos/RStudio-[0-9.]+dmg"
+      # URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
 
       setwd(tempdir())
       download.file(URL,"Rstudio.dmg")
       system("open Rstudio.dmg")
       cat("Please drag-and-drop the Rstudio image to the Applications folder on your Mac\n")
 
+      ## moving Rstudio.app doesn't seem to work just yet
+      # rstudio <- file.path("/Volumes", list.files("/Volumes", pattern = "^RStudio-*"), "RStudio.app")
+      # system(paste0("cp -r ", rstudio, " /Applications", intern = TRUE))
+
       pl <- suppressWarnings(system("which pdflatex", intern = TRUE))
       if (length(pl) == 0) {
         cat("To generate PDF reports in Radiant (Report > Rmd) you will need TinyTex (or MacTex).")
         inp <- readliner("Proceed with the TinyTex download and install? Press y or n and then press return: ")
         if (grepl("[yY]", inp)) {
-          # if (file.access("/usr/local/bin", mode = 2) == -1) {
-          #   cat("\n\nPermissions for directory /usr/local/bin are not set correctly on your system.\nA terminal will be opened to fix the settings. Provide your system password\nand then press return to start the install process for TinyTex.\nYou can close the terminal when the install process has been completed\n")
-          #   tf <- tempfile()
-          #   cat("#!/bin/bash\nsudo chown -R `whoami`:admin /usr/local/bin\nRscript -e 'tinytex::install_tinytex()'\n", file = tf)
-          #   Sys.chmod(tf, mode = "0755")
-          #   system(paste0('osascript -e \'tell application "Terminal" to activate\' -e \'tell application "Terminal" to do script "', tf, '"\''))
-          # } else {
-            tinytex::install_tinytex()
-          # }
+          tinytex::install_tinytex()
         }
       }
       cat("\n\nInstallation on Mac complete. Close R, (re)start Rstudio, and select 'Start radiant'\nfrom the Addins menu to get started\n\n")
     }
   } else {
-    cat("\n\nThe install script only partially supports your OS\n\n")
-    build(type = "source")
+    cat("\n\nThe install script only partially supports your OS\n")
+    cat("You may prefer to use a docker image of Radiant and related software\nSee https://github.com/radiant-rstats/docker/blob/master/install/rsm-msba-linux.md for details\n\n")
+    inp <- readliner("Do wish to proceed with the local install of Radiant and its dependencies? Press y or n and then press return: ")
+    if (grepl("[yY]", inp)) {
+      build(type = "source")
+      pl <- suppressWarnings(system("which pdflatex", intern = TRUE))
+      if (length(pl) == 0) {
+        cat("To generate PDF reports in Radiant (Report > Rmd) you will need TinyTex (or LaTex).")
+        inp <- readliner("Proceed with the TinyTex download and install? Press y or n and then press return: ")
+        if (grepl("[yY]", inp)) {
+          tinytex::install_tinytex()
+        }
+      }
+    }
   }
 }
 

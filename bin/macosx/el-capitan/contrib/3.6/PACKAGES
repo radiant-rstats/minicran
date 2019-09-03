@@ -381,14 +381,14 @@ Archs: git2r.so.dSYM
 MD5sum: 52a1137f55110b99dde101b65872fcda
 
 Package: gitgadget
-Version: 0.4.2
+Version: 0.4.4
 Depends: R (>= 3.4.0)
 Imports: shiny (>= 1.1.0), miniUI (>= 0.1.1.1), rstudioapi (>= 0.7), curl
         (>= 3.2), jsonlite (>= 1.5), dplyr (>= 0.8.3), shinyFiles (>=
         0.7.3), callr (>= 2.0.4), usethis (>= 1.5.1), markdown
 Suggests: knitr, rmarkdown
 License: GPL-3
-MD5sum: a89e1666d3514ed3cda2572e42db04c8
+MD5sum: 75243bb997bbb4cb197f40857b98ba34
 
 Package: glue
 Version: 1.3.1
@@ -460,11 +460,11 @@ License: GPL
 MD5sum: 81d184451be0fd4a8381131386e6c7a9
 
 Package: hms
-Version: 0.5.0
+Version: 0.5.1
 Imports: methods, pkgconfig, rlang, vctrs (>= 0.2.0)
 Suggests: crayon, lubridate, pillar (>= 1.1.0), testthat
 License: GPL-3
-MD5sum: 2a5a2059dbc0a62e96354012bbea1094
+MD5sum: d47c023649af5bdeb40a3ad57a454453
 
 Package: htmltools
 Version: 0.3.6
@@ -938,7 +938,7 @@ License: AGPL-3 | file LICENSE
 MD5sum: aa22544fd89ba0f912cea72d52310c84
 
 Package: radiant.data
-Version: 1.0.5
+Version: 1.0.6
 Depends: R (>= 3.4.0), magrittr (>= 1.5), ggplot2 (>= 2.2.1), lubridate
         (>= 1.7.4), tidyr (>= 0.8.2), dplyr (>= 0.8.0)
 Imports: tibble (>= 1.4.2), rlang (>= 0.4.0), broom (>= 0.4.5), car (>=
@@ -953,7 +953,7 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0), RPostgreSQL
         (>= 0.6.2), odbc (>= 1.1.4), webshot (>= 0.5.0), testthat (>=
         2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 3acbd01d7a53504d5cd171fc87fc1b3b
+MD5sum: a35730dd642d124d1335b57f21289c98
 
 Package: radiant.design
 Version: 0.9.9
@@ -1098,7 +1098,7 @@ Archs: rlang.so.dSYM
 MD5sum: 04974f29b7283d557901db2ef32e2340
 
 Package: rmarkdown
-Version: 1.14
+Version: 1.15
 Depends: R (>= 3.0)
 Imports: tools, utils, knitr (>= 1.22), yaml (>= 2.1.19), htmltools (>=
         0.3.5), evaluate (>= 0.13), base64enc, jsonlite, mime, tinytex
@@ -1106,7 +1106,7 @@ Imports: tools, utils, knitr (>= 1.22), yaml (>= 2.1.19), htmltools (>=
 Suggests: shiny (>= 0.11), tufte, testthat, digest, dygraphs, tibble, fs,
         pkgdown, callr (>= 2.0.0)
 License: GPL-3
-MD5sum: f9783a3d1d7f996146a6828174ed4266
+MD5sum: 262284ce22f121c12a2f75de060f48f3
 
 Package: robustbase
 Version: 0.93-5
@@ -1261,11 +1261,11 @@ Archs: svglite.so.dSYM
 MD5sum: 3c6a7b296778485068b35297b55be142
 
 Package: sys
-Version: 3.2
+Version: 3.3
 Suggests: unix (>= 1.4), spelling, testthat
 License: MIT + file LICENSE
 Archs: sys.so.dSYM
-MD5sum: 543fcbf11755ea67a3fdddf7c712a121
+MD5sum: d171b1b9880b47299caf157aa66a8c0d
 
 Package: tibble
 Version: 2.1.3
@@ -1304,7 +1304,7 @@ Version: 0.15.2
 Imports: xfun (>= 0.5)
 Suggests: testit, rstudioapi
 License: MIT + file LICENSE
-MD5sum: f1a5784f84698a8852ed73ea15ee5a7f
+MD5sum: c3c803e0c9652bbf97794c02689d65e7
 
 Package: usethis
 Version: 1.5.1
@@ -1355,14 +1355,14 @@ License: MIT + file LICENSE
 MD5sum: 78cd175b5028c41902e7cdf622992e46
 
 Package: visNetwork
-Version: 2.0.7
+Version: 2.0.8
 Depends: R (>= 3.0)
 Imports: htmlwidgets, htmltools, jsonlite, magrittr, utils, methods,
         grDevices, stats
 Suggests: knitr, rmarkdown, webshot, igraph, rpart, shiny, shinyWidgets,
-        colourpicker, sparkline, ggraph, flashClust
+        colourpicker, sparkline, ggraph, tidygraph, flashClust
 License: MIT + file LICENSE
-MD5sum: cb39d9b710fc7fa0172e59c2c18b0121
+MD5sum: aece4ff0a93f9c07bf2ec14386ab9537
 
 Package: webshot
 Version: 0.5.1
@@ -1373,10 +1373,10 @@ License: GPL-2
 MD5sum: 5d7ebde13631d89434b3cdbc864da03b
 
 Package: whisker
-Version: 0.3-2
+Version: 0.4
 Suggests: markdown
 License: GPL-3
-MD5sum: 605607dfa9816e49220ce41b5c9f3f93
+MD5sum: f6c7a79f39fae6e22f31f7a7d50d7e62
 
 Package: withr
 Version: 2.1.2
@@ -1395,12 +1395,12 @@ Archs: writexl.so.dSYM
 MD5sum: 502ee327e651c608cbd3df27be27b946
 
 Package: xfun
-Version: 0.8
+Version: 0.9
 Imports: stats, tools
 Suggests: testit, parallel, rstudioapi, tinytex, mime, markdown, knitr,
         htmltools, base64enc, remotes, rmarkdown
 License: MIT + file LICENSE
-MD5sum: 8fc528d84637062bd0a96dd5f9c718c5
+MD5sum: 10f395330e01530cf6fdfb8f26672e15
 
 Package: XML
 Version: 3.98-1.20

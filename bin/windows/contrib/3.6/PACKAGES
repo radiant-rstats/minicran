@@ -337,7 +337,7 @@ License: GPL-2
 Archs: i386, x64
 
 Package: gitgadget
-Version: 0.4.2
+Version: 0.4.4
 Depends: R (>= 3.4.0)
 Imports: shiny (>= 1.1.0), miniUI (>= 0.1.1.1), rstudioapi (>= 0.7), curl
         (>= 3.2), jsonlite (>= 1.5), dplyr (>= 0.8.3), shinyFiles (>=
@@ -407,7 +407,7 @@ Suggests: knitr, testit
 License: GPL
 
 Package: hms
-Version: 0.5.0
+Version: 0.5.1
 Imports: methods, pkgconfig, rlang, vctrs (>= 0.2.0)
 Suggests: crayon, lubridate, pillar (>= 1.1.0), testthat
 License: GPL-3
@@ -832,7 +832,7 @@ Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 
 Package: radiant.data
-Version: 1.0.5
+Version: 1.0.6
 Depends: R (>= 3.4.0), magrittr (>= 1.5), ggplot2 (>= 2.2.1), lubridate
         (>= 1.7.4), tidyr (>= 0.8.2), dplyr (>= 0.8.0)
 Imports: tibble (>= 1.4.2), rlang (>= 0.4.0), broom (>= 0.4.5), car (>=
@@ -977,7 +977,7 @@ License: GPL-3
 Archs: i386, x64
 
 Package: rmarkdown
-Version: 1.14
+Version: 1.15
 Depends: R (>= 3.0)
 Imports: tools, utils, knitr (>= 1.22), yaml (>= 2.1.19), htmltools (>=
         0.3.5), evaluate (>= 0.13), base64enc, jsonlite, mime, tinytex
@@ -1123,7 +1123,7 @@ License: GPL (>= 2)
 Archs: i386, x64
 
 Package: sys
-Version: 3.2
+Version: 3.3
 Suggests: unix (>= 1.4), spelling, testthat
 License: MIT + file LICENSE
 Archs: i386, x64
@@ -1156,12 +1156,6 @@ LinkingTo: Rcpp (>= 0.12.0),
 Suggests: covr, dplyr, testthat
 License: GPL-3
 Archs: i386, x64
-
-Package: tinytex
-Version: 0.15.2
-Imports: xfun (>= 0.5)
-Suggests: testit, rstudioapi
-License: MIT + file LICENSE
 
 Package: usethis
 Version: 1.5.1
@@ -1207,12 +1201,12 @@ Suggests: hexbin (>= 1.27.0), ggplot2 (>= 1.0.1), testthat, covr
 License: MIT + file LICENSE
 
 Package: visNetwork
-Version: 2.0.7
+Version: 2.0.8
 Depends: R (>= 3.0)
 Imports: htmlwidgets, htmltools, jsonlite, magrittr, utils, methods,
         grDevices, stats
 Suggests: knitr, rmarkdown, webshot, igraph, rpart, shiny, shinyWidgets,
-        colourpicker, sparkline, ggraph, flashClust
+        colourpicker, sparkline, ggraph, tidygraph, flashClust
 License: MIT + file LICENSE
 
 Package: webshot
@@ -1223,7 +1217,7 @@ Suggests: httpuv, knitr, rmarkdown, shiny
 License: GPL-2
 
 Package: whisker
-Version: 0.3-2
+Version: 0.4
 Suggests: markdown
 License: GPL-3
 
@@ -1242,7 +1236,7 @@ License: BSD_2_clause + file LICENSE
 Archs: i386, x64
 
 Package: xfun
-Version: 0.8
+Version: 0.9
 Imports: stats, tools
 Suggests: testit, parallel, rstudioapi, tinytex, mime, markdown, knitr,
         htmltools, base64enc, remotes, rmarkdown

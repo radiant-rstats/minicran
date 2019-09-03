@@ -54,45 +54,28 @@ pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
 # download <- makeRepo(pkgs, path = pth, type = "source", Rversion = "3.6")
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "source")
 
-# building minicran for windows binaries
-pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = "3.4")
-to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.binary", Rversion = "3.4")
+## only needed when a new major R-version comes out
+# download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "3.7")
+# download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "3.7")
 
-# building minicran for windows binaries
-pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = "3.5")
-to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.binary", Rversion = "3.5")
+versions <- c("3.4", "3.5", "3.6")
+for (ver in versions) {
+  ## building minicran for windows binaries
+  pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = ver)
+  to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.binary", Rversion = ver)
 
-# building minicran for windows binaries
-pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = "3.6")
-## only needed when a new major version comes out
-# download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "3.6")
-to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.binary", Rversion = "3.6")
+  ## building minicran for mac el-capitan binaries
+  pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = ver)
+  to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = ver)
+}
 
-# building minicran for mac el-capitan binaries
-pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = "3.4")
-to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = "3.4")
-
-# building minicran for mac el-capitan binaries
-pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = "3.5")
-cat(paste0("pkgs <- c('", paste0(pkgList, collapse = "', '"), "')"), file = "pkgs.R")
-to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = "3.5")
-
-# building minicran for mac el-capitan binaries
-pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = "3.6")
-# download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "3.6")
-to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = "3.6")
-
-# cleanup
+## cleanup
 library(dplyr)
 library(magrittr)
 
-pdirs <- c(
-  "src/contrib",
-  "bin/windows/contrib/3.4",
-  "bin/windows/contrib/3.5",
-  "bin/macosx/el-capitan/contrib/3.4",
-  "bin/macosx/el-capitan/contrib/3.5"
-)
+win_dirs <- list.dirs("bin/windows/contrib")[-1]
+mac_dirs <- list.dirs("bin/macosx/el-capitan/contrib")[-1]
+pdirs <- c("src/contrib", win_dirs, mac_dirs)
 
 for (pdir in pdirs) {
   print(pdir)
@@ -114,11 +97,9 @@ for (pdir in pdirs) {
 }
 
 ## needed to update PACKAGES after deleting old versions
-tools::write_PACKAGES("bin/windows/contrib/3.4/", type = "win.binary")
-tools::write_PACKAGES("bin/windows/contrib/3.5/", type = "win.binary")
-tools::write_PACKAGES("bin/macosx/el-capitan/contrib/3.4/", type = "mac.binary")
-tools::write_PACKAGES("bin/macosx/el-capitan/contrib/3.5/", type = "mac.binary")
 tools::write_PACKAGES("src/contrib/", type = "source")
+sapply(win_dirs, tools::write_PACKAGES, type = "win.binary")
+sapply(mac_dirs, tools::write_PACKAGES, type = "mac.binary")
 
 ## push to github
 # rstudioapi::documentSaveAll()

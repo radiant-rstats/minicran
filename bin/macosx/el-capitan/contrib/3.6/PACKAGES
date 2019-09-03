@@ -1304,7 +1304,7 @@ Version: 0.15.2
 Imports: xfun (>= 0.5)
 Suggests: testit, rstudioapi
 License: MIT + file LICENSE
-MD5sum: c3c803e0c9652bbf97794c02689d65e7
+MD5sum: b6d4a48e6982dfc3cb1f2752b6e444f3
 
 Package: usethis
 Version: 1.5.1

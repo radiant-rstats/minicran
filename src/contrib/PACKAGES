@@ -2830,7 +2830,7 @@ Version: 0.15.2
 Imports: xfun (>= 0.5)
 Suggests: testit, rstudioapi
 License: MIT + file LICENSE
-MD5sum: 1e836993b0894ed56c12e1a9f06af92c
+MD5sum: 45f487e1aefe60f8e4b311d08e8abedc
 NeedsCompilation: no
 
 Package: tm

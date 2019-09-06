@@ -945,7 +945,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 1.1.0), radiant.design
 Imports: shiny (>= 1.2.0), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
-MD5sum: 58f78574366a0465fff158dd38bc608f
+MD5sum: 6ceb4adcd7153bb921b43f5e49f1fb70
 
 Package: radiant.basics
 Version: 1.1.0
@@ -956,7 +956,7 @@ Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales (>=
        1.1.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 718661c20167635b46d1a5f186c4bfda
+MD5sum: 7a18a8eb65e3bef58942e2998d5c2998
 
 Package: radiant.data
 Version: 1.1.0
@@ -975,7 +975,7 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0),
        RPostgreSQL (>= 0.6.2), odbc (>= 1.1.4), webshot (>=
        0.5.0), testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 185f24fa446cb8dac635860fc8f57573
+MD5sum: 10f3522b4291f5186c1c5c13df409037
 
 Package: radiant.design
 Version: 1.1.0
@@ -984,7 +984,7 @@ Imports: dplyr (>= 0.8.3), shiny (>= 1.2.0), AlgDesign (>=
        1.1.7.3), import (>= 1.1.0), pwr (>= 1.1.2), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 3435203f5f393f5f550cbe02e07a5112
+MD5sum: b73b239770b03b581ec0f0d5eacc6e72
 
 Package: radiant.model
 Version: 1.1.0
@@ -999,7 +999,7 @@ Imports: radiant.basics (>= 1.1.0), shiny (>= 1.1.0), nnet (>=
        4.1.11), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 8c4d9f24f2ff877919a6c30f88ee2180
+MD5sum: 268c42999089cc751619ce68cb50be2d
 
 Package: radiant.multivariate
 Version: 1.1.0
@@ -1012,7 +1012,7 @@ Imports: radiant.model (>= 1.1.0), shiny (>= 1.2.0), dplyr (>=
        ggrepel (>= 0.8)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: d15d0711f61caec1d928f2f5b3053257
+MD5sum: 4bce1b8e552ad778cc714d4e17100f63
 
 Package: radiant.update
 Version: 1.1.0
@@ -1020,7 +1020,7 @@ Depends: R (>= 3.4.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 9659baf6bf6d8b860e47c0b8a8234333
+MD5sum: e5510e232bf9caa16d55bad4f6e51a1f
 
 Package: RColorBrewer
 Version: 1.1-2
@@ -1227,7 +1227,7 @@ Depends: R (>= 3.3.0)
 Imports: shiny (>= 1.0.5), jsonlite, utils, tools
 Suggests: testthat (>= 2.0.0), dplyr (>= 0.8.3)
 License: MIT + file LICENSE
-MD5sum: e771494e4abc799c33ba19a02d31748e
+MD5sum: 2c3c6fa2b69152d5c5a5f24f10220996
 
 Package: shinyFiles
 Version: 0.7.3

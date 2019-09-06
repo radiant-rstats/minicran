@@ -1336,11 +1336,11 @@ Archs: tidyselect.so.dSYM
 MD5sum: b3f81341bc547ddeedd78c39c00ed5fb
 
 Package: tinytex
-Version: 0.15
+Version: 0.15.2
 Imports: xfun (>= 0.5)
 Suggests: testit, rstudioapi
 License: MIT + file LICENSE
-MD5sum: b59cdf3650da689b6eebf30593a6245c
+MD5sum: a7be817d8f749f4fec7998251d53f7d0
 
 Package: usethis
 Version: 1.5.1

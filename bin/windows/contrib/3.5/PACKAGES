@@ -1189,7 +1189,7 @@ License: GPL-3
 Archs: i386, x64
 
 Package: tinytex
-Version: 0.15
+Version: 0.15.2
 Imports: xfun (>= 0.5)
 Suggests: testit, rstudioapi
 License: MIT + file LICENSE

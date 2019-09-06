@@ -833,6 +833,15 @@ Depends: R (>= 3.0)
 Suggests: knitr, microbenchmark, pryr, testthat, ggplot2, scales
 License: MIT + file LICENSE
 
+Package: radiant
+Version: 1.1.0
+Depends: R (>= 3.4.0), radiant.data (>= 1.1.0), radiant.design
+       (>= 1.1.0), radiant.basics (>= 1.1.0), radiant.model (>=
+       1.1.0), radiant.multivariate (>= 1.1.0)
+Imports: shiny (>= 1.2.0), import (>= 1.1.0)
+Suggests: testthat (>= 2.0.0), knitr, rmarkdown
+License: AGPL-3 | file LICENSE
+
 Package: radiant.basics
 Version: 1.1.0
 Depends: R (>= 3.4.0), radiant.data (>= 1.1.0)

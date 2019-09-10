@@ -294,8 +294,8 @@ License: GPL-3
 Archs: i386, x64
 
 Package: gdtools
-Version: 0.1.9
-Imports: Rcpp (>= 0.12.12), withr
+Version: 0.2.0
+Imports: Rcpp (>= 0.12.12), systemfonts (>= 0.1.1)
 LinkingTo: Rcpp
 Suggests: htmltools, testthat, fontquiver (>= 0.2.0), curl
 License: GPL-3 | file LICENSE
@@ -926,7 +926,7 @@ License: GPL (>= 2)
 Archs: i386, x64
 
 Package: RcppArmadillo
-Version: 0.9.600.4.0
+Version: 0.9.700.2.0
 Depends: R (>= 3.3.0)
 Imports: Rcpp (>= 0.11.0), stats, utils, methods
 LinkingTo: Rcpp
@@ -1155,6 +1155,12 @@ Archs: i386, x64
 Package: sys
 Version: 3.3
 Suggests: unix (>= 1.4), spelling, testthat
+License: MIT + file LICENSE
+Archs: i386, x64
+
+Package: systemfonts
+Version: 0.1.1
+Suggests: testthat (>= 2.1.0), covr, knitr, rmarkdown, tools
 License: MIT + file LICENSE
 Archs: i386, x64
 

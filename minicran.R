@@ -39,14 +39,18 @@ pkgs_src <- c(
   "forge", "gganimate", "gifski", "here", "zipcode", "forcats", "future", "parsnip",
   "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip", "kableExtra",
   "ggraph", "tidygraph", "bookdown", "lintr", "languageserver", "rprojroot", "iml",
-  "xaringan", "stargazer", "lfe"
+  "xaringan"
 )
 
-# for khansen
-# gtrendsR will be updated to the github version in the radiant docker
+# for Karsten
 pkgs_src <- c(
   pkgs_src, "ggmap", "leaflet", "tm", "wordcloud", "rvest", "tidytext",
   "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal", "topicmodels"
+)
+
+# for Ken
+pkgs_src <- c(
+  pkgs_src, "stargazer", "lfe"
 )
 
 # building minicran for source packages

@@ -2043,7 +2043,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 1.1.0),
 Imports: shiny (>= 1.2.0), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
-MD5sum: 535a4a78f5953fd93d816d7ef050f3aa
+MD5sum: a10c356b77687b01d6714f3d9d600f76
 NeedsCompilation: no
 
 Package: radiant.basics
@@ -2055,7 +2055,7 @@ Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales
       1.8.3.3), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: cc5ab2b2305c6e161f581bef0195d337
+MD5sum: ae0a31e8dcfcd925043ca28f26d339bd
 NeedsCompilation: no
 
 Package: radiant.data
@@ -2078,7 +2078,7 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>=
       webshot (>= 0.5.0), testthat (>= 2.0.0), pkgdown (>=
       1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 8b4c4e3781ae2bd32cefdcfc1ec8cb9d
+MD5sum: cdbcdafd612d5be911969e50e88f8603
 NeedsCompilation: no
 
 Package: radiant.design
@@ -2088,7 +2088,7 @@ Imports: dplyr (>= 0.8.3), shiny (>= 1.2.0), AlgDesign (>=
       1.1.7.3), import (>= 1.1.0), pwr (>= 1.1.2), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: d6c268e3061c42828b6aef77833edd41
+MD5sum: f60c7b5f4d2b2e35199026e30e630274
 NeedsCompilation: no
 
 Package: radiant.model
@@ -2104,7 +2104,7 @@ Imports: radiant.basics (>= 1.1.0), shiny (>= 1.1.0), nnet
       1.8.4), e1071 (>= 1.6.8), rpart (>= 4.1.11), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 0c91ed67d02a2193b933a873ca31d39c
+MD5sum: 08f8447ed7fa7b7c7fd0478feae32b8a
 NeedsCompilation: no
 
 Package: radiant.multivariate
@@ -2118,7 +2118,7 @@ Imports: radiant.model (>= 1.1.0), shiny (>= 1.2.0), dplyr
       Gmedian (>= 1.2.3), ggrepel (>= 0.8)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 31f2705874527bfa8bfd5a340eb6ec86
+MD5sum: eec8a7de061dbae2da2b5ac65e0d1dbd
 NeedsCompilation: no
 
 Package: radiant.update
@@ -2127,7 +2127,7 @@ Depends: R (>= 3.4.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: d22176383a8c4737afedb25a5061637d
+MD5sum: e2f6cdec2bde13477046b77cd9170ab4
 NeedsCompilation: no
 
 Package: randomForest

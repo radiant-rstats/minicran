@@ -975,7 +975,7 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0),
        RPostgreSQL (>= 0.6.2), odbc (>= 1.1.4), webshot (>=
        0.5.0), testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 58e3f9e486b0070df0d8d28139c42583
+MD5sum: 95d9ce62e2c9f1b899827f0850a37c3d
 
 Package: radiant.design
 Version: 1.1.0

@@ -2013,7 +2013,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 1.1.0), radiant.design
 Imports: shiny (>= 1.2.0), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
-MD5sum: 81c734ba32c14a30e69ccd0af2f4afa5
+MD5sum: 8aef32c63edfe948a2309ed819ef68e1
 NeedsCompilation: no
 
 Package: radiant.basics
@@ -2045,7 +2045,7 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0),
        RPostgreSQL (>= 0.6.2), odbc (>= 1.1.4), webshot (>=
        0.5.0), testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 5dd9c9ffc0613f0fe86eb6db14f328a6
+MD5sum: cfa0d380a56ac47fbe5a814b4acbbacd
 NeedsCompilation: no
 
 Package: radiant.design
@@ -2071,7 +2071,7 @@ Imports: radiant.basics (>= 1.1.0), shiny (>= 1.1.0), nnet (>=
        4.1.11), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: fbe9cbf3019474bfb39a271799073955
+MD5sum: f86f1f160eb05f891a89b2bfac762d80
 NeedsCompilation: no
 
 Package: radiant.multivariate

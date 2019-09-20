@@ -393,7 +393,7 @@ Imports: shiny (>= 1.3.2), miniUI (>= 0.1.1.1), rstudioapi (>=
        1.5.1), markdown
 Suggests: knitr, rmarkdown
 License: GPL-3
-MD5sum: 5ef628d419e5145091fa77649d5bca39
+MD5sum: 74cd833a3d7515e7b8acf7a3b45ce7fb
 
 Package: glue
 Version: 1.3.1

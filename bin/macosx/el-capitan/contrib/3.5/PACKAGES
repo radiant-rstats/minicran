@@ -169,13 +169,13 @@ License: MIT + file LICENSE
 MD5sum: 1f9eeadb3643c2228421894768eacef7
 
 Package: curl
-Version: 4.0
+Version: 4.1
 Depends: R (>= 3.0.0)
 Suggests: askpass, spelling, testthat (>= 1.0.0), knitr, jsonlite,
        rmarkdown, magrittr, httpuv (>= 1.4.4), webutils
 License: MIT + file LICENSE
 Archs: curl.so.dSYM
-MD5sum: a9d2f7b55c6cb104e844d15e42853b98
+MD5sum: 1c3a4ad3eb83b01b3a458c6099dfa4ad
 
 Package: data.table
 Version: 1.12.2
@@ -256,12 +256,12 @@ Archs: dplyr.so.dSYM
 MD5sum: 03dbf2c3c557db28d8b2bac84865e0d3
 
 Package: DT
-Version: 0.8
+Version: 0.9
 Imports: htmltools (>= 0.3.6), htmlwidgets (>= 1.3), jsonlite (>=
        0.9.16), magrittr, crosstalk, promises
 Suggests: knitr (>= 1.8), rmarkdown, shiny (>= 1.1.0)
 License: GPL-3 | file LICENSE
-MD5sum: b536affca0ada06320d115531fc8894a
+MD5sum: 2337dc6e41a4a42c9d15059390f99d07
 
 Package: e1071
 Version: 1.7-2
@@ -550,7 +550,7 @@ Archs: jsonlite.so.dSYM
 MD5sum: 896b6ed09cdd3e2f66f2a517a0cefe46
 
 Package: knitr
-Version: 1.24
+Version: 1.25
 Depends: R (>= 3.2.3)
 Imports: evaluate (>= 0.10), highr, markdown, stringr (>= 0.6),
        yaml (>= 2.1.19), methods, xfun, tools
@@ -558,9 +558,9 @@ Suggests: formatR, testit, digest, rgl (>= 0.95.1201), codetools,
        rmarkdown, htmlwidgets (>= 0.7), webshot, tikzDevice (>=
        0.10), tinytex, reticulate (>= 1.4), JuliaCall (>= 0.11.1),
        magick, png, jpeg, gifski, xml2 (>= 1.2.0), httr, DBI (>=
-       0.4-1), showtext, tibble, styler
+       0.4-1), showtext, tibble, sass, styler
 License: GPL
-MD5sum: d741a7b3583ec22ca29396fa318e95ae
+MD5sum: dabbae1fc4d81105c7e685df5d5ac368
 
 Package: labeling
 Version: 0.3
@@ -1330,11 +1330,11 @@ Archs: tidyselect.so.dSYM
 MD5sum: b3f81341bc547ddeedd78c39c00ed5fb
 
 Package: tinytex
-Version: 0.15.2
+Version: 0.16
 Imports: xfun (>= 0.5)
 Suggests: testit, rstudioapi
 License: MIT + file LICENSE
-MD5sum: a7be817d8f749f4fec7998251d53f7d0
+MD5sum: dbf5cfea8db098e57e0125051e8f6172
 
 Package: usethis
 Version: 1.5.1

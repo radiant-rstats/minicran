@@ -148,7 +148,7 @@ Imports: htmltools (>= 0.3.5), jsonlite, lazyeval, R6, shiny (>=
 License: MIT + file LICENSE
 
 Package: curl
-Version: 4.0
+Version: 4.1
 Depends: R (>= 3.0.0)
 Suggests: askpass, spelling, testthat (>= 1.0.0), knitr, jsonlite,
        rmarkdown, magrittr, httpuv (>= 1.4.4), webutils

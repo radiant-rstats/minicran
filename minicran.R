@@ -21,7 +21,7 @@ source("selMakeRepo.R", local = TRUE)
 pth <- rprojroot::find_root(rprojroot::has_file("README.md"))
 pkgs <- c(
   "radiant", "miniUI", "webshot", "tinytex",
-  "usethis", "radiant.update", "svglite", "randomizr"
+  "usethis", "radiant.update", "svglite"
 )
 
 # check only files that needed updating or adding

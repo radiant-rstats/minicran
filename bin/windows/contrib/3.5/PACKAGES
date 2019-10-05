@@ -862,6 +862,15 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0),
        testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 
+Package: radiant.design
+Version: 1.1.1
+Depends: R (>= 3.4.0), radiant.data (>= 1.1.4), mvtnorm
+Imports: dplyr (>= 0.8.3), shiny (>= 1.2.0), AlgDesign (>= 1.1.7.3),
+       import (>= 1.1.0), pwr (>= 1.1.2), randomizr (>= 0.20.0),
+       polycor
+Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
+License: AGPL-3 | file LICENSE
+
 Package: radiant.model
 Version: 1.1.7
 Depends: R (>= 3.4.0), radiant.data (>= 1.1.0)

@@ -1860,7 +1860,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 1.1.4), mvtnorm
 Imports: dplyr (>= 0.8.3), shiny (>= 1.2.0), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), pwr (>= 1.1.2), randomizr (>= 0.20.0), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 2f50017df78ad17efe5b8f71d417a19d
+MD5sum: e3741ea2b8bc4b26f130cabdc1a9debd
 NeedsCompilation: no
 
 Package: radiant.model

@@ -997,6 +997,14 @@ Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
 MD5sum: a66066c25cb1f7e2208e1019f1857388
 
+Package: randomizr
+Version: 0.16.1
+Depends: R (>= 3.4.0)
+Suggests: knitr, dplyr, blockTools, testthat, rmarkdown, ri
+License: MIT + file LICENSE
+Archs: randomizr.so.dSYM
+MD5sum: 322461198ee397b8030a91213ad52182
+
 Package: RColorBrewer
 Version: 1.1-2
 Depends: R (>= 2.0.0)

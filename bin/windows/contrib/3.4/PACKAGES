@@ -901,6 +901,13 @@ Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
 
+Package: randomizr
+Version: 0.18.0
+Depends: R (>= 3.4.0)
+Suggests: knitr, dplyr, blockTools, testthat, rmarkdown, ri
+License: MIT + file LICENSE
+Archs: i386, x64
+
 Package: RColorBrewer
 Version: 1.1-2
 Depends: R (>= 2.0.0)

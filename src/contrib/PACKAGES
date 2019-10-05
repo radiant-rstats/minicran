@@ -2060,7 +2060,7 @@ Imports: dplyr (>= 0.8.3), shiny (>= 1.2.0), AlgDesign (>= 1.1.7.3),
        polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: e3741ea2b8bc4b26f130cabdc1a9debd
+MD5sum: cd394961de22cd88614944d6b11375ea
 NeedsCompilation: no
 
 Package: radiant.model

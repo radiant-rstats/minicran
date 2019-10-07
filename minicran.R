@@ -100,13 +100,17 @@ for (pdir in pdirs) {
   }
 }
 
+## work-around for https://github.com/ramnathv/htmlwidgets/issues/348
+# unlink("src/contrib/htmlwidgets*", force = TRUE)
+# curl::curl_download("https://cran.r-project.org/src/contrib/Archive/htmlwidgets/htmlwidgets_1.3.tar.gz", destfile = "src/contrib/htmlwidgets_1.3.tar.gz")
+
 ## needed to update PACKAGES after deleting old versions
 tools::write_PACKAGES("src/contrib/", type = "source")
 sapply(win_dirs, tools::write_PACKAGES, type = "win.binary")
 sapply(mac_dirs, tools::write_PACKAGES, type = "mac.binary")
 
 ## push to github
-# rstudioapi::documentSaveAll()
+rstudioapi::documentSaveAll()
 system("git add --all .")
 mess <- paste0("update for: ", paste0(pkgs, collapse = ", "), " (", format(Sys.Date(), format = "%m-%d-%Y"), ")")
 system(paste0("git commit -m '", mess, "'"))

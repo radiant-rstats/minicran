@@ -971,7 +971,7 @@ Imports: grDevices, htmltools (>= 0.3), jsonlite (>= 0.9.16), yaml
 Suggests: knitr (>= 1.8)
 Enhances: shiny (>= 1.1)
 License: MIT + file LICENSE
-MD5sum: 7d2ed8c5908bd04083a40f24f29338d6
+MD5sum: 2c2451d8e8cef5d4c484b0bd5790287b
 NeedsCompilation: no
 
 Package: httpuv
@@ -2017,7 +2017,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 1.1.0), radiant.design (>=
 Imports: shiny (>= 1.4.0), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
-MD5sum: ea71d66624efaa0cfad2ace844d50a32
+MD5sum: 54aeb000a0ce9ca91c3d1a74430a1858
 NeedsCompilation: no
 
 Package: radiant.basics
@@ -2569,7 +2569,7 @@ Suggests: datasets, Cairo (>= 1.5-5), testthat (>= 2.1.1), knitr (>=
        1.6), markdown, rmarkdown, ggplot2, reactlog (>= 1.0.0),
        magrittr
 License: GPL-3 | file LICENSE
-MD5sum: 762291b3e47a8f25ad54641879cbd60a
+MD5sum: 19e20831510bef85b92a7b4a06f1a0fa
 NeedsCompilation: no
 
 Package: shinyAce

@@ -839,7 +839,7 @@ Suggests: Rcpp, testthat, withr
 License: MIT + file LICENSE
 
 Package: promises
-Version: 1.0.1
+Version: 1.1.0
 Imports: R6, Rcpp, later, rlang, stats, magrittr
 LinkingTo: later, Rcpp
 Suggests: testthat, future, knitr, rmarkdown

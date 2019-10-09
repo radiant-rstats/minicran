@@ -671,6 +671,16 @@ License: LGPL (>= 2.1)
 MD5sum: b50b45a63de747d71e78f64942a15814
 NeedsCompilation: no
 
+Package: gargle
+Version: 0.4.0
+Depends: R (>= 3.2)
+Imports: fs (>= 1.3.1), glue (>= 1.3.0), httr (>= 1.4.0), jsonlite,
+       rlang (>= 0.4.0), stats, withr
+Suggests: covr, knitr, rmarkdown, sodium, testthat (>= 2.1.0)
+License: MIT + file LICENSE
+MD5sum: 0f02d96c554ae06db26a689c8f70f3ef
+NeedsCompilation: no
+
 Package: gbm
 Version: 2.1.5
 Depends: R (>= 2.9.0)
@@ -843,6 +853,19 @@ LinkingTo: Rcpp, RcppArmadillo, RSpectra
 License: GPL (>= 2)
 MD5sum: 44cc684be26529574038244d0db20a7b
 NeedsCompilation: yes
+
+Package: googleAuthR
+Version: 1.1.1
+Depends: R (>= 3.3.0)
+Imports: assertthat (>= 0.2.0), digest, gargle (>= 0.3.1), httr (>=
+       1.4.0), jsonlite (>= 1.6), memoise (>= 1.1.0), rlang, utils
+Suggests: bigQueryR, covr, devtools (>= 1.12.0), formatR (>= 1.4),
+       googleAnalyticsR, knitr, miniUI (>= 0.1.1), rmarkdown,
+       roxygen2 (>= 5.0.0), shiny (>= 0.13.2), testthat, usethis
+       (>= 1.5.1)
+License: MIT + file LICENSE
+MD5sum: 3ad3782e602b34a05362fa17f6944c7c
+NeedsCompilation: no
 
 Package: gower
 Version: 0.2.1

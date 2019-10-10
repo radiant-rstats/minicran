@@ -814,7 +814,7 @@ Imports: shiny (>= 1.3.2), miniUI (>= 0.1.1.1), rstudioapi (>= 0.7),
        markdown
 Suggests: knitr, rmarkdown
 License: GPL-3
-MD5sum: 5be95d2bf2c437bf4d04bd7b8ac16172
+MD5sum: 9fa91c610166d70ad8d484de62f2ef5a
 NeedsCompilation: no
 
 Package: glmnet
@@ -2056,7 +2056,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 1.1.5), radiant.design (>=
 Imports: shiny (>= 1.4.0), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
-MD5sum: e163e18d22483eaedcff27d810518485
+MD5sum: aface668760afa443bc200eeef5fd1f6
 NeedsCompilation: no
 
 Package: radiant.basics
@@ -2068,7 +2068,7 @@ Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales (>=
        1.1.0), MASS
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 35792525ceca068fb3d8d4903afce0a9
+MD5sum: 80bc9b56c739793372b5928ccc0350cf
 NeedsCompilation: no
 
 Package: radiant.data
@@ -2088,7 +2088,7 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0),
        RPostgreSQL (>= 0.6.2), odbc (>= 1.1.4), webshot (>= 0.5.0),
        testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 7a906e20e85702abed12299895586277
+MD5sum: abfbccc58164fe51b5379d17ef56108d
 NeedsCompilation: no
 
 Package: radiant.design
@@ -2099,7 +2099,7 @@ Imports: dplyr (>= 0.8.3), shiny (>= 1.2.0), AlgDesign (>= 1.1.7.3),
        polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 6c2d67871fdaf07c0eac3f13222821b0
+MD5sum: 2856d8565c03b52b87c46a446f1358d3
 NeedsCompilation: no
 
 Package: radiant.model
@@ -2129,7 +2129,7 @@ Imports: radiant.model (>= 1.1.0), shiny (>= 1.2.0), dplyr (>=
        0.8)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: f9ec05e238b8fc1ae6e0e8484959ca7d
+MD5sum: 5b5f6c0989f0697d9516945440f422a7
 NeedsCompilation: no
 
 Package: radiant.update
@@ -2645,7 +2645,7 @@ Version: 0.7.4
 Imports: htmltools, jsonlite, tools, shiny (>= 1.1.0), fs (>=
        1.2.6), tibble (>= 1.4.2)
 License: GPL (>= 2)
-MD5sum: 4bd0761ec08234c0ef043b48d9131eeb
+MD5sum: 4d00efe4de3e216fc88dc63f9e004063
 NeedsCompilation: no
 
 Package: shinythemes

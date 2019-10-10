@@ -806,7 +806,7 @@ MD5sum: f4632239798a84680ddcab650caaa1df
 NeedsCompilation: yes
 
 Package: gitgadget
-Version: 0.5.1
+Version: 0.5.2
 Depends: R (>= 3.4.0)
 Imports: shiny (>= 1.3.2), miniUI (>= 0.1.1.1), rstudioapi (>= 0.7),
        curl (>= 3.2), jsonlite (>= 1.5), dplyr (>= 0.8.3),
@@ -814,7 +814,7 @@ Imports: shiny (>= 1.3.2), miniUI (>= 0.1.1.1), rstudioapi (>= 0.7),
        markdown
 Suggests: knitr, rmarkdown
 License: GPL-3
-MD5sum: 867fc0002a8126f190013d93eea647ee
+MD5sum: 28d7c24424ddc5740f3305c0b13d6890
 NeedsCompilation: no
 
 Package: glmnet
@@ -985,14 +985,14 @@ MD5sum: 5e8f386ed5a4bbf61080b1560f617806
 NeedsCompilation: no
 
 Package: htmltools
-Version: 0.4.0
+Version: 0.4.0.9000
 Depends: R (>= 2.14.1)
 Imports: utils, digest, Rcpp, rlang
 LinkingTo: Rcpp
 Suggests: markdown, testthat, withr
 Enhances: knitr
 License: GPL (>= 2)
-MD5sum: af44a5dcbc6231eef324026ac0b95c32
+MD5sum: a2547d54f0e24db1fc06e0f350c32015
 NeedsCompilation: yes
 
 Package: htmlwidgets

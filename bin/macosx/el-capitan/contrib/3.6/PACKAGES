@@ -297,11 +297,11 @@ Archs: fansi.so.dSYM
 MD5sum: 24203d2b13958950c9901e57a0fd2f7f
 
 Package: fastmap
-Version: 1.0.0
+Version: 1.0.1
 Suggests: testthat (>= 2.1.1)
 License: MIT + file LICENSE
 Archs: fastmap.so.dSYM
-MD5sum: fae9c7b1ee7e4e49f9a30693f86d0741
+MD5sum: 47aeef284f5a2401cb416a329d898aa9
 
 Package: forcats
 Version: 0.4.0

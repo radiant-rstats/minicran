@@ -2072,7 +2072,7 @@ MD5sum: 80bc9b56c739793372b5928ccc0350cf
 NeedsCompilation: no
 
 Package: radiant.data
-Version: 1.1.5
+Version: 1.1.6
 Depends: R (>= 3.4.0), magrittr (>= 1.5), ggplot2 (>= 2.2.1),
        lubridate (>= 1.7.4), tidyr (>= 0.8.2), dplyr (>= 0.8.0)
 Imports: tibble (>= 1.4.2), rlang (>= 0.4.0), broom (>= 0.4.5), car
@@ -2088,7 +2088,7 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0),
        RPostgreSQL (>= 0.6.2), odbc (>= 1.1.4), webshot (>= 0.5.0),
        testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: abfbccc58164fe51b5379d17ef56108d
+MD5sum: 0d012681201dc113db8ab0b9e3f140a9
 NeedsCompilation: no
 
 Package: radiant.design

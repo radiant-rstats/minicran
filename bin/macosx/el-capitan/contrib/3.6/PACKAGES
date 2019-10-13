@@ -999,7 +999,7 @@ Imports: radiant.basics (>= 1.1.0), shiny (>= 1.1.0), nnet (>=
        4.1.11), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: ee52b4f2ce9e887b6d5a6a8ea6678f75
+MD5sum: 2d479d42c682cae9766c5e7a6b83a263
 
 Package: radiant.multivariate
 Version: 1.1.1

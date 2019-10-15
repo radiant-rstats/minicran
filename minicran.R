@@ -63,7 +63,7 @@ to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "sourc
 # download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "3.7")
 # download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "3.7")
 
-versions <- c("3.4", "3.5", "3.6")
+versions <- c("3.5", "3.6")
 for (ver in versions) {
   ## building minicran for windows binaries
   pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = ver)

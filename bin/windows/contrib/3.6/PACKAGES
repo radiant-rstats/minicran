@@ -262,7 +262,7 @@ License: GPL (>= 2)
 Archs: i386, x64
 
 Package: fastmap
-Version: 1.0.0
+Version: 1.0.1
 Suggests: testthat (>= 2.1.1)
 License: MIT + file LICENSE
 Archs: i386, x64
@@ -927,11 +927,11 @@ License: GPL (>= 2)
 Archs: i386, x64
 
 Package: RcppArmadillo
-Version: 0.9.700.2.0
+Version: 0.9.800.1.0
 Depends: R (>= 3.3.0)
 Imports: Rcpp (>= 0.11.0), stats, utils, methods
 LinkingTo: Rcpp
-Suggests: RUnit, Matrix, pkgKitten, reticulate, rmarkdown, knitr,
+Suggests: tinytest, Matrix, pkgKitten, reticulate, rmarkdown, knitr,
        pinp, slam
 License: GPL (>= 2)
 Archs: i386, x64

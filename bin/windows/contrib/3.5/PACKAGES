@@ -839,7 +839,7 @@ Suggests: testthat (>= 2.0.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
 
 Package: radiant.basics
-Version: 1.1.1
+Version: 1.1.2
 Depends: R (>= 3.4.0), radiant.data (>= 1.1.5)
 Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales (>= 0.4.0),
        dplyr (>= 0.8.3), tidyr (>= 0.8.2), magrittr (>= 1.5), shiny
@@ -875,7 +875,7 @@ Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 
 Package: radiant.model
-Version: 1.1.9
+Version: 1.1.10
 Depends: R (>= 3.4.0), radiant.data (>= 1.1.0)
 Imports: radiant.basics (>= 1.1.0), shiny (>= 1.1.0), nnet (>=
        7.3.12), NeuralNetTools (>= 1.5.1), sandwich (>= 2.3.4), car

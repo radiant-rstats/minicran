@@ -307,7 +307,7 @@ MD5sum: 61382e2d4f0eea718d7a07624e93e22e
 NeedsCompilation: no
 
 Package: covr
-Version: 3.3.1
+Version: 3.3.2
 Depends: R (>= 3.1.0), methods
 Imports: digest, stats, utils, jsonlite, rex, httr, crayon, withr (>=
        1.0.2), yaml
@@ -315,7 +315,7 @@ Suggests: R6, knitr, rmarkdown, htmltools, DT (>= 0.2), testthat,
        rlang, rstudioapi (>= 0.2), xml2 (>= 1.0.0), parallel,
        memoise, mockery
 License: GPL-3
-MD5sum: 7e8dd20840a2167f398826f4bcc6f2d9
+MD5sum: 0e3838bc5ecd3e75929796423452d0ca
 NeedsCompilation: yes
 
 Package: crayon
@@ -1169,12 +1169,12 @@ MD5sum: 7497cc69fc7f7574929d99de2ceb9de6
 NeedsCompilation: no
 
 Package: KernSmooth
-Version: 2.23-15
+Version: 2.23-16
 Priority: recommended
 Depends: R (>= 2.5.0), stats
 Suggests: MASS
 License: Unlimited
-MD5sum: 746cdf26dec72004cf19978e87dcc982
+MD5sum: ea248d80dcbd9d30eb5fb0a25abbd4c8
 NeedsCompilation: yes
 
 Package: knitr
@@ -2807,15 +2807,15 @@ MD5sum: 1c3e0267af33d829b842de9fa68853e2
 NeedsCompilation: no
 
 Package: styler
-Version: 1.1.1
+Version: 1.2.0
 Imports: backports (>= 1.1.0), cli (>= 1.1.0), magrittr (>= 1.0.1),
        purrr (>= 0.2.3), rematch2 (>= 2.0.1), rlang (>= 0.1.1),
        rprojroot (>= 1.1), tibble (>= 1.4.2), tools, withr (>=
        1.0.0), xfun (>= 0.1)
 Suggests: data.tree (>= 0.1.6), dplyr, here, knitr, prettycode,
-       rmarkdown, rstudioapi (>= 0.7), testthat
+       rmarkdown, rstudioapi (>= 0.7), testthat (>= 2.1.0)
 License: GPL-3
-MD5sum: 6ff19334c95548e58d44e5b168efa554
+MD5sum: 291ba47731b9138a5aae1c1b9aba7572
 NeedsCompilation: no
 
 Package: survival

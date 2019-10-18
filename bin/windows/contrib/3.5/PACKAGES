@@ -293,7 +293,7 @@ License: GPL-3
 Archs: i386, x64
 
 Package: gdtools
-Version: 0.2.0
+Version: 0.2.1
 Imports: Rcpp (>= 0.12.12), systemfonts (>= 0.1.1)
 LinkingTo: Rcpp
 Suggests: htmltools, testthat, fontquiver (>= 0.2.0), curl

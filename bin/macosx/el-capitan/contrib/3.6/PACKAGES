@@ -332,13 +332,13 @@ Archs: fs.so.dSYM
 MD5sum: b3f36bd9a3e805b0f0cd0bbd8ea3cecd
 
 Package: gdtools
-Version: 0.2.0
+Version: 0.2.1
 Imports: Rcpp (>= 0.12.12), systemfonts (>= 0.1.1)
 LinkingTo: Rcpp
 Suggests: htmltools, testthat, fontquiver (>= 0.2.0), curl
 License: GPL-3 | file LICENSE
 Archs: gdtools.so.dSYM
-MD5sum: 510fca2508e623b17cef3a370518a146
+MD5sum: 83cde21a39224bce0faf21f4a108f7df
 
 Package: generics
 Version: 0.0.2

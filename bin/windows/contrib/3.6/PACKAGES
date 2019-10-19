@@ -293,7 +293,7 @@ License: GPL-3
 Archs: i386, x64
 
 Package: gdtools
-Version: 0.2.0
+Version: 0.2.1
 Imports: Rcpp (>= 0.12.12), systemfonts (>= 0.1.1)
 LinkingTo: Rcpp
 Suggests: htmltools, testthat, fontquiver (>= 0.2.0), curl
@@ -800,8 +800,8 @@ Suggests: GPArotation, lavaan, sem, lme4,Rcsdp, graph, Rgraphviz
 License: GPL (>= 2)
 
 Package: purrr
-Version: 0.3.2
-Depends: R (>= 3.1)
+Version: 0.3.3
+Depends: R (>= 3.2)
 Imports: magrittr (>= 1.5), rlang (>= 0.3.1)
 Suggests: covr, crayon, dplyr (>= 0.7.8), knitr, rmarkdown, testthat,
        tibble, tidyselect

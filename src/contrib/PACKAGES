@@ -29,6 +29,14 @@ License: GPL (>= 2)
 MD5sum: b09cac5668f70cc489a1f8817452f522
 NeedsCompilation: yes
 
+Package: arm
+Version: 1.10-1
+Depends: R (>= 3.1.0), MASS, Matrix (>= 1.0), stats, lme4 (>= 1.0)
+Imports: abind, coda, graphics, grDevices, methods, nlme, utils
+License: GPL (>= 3)
+MD5sum: 65475b51084d4ec98b8eb6a9d1ecd036
+NeedsCompilation: no
+
 Package: askpass
 Version: 1.1
 Imports: sys (>= 2.1)
@@ -352,12 +360,12 @@ MD5sum: f2e9acc45196fd255f85915d00e9332e
 NeedsCompilation: no
 
 Package: data.table
-Version: 1.12.4
+Version: 1.12.6
 Depends: R (>= 3.1.0)
 Imports: methods
 Suggests: bit64, curl, R.utils, knitr, xts, nanotime, zoo, yaml
 License: MPL-2.0 | file LICENSE
-MD5sum: 8f18d68464663f6daadd1d37c450df8e
+MD5sum: 7fdb071ac00529f5ef697df3bae36353
 NeedsCompilation: yes
 
 Package: data.tree
@@ -1090,6 +1098,15 @@ License: GPL-3
 MD5sum: b0e2d7388fc69327d3c4bbaab9067f3d
 NeedsCompilation: no
 
+Package: inline
+Version: 0.3.15
+Depends: R (>= 2.4.0)
+Imports: methods
+Suggests: Rcpp (>= 0.11.0)
+License: LGPL
+MD5sum: 8f0de494120ecd628fa7a2e6d4af98cb
+NeedsCompilation: no
+
 Package: inum
 Version: 1.0-1
 Depends: R (>= 3.3.0)
@@ -1360,6 +1377,17 @@ Suggests: car, strucchange, sandwich, dynlm, stats4, survival, AER
 License: GPL-2 | GPL-3
 MD5sum: 461f2cac3f460c446b2e87bd61149928
 NeedsCompilation: yes
+
+Package: loo
+Version: 2.1.0
+Depends: R (>= 3.1.2)
+Imports: graphics, matrixStats (>= 0.52), parallel, stats, checkmate
+Suggests: bayesplot (>= 1.5.0), brms (>= 2.2.0), ggplot2, knitr,
+       rmarkdown, rstan, rstanarm (>= 2.17.4), rstantools, spdep,
+       testthat
+License: GPL (>= 3)
+MD5sum: 40529aa5626eed039244966b58675a67
+NeedsCompilation: no
 
 Package: lubridate
 Version: 1.7.4
@@ -1928,13 +1956,13 @@ MD5sum: d5f5738cd3e8eb931acd11b428e25a45
 NeedsCompilation: no
 
 Package: purrr
-Version: 0.3.2
-Depends: R (>= 3.1)
+Version: 0.3.3
+Depends: R (>= 3.2)
 Imports: magrittr (>= 1.5), rlang (>= 0.3.1)
 Suggests: covr, crayon, dplyr (>= 0.7.8), knitr, rmarkdown, testthat,
        tibble, tidyselect
 License: GPL-3 | file LICENSE
-MD5sum: 666aa30d462bbf235b3a9dafd0637efc
+MD5sum: c8eb681161e566440cae83b36d84704a
 NeedsCompilation: yes
 
 Package: pwr
@@ -2497,6 +2525,20 @@ License: LGPL (>= 2)
 MD5sum: a8425543e9d3c6f3d4a7324122d10dae
 NeedsCompilation: yes
 
+Package: rstan
+Version: 2.19.2
+Depends: R (>= 3.4.0), StanHeaders (> 2.18.1), ggplot2 (>= 2.0.0)
+Imports: methods, stats4, inline, gridExtra (>= 2.0.0), Rcpp (>=
+       0.12.0), loo (>= 2.0.0), pkgbuild
+LinkingTo: Rcpp (>= 0.12.0), RcppEigen (>= 0.3.3.3.0), BH (>=
+       1.69.0), StanHeaders (> 2.18.1)
+Suggests: RUnit, RcppEigen (>= 0.3.3.3.0), BH (>= 1.66), parallel,
+       KernSmooth, shinystan (>= 2.3.0), bayesplot (>= 1.5.0),
+       rmarkdown, rstantools, rstudioapi, Matrix, knitr (>= 1.15.1)
+License: GPL (>= 3)
+MD5sum: ecf648981e85418995e84618b61d78d7
+NeedsCompilation: yes
+
 Package: rstudioapi
 Version: 0.10
 Suggests: testthat, knitr, rmarkdown
@@ -2735,6 +2777,15 @@ Suggests: setRNG
 License: GPL (>= 2)
 MD5sum: df052fd66b10f10780b34b3e5fa72f8e
 NeedsCompilation: no
+
+Package: StanHeaders
+Version: 2.19.0
+Depends: R (>= 3.4.0)
+Suggests: Rcpp, RcppEigen, BH, knitr (>= 1.15.1), rmarkdown, Matrix,
+       methods, rstan
+License: BSD_3_clause + file LICENSE
+MD5sum: f18ed8d8646b540abc330c161d70f9b0
+NeedsCompilation: yes
 
 Package: stargazer
 Version: 5.2.2

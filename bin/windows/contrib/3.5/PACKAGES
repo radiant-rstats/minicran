@@ -848,7 +848,7 @@ Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 
 Package: radiant.data
-Version: 1.1.7
+Version: 1.1.8
 Depends: R (>= 3.4.0), magrittr (>= 1.5), ggplot2 (>= 2.2.1),
        lubridate (>= 1.7.4), tidyr (>= 0.8.2), dplyr (>= 0.8.0)
 Imports: tibble (>= 1.4.2), rlang (>= 0.4.0), broom (>= 0.4.5), car
@@ -866,11 +866,11 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0),
 License: AGPL-3 | file LICENSE
 
 Package: radiant.design
-Version: 1.1.2
+Version: 1.1.3
 Depends: R (>= 3.4.0), radiant.data (>= 1.1.5), mvtnorm
-Imports: dplyr (>= 0.8.3), shiny (>= 1.2.0), AlgDesign (>= 1.1.7.3),
-       import (>= 1.1.0), pwr (>= 1.1.2), randomizr (>= 0.20.0),
-       polycor
+Imports: dplyr (>= 0.8.3), magrittr (>= 1.5), shiny (>= 1.2.0),
+       AlgDesign (>= 1.1.7.3), import (>= 1.1.0), pwr (>= 1.1.2),
+       randomizr (>= 0.20.0), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 

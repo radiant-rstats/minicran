@@ -942,7 +942,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 1.1.5), radiant.design (>=
 Imports: shiny (>= 1.4.0), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
-MD5sum: fd244f775637a5740e72767675e116f2
+MD5sum: 0d66270f4f75bdbf745c557340da139d
 
 Package: radiant.basics
 Version: 1.1.4
@@ -955,7 +955,7 @@ License: AGPL-3 | file LICENSE
 MD5sum: 03cdcddd264a49f806790d09509e960d
 
 Package: radiant.data
-Version: 1.1.7
+Version: 1.1.8
 Depends: R (>= 3.4.0), magrittr (>= 1.5), ggplot2 (>= 2.2.1),
        lubridate (>= 1.7.4), tidyr (>= 0.8.2), dplyr (>= 0.8.0)
 Imports: tibble (>= 1.4.2), rlang (>= 0.4.0), broom (>= 0.4.5), car
@@ -971,17 +971,17 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0),
        RPostgreSQL (>= 0.6.2), odbc (>= 1.1.4), webshot (>= 0.5.0),
        testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 6ee11b2464d368230058bee57dfb7207
+MD5sum: ce32ab3fae7d863d3d3923b11ad77eac
 
 Package: radiant.design
-Version: 1.1.2
+Version: 1.1.3
 Depends: R (>= 3.4.0), radiant.data (>= 1.1.5), mvtnorm
-Imports: dplyr (>= 0.8.3), shiny (>= 1.2.0), AlgDesign (>= 1.1.7.3),
-       import (>= 1.1.0), pwr (>= 1.1.2), randomizr (>= 0.20.0),
-       polycor
+Imports: dplyr (>= 0.8.3), magrittr (>= 1.5), shiny (>= 1.2.0),
+       AlgDesign (>= 1.1.7.3), import (>= 1.1.0), pwr (>= 1.1.2),
+       randomizr (>= 0.20.0), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 231ac32c51829c8dc907561bac97261f
+MD5sum: a4e1d307a7a5187d09cc4478d40ae19e
 
 Package: radiant.model
 Version: 1.1.11
@@ -996,7 +996,7 @@ Imports: radiant.basics (>= 1.1.0), shiny (>= 1.1.0), nnet (>=
        ggrepel (>= 0.8), broom (>= 0.5.2), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: f319a605d82434c25c691227bdf5a6a2
+MD5sum: ceab821f86fc128d611ef752c5c46f4a
 
 Package: radiant.multivariate
 Version: 1.1.1

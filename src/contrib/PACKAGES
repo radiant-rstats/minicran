@@ -2655,7 +2655,7 @@ Version: 0.7.5
 Imports: htmltools, jsonlite, tools, shiny (>= 1.1.0), fs (>= 1.2.6),
         tibble (>= 1.4.2)
 License: GPL (>= 2)
-MD5sum: 76214d9491693b25f9bc7c9498ddaf5c
+MD5sum: b584ca71d622e8f654c290857f437bf4
 NeedsCompilation: no
 
 Package: shinythemes

@@ -2089,7 +2089,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 1.2.0), radiant.design (>=
 Imports: shiny (>= 1.4.0), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
-MD5sum: d6ec6abd11870d72ddacdc4b10aa8ffb
+MD5sum: 9f85fbe1cc618f2fd664656228ff9965
 NeedsCompilation: no
 
 Package: radiant.basics
@@ -2100,7 +2100,7 @@ Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales (>= 0.4.0),
        (>= 1.4.0), psych (>= 1.8.3.3), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: d65d44f8c841373d32e587fa35f6ef5c
+MD5sum: 10968eac87bdae475f12ee6b8475d100
 NeedsCompilation: no
 
 Package: radiant.data
@@ -2120,7 +2120,7 @@ Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0),
        RPostgreSQL (>= 0.6.2), odbc (>= 1.1.4), webshot (>= 0.5.0),
        testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 528a1d7dc4ea741f7a71413ea14e5588
+MD5sum: ed211a5e2c506fcb4d26d29df80c0bf6
 NeedsCompilation: no
 
 Package: radiant.design
@@ -2131,7 +2131,7 @@ Imports: dplyr (>= 0.8.3), magrittr (>= 1.5), shiny (>= 1.4.0),
        randomizr (>= 0.20.0), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: b5c14e67d4e6479de3d42874815e5cf6
+MD5sum: 9f139695f851a370498530f119bcdb4d
 NeedsCompilation: no
 
 Package: radiant.model
@@ -2147,7 +2147,7 @@ Imports: radiant.basics (>= 1.2.0), shiny (>= 1.4.0), nnet (>=
        ggrepel (>= 0.8), broom (>= 0.5.2), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 44075efb773bc1a9a942fb4bfd98eed4
+MD5sum: 53eaaaf5ea7e0fc438f2e9bb62bee1c0
 NeedsCompilation: no
 
 Package: radiant.multivariate
@@ -2160,7 +2160,7 @@ Imports: radiant.model (>= 1.2.0), shiny (>= 1.4.0), dplyr (>=
        7.3), import (>= 1.1.0), Gmedian (>= 1.2.3), ggrepel (>= 0.8)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: ba1a4cd56781beaacbf6d4f7dc689d8c
+MD5sum: 511a5ca8816b1ef9709890c7563d494b
 NeedsCompilation: no
 
 Package: radiant.update

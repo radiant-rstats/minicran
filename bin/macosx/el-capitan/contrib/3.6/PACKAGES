@@ -320,6 +320,13 @@ License: GPL (>= 2)
 Archs: foreign.so.dSYM
 MD5sum: 88f23baab2554007c668aea2c73a02bb
 
+Package: formatR
+Version: 1.7
+Depends: R (>= 3.0.2)
+Suggests: codetools, shiny, testit, rmarkdown, knitr
+License: GPL
+MD5sum: fc2a6068fc8fe745dd1c92780641d16a
+
 Package: fs
 Version: 1.3.1
 Depends: R (>= 3.1)

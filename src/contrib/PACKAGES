@@ -169,14 +169,14 @@ MD5sum: b9241e4c8c3b90d40734161680543374
 NeedsCompilation: no
 
 Package: car
-Version: 3.0-3
+Version: 3.0-4
 Depends: R (>= 3.5.0), carData (>= 3.0-0)
 Imports: abind, MASS, mgcv, nnet, pbkrtest (>= 0.4-4), quantreg,
        grDevices, utils, stats, graphics, maptools, rio, lme4, nlme
 Suggests: alr4, boot, coxme, leaps, lmtest, Matrix, MatrixModels, rgl
        (>= 0.93.960), sandwich, SparseM, survival, survey
 License: GPL (>= 2)
-MD5sum: 7662cd153bc873aaf8fcb369e6776411
+MD5sum: dd79be75969cb0f500eb994f355de299
 NeedsCompilation: no
 
 Package: carData
@@ -291,12 +291,12 @@ MD5sum: 0f04011ff13aa9df73195efa9e71bed9
 NeedsCompilation: no
 
 Package: collections
-Version: 0.2.1
+Version: 0.2.2
 Depends: R (>= 3.4.0)
 Imports: xptr
 Suggests: testthat
 License: MIT + file LICENSE
-MD5sum: 94dbf20099aa8e3b7d4d9d8d98a7acfb
+MD5sum: d1234744f5f22d185e9b454ccbafa492
 NeedsCompilation: yes
 
 Package: colorspace
@@ -648,6 +648,14 @@ License: Apache License (>= 2.0)
 MD5sum: 4078784d52bb5d072ed2b44beaa72111
 NeedsCompilation: no
 
+Package: formatR
+Version: 1.7
+Depends: R (>= 3.0.2)
+Suggests: codetools, shiny, testit, rmarkdown, knitr
+License: GPL
+MD5sum: 1b223bdb396ef14597e8a449c53af2fb
+NeedsCompilation: no
+
 Package: Formula
 Version: 1.2-3
 Depends: R (>= 2.0.0), stats
@@ -985,11 +993,11 @@ MD5sum: f5ce9ab7c2fe5f75383ee5ad4e60af04
 NeedsCompilation: yes
 
 Package: hms
-Version: 0.5.1
+Version: 0.5.2
 Imports: methods, pkgconfig, rlang, vctrs (>= 0.2.0)
 Suggests: crayon, lubridate, pillar (>= 1.1.0), testthat
 License: GPL-3
-MD5sum: ddf5323d36067c51d9e5dcf5c8acf336
+MD5sum: 7ed26640a8df6aa3f14c1722723c2156
 NeedsCompilation: no
 
 Package: htmlTable
@@ -1227,14 +1235,14 @@ MD5sum: ccd7082ec0b211aba8a89d85176bb534
 NeedsCompilation: no
 
 Package: languageserver
-Version: 0.3.1
+Version: 0.3.2
 Depends: R (>= 3.4.0)
-Imports: callr (>= 3.0.0), collections, desc, jsonlite, lintr (>=
-       1.0.3), R6, repr, readr, stringr, styler (>= 1.0.2), tools,
-       utils
-Suggests: processx, knitr, magrittr, purrr, fs, withr, testthat
+Imports: callr (>= 3.0.0), collections (>= 0.2.0), desc, jsonlite,
+       lintr (>= 2.0.0), R6, readr, repr, stringr, styler (>=
+       1.0.2), tools, utils, xml2, xmlparsedata
+Suggests: fs, knitr, magrittr, processx, purrr, testthat, withr
 License: MIT + file LICENSE
-MD5sum: 8c7508380021a814788581ededb37518
+MD5sum: 521b691d2d3af3c2163634145673f03a
 NeedsCompilation: yes
 
 Package: later
@@ -1666,13 +1674,13 @@ MD5sum: 776426687d74e645334542f30757f5a6
 NeedsCompilation: yes
 
 Package: openxlsx
-Version: 4.1.0.1
+Version: 4.1.2
 Depends: R (>= 3.3.0)
 Imports: methods, Rcpp, grDevices, stats, utils, zip
 LinkingTo: Rcpp
 Suggests: knitr, testthat
 License: MIT + file LICENSE
-MD5sum: 5f65ab51db0cad0c015678bb71b9073d
+MD5sum: 02b79895af6a60530b6c9710370b1cdf
 NeedsCompilation: yes
 
 Package: packrat
@@ -2385,12 +2393,12 @@ MD5sum: 8820b4d4fe3718f275847b6f2cf83689
 NeedsCompilation: no
 
 Package: rgdal
-Version: 1.4-6
+Version: 1.4-7
 Depends: R (>= 3.5.0), methods, sp (>= 1.1-0)
 Imports: grDevices, graphics, stats, utils
 LinkingTo: sp
 License: GPL (>= 2)
-MD5sum: bf20e586ec550292089b822925e99b1d
+MD5sum: b38fe0b080b80f72719f18553a73116b
 NeedsCompilation: yes
 
 Package: rgexf
@@ -2701,12 +2709,12 @@ MD5sum: 428af1e94f2337bf5dcbb7cd3ac94001
 NeedsCompilation: no
 
 Package: slam
-Version: 0.1-45
+Version: 0.1-46
 Depends: R (>= 3.4.0)
 Imports: stats
 Enhances: Matrix, SparseM, spam
 License: GPL-2
-MD5sum: b2438dc342915d59d88f8ec1077b3f25
+MD5sum: 96455e99999eddcfb83a7a4ccf17b847
 NeedsCompilation: yes
 
 Package: sna
@@ -2822,16 +2830,17 @@ MD5sum: c7ebf020c3c7bc01af429d75dae55659
 NeedsCompilation: yes
 
 Package: stm
-Version: 1.3.3
-Depends: R (>= 3.2.2)
-Imports: matrixStats, splines, slam, lda, quanteda, stringr, Matrix,
-       glmnet, Rcpp (>= 0.11.3), grDevices, graphics, stats, utils,
-       data.table, quadprog, parallel, methods
+Version: 1.3.4
+Depends: R (>= 3.2.2), methods
+Imports: Rcpp (>= 0.11.3), data.table, glmnet, grDevices, graphics,
+       lda, Matrix, matrixStats, parallel, quadprog, quanteda, slam,
+       splines, stats, stringr, utils
 LinkingTo: Rcpp, RcppArmadillo
-Suggests: igraph, SnowballC, tm (>= 0.6), huge, clue, wordcloud,
-       KernSmooth, NLP, LDAvis, geometry, Rtsne, testthat, rsvd
+Suggests: clue, geometry, huge, igraph, LDAvis, KernSmooth, NLP,
+       rsvd, Rtsne, SnowballC, spelling, testthat, tm (>= 0.6),
+       wordcloud
 License: MIT + file LICENSE
-MD5sum: 4990bc2a79509f2defc359e4c1cf1a61
+MD5sum: 29d99e15f364a2699339d14f56912a96
 NeedsCompilation: yes
 
 Package: stopwords

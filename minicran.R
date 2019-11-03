@@ -68,7 +68,6 @@ to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "sourc
 #   "shinyAce", "shinyFiles"
 # )
 
-
 versions <- c("3.5", "3.6")
 for (ver in versions) {
   ## building minicran for windows binaries

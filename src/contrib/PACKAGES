@@ -1925,7 +1925,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 1.2.0)
 Imports: ggplot2 (>= 2.2.1), gridExtra (>= 2.0.0), scales (>= 0.4.0), dplyr (>= 0.8.3), tidyr (>= 0.8.2), magrittr (>= 1.5), shiny (>= 1.4.0), psych (>= 1.8.3.3), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 756deda54df5aa5f01af03d82e7d5a35
+MD5sum: f2f76fab58990b53b568c82a84402a19
 NeedsCompilation: no
 
 Package: radiant.data

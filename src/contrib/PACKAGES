@@ -2167,7 +2167,7 @@ Imports: radiant.basics (>= 1.2.0), shiny (>= 1.4.0), nnet (>=
        ggrepel (>= 0.8), broom (>= 0.5.2), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: ab1f85e8a22da0d817814bbeeaac6ba8
+MD5sum: 13b2e581803a84b139b6efd318477d1e
 NeedsCompilation: no
 
 Package: radiant.multivariate

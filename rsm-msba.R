@@ -1,3 +1,9 @@
+repos <- c(
+  "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/bionic/latest",
+  "https://radiant-rstats.github.io/minicran/",
+  "https://cloud.r-project.org"
+)
+
 install_phantomjs <- function(version, baseURL) {
 
   if (!grepl("/$", baseURL))
@@ -28,40 +34,24 @@ install_phantomjs <- function(version, baseURL) {
   invisible()
 }
 
-build <- function(type = "source") {
-  repos <- "https://radiant-rstats.github.io/minicran/"
+build <- function(type = "binary", os = "") {
+  repos_fun <- ifelse(os == "Linux", repos[1], repos[2])
 
   update.packages(
     lib.loc = .libPaths()[1],
     ask = FALSE,
-    repos = repos,
+    repos = repos_fun,
     type = type
   )
 
-  ipkgs <- installed.packages()
-  install <- function(x) {
-    if (!x %in% ipkgs) install.packages(x, repos = repos, type = type)
-  }
-
-  # resp <- sapply(
-  #   c(
-  #     "radiant", "radiant.update", "devtools", "roxygen2",
-  #     "testthat", "gitgadget", "tinytex", "haven", "readxl",
-  #     "writexl", "miniUI", "caret", "ranger", "gbm", "dbplyr",
-  #     "DBI", "RSQLite", "RPostgreSQL", "pool", "usethis",
-  #     "xgboost", "webshot", "reticulate"
-  #   ),
-  #   install
-  # )
-
   pkgs <- new.packages(
     lib.loc = .libPaths()[1],
-    repos = repos,
+    repos = repos_fun,
     type = type,
     ask = FALSE
   )
   if (length(pkgs) > 0) {
-    install.packages(pkgs, repos = repos, type = type)
+    install.packages(pkgs, repos = repos_fun, type = type)
   }
 
   # see https://github.com/wch/webshot/issues/25#event-740360519
@@ -70,4 +60,9 @@ build <- function(type = "source") {
   if (is.null(webshot:::find_phantom())) install_phantomjs(ws_args$version, ws_args$baseURL)
 }
 
-build()
+os <- Sys.info()["sysname"]
+if (os == "Linux") {
+  build(os = "Linux")
+} else {
+  build(type = "binary")
+}

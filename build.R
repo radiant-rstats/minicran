@@ -1,23 +1,27 @@
 ## install script for R(adiant) @ Rady School of Management (MBA and MSBA)
 cdir <- getwd()
-repos <- c("https://radiant-rstats.github.io/minicran/", "https://cran.rstudio.com")
-options(repos = c(CRAN = repos))
+repos <- c(
+  "https://radiant-rstats.github.io/minicran/",
+  "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/bionic/latest",
+  "https://cloud.r-project.org"
+)
 
-build <- function(type = "binary") {
-  update.packages(lib.loc = .libPaths()[1], ask = FALSE, repos = "https://radiant-rstats.github.io/minicran/", type = type)
-  install <- function(x) {
-    if (!x %in% installed.packages()) install.packages(x, type = type)
-  }
+build <- function(type = "binary", os="") {
 
-  resp <- sapply(c("radiant", "haven", "readxl", "miniUI", "webshot"), install)
+  repos_fun <- ifelse(os == "Linux", repos[2], repos[1])
+  update.packages(lib.loc = .libPaths()[1], ask = FALSE, repos = repos_fun, type = type)
+
+  install <- function(x) if (!x %in% installed.packages()) install.packages(x, lib = .libPaths()[1], repos = repos_fun, type = type)
+  resp <- sapply(
+    c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "radiant.update", "svglite"),
+    install
+  )
 
   ## needed for windoze
-  pkgs <- new.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', type = type, ask = FALSE)
-  pkgs <- pkgs[!grepl("gitgadget",pkgs)]
-  if (length(pkgs) > 0) install.packages(pkgs, repos = 'https://radiant-rstats.github.io/minicran', type = type)
-
-  if (!"shiny" %in% installed.packages() || packageVersion("shiny") == "1.0.4")
-    install.packages("shiny", repos = 'https://radiant-rstats.github.io/minicran', type = type)
+  pkgs <- new.packages(lib.loc = .libPaths()[1], repos = repos_fun, type = type, ask = FALSE)
+  if (length(pkgs) > 0) {
+    install.packages(pkgs, repos = repos_fun, type = type)
+  }
 
   # see https://github.com/wch/webshot/issues/25#event-740360519
   if (is.null(webshot:::find_phantom())) webshot::install_phantomjs()
@@ -25,8 +29,8 @@ build <- function(type = "binary") {
 
 rv <- R.Version()
 
-if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
-  cat("Radiant requires R-3.3.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
+if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 5) {
+  cat("Radiant requires R-3.5.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
 } else {
 
   os <- Sys.info()["sysname"]
@@ -51,7 +55,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 3) {
       build()
     }
   } else {
-    build(type = "source")
+    build(type = "source", os = "Linux")
   }
 }
 

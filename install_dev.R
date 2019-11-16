@@ -1,26 +1,21 @@
 ## install script for R(adiant) @ Rady School of Management (MBA)
 owd <- getwd()
 
-repos <- c(
-  "https://radiant-rstats.github.io/minicran/",
-  "https://radiant-rstats.github.io/minicran/dev/",
-  "https://cran.rstudio.com"
-)
-options(repos = c(CRAN = repos))
+repos <- c("https://radiant-rstats.github.io/minicran/", "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/bionic/latest", "https://cran.rstudio.com")
+options(repos = repos)
 
-build <- function(type = "binary") {
+
+build <- function(type = "binary", os = "") {
+  repos_fun <- ifelse(os == "Linux", repos[2], repos[1])
   update.packages(
     lib.loc = .libPaths()[1],
     ask = FALSE,
-    repos = c(
-      "https://radiant-rstats.github.io/minicran/",
-      "https://radiant-rstats.github.io/minicran/dev/"
-    ),
+    repos = repos_fun,
     type = type
   )
 
   install <- function(x) {
-    if (!x %in% installed.packages()) install.packages(x, type = type)
+    if (!x %in% installed.packages()) install.packages(x, repos = repos_fun, type = type)
   }
 
   resp <- sapply(
@@ -30,25 +25,19 @@ build <- function(type = "binary") {
       "caret", "ranger", "gbm", "dbplyr", "DBI", "RSQLite", "usethis",
       "xgboost"
     ),
-    install
+    install, repos = repos_fun
   )
 
   pkgs <- new.packages(
     lib.loc = .libPaths()[1],
-    repos = c(
-      "https://radiant-rstats.github.io/minicran/",
-      "https://radiant-rstats.github.io/minicran/dev/"
-    ),
+    repos = repos_fun,
     type = type,
     ask = FALSE
   )
   if (length(pkgs) > 0) {
     install.packages(
       pkgs,
-      repos = c(
-        "https://radiant-rstats.github.io/minicran/",
-        "https://radiant-rstats.github.io/minicran/dev/"
-      ),
+      repos = repos_fun,
       type = type
     )
   }
@@ -61,8 +50,8 @@ readliner <- function(text, inp = "", resp = "[yYnN]") {
 
 rv <- R.Version()
 
-if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
-  cat("Radiant requires R-3.4.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
+if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 5) {
+  cat("Radiant requires R-3.5.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
 } else {
 
   os <- Sys.info()["sysname"]
@@ -146,7 +135,7 @@ if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
     }
   } else {
     cat("\n\nThe install script is only partially supported on your OS\n\n")
-    build(type = "source")
+    build(type = "source", os = "Linux")
   }
 }
 

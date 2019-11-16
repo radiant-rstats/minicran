@@ -1,9 +1,16 @@
+repos <- c(
+  "https://radiant-rstats.github.io/minicran/",
+  "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/bionic/latest",
+  "https://cran.rstudio.com"
+)
+
 ## install script for R(adiant) @ Rady School of Management (MBA and MSBA)
-build <- function(type = "binary", repos = "https://radiant-rstats.github.io/minicran/") {
+build <- function(type = "binary", os = "") {
+  repos_fun <- ifelse(os == "Linux", repos[2], repos[1])
   ## get list of packages to update
   op <- old.packages(
     lib.loc = .libPaths()[1],
-    repos = "https://radiant-rstats.github.io/minicran/",
+    repos = repos_fun,
     type = type
   )
 
@@ -47,14 +54,14 @@ build <- function(type = "binary", repos = "https://radiant-rstats.github.io/min
       ## all deps should already be available in op by using the minicran package
       ## and all packages will be installed 1-by-1
       update.packages(
-        lib.loc = .libPaths()[1], ask = FALSE, repos = repos,
+        lib.loc = .libPaths()[1], ask = FALSE, repos = repos_run,
         type = type, oldPkgs = p, dependencies = FALSE
       )
     }
   }
 
   ## additional packages ... not required but useful
-  np <- new.packages(lib.loc = .libPaths()[1], repos = repos, type = type, ask = FALSE)
+  np <- new.packages(lib.loc = .libPaths()[1], repos = repos_fun, type = type, ask = FALSE)
 
   if (length(np) > 0) {
     cat("\n#################################################\n")
@@ -74,7 +81,7 @@ build <- function(type = "binary", repos = "https://radiant-rstats.github.io/min
       ## sometimes trying to install dependencies (e.g., Matrix) causes problems
       ## all deps should already be available in op by using the minicran package
       ## and all packages will be installed 1-by-1
-      install.packages(p, repos = repos, type = type, dependencies = FALSE)
+      install.packages(p, repos = repos_fun, type = type, dependencies = FALSE)
     }
   }
 
@@ -125,8 +132,8 @@ updater <- function() {
 
   rv <- R.Version()
 
-  if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 4) {
-    message("Radiant requires R-3.4.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
+  if (as.numeric(rv$major) < 3 || as.numeric(rv$minor) < 5) {
+    message("Radiant requires R-3.5.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
   } else {
 
     os <- Sys.info()["sysname"]
@@ -140,7 +147,7 @@ updater <- function() {
         build()
       }
     } else {
-      build(type = "source")
+      build(type = "source", os = "Linux")
     }
   }
 }

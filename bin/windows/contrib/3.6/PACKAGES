@@ -149,11 +149,12 @@ License: MPL-2.0 | file LICENSE
 Archs: i386, x64
 
 Package: data.tree
-Version: 0.7.8
+Version: 0.7.11
 Depends: R (>= 3.0)
-Imports: R6, stringr, methods, DiagrammeR (>= 1.0.0)
-Suggests: Formula, graphics, testthat, knitr, rmarkdown, ape, yaml, networkD3, jsonlite, igraph, treemap, party, partykit, doParallel, foreach,
-                htmlwidgets
+Imports: R6, stringr, methods
+Suggests: Formula, graphics, testthat, knitr, rmarkdown, ape, yaml, networkD3, jsonlite, treemap, party, partykit, doParallel, foreach,
+                htmlwidgets, DiagrammeR (>= 1.0.0), mockery, rpart
+Enhances: igraph
 License: GPL (>= 2)
 
 Package: DEoptimR
@@ -366,11 +367,11 @@ Suggests: covr, testthat, knitr, rmarkdown, ggplot2, profvis
 License: GPL-2
 
 Package: haven
-Version: 2.1.1
+Version: 2.2.0
 Depends: R (>= 3.2)
-Imports: forcats (>= 0.2.0), hms, Rcpp (>= 0.11.4), readr (>= 0.1.0), tibble
+Imports: forcats (>= 0.2.0), hms, Rcpp (>= 0.11.4), readr (>= 0.1.0), rlang (>= 0.4.0), tibble, tidyselect
 LinkingTo: Rcpp
-Suggests: covr, fs, knitr, rmarkdown, testthat, pillar (>= 1.1.1), cli, crayon
+Suggests: covr, fs, knitr, rmarkdown, testthat, pillar (>= 1.4.0), cli, crayon
 License: MIT + file LICENSE
 Archs: i386, x64
 
@@ -855,7 +856,7 @@ Depends: R (>= 2.0.0)
 License: Apache License 2.0
 
 Package: Rcpp
-Version: 1.0.2
+Version: 1.0.3
 Depends: R (>= 3.0.0)
 Imports: methods, utils
 Suggests: RUnit, inline, rbenchmark, knitr, rmarkdown, pinp, pkgKitten (>= 0.1.2)

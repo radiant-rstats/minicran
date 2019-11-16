@@ -235,11 +235,11 @@ Archs: dplyr.so.dSYM
 MD5sum: 43f99c8dc81568ccc69abe9a49800d8e
 
 Package: DT
-Version: 0.9
+Version: 0.10
 Imports: htmltools (>= 0.3.6), htmlwidgets (>= 1.3), jsonlite (>= 0.9.16), magrittr, crosstalk, promises
 Suggests: knitr (>= 1.8), rmarkdown, shiny (>= 1.1.0)
 License: GPL-3 | file LICENSE
-MD5sum: 9a2ebeb8397c5b956adf180e8472fec5
+MD5sum: 540d753a8a880f3b96063f319588c102
 
 Package: e1071
 Version: 1.7-2
@@ -429,13 +429,13 @@ Archs: haven.so.dSYM
 MD5sum: ddd4a3641c455065c8bbce1ede30e59b
 
 Package: hexbin
-Version: 1.27.3
+Version: 1.28.0
 Depends: R (>= 2.0.1), methods
 Imports: lattice, grid, graphics, grDevices, stats, utils
 Suggests: marray, affy, Biobase, limma
 License: GPL-2
 Archs: hexbin.so.dSYM
-MD5sum: 849f41565506ab69cd24d1a07fefa137
+MD5sum: baea5bc2f20dc8d232e9f320bd47fd16
 
 Package: highr
 Version: 0.8
@@ -526,14 +526,14 @@ Archs: jsonlite.so.dSYM
 MD5sum: 8cef22672dfe0254930d2cc53ee6d033
 
 Package: knitr
-Version: 1.25
+Version: 1.26
 Depends: R (>= 3.2.3)
 Imports: evaluate (>= 0.10), highr, markdown, stringr (>= 0.6), yaml (>= 2.1.19), methods, xfun, tools
 Suggests: formatR, testit, digest, rgl (>= 0.95.1201), codetools, rmarkdown, htmlwidgets (>= 0.7), webshot, tikzDevice (>= 0.10), tinytex,
                 reticulate (>= 1.4), JuliaCall (>= 0.11.1), magick, png, jpeg, gifski, xml2 (>= 1.2.0), httr, DBI (>= 0.4-1), showtext, tibble,
-                sass, styler
+                sass, styler (>= 1.2.0)
 License: GPL
-MD5sum: 8c6fec44b2364893ee2122c3002fdacb
+MD5sum: f66e6f0e95ae782b0a76c6217cbc1eb5
 
 Package: labeling
 Version: 0.3
@@ -882,11 +882,11 @@ Archs: quantreg.so.dSYM
 MD5sum: 2c42f49e389b169386ac0be7721eaa77
 
 Package: R6
-Version: 2.4.0
+Version: 2.4.1
 Depends: R (>= 3.0)
 Suggests: knitr, microbenchmark, pryr, testthat, ggplot2, scales
 License: MIT + file LICENSE
-MD5sum: dcc663dcc0bf87abf63af72c200e2718
+MD5sum: 8c6bcbc8ee2577d8eba6a5094aec93a3
 
 Package: radiant
 Version: 1.2.0
@@ -1058,13 +1058,13 @@ Archs: rlang.so.dSYM
 MD5sum: 9fd47640ae61c972f91bedde20f2b053
 
 Package: rmarkdown
-Version: 1.16
+Version: 1.17
 Depends: R (>= 3.0)
 Imports: tools, utils, knitr (>= 1.22), yaml (>= 2.1.19), htmltools (>= 0.3.5), evaluate (>= 0.13), base64enc, jsonlite, mime, tinytex (>= 0.11),
                 xfun, methods, stringr (>= 1.2.0)
 Suggests: shiny (>= 0.11), tufte, testthat, digest, dygraphs, tibble, fs, pkgdown, callr (>= 2.0.0)
 License: GPL-3
-MD5sum: faf6312ba9f36d6b64a1be37021baea2
+MD5sum: 390492b1ca29b29b4968713fd493806f
 
 Package: robustbase
 Version: 0.93-5
@@ -1340,11 +1340,11 @@ Archs: writexl.so.dSYM
 MD5sum: 502ee327e651c608cbd3df27be27b946
 
 Package: xfun
-Version: 0.10
+Version: 0.11
 Imports: stats, tools
 Suggests: testit, parallel, rstudioapi, tinytex, mime, markdown, knitr, htmltools, base64enc, remotes, rmarkdown
 License: MIT + file LICENSE
-MD5sum: 5d9830518d7af0a8e997375db8b65d33
+MD5sum: 7177a900808583b470fb6ef1240cb375
 
 Package: XML
 Version: 3.98-1.20

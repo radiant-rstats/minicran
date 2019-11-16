@@ -2023,7 +2023,7 @@ Depends: R (>= 3.5.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: fb4ee5ab48e0d02fb82da65bb803a57e
+MD5sum: 034c20be19d8eba5a4b7e2f1d274db5c
 NeedsCompilation: no
 
 Package: randomForest

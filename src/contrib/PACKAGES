@@ -1972,7 +1972,7 @@ Imports: radiant.basics (>= 1.2.0), shiny (>= 1.4.0), nnet (>= 7.3.12), NeuralNe
                          (>= 0.8), broom (>= 0.5.2), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 6667bedffe8c00d9f0502499f16960db
+MD5sum: 56f5f0cde8ecc62ad87962a60bcae748
 NeedsCompilation: no
 
 Package: radiant.multivariate

@@ -85,6 +85,15 @@ License: BSL-1.0
 MD5sum: d602666e5dae040489a1ed4f208f623b
 NeedsCompilation: no
 
+Package: binman
+Version: 0.1.1
+Depends: R (>= 3.3)
+Imports: rappdirs, yaml, httr, jsonlite, xml2, utils, stats, assertthat, semver
+Suggests: testthat, covr, knitr, rmarkdown
+License: MIT + file LICENSE
+MD5sum: 038258b4e20d80d55f4205f543b30b79
+NeedsCompilation: no
+
 Package: bit
 Version: 1.1-14
 Depends: R (>= 2.9.2)
@@ -2362,6 +2371,15 @@ License: GPL-2
 MD5sum: 24f943893f8927d8386c9cd514230d3f
 NeedsCompilation: no
 
+Package: RSelenium
+Version: 1.7.5
+Depends: R (>= 3.0.0)
+Imports: XML, methods, caTools, tools, utils, openssl, httr, wdman(>= 0.2.2), binman
+Suggests: testthat, knitr, Rcompression, covr, rmarkdown
+License: AGPL-3
+MD5sum: cecef6c09676c19d9015a28d9d7bc898
+NeedsCompilation: no
+
 Package: RSpectra
 Version: 0.15-0
 Depends: R (>= 3.0.2)
@@ -2469,6 +2487,15 @@ Suggests: testthat, XML, xml2
 License: BSD_3_clause + file LICENCE
 MD5sum: 165e7b67a11f58c53e55fee4b0da944e
 NeedsCompilation: no
+
+Package: semver
+Version: 0.2.0
+Imports: Rcpp (>= 0.12.8), assertthat, utils
+LinkingTo: Rcpp
+Suggests: testthat, covr, knitr, rmarkdown
+License: MIT + file LICENSE
+MD5sum: 35099b273e44874fd7561473f292ac11
+NeedsCompilation: yes
 
 Package: servr
 Version: 0.15
@@ -2703,6 +2730,14 @@ Suggests: data.tree (>= 0.1.6), dplyr, here, knitr, prettycode, rmarkdown, rstud
 License: GPL-3
 MD5sum: 291ba47731b9138a5aae1c1b9aba7572
 NeedsCompilation: no
+
+Package: subprocess
+Version: 0.8.3
+Depends: R (>= 3.2.0)
+Suggests: mockery, testthat, knitr, rmarkdown (>= 1.0)
+License: MIT + file LICENSE
+MD5sum: 399d20a322b70f69f41b311cbea3285b
+NeedsCompilation: yes
 
 Package: survival
 Version: 3.1-7
@@ -3000,6 +3035,15 @@ Imports: htmlwidgets, htmltools, jsonlite, magrittr, utils, methods, grDevices, 
 Suggests: knitr, rmarkdown, webshot, igraph, rpart, shiny, shinyWidgets, colourpicker, sparkline, ggraph, tidygraph, flashClust
 License: MIT + file LICENSE
 MD5sum: ac811821f07eb0a8a691d2d94ea29b0f
+NeedsCompilation: no
+
+Package: wdman
+Version: 0.2.4
+Depends: R (>= 3.2)
+Imports: binman, assertthat, subprocess (>= 0.8.0), yaml, semver(>= 0.2.0), utils
+Suggests: testthat, covr, knitr, rmarkdown
+License: MIT + file LICENSE
+MD5sum: d4f08487b60bc65e95ec9774d3cf6f12
 NeedsCompilation: no
 
 Package: webshot

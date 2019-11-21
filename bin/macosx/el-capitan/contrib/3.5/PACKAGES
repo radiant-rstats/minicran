@@ -997,7 +997,7 @@ License: AGPL-3 | file LICENSE
 MD5sum: 69c46e610c097ffe15c631af47bf1397
 
 Package: radiant.model
-Version: 1.2.5
+Version: 1.2.6
 Depends: R (>= 3.4.0), radiant.data (>= 1.2.0)
 Imports: radiant.basics (>= 1.2.0), shiny (>= 1.4.0), nnet (>= 7.3.12),
         NeuralNetTools (>= 1.5.1), sandwich (>= 2.3.4), car (>= 2.1.3),
@@ -1008,7 +1008,7 @@ Imports: radiant.basics (>= 1.2.0), shiny (>= 1.4.0), nnet (>= 7.3.12),
         rpart (>= 4.1.11), ggrepel (>= 0.8), broom (>= 0.5.2), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: f85cbb17cadb3ae1e81cb5bb85cdd63d
+MD5sum: f987fda00f30c3cde34ace1123c19bfe
 
 Package: radiant.multivariate
 Version: 1.2.0

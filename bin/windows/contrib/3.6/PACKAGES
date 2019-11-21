@@ -879,7 +879,7 @@ Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 
 Package: radiant.model
-Version: 1.2.5
+Version: 1.2.6
 Depends: R (>= 3.4.0), radiant.data (>= 1.2.0)
 Imports: radiant.basics (>= 1.2.0), shiny (>= 1.4.0), nnet (>= 7.3.12),
         NeuralNetTools (>= 1.5.1), sandwich (>= 2.3.4), car (>= 2.1.3),

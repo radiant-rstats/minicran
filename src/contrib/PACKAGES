@@ -458,6 +458,13 @@ License: MIT + file LICENSE
 MD5sum: c4f3b0704db4a825f817afbb72997952
 NeedsCompilation: no
 
+Package: dichromat
+Version: 2.0-0
+Depends: R (>= 2.10), stats
+License: GPL-2
+MD5sum: 84e194ac95a69763d740947a7ee346a6
+NeedsCompilation: no
+
 Package: digest
 Version: 0.6.22
 Depends: R (>= 3.1.0)
@@ -709,6 +716,14 @@ Suggests: knitr, pdp, RUnit, splines, viridis
 License: GPL (>= 2) | file LICENSE
 MD5sum: 6ed964794d77bb0e894c2374f006be7c
 NeedsCompilation: yes
+
+Package: gdalUtils
+Version: 2.0.1.14
+Depends: R (>= 2.14.0)
+Imports: sp, foreach, R.utils, raster, rgdal
+License: GPL (>= 2)
+MD5sum: 3e295fbf92d75d9c8ea38a9307986d40
+NeedsCompilation: no
 
 Package: gdtools
 Version: 0.2.1
@@ -1266,6 +1281,15 @@ License: LGPL
 MD5sum: c48a92925fd43592efd14cac12ff1c5d
 NeedsCompilation: yes
 
+Package: leafem
+Version: 0.0.1
+Depends: R (>= 3.1.0)
+Imports: htmltools (>= 0.3), htmlwidgets, leaflet (>= 2.0.1), raster, sf, sp
+Suggests: gdalUtils, plainview, png
+License: MIT + file LICENSE
+MD5sum: 7556c03790bfb301d64bf07bc17fbb08
+NeedsCompilation: no
+
 Package: leaflet
 Version: 2.0.3
 Depends: R (>= 3.1.0)
@@ -1282,6 +1306,23 @@ Depends: R (>= 2.10)
 Suggests: V8, jsonlite, testthat (>= 2.1.0)
 License: BSD_2_clause + file LICENSE
 MD5sum: 87d3aa865f584e4a250a716bdab7f1cc
+NeedsCompilation: no
+
+Package: leafpop
+Version: 0.0.1
+Imports: base64enc, brew, gdalUtils, htmlwidgets, Rcpp (>= 1.0.0), svglite, uuid
+LinkingTo: Rcpp
+Suggests: lattice, leaflet (>= 2.0.0), sf, sp
+License: MIT + file LICENSE
+MD5sum: 9305de6c103ecc091e3a35c289322078
+NeedsCompilation: yes
+
+Package: leafsync
+Version: 0.1.0
+Depends: R (>= 3.1.0), methods
+Imports: htmltools (>= 0.3), htmlwidgets, leaflet (>= 2.0.1)
+License: MIT + file LICENSE
+MD5sum: 57e425815635415956b48ae1991a695e
 NeedsCompilation: no
 
 Package: lfe
@@ -1383,6 +1424,16 @@ License: GPL (>= 2)
 MD5sum: 34d49a18996dfca7c9117b4ff101f460
 NeedsCompilation: yes
 
+Package: lwgeom
+Version: 0.1-7
+Depends: R (>= 3.3.0)
+Imports: Rcpp, units, sf (>= 0.6-0)
+LinkingTo: Rcpp, sf (>= 0.6-0)
+Suggests: covr, sp, geosphere, testthat
+License: GPL-2
+MD5sum: 6639bcbff4df5fbbf3a63842e4eaeb98
+NeedsCompilation: yes
+
 Package: magick
 Version: 2.2
 Imports: Rcpp (>= 0.12.12), magrittr, curl
@@ -1409,6 +1460,18 @@ Suggests: rgeos (>= 0.1-8), spatstat (>= 1.60), PBSmapping, maps, RColorBrewer, 
 Enhances: gpclib, RArcInfo
 License: GPL (>= 2)
 MD5sum: a0d4be7222320b085bd2a7746419f955
+NeedsCompilation: yes
+
+Package: mapview
+Version: 2.7.0
+Depends: methods, R (>= 2.10)
+Imports: base64enc, brew, htmltools, htmlwidgets, lattice, leafem, leaflet (>= 2.0.0), leafpop, png,
+           raster, Rcpp (>= 0.11.3), satellite, scales (>= 0.2.5), sf, sp, svglite, uuid, viridisLite,
+           webshot
+LinkingTo: Rcpp
+Suggests: covr, dplyr, knitr, lwgeom, plainview, rmarkdown, stars, testthat
+License: GPL (>= 3) | file LICENSE
+MD5sum: aceef337a124a7901b518a5e673e6df0
 NeedsCompilation: yes
 
 Package: markdown
@@ -2320,6 +2383,16 @@ License: GPL (>= 2)
 MD5sum: b38fe0b080b80f72719f18553a73116b
 NeedsCompilation: yes
 
+Package: rgeos
+Version: 0.5-2
+Depends: R (>= 3.3.0), methods, sp (>= 1.1-0)
+Imports: utils, stats, graphics
+LinkingTo: sp
+Suggests: maptools (>= 0.8-5), testthat, XML, maps, rgdal
+License: GPL (>= 2)
+MD5sum: 153fca7f4c6236a136943dcf5105b778
+NeedsCompilation: yes
+
 Package: rgexf
 Version: 0.15.3
 Depends: XML, Rook, igraph
@@ -2528,6 +2601,16 @@ Suggests: AER, car, geepack, lattice, lmtest, MASS, multiwayvcov, parallel, pcse
 License: GPL-2 | GPL-3
 MD5sum: 543e51613620ed2cab375911c3611633
 NeedsCompilation: no
+
+Package: satellite
+Version: 1.0.1
+Depends: R (>= 2.10), raster, methods, utils, stats, grDevices, graphics
+Imports: plyr, Rcpp (>= 0.10.3), tools, stats4
+LinkingTo: Rcpp
+Suggests: devtools, knitr, rgdal, testthat, rmarkdown
+License: GPL (>= 3) | file LICENSE
+MD5sum: 86398c7d7b3a508810eb10d0da119bcc
+NeedsCompilation: yes
 
 Package: scales
 Version: 1.1.0
@@ -3019,6 +3102,28 @@ License: GPL-3
 MD5sum: 88efa167fc8cca65f311860a6e8d4d79
 NeedsCompilation: yes
 
+Package: tmap
+Version: 2.3-1
+Depends: R (>= 3.0), methods
+Imports: tmaptools (>= 2.0-2), sf (>= 0.7-1), lwgeom (>= 0.1-4), units (>= 0.6-1), raster (>= 2.7-15),
+           grid, RColorBrewer, viridisLite, classInt, htmltools, htmlwidgets, leaflet (>= 2.0.2),
+           leafsync, stats
+Suggests: rmapshaper, rmarkdown, knitr, png, cartogram, osmdata, ggplot2, dplyr, tidyr, shiny,
+           testthat, covr
+License: GPL-3
+MD5sum: c636b9de3261f07c91bb0be60599a6f1
+NeedsCompilation: no
+
+Package: tmaptools
+Version: 2.0-2
+Depends: R (>= 3.0), methods
+Imports: sp, sf (>= 0.7-1), lwgeom (>= 0.1-4), units (>= 0.6-1), grid, raster (>= 2.7-15), rgdal,
+           rgeos, classInt, KernSmooth, magrittr, RColorBrewer, viridisLite, stats, dichromat, XML
+Suggests: tmap (>= 2.0), rmapshaper, osmdata, OpenStreetMap, png, shiny, shinyjs
+License: GPL-3
+MD5sum: 087d9f8fff1119436f71e020ed78afc7
+NeedsCompilation: no
+
 Package: tokenizers
 Version: 0.2.1
 Depends: R (>= 3.1.3)
@@ -3103,6 +3208,13 @@ Depends: R (>= 2.10)
 Suggests: knitr, rmarkdown, testthat
 License: Apache License (== 2.0) | file LICENSE
 MD5sum: 33de0b2841c49e84f8eb5a7b2a8222b8
+NeedsCompilation: yes
+
+Package: uuid
+Version: 0.1-2
+Depends: R (>= 2.9.0)
+License: MIT + file LICENSE
+MD5sum: f97d000c0b16bca455fb5bf2cd668ddf
 NeedsCompilation: yes
 
 Package: vctrs

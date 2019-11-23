@@ -39,7 +39,8 @@ pkgs_src <- c(
   "forge", "gganimate", "gifski", "here", "zipcode", "forcats", "future", "parsnip",
   "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip", "kableExtra",
   "ggraph", "tidygraph", "bookdown", "lintr", "languageserver", "rprojroot", "iml",
-  "xaringan", "magick", "arm", "rstan", "dtplyr", "renv", "RSelenium", "stringi", "sf"
+  "xaringan", "magick", "arm", "rstan", "dtplyr", "renv", "RSelenium", "stringi",
+  "sf", "mapview", "tmap"
 )
 
 # for Karsten

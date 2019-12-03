@@ -21,7 +21,8 @@ source("selMakeRepo.R", local = TRUE)
 pth <- rprojroot::find_root(rprojroot::has_file("README.md"))
 pkgs <- c(
   "radiant", "miniUI", "webshot", "tinytex",
-  "usethis", "radiant.update", "svglite", "formatR"
+  "usethis", "radiant.update", "svglite", "formatR",
+  "patchwork"
 )
 
 # check only files that needed updating or adding
@@ -40,7 +41,7 @@ pkgs_src <- c(
   "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip", "kableExtra",
   "ggraph", "tidygraph", "bookdown", "lintr", "languageserver", "rprojroot", "iml",
   "xaringan", "magick", "arm", "rstan", "dtplyr", "renv", "RSelenium", "stringi",
-  "sf"
+  "sf", "rpart.plot"
 )
 
 # for Karsten

@@ -57,16 +57,15 @@ Depends: R (>= 3.1)
 Imports: backports, dplyr, generics (>= 0.0.2), methods, nlme,
        purrr, reshape2, stringr, tibble, tidyr
 Suggests: AER, akima, AUC, bbmle, betareg, biglm, binGroup, boot,
-       brms, btergm, car, caret, coda, covr, e1071, emmeans,
-       ergm, gam (>= 1.15), gamlss, gamlss.data, gamlss.dist,
-       geepack, ggplot2, glmnet, gmm, Hmisc, irlba, joineRML,
-       Kendall, knitr, ks, Lahman, lavaan, lfe, lme4, lmodel2,
-       lmtest, lsmeans, maps, maptools, MASS, Matrix, mclust,
-       mgcv, muhaz, multcomp, network, nnet, orcutt (>= 2.2),
-       ordinal, plm, plyr, poLCA, psych, quantreg, rgeos,
-       rmarkdown, robust, rsample, rstan, rstanarm, sp, speedglm,
-       statnet.common, survey, survival, testthat, tseries,
-       xergm, zoo
+       brms, btergm, car, caret, coda, covr, e1071, emmeans, ergm,
+       gam (>= 1.15), gamlss, gamlss.data, gamlss.dist, geepack,
+       ggplot2, glmnet, gmm, Hmisc, irlba, joineRML, Kendall,
+       knitr, ks, Lahman, lavaan, lfe, lme4, lmodel2, lmtest,
+       lsmeans, maps, maptools, MASS, Matrix, mclust, mgcv, muhaz,
+       multcomp, network, nnet, orcutt (>= 2.2), ordinal, plm,
+       plyr, poLCA, psych, quantreg, rgeos, rmarkdown, robust,
+       rsample, rstan, rstanarm, sp, speedglm, statnet.common,
+       survey, survival, testthat, tseries, xergm, zoo
 License: MIT + file LICENSE
 
 Package: callr
@@ -77,7 +76,7 @@ Suggests: cliapp, covr, crayon, fansi, knitr, pingr, ps,
 License: MIT + file LICENSE
 
 Package: car
-Version: 3.0-5
+Version: 3.0-6
 Depends: R (>= 3.5.0), carData (>= 3.0-0)
 Imports: abind, MASS, mgcv, nnet, pbkrtest (>= 0.4-4), quantreg,
        grDevices, utils, stats, graphics, maptools, rio, lme4,
@@ -201,12 +200,11 @@ Version: 1.0.1
 Depends: R (>= 3.2.0)
 Imports: dplyr (>= 0.7.4), downloader (>= 0.4), glue (>= 1.2.0),
        htmltools (>= 0.3.6), htmlwidgets (>= 1.0), igraph (>=
-       1.1.2), influenceR (>= 0.1.0), magrittr (>= 1.5), purrr
-       (>= 0.2.4), RColorBrewer (>= 1.1-2), readr (>= 1.1.1),
-       rlang (>= 0.2.0), rstudioapi (>= 0.7), rgexf (>= 0.15.3),
-       scales (>= 0.5.0), stringr (>= 1.3.0), tibble (>= 1.4.2),
-       tidyr (>= 0.8.0), viridis (>= 0.5.0), visNetwork (>=
-       2.0.3)
+       1.1.2), influenceR (>= 0.1.0), magrittr (>= 1.5), purrr (>=
+       0.2.4), RColorBrewer (>= 1.1-2), readr (>= 1.1.1), rlang
+       (>= 0.2.0), rstudioapi (>= 0.7), rgexf (>= 0.15.3), scales
+       (>= 0.5.0), stringr (>= 1.3.0), tibble (>= 1.4.2), tidyr
+       (>= 0.8.0), viridis (>= 0.5.0), visNetwork (>= 2.0.3)
 Suggests: covr, DiagrammeRsvg, rsvg, knitr, testthat
 License: MIT + file LICENSE
 
@@ -232,8 +230,8 @@ Imports: assertthat (>= 0.2.0), glue (>= 1.3.0), magrittr (>=
        0.4.0), tibble (>= 2.0.0), tidyselect (>= 0.2.5), utils
 LinkingTo: BH, plogr (>= 0.2.0), Rcpp (>= 1.0.1)
 Suggests: bit64, callr, covr, crayon (>= 1.3.4), DBI, dbplyr,
-       dtplyr, ggplot2, hms, knitr, Lahman, lubridate, MASS,
-       mgcv, microbenchmark, nycflights13, rmarkdown, RMySQL,
+       dtplyr, ggplot2, hms, knitr, Lahman, lubridate, MASS, mgcv,
+       microbenchmark, nycflights13, rmarkdown, RMySQL,
        RPostgreSQL, RSQLite, testthat, withr, broom, purrr, readr
 License: MIT + file LICENSE
 Archs: i386, x64
@@ -385,10 +383,18 @@ Package: glue
 Version: 1.3.1
 Depends: R (>= 3.1)
 Imports: methods
-Suggests: testthat, covr, magrittr, crayon, knitr, rmarkdown,
-       DBI, RSQLite, R.utils, forcats, microbenchmark, rprintf,
+Suggests: testthat, covr, magrittr, crayon, knitr, rmarkdown, DBI,
+       RSQLite, R.utils, forcats, microbenchmark, rprintf,
        stringr, ggplot2, dplyr, withr
 License: MIT + file LICENSE
+Archs: i386, x64
+
+Package: Gmedian
+Version: 1.2.4
+Depends: R (>= 3.0.0)
+Imports: Rcpp (>= 0.12.6), RSpectra, robustbase
+LinkingTo: Rcpp, RcppArmadillo, RSpectra
+License: GPL (>= 2)
 Archs: i386, x64
 
 Package: gower
@@ -421,8 +427,8 @@ Depends: R (>= 3.2)
 Imports: forcats (>= 0.2.0), hms, Rcpp (>= 0.11.4), readr (>=
        0.1.0), rlang (>= 0.4.0), tibble, tidyselect
 LinkingTo: Rcpp
-Suggests: covr, fs, knitr, rmarkdown, testthat, pillar (>=
-       1.4.0), cli, crayon
+Suggests: covr, fs, knitr, rmarkdown, testthat, pillar (>= 1.4.0),
+       cli, crayon
 License: MIT + file LICENSE
 Archs: i386, x64
 
@@ -458,8 +464,7 @@ Archs: i386, x64
 
 Package: htmlwidgets
 Version: 1.5.1
-Imports: grDevices, htmltools (>= 0.3), jsonlite (>= 0.9.16),
-       yaml
+Imports: grDevices, htmltools (>= 0.3), jsonlite (>= 0.9.16), yaml
 Suggests: knitr (>= 1.8)
 Enhances: shiny (>= 1.1)
 License: MIT + file LICENSE
@@ -523,9 +528,9 @@ Imports: evaluate (>= 0.10), highr, markdown, stringr (>= 0.6),
        yaml (>= 2.1.19), methods, xfun, tools
 Suggests: formatR, testit, digest, rgl (>= 0.95.1201), codetools,
        rmarkdown, htmlwidgets (>= 0.7), webshot, tikzDevice (>=
-       0.10), tinytex, reticulate (>= 1.4), JuliaCall (>=
-       0.11.1), magick, png, jpeg, gifski, xml2 (>= 1.2.0), httr,
-       DBI (>= 0.4-1), showtext, tibble, sass, styler (>= 1.2.0)
+       0.10), tinytex, reticulate (>= 1.4), JuliaCall (>= 0.11.1),
+       magick, png, jpeg, gifski, xml2 (>= 1.2.0), httr, DBI (>=
+       0.4-1), showtext, tibble, sass, styler (>= 1.2.0)
 License: GPL
 
 Package: labeling
@@ -583,8 +588,7 @@ Depends: methods, R (>= 3.0.0)
 Imports: stringr, Rcpp (>= 0.12.13),
 LinkingTo: Rcpp,
 Suggests: testthat, knitr, covr
-Enhances: chron, fts, timeSeries, timeDate, tis, tseries, xts,
-       zoo
+Enhances: chron, fts, timeSeries, timeDate, tis, tseries, xts, zoo
 License: GPL (>= 2)
 Archs: i386, x64
 
@@ -747,8 +751,8 @@ License: GPL (>= 2)
 
 Package: pillar
 Version: 1.4.3
-Imports: cli, crayon (>= 1.3.4), fansi, rlang (>= 0.3.0), utf8
-       (>= 1.1.0), vctrs (>= 0.2.0)
+Imports: cli, crayon (>= 1.3.4), fansi, rlang (>= 0.3.0), utf8 (>=
+       1.1.0), vctrs (>= 0.2.0)
 Suggests: knitr, lubridate, testthat (>= 2.0.0), withr
 License: GPL-3
 
@@ -766,16 +770,16 @@ License: MIT + file LICENSE
 Package: plotly
 Version: 4.9.1
 Depends: R (>= 3.2.0), ggplot2 (>= 3.0.0)
-Imports: tools, scales, httr, jsonlite (>= 1.6), magrittr,
-       digest, viridisLite, base64enc, htmltools (>= 0.3.6),
-       htmlwidgets (>= 1.3), tidyr, hexbin, RColorBrewer, dplyr,
-       tibble, lazyeval (>= 0.2.0), rlang, crosstalk, purrr,
-       data.table, promises
-Suggests: MASS, maps, ggthemes, GGally, testthat, knitr,
-       devtools, shiny (>= 1.1.0), shinytest (>= 1.3.0), curl,
-       rmarkdown, vdiffr, Cairo, broom, webshot, listviewer,
-       dendextend, sf, maptools, rgeos, png, IRdisplay, processx,
-       plotlyGeoAssets, forcats
+Imports: tools, scales, httr, jsonlite (>= 1.6), magrittr, digest,
+       viridisLite, base64enc, htmltools (>= 0.3.6), htmlwidgets
+       (>= 1.3), tidyr, hexbin, RColorBrewer, dplyr, tibble,
+       lazyeval (>= 0.2.0), rlang, crosstalk, purrr, data.table,
+       promises
+Suggests: MASS, maps, ggthemes, GGally, testthat, knitr, devtools,
+       shiny (>= 1.1.0), shinytest (>= 1.3.0), curl, rmarkdown,
+       vdiffr, Cairo, broom, webshot, listviewer, dendextend, sf,
+       maptools, rgeos, png, IRdisplay, processx, plotlyGeoAssets,
+       forcats
 License: MIT + file LICENSE
 
 Package: plyr
@@ -858,8 +862,8 @@ Package: quantreg
 Version: 5.54
 Depends: R (>= 2.6), stats, SparseM
 Imports: methods, graphics, Matrix, MatrixModels
-Suggests: tripack, akima, MASS, survival, rgl, logspline,
-       nor1mix, Formula, zoo, R.rsp
+Suggests: tripack, akima, MASS, survival, rgl, logspline, nor1mix,
+       Formula, zoo, R.rsp
 License: GPL (>= 2)
 Archs: i386, x64
 
@@ -871,8 +875,8 @@ License: MIT + file LICENSE
 
 Package: radiant
 Version: 1.3.0
-Depends: R (>= 3.4.0), radiant.data (>= 1.3.0), radiant.design
-       (>= 1.3.0), radiant.basics (>= 1.3.0), radiant.model (>=
+Depends: R (>= 3.4.0), radiant.data (>= 1.3.0), radiant.design (>=
+       1.3.0), radiant.basics (>= 1.3.0), radiant.model (>=
        1.3.0), radiant.multivariate (>= 1.3.0)
 Imports: shiny (>= 1.4.0), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown
@@ -896,8 +900,8 @@ Imports: tibble (>= 1.4.2), rlang (>= 0.4.0), broom (>= 0.5.2),
        car (>= 3.0-0), knitr (>= 1.20), markdown (>= 1.0),
        rmarkdown(>= 1.14), shiny (>= 1.4.0), jsonlite (>= 1.0),
        shinyAce (>= 0.4.1), psych (>= 1.8.4), DT (>= 0.9), readr
-       (>= 1.1.1), readxl (>= 1.0.0), writexl (>= 0.2), scales
-       (>= 0.4.0), curl (>= 2.5), rstudioapi (>= 0.7), import (>=
+       (>= 1.1.1), readxl (>= 1.0.0), writexl (>= 0.2), scales (>=
+       0.4.0), curl (>= 2.5), rstudioapi (>= 0.7), import (>=
        1.1.0), plotly (>= 4.7.1), glue (>= 1.3.0), shinyFiles (>=
        0.7.3), stringi (>= 1.2.4), randomizr (>= 0.20.0),
        patchwork (>= 1.0.0), MASS, base64enc
@@ -921,23 +925,23 @@ Depends: R (>= 3.4.0), radiant.data (>= 1.3.0)
 Imports: radiant.basics (>= 1.3.0), shiny (>= 1.4.0), nnet (>=
        7.3.12), NeuralNetTools (>= 1.5.1), sandwich (>= 2.3.4),
        car (>= 2.1.3), ggplot2 (>= 2.2.1), data.tree (>= 0.7.4),
-       stringr (>= 1.1.0), lubridate (>= 1.7.2), tidyr (>=
-       0.8.2), dplyr (>= 0.8.3), rlang (>= 0.4.0), magrittr (>=
-       1.5), DiagrammeR (>= 1.0.0), import (>= 1.1.0), psych (>=
-       1.8.4), e1071 (>= 1.6.8), rpart (>= 4.1.11), ggrepel (>=
-       0.8), broom (>= 0.5.2), patchwork (>= 1.0.0), yaml
+       stringr (>= 1.1.0), lubridate (>= 1.7.2), tidyr (>= 0.8.2),
+       dplyr (>= 0.8.3), rlang (>= 0.4.0), magrittr (>= 1.5),
+       DiagrammeR (>= 1.0.0), import (>= 1.1.0), psych (>= 1.8.4),
+       e1071 (>= 1.6.8), rpart (>= 4.1.11), ggrepel (>= 0.8),
+       broom (>= 0.5.2), patchwork (>= 1.0.0), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 
 Package: radiant.multivariate
-Version: 1.3.0
+Version: 1.3.1
 Depends: R (>= 3.4.0), radiant.data (>= 1.3.0)
 Imports: radiant.model (>= 1.3.0), shiny (>= 1.4.0), dplyr (>=
        0.8.3), rlang (>= 0.4.0), ggplot2 (>= 2.2.1), scales (>=
        0.4.0), magrittr (>= 1.5), psych (>= 1.8.4), GPArotation
        (>= 2014.11-1), car (>= 2.1.1), MASS (>= 7.3), import (>=
-       1.1.0), Gmedian (>= 1.2.3), ggrepel (>= 0.8), lubridate
-       (>= 1.7.4), polycor (>= 0.7.10), gower (>= 0.2.1),
+       1.1.0), ggrepel (>= 0.8), lubridate (>= 1.7.4), polycor (>=
+       0.7.10), gower (>= 0.2.1), clustMixType (>= 0.2.1),
        patchwork (>= 1.0.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
@@ -1034,16 +1038,16 @@ Depends: R (>= 2.15.0)
 Imports: tools, stats, utils, foreign, haven (>= 1.1.0), curl (>=
        0.6), data.table (>= 1.9.8), readxl (>= 0.1.1), openxlsx,
        tibble
-Suggests: datasets, bit64, testthat, knitr, magrittr, clipr,
-       csvy, feather, fst, hexView, jsonlite, readODS (>= 1.6.4),
-       readr, rmatio, xml2 (>= 1.2.0), yaml
+Suggests: datasets, bit64, testthat, knitr, magrittr, clipr, csvy,
+       feather, fst, hexView, jsonlite, readODS (>= 1.6.4), readr,
+       rmatio, xml2 (>= 1.2.0), yaml
 License: GPL-2
 
 Package: rlang
 Version: 0.4.2
 Depends: R (>= 3.2.0)
-Suggests: cli, covr, crayon, magrittr, methods, pillar,
-       rmarkdown, testthat (>= 2.3.0)
+Suggests: cli, covr, crayon, magrittr, methods, pillar, rmarkdown,
+       testthat (>= 2.3.0)
 License: GPL-3
 Archs: i386, x64
 
@@ -1057,6 +1061,16 @@ Imports: tools, utils, knitr (>= 1.22), yaml (>= 2.1.19),
 Suggests: shiny (>= 0.11), tufte, testthat, digest, dygraphs,
        tibble, fs, pkgdown, callr (>= 2.0.0)
 License: GPL-3
+
+Package: robustbase
+Version: 0.93-5
+Depends: R (>= 3.1.0)
+Imports: stats, graphics, utils, methods, DEoptimR
+Suggests: grid, MASS, lattice, boot, cluster, Matrix, robust,
+       fit.models, MPV, xtable, ggplot2, GGally, RColorBrewer,
+       reshape2, sfsmisc, catdata, doParallel, foreach, skewt
+License: GPL (>= 2)
+Archs: i386, x64
 
 Package: Rook
 Version: 1.1-1
@@ -1079,6 +1093,15 @@ Depends: R (>= 3.0.0)
 Imports: backports
 Suggests: testthat, mockr, knitr, withr, rmarkdown
 License: GPL-3
+
+Package: RSpectra
+Version: 0.16-0
+Depends: R (>= 3.0.2)
+Imports: Matrix (>= 1.1-0), Rcpp (>= 0.11.5)
+LinkingTo: Rcpp, RcppEigen (>= 0.3.3.3.0)
+Suggests: knitr, rmarkdown, prettydoc
+License: MPL (>= 2)
+Archs: i386, x64
 
 Package: rstudioapi
 Version: 0.10
@@ -1107,10 +1130,9 @@ Package: shiny
 Version: 1.4.0
 Depends: R (>= 3.0.2), methods
 Imports: utils, grDevices, httpuv (>= 1.5.2), mime (>= 0.3),
-       jsonlite (>= 0.9.16), xtable, digest, htmltools (>=
-       0.4.0), R6 (>= 2.0), sourcetools, later (>= 1.0.0),
-       promises (>= 1.1.0), tools, crayon, rlang (>= 0.4.0),
-       fastmap (>= 1.0.0)
+       jsonlite (>= 0.9.16), xtable, digest, htmltools (>= 0.4.0),
+       R6 (>= 2.0), sourcetools, later (>= 1.0.0), promises (>=
+       1.1.0), tools, crayon, rlang (>= 0.4.0), fastmap (>= 1.0.0)
 Suggests: datasets, Cairo (>= 1.5-5), testthat (>= 2.1.1), knitr
        (>= 1.6), markdown, rmarkdown, ggplot2, reactlog (>=
        1.0.0), magrittr, yaml
@@ -1164,8 +1186,7 @@ Package: stringr
 Version: 1.4.0
 Depends: R (>= 3.1)
 Imports: glue (>= 1.2.0), magrittr, stringi (>= 1.1.7)
-Suggests: covr, htmltools, htmlwidgets, knitr, rmarkdown,
-       testthat
+Suggests: covr, htmltools, htmlwidgets, knitr, rmarkdown, testthat
 License: GPL-2 | file LICENSE
 
 Package: svglite
@@ -1193,8 +1214,8 @@ Archs: i386, x64
 Package: tibble
 Version: 2.1.3
 Depends: R (>= 3.1.0)
-Imports: cli, crayon (>= 1.3.4), fansi (>= 0.4.0), methods,
-       pillar (>= 1.3.1), pkgconfig, rlang (>= 0.3.0), utils
+Imports: cli, crayon (>= 1.3.4), fansi (>= 0.4.0), methods, pillar
+       (>= 1.3.1), pkgconfig, rlang (>= 0.3.0), utils
 Suggests: bench, covr, dplyr, htmltools, import, knitr, mockr,
        nycflights13, rmarkdown, testthat, withr
 License: MIT + file LICENSE
@@ -1233,8 +1254,8 @@ Version: 1.5.1
 Depends: R (>= 3.2)
 Imports: clipr (>= 0.3.0), clisymbols, crayon, curl (>= 2.7),
        desc, fs (>= 1.3.0), gh, git2r (>= 0.23), glue (>= 1.3.0),
-       purrr, rlang, rprojroot (>= 1.2), rstudioapi, stats,
-       utils, whisker, withr, yaml
+       purrr, rlang, rprojroot (>= 1.2), rstudioapi, stats, utils,
+       whisker, withr, yaml
 Suggests: covr, knitr, magick, pkgdown (>= 1.1.0), rmarkdown,
        roxygen2, spelling (>= 1.2), styler (>= 1.0.2), testthat
        (>= 2.1.0)
@@ -1252,8 +1273,8 @@ Version: 0.2.1
 Depends: R (>= 3.2)
 Imports: backports, ellipsis (>= 0.2.0), digest, glue, rlang (>=
        0.4.0), zeallot
-Suggests: bit64, covr, crayon, generics, knitr, pillar (>=
-       1.4.1), pkgdown, rmarkdown, testthat, tibble
+Suggests: bit64, covr, crayon, generics, knitr, pillar (>= 1.4.1),
+       pkgdown, rmarkdown, testthat, tibble
 License: GPL-3
 Archs: i386, x64
 

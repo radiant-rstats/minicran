@@ -19,6 +19,7 @@ source("selMakeRepo.R", local = TRUE)
 
 # pth <- rstudioapi::getActiveProject()
 pth <- rprojroot::find_root(rprojroot::has_file("README.md"))
+pkgs <- pkgs_src <- "clustMixType"
 pkgs <- c(
   "radiant", "miniUI", "webshot", "tinytex",
   "usethis", "radiant.update", "svglite", "formatR",

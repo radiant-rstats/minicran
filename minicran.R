@@ -17,12 +17,10 @@ library(devtools)
 library(miniCRAN)
 source("selMakeRepo.R", local = TRUE)
 
-# pth <- rstudioapi::getActiveProject()
 pth <- rprojroot::find_root(rprojroot::has_file("README.md"))
 pkgs <- c(
   "radiant", "miniUI", "webshot", "tinytex",
-  "usethis", "radiant.update", "svglite", "formatR",
-  "patchwork","gower"
+  "usethis", "radiant.update", "svglite"
 )
 
 # check only files that needed updating or adding
@@ -41,7 +39,7 @@ pkgs_src <- c(
   "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip", "kableExtra",
   "ggraph", "tidygraph", "bookdown", "lintr", "languageserver", "rprojroot", "iml",
   "xaringan", "magick", "arm", "rstan", "dtplyr", "renv", "RSelenium", "stringi",
-  "sf", "rpart.plot"
+  "sf", "rpart.plot", "formatR"
 )
 
 # for Karsten
@@ -58,12 +56,12 @@ pkgs_src <- c(
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
-# download <- makeRepo(pkgs, path = pth, type = "source", Rversion = "3.6")
+# download <- makeRepo(pkgs, path = pth, type = "source", Rversion = "4.0")
 to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "source")
 
 ## only needed when a new major R-version comes out
-# download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "3.7")
-# download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "3.7")
+# download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.0")
+# download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "4.0")
 
 versions <- c("3.5", "3.6")
 for (ver in versions) {

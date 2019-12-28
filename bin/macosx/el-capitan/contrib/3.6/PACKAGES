@@ -188,13 +188,6 @@ Enhances: igraph
 License: GPL (>= 2)
 MD5sum: 4501b6b8058c8e0415cfaf96f0a47192
 
-Package: DEoptimR
-Version: 1.0-8
-Imports: stats
-Enhances: robustbase
-License: GPL (>= 2)
-MD5sum: 31ba85960f0c7022bfad1f7034029d68
-
 Package: desc
 Version: 1.2.0
 Depends: R (>= 3.1.0)
@@ -312,13 +305,6 @@ Imports: methods, utils, stats
 License: GPL (>= 2)
 Archs: foreign.so.dSYM
 MD5sum: ac198a370ee87be27a4d53ea5ba0aaf4
-
-Package: formatR
-Version: 1.7
-Depends: R (>= 3.0.2)
-Suggests: codetools, shiny, testit, rmarkdown, knitr
-License: GPL
-MD5sum: fc2a6068fc8fe745dd1c92780641d16a
 
 Package: fs
 Version: 1.3.1

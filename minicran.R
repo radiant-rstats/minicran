@@ -11,6 +11,11 @@ repos <- c(
   "https://cran.r-project.org",
   minicran
 )
+
+## if you have removed a radiant dependency **but**
+## the change is not yet on CRAN use the below as repo
+repos <- minicran
+
 options(repos = c(CRAN = repos))
 
 library(devtools)
@@ -65,6 +70,7 @@ to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "sourc
 
 versions <- c("3.5", "3.6")
 for (ver in versions) {
+  ver <- "3.5"
   ## building minicran for windows binaries
   pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = ver)
   to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.binary", Rversion = ver)

@@ -12,9 +12,6 @@ repos <- c(
   minicran
 )
 
-## if you have removed a radiant dependency **but**
-## the change is not yet on CRAN use the below as repo
-repos <- minicran
 
 options(repos = c(CRAN = repos))
 
@@ -25,8 +22,14 @@ source("selMakeRepo.R", local = TRUE)
 pth <- rprojroot::find_root(rprojroot::has_file("README.md"))
 pkgs <- c(
   "radiant", "miniUI", "webshot", "tinytex",
-  "usethis", "radiant.update", "svglite"
+  "usethis", "radiant.update", "svglite", "ranger",
+  "xgboost", "pdp", "patchwork"
 )
+
+## if you have removed a radiant dependency **but**
+## the change is not yet on CRAN use the below as repo
+# repos <- minicran
+pkgs <- pkgs_src <- c("ranger", "xgboost", "pdp", "patchwork")
 
 # check only files that needed updating or adding
 # see PR https://github.com/RevolutionAnalytics/miniCRAN/pull/15/files
@@ -70,7 +73,6 @@ to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "sourc
 
 versions <- c("3.5", "3.6")
 for (ver in versions) {
-  ver <- "3.5"
   ## building minicran for windows binaries
   pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = ver)
   to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.binary", Rversion = ver)

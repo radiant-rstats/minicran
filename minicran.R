@@ -26,10 +26,6 @@ pkgs <- c(
   "xgboost", "pdp", "patchwork"
 )
 
-## if you have removed a radiant dependency **but**
-## the change is not yet on CRAN use the below as repo
-# repos <- minicran
-pkgs <- pkgs_src <- c("ranger", "xgboost", "pdp", "patchwork")
 
 # check only files that needed updating or adding
 # see PR https://github.com/RevolutionAnalytics/miniCRAN/pull/15/files
@@ -61,6 +57,13 @@ pkgs_src <- c(
 pkgs_src <- c(
   pkgs_src, "stargazer", "lfe"
 )
+
+
+## if you have removed a radiant dependency **but**
+## the change is not yet on CRAN use the below as repo
+# repos <- minicran
+pkgs <- pkgs_src <- c("ranger", "xgboost", "pdp", "patchwork", "clustMixType")
+
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)

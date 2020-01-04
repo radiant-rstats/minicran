@@ -12,7 +12,6 @@ repos <- c(
   minicran
 )
 
-
 options(repos = c(CRAN = repos))
 
 library(devtools)
@@ -20,8 +19,10 @@ library(miniCRAN)
 source("selMakeRepo.R", local = TRUE)
 
 pth <- rprojroot::find_root(rprojroot::has_file("README.md"))
+
+  # "radiant", "miniUI", "webshot", "tinytex",
 pkgs <- c(
-  "radiant", "miniUI", "webshot", "tinytex",
+  "radiant.design", "radiant.basics", "miniUI", "webshot", "tinytex",
   "usethis", "radiant.update", "svglite", "ranger",
   "xgboost", "pdp", "patchwork"
 )
@@ -62,7 +63,7 @@ pkgs_src <- c(
 ## if you have removed a radiant dependency **but**
 ## the change is not yet on CRAN use the below as repo
 # repos <- minicran
-pkgs <- pkgs_src <- c("ranger", "xgboost", "pdp", "patchwork", "clustMixType")
+# pkgs <- pkgs_src <- c("ranger", "xgboost", "pdp", "patchwork", "clustMixType")
 
 
 # building minicran for source packages

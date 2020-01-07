@@ -847,14 +847,14 @@ MD5sum: f4632239798a84680ddcab650caaa1df
 NeedsCompilation: yes
 
 Package: gitgadget
-Version: 0.5.2
+Version: 0.5.3
 Depends: R (>= 3.4.0)
-Imports: shiny (>= 1.3.2), miniUI (>= 0.1.1.1), rstudioapi (>= 0.7), curl (>= 3.2),
-          jsonlite (>= 1.5), dplyr (>= 0.8.3), shinyFiles (>= 0.7.3), callr (>= 2.0.4),
+Imports: shiny (>= 1.4.0), miniUI (>= 0.1.1.1), rstudioapi (>= 0.7), curl (>= 3.2),
+          jsonlite (>= 1.5), dplyr (>= 0.8.3), shinyFiles (>= 0.7.5), callr (>= 2.0.4),
           usethis (>= 1.5.1), markdown
 Suggests: knitr, rmarkdown
 License: GPL-3
-MD5sum: 9fa91c610166d70ad8d484de62f2ef5a
+MD5sum: ff49e55ff6ece8d3c3dfff342910680e
 NeedsCompilation: no
 
 Package: glmnet
@@ -2120,7 +2120,7 @@ Depends: R (>= 3.4.0), radiant.data (>= 1.3.0), radiant.design (>= 1.3.0), radia
 Imports: shiny (>= 1.4.0), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown
 License: AGPL-3 | file LICENSE
-MD5sum: ddb1c8c6fccbaa7bf395101b127b0e52
+MD5sum: 437f3b789a56043c13af3a59b7ecd587
 NeedsCompilation: no
 
 Package: radiant.basics
@@ -2148,7 +2148,7 @@ Imports: tibble (>= 1.4.2), rlang (>= 0.4.0), broom (>= 0.5.2), car (>= 3.0-0), 
 Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0), RPostgreSQL (>= 0.6.2), odbc
           (>= 1.1.4), webshot (>= 0.5.0), testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 0d88f8ce9a48c98946315d21705ede77
+MD5sum: 12968be18ebba3bf4cb909386baab095
 NeedsCompilation: no
 
 Package: radiant.design

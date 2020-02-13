@@ -451,7 +451,7 @@ MD5sum: 433a5ce887f8f383db1546824e97a6df
 NeedsCompilation: no
 
 Package: DiagrammeR
-Version: 1.0.5
+Version: 1.0.6
 Depends: R (>= 3.2.0)
 Imports: dplyr (>= 0.7.6), downloader (>= 0.4), glue (>= 1.3.0), htmltools (>= 0.3.6), htmlwidgets (>=
             1.2), igraph (>= 1.2.2), influenceR (>= 0.1.0), magrittr (>= 1.5), purrr (>= 0.2.5),
@@ -460,7 +460,7 @@ Imports: dplyr (>= 0.7.6), downloader (>= 0.4), glue (>= 1.3.0), htmltools (>= 0
             (>= 2.0.4)
 Suggests: covr, DiagrammeRsvg, rsvg, knitr, testthat, rmarkdown
 License: MIT + file LICENSE
-MD5sum: 47a6d86ace6f6ca95ad6c32b9165c38c
+MD5sum: 66a5215923dc71793031181910573908
 NeedsCompilation: no
 
 Package: dichromat

@@ -2075,7 +2075,7 @@ Imports: radiant.basics (>= 1.3.0), shiny (>= 1.4.0), nnet (>= 7.3.12), NeuralNe
                          0.5.2), patchwork (>= 1.0.0), ranger (>= 0.11.2), xgboost (>= 0.90.0.2), pdp (>= 0.7.0), yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: ca0ec3b34b9995860959d50c3c110aec
+MD5sum: f3d77d672470d25f5b9f15a2fd52c2c3
 NeedsCompilation: no
 
 Package: radiant.multivariate

@@ -44,7 +44,7 @@ pkgs_src <- c(
   "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip", "kableExtra",
   "ggraph", "tidygraph", "bookdown", "lintr", "languageserver", "rprojroot", "iml",
   "xaringan", "magick", "arm", "rstan", "dtplyr", "renv", "RSelenium", "stringi",
-  "sf", "rpart.plot", "formatR"
+  "sf", "rpart.plot", "formatR", "RhpcBLASctl"
 )
 
 # for Karsten

@@ -13,6 +13,7 @@ repos <- c(
 )
 
 options(repos = c(CRAN = repos))
+# options(repos = c(CRAN = minicran))
 
 library(devtools)
 library(miniCRAN)
@@ -20,9 +21,8 @@ source("selMakeRepo.R", local = TRUE)
 
 pth <- rprojroot::find_root(rprojroot::has_file("README.md"))
 
-  # "radiant", "miniUI", "webshot", "tinytex",
 pkgs <- c(
-  "radiant.design", "radiant.basics", "miniUI", "webshot", "tinytex",
+  "radiant", "miniUI", "webshot", "tinytex",
   "usethis", "radiant.update", "svglite", "ranger",
   "xgboost", "pdp", "patchwork"
 )
@@ -66,10 +66,15 @@ pkgs_src <- c(
 # pkgs <- pkgs_src <- c("ranger", "xgboost", "pdp", "patchwork", "clustMixType")
 
 
+clean_pkgs <- function(pkl) {
+  setdiff(pkl, c("Gmedian", "RSpectra"))
+}
+
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
 # download <- makeRepo(pkgs, path = pth, type = "source", Rversion = "4.0")
-to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "source")
+to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "source")
+
 
 ## only needed when a new major R-version comes out
 # download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.0")
@@ -77,13 +82,14 @@ to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "sourc
 
 versions <- c("3.5", "3.6")
 for (ver in versions) {
+  ver <- "3.6"
   ## building minicran for windows binaries
   pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = ver)
-  to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "win.binary", Rversion = ver)
+  to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "win.binary", Rversion = ver)
 
   ## building minicran for mac el-capitan binaries
   pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = ver)
-  to_rm <- selMakeRepo(pkgList, path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = ver)
+  to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = ver)
 }
 
 ## cleanup

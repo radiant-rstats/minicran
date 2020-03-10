@@ -47,10 +47,6 @@ Depends: R (>= 3.0.0), graphics, stats
 Suggests: MASS, survival
 License: Unlimited
 
-Package: brew
-Version: 1.0-6
-License: GPL-2
-
 Package: broom
 Version: 0.5.5
 Depends: R (>= 3.1)
@@ -365,14 +361,6 @@ Imports: methods
 Suggests: testthat, covr, magrittr, crayon, knitr, rmarkdown, DBI, RSQLite, R.utils,
          forcats, microbenchmark, rprintf, stringr, ggplot2, dplyr, withr
 License: MIT + file LICENSE
-Archs: i386, x64
-
-Package: Gmedian
-Version: 1.2.5
-Depends: R (>= 3.0.0)
-Imports: Rcpp (>= 0.12.6), RSpectra, robustbase
-LinkingTo: Rcpp, RcppArmadillo, RSpectra
-License: GPL (>= 2)
 Archs: i386, x64
 
 Package: gower
@@ -993,12 +981,6 @@ Suggests: covr, lattice, testthat (>= 0.8.0)
 License: MIT + file LICENSE
 Archs: i386, x64
 
-Package: rgexf
-Version: 0.16.0
-Imports: XML, igraph, grDevices, utils, servr
-Suggests: knitr, rmarkdown, testthat, covr
-License: MIT + file LICENSE
-
 Package: rio
 Version: 0.5.16
 Depends: R (>= 2.15.0)
@@ -1036,13 +1018,6 @@ Suggests: grid, MASS, lattice, boot, cluster, Matrix, robust, fit.models, MPV, x
 License: GPL (>= 2)
 Archs: i386, x64
 
-Package: Rook
-Version: 1.1-1
-Depends: R (>= 2.13.0)
-Imports: utils, tools, methods, brew
-License: GPL-2
-Archs: i386, x64
-
 Package: rpart
 Version: 4.1-15
 Priority: recommended
@@ -1057,15 +1032,6 @@ Depends: R (>= 3.0.0)
 Imports: backports
 Suggests: testthat, mockr, knitr, withr, rmarkdown
 License: GPL-3
-
-Package: RSpectra
-Version: 0.16-0
-Depends: R (>= 3.0.2)
-Imports: Matrix (>= 1.1-0), Rcpp (>= 0.11.5)
-LinkingTo: Rcpp, RcppEigen (>= 0.3.3.3.0)
-Suggests: knitr, rmarkdown, prettydoc
-License: MPL (>= 2)
-Archs: i386, x64
 
 Package: rstudioapi
 Version: 0.11
@@ -1296,13 +1262,6 @@ Suggests: knitr, rmarkdown, ggplot2 (>= 1.0.1), DiagrammeR (>= 0.9.0), Ckmeans.1
 License: Apache License (== 2.0) | file LICENSE
 Archs: i386, x64
 
-Package: XML
-Version: 3.99-0.3
-Depends: R (>= 2.13.0), methods, utils
-Suggests: bitops, RCurl
-License: BSD_3_clause + file LICENSE
-Archs: i386, x64
-
 Package: xtable
 Version: 1.8-4
 Depends: R (>= 2.10.0)
@@ -1315,11 +1274,6 @@ Version: 2.2.1
 Suggests: RUnit
 License: BSD_3_clause + file LICENSE
 Archs: i386, x64
-
-Package: zeallot
-Version: 0.1.0
-Suggests: testthat, knitr, rmarkdown, purrr, magrittr
-License: MIT + file LICENSE
 
 Package: zip
 Version: 2.0.4

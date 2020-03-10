@@ -33,7 +33,7 @@ selMakeRepo <- function(
 
   ## returning packages to remove
   if (length(to_remove) > 0) {
-    cat("Consider removing", type, ifelse(is.list(Rversion), Rversion$version.string, Rversion), "remove:\n")
+    cat("Consider removing", type, ifelse(is.list(Rversion), Rversion$version.string, Rversion), ":\n")
     print(to_remove)
   }
   invisible(to_remove)

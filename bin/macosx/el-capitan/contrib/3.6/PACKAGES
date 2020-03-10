@@ -55,11 +55,6 @@ Suggests: MASS, survival
 License: Unlimited
 MD5sum: deb45231ce59979209984181b3b4c1b1
 
-Package: brew
-Version: 1.0-6
-License: GPL-2
-MD5sum: 5b4a32dc66c3ae51aa344bff399e712c
-
 Package: broom
 Version: 0.5.5
 Depends: R (>= 3.1)
@@ -1064,16 +1059,6 @@ License: GPL (>= 2)
 Archs: Rcpp.so.dSYM
 MD5sum: 419213e10fcdebf3b4dc159f02f44b18
 
-Package: RcppArmadillo
-Version: 0.9.850.1.0
-Depends: R (>= 3.3.0)
-Imports: Rcpp (>= 0.11.0), stats, utils, methods
-LinkingTo: Rcpp
-Suggests: tinytest, Matrix, pkgKitten, reticulate, rmarkdown, knitr, pinp, slam
-License: GPL (>= 2)
-Archs: RcppArmadillo.so.dSYM
-MD5sum: 2877864f5ba3d2d9d644d53a6ddde215
-
 Package: RcppEigen
 Version: 0.3.3.7.0
 Depends: R (>= 2.15.1)
@@ -1118,13 +1103,6 @@ License: MIT + file LICENSE
 Archs: reshape2.so.dSYM
 MD5sum: 573d40484128dbf77fd532dd247d38ea
 
-Package: rgexf
-Version: 0.16.0
-Imports: XML, igraph, grDevices, utils, servr
-Suggests: knitr, rmarkdown, testthat, covr
-License: MIT + file LICENSE
-MD5sum: b4a2cdcd595891fe2850fa86bc6861f9
-
 Package: rio
 Version: 0.5.16
 Depends: R (>= 2.15.0)
@@ -1165,14 +1143,6 @@ Suggests: grid, MASS, lattice, boot, cluster, Matrix, robust, fit.models, MPV, x
 License: GPL (>= 2)
 Archs: robustbase.so.dSYM
 MD5sum: 3d5aca91afed7f98bb7c61afd46221dd
-
-Package: Rook
-Version: 1.1-1
-Depends: R (>= 2.13.0)
-Imports: utils, tools, methods, brew
-License: GPL-2
-Archs: Rook.so.dSYM
-MD5sum: 89e807396aaef9954d0b2c505ee702ec
 
 Package: rpart
 Version: 4.1-15
@@ -1449,14 +1419,6 @@ License: Apache License (== 2.0) | file LICENSE
 Archs: xgboost.so.dSYM
 MD5sum: 4e67d8e79721757f24b552a0729f9c47
 
-Package: XML
-Version: 3.99-0.3
-Depends: R (>= 2.13.0), methods, utils
-Suggests: bitops, RCurl
-License: BSD_3_clause + file LICENSE
-Archs: XML.so.dSYM
-MD5sum: cc5905c7471f1a620c1a456f5447747c
-
 Package: xtable
 Version: 1.8-4
 Depends: R (>= 2.10.0)
@@ -1471,12 +1433,6 @@ Suggests: RUnit
 License: BSD_3_clause + file LICENSE
 Archs: yaml.so.dSYM
 MD5sum: 650ec1ca0f46d8a650f809af67ee1f80
-
-Package: zeallot
-Version: 0.1.0
-Suggests: testthat, knitr, rmarkdown, purrr, magrittr
-License: MIT + file LICENSE
-MD5sum: eec892ca6d317a15f533ec1c300d39f1
 
 Package: zip
 Version: 2.0.4

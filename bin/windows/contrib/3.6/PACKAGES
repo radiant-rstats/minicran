@@ -897,7 +897,7 @@ Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 
 Package: radiant.update
-Version: 1.3.0
+Version: 1.4.0
 Depends: R (>= 3.5.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)

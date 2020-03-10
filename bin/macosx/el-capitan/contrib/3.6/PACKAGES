@@ -1019,12 +1019,12 @@ License: AGPL-3 | file LICENSE
 MD5sum: dff11c9fe4f2d996a7412d138441f79f
 
 Package: radiant.update
-Version: 1.3.0
+Version: 1.4.0
 Depends: R (>= 3.5.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: c10cfe4b10aaec48c942181a641ef35f
+MD5sum: c93eba7f5e98ae9e8ecfb36b0d3f47bc
 
 Package: randomizr
 Version: 0.20.0

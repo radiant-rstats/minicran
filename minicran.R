@@ -87,6 +87,9 @@ for (ver in versions) {
   pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = ver)
   to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "win.binary", Rversion = ver)
 
+  sapply(setdiff(names(to_rm), "gitgadget"), function(x) file.path(pth, "bin/windows/contrib", ver, paste0(x, "_*"))
+
+
   ## building minicran for mac el-capitan binaries
   pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = ver)
   to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = ver)

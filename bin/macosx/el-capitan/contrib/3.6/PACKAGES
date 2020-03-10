@@ -1064,6 +1064,16 @@ License: GPL (>= 2)
 Archs: Rcpp.so.dSYM
 MD5sum: 419213e10fcdebf3b4dc159f02f44b18
 
+Package: RcppArmadillo
+Version: 0.9.850.1.0
+Depends: R (>= 3.3.0)
+Imports: Rcpp (>= 0.11.0), stats, utils, methods
+LinkingTo: Rcpp
+Suggests: tinytest, Matrix, pkgKitten, reticulate, rmarkdown, knitr, pinp, slam
+License: GPL (>= 2)
+Archs: RcppArmadillo.so.dSYM
+MD5sum: 2877864f5ba3d2d9d644d53a6ddde215
+
 Package: RcppEigen
 Version: 0.3.3.7.0
 Depends: R (>= 2.15.1)

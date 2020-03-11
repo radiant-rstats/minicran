@@ -1025,7 +1025,7 @@ Depends: R (>= 3.5.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 5dccd8c31c55977c4ac58ed84e192c2b
+MD5sum: 939f9ab48408b55b4a7557c878a75657
 
 Package: randomizr
 Version: 0.20.0

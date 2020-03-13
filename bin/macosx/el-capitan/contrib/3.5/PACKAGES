@@ -80,14 +80,14 @@ License: MIT + file LICENSE
 MD5sum: 2dfd669f58773945fb493a1d804a67ae
 
 Package: car
-Version: 3.0-6
+Version: 3.0-7
 Depends: R (>= 3.5.0), carData (>= 3.0-0)
 Imports: abind, MASS, mgcv, nnet, pbkrtest (>= 0.4-4), quantreg, grDevices, utils,
          stats, graphics, maptools, rio, lme4, nlme
-Suggests: alr4, boot, coxme, leaps, lmtest, Matrix, MatrixModels, rgl (>= 0.93.960),
-         sandwich, SparseM, survival, survey
+Suggests: alr4, boot, coxme, knitr, leaps, lmtest, Matrix, MatrixModels, rgl (>=
+         0.93.960), sandwich, SparseM, survival, survey
 License: GPL (>= 2)
-MD5sum: bfecda15f22ae191fa35d10671c850e1
+MD5sum: c0652da5bb892183166a9d5ee5d44d00
 
 Package: carData
 Version: 3.0-3
@@ -365,14 +365,14 @@ License: GPL-2 | file LICENSE
 MD5sum: da89e615dd87b21c30530d3bf63366a8
 
 Package: ggrepel
-Version: 0.8.1
+Version: 0.8.2
 Depends: R (>= 3.0.0), ggplot2 (>= 2.2.0)
 Imports: grid, Rcpp, scales (>= 0.3.0)
 LinkingTo: Rcpp
 Suggests: knitr, rmarkdown, testthat, gridExtra, devtools, prettydoc
 License: GPL-3 | file LICENSE
 Archs: ggrepel.so.dSYM
-MD5sum: ec2cf99f658b2bb020c998991a1e63e9
+MD5sum: 3b9f0fcd2775eb8ab291765f47802e60
 
 Package: gh
 Version: 1.1.0
@@ -758,11 +758,11 @@ Archs: nlme.so.dSYM
 MD5sum: 75520ff406affe72a3248eeafeecef7b
 
 Package: nloptr
-Version: 1.2.1
+Version: 1.2.2.1
 Suggests: testthat (>= 0.8.1), knitr, rmarkdown, inline (>= 0.3.14)
 License: LGPL-3
 Archs: nloptr.so.dSYM
-MD5sum: 6935cc8634301d0c2dc44dea41399751
+MD5sum: e3d827fa98e312949f9b3e2e8773d6d7
 
 Package: nnet
 Version: 7.3-13
@@ -827,12 +827,29 @@ Suggests: knitr, lubridate, testthat (>= 2.0.0), withr
 License: GPL-3
 MD5sum: 586f5c215dc829efa74c8111417d9863
 
+Package: pkgbuild
+Version: 1.0.6
+Depends: R (>= 3.1)
+Imports: callr (>= 3.2.0), cli, crayon, desc, prettyunits, R6, rprojroot, withr (>=
+         2.1.2)
+Suggests: Rcpp, testthat, covr
+License: GPL-3
+MD5sum: 603d0c516442723490e9911de6b3bb90
+
 Package: pkgconfig
 Version: 2.0.3
 Imports: utils
 Suggests: covr, testthat, disposables (>= 1.0.3)
 License: MIT + file LICENSE
 MD5sum: efbe10fb04bc54764e29091a6b22b446
+
+Package: pkgload
+Version: 1.0.2
+Imports: desc, methods, pkgbuild, rlang, rprojroot, rstudioapi, utils, withr
+Suggests: bitops, covr, Rcpp, testthat
+License: GPL-3
+Archs: pkgload.so.dSYM
+MD5sum: f0b98bb9edadbfbd62a209861f534631
 
 Package: plogr
 Version: 0.2.0
@@ -870,6 +887,12 @@ Depends: R (>= 3.3.0)
 Imports: stats, mvtnorm, Matrix
 License: GPL (>= 2)
 MD5sum: 73d227681c76d2f2c645df8e28f458a2
+
+Package: praise
+Version: 1.0.0
+Suggests: testthat
+License: MIT + file LICENSE
+MD5sum: b70d88c425bb2eae0ebe3fbc06c05ff1
 
 Package: prettyunits
 Version: 1.1.1
@@ -1278,6 +1301,17 @@ License: MIT + file LICENSE
 Archs: systemfonts.so.dSYM
 MD5sum: cad4106bc7375f0f24d565900a38a33b
 
+Package: testthat
+Version: 2.3.2
+Depends: R (>= 3.1)
+Imports: cli, crayon (>= 1.3.4), digest, ellipsis, evaluate, magrittr, methods, pkgload,
+         praise, R6 (>= 2.2.0), rlang (>= 0.4.1), withr (>= 2.0.0)
+Suggests: covr, curl (>= 0.9.5), devtools, knitr, rmarkdown, usethis, vctrs (>= 0.1.0),
+         xml2
+License: MIT + file LICENSE
+Archs: testthat.so.dSYM
+MD5sum: ba7ecce539575a8eb2380cdbe4bd07ed
+
 Package: tibble
 Version: 2.1.3
 Depends: R (>= 3.1.0)
@@ -1338,14 +1372,14 @@ Archs: utf8.so.dSYM
 MD5sum: 4836021a2fdba929debc1931dae6d215
 
 Package: vctrs
-Version: 0.2.3
+Version: 0.2.4
 Depends: R (>= 3.2)
-Imports: ellipsis (>= 0.2.0), digest, glue, rlang (>= 0.4.2)
+Imports: ellipsis (>= 0.2.0), digest, glue, rlang (>= 0.4.5)
 Suggests: bit64, covr, crayon, generics, knitr, pillar (>= 1.4.1), pkgdown, rmarkdown,
          testthat (>= 2.3.0), tibble, xml2, zeallot
 License: GPL-3
 Archs: vctrs.so.dSYM
-MD5sum: 051160b0c1c447fb8001e05e2fbfc899
+MD5sum: 2ab68dea2ea0847a1557d7992dabf9e9
 
 Package: viridis
 Version: 0.5.1

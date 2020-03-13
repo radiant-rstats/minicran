@@ -51,7 +51,7 @@ pkgs_src <- c(
 pkgs_src <- c(
   pkgs_src, "ggmap", "leaflet", "tm", "wordcloud", "rvest", "tidytext",
   "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal", "topicmodels", "rtweet",
-  "pageviews", "googleAuthR"
+  "pageviews", "googleAuthR", "tidymodels"
 )
 
 # for Ken

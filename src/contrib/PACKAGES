@@ -2193,7 +2193,7 @@ Imports: radiant.model (>= 1.3.0), shiny (>= 1.4.0), dplyr (>= 0.8.3), rlang (>=
                          import (>= 1.1.0), ggrepel (>= 0.8), lubridate (>= 1.7.4), polycor (>= 0.7.10), gower (>= 0.2.1), clustMixType (>= 0.2.1), patchwork (>= 1.0.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 86b8a58789f33d896f1bedc523ab78e3
+MD5sum: fc84fc709f30af1f09700a2875aea89a
 NeedsCompilation: no
 
 Package: radiant.update

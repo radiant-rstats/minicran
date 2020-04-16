@@ -7,7 +7,7 @@ repos <- c(
 
 ## install script for R(adiant) @ Rady School of Management (MBA and MSBA)
 build <- function(type = "binary", os = "") {
-  repos_run <- ifelse(os == "Linux", repos[2], repos[1])
+  repos_fun <- ifelse(os == "Linux", repos[2], repos[1])
   ## get list of packages to update
   op <- old.packages(
     lib.loc = .libPaths()[1],
@@ -55,7 +55,7 @@ build <- function(type = "binary", os = "") {
       ## all deps should already be available in op by using the minicran package
       ## and all packages will be installed 1-by-1
       update.packages(
-        lib.loc = .libPaths()[1], ask = FALSE, repos = repos_run,
+        lib.loc = .libPaths()[1], ask = FALSE, repos = repos_fun,
         type = type, oldPkgs = p, dependencies = FALSE
       )
     }

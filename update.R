@@ -7,7 +7,7 @@ repos <- c(
 
 ## install script for R(adiant) @ Rady School of Management (MBA and MSBA)
 build <- function(type = "binary", os = "") {
-  repos_fun <- ifelse(os == "Linux", repos[2], repos[1])
+  repos_run <- ifelse(os == "Linux", repos[2], repos[1])
   ## get list of packages to update
   op <- old.packages(
     lib.loc = .libPaths()[1],

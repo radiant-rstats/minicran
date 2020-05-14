@@ -901,12 +901,12 @@ MD5sum: ff49e55ff6ece8d3c3dfff342910680e
 NeedsCompilation: no
 
 Package: glmnet
-Version: 3.0-2
+Version: 4.0
 Depends: R (>= 3.6.0), Matrix (>= 1.0-6)
 Imports: methods, utils, foreach, shape
-Suggests: survival, knitr, lars
+Suggests: survival, knitr, lars, testthat
 License: GPL-2
-MD5sum: 0d8cd35b1407a0a1951c94b7b42b7b7d
+MD5sum: 5978aa015dfd8dbbfa5c75c36642c9e8
 NeedsCompilation: yes
 
 Package: globals

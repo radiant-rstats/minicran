@@ -74,14 +74,13 @@ clean_pkgs <- function(pkl) {
 
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
-# download <- makeRepo(pkgs, path = pth, type = "source", Rversion = "4.0")
 to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "source")
 
 ## only needed when a new major R-version comes out
 # download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.1")
-# download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "4.1")
+# download <- makeRepo(pkgs, path = pth, type = "mac.binary", Rversion = "4.1")
 
-versions <- c("3.5", "3.6", "4.0")
+versions <- c("3.5", "3.6")
 for (ver in versions) {
   ## building minicran for windows binaries
   pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = ver)
@@ -93,6 +92,30 @@ for (ver in versions) {
   to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = ver)
   sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/el-capitan/contrib", ver, paste0(x, "_*")), force = TRUE))
 }
+
+versions <- c("4.0")
+for (ver in versions) {
+  ## building minicran for windows binaries
+  pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = ver)
+  to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "win.binary", Rversion = ver)
+  sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/windows/contrib", ver, paste0(x, "_*")), force = TRUE))
+
+  ## building minicran for mac el-capitan binaries
+  pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary", suggests = FALSE, Rversion = ver)
+  to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary", Rversion = ver)
+  sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/contrib", ver, paste0(x, "_*")), force = TRUE))
+}
+
+# repos <- c(
+#   "https://cloud.r-project.org",
+#   "https://cran.r-project.org"
+# )
+#
+# ## building minicran for mac el-capitan binaries
+# pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary", suggests = FALSE, Rversion = ver)
+# to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary", Rversion = ver)
+# sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/contrib", ver, paste0(x, "_*")), force = TRUE))
+
 
 ## cleanup
 library(dplyr)

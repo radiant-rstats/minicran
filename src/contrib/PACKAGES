@@ -1535,13 +1535,13 @@ MD5sum: e74ab7329f2b9833f0c3c1216f86d65a
 NeedsCompilation: no
 
 Package: maptools
-Version: 0.9-9
+Version: 1.0-1
 Depends: R (>= 2.10), sp (>= 1.0-11)
 Imports: foreign (>= 0.8), methods, grid, lattice, stats, utils, grDevices
 Suggests: rgeos (>= 0.1-8), spatstat (>= 1.60), PBSmapping, maps, RColorBrewer, raster, polyclip, spatstat.utils
-Enhances: gpclib, RArcInfo
+Enhances: gpclib
 License: GPL (>= 2)
-MD5sum: 460bfee2820cf66121b6cb5425797e1c
+MD5sum: 80db6ff35aa7511d02b94b7e3ae400ca
 NeedsCompilation: yes
 
 Package: mapview
@@ -3127,10 +3127,10 @@ MD5sum: 40e3410254657d487cd9f19391fb6118
 NeedsCompilation: yes
 
 Package: systemfonts
-Version: 0.2.1
+Version: 0.2.2
 Suggests: testthat (>= 2.1.0), covr, knitr, rmarkdown, tools
 License: MIT + file LICENSE
-MD5sum: e139d06a5272d6278c55a305f9d36c0c
+MD5sum: a571a0442337ebccd7e096964d5fa033
 NeedsCompilation: yes
 
 Package: tensorflow

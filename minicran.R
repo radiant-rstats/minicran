@@ -8,6 +8,7 @@
 # install.packages("rprojroot")
 # install.packages("dplyr")
 # install.packages("magrittr")
+# install.packages("devtools")
 
 minicran <- "https://radiant-rstats.github.io/minicran/"
 repos <- c(
@@ -30,7 +31,6 @@ pkgs <- c(
   "usethis", "radiant.update", "svglite", "ranger",
   "xgboost", "pdp", "patchwork"
 )
-
 
 # check only files that needed updating or adding
 # see PR https://github.com/RevolutionAnalytics/miniCRAN/pull/15/files
@@ -63,7 +63,6 @@ pkgs_src <- c(
   pkgs_src, "stargazer", "lfe"
 )
 
-
 ## if you have removed a radiant dependency **but**
 ## the change is not yet on CRAN use the below as repo
 # repos <- minicran
@@ -78,12 +77,9 @@ pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
 # download <- makeRepo(pkgs, path = pth, type = "source", Rversion = "4.0")
 to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "source")
 
-
 ## only needed when a new major R-version comes out
 # download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.1")
 # download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "4.1")
-download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.0")
-download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "4.0")
 
 versions <- c("3.5", "3.6", "4.0")
 for (ver in versions) {

@@ -7,7 +7,7 @@ repos <- c(
   "https://cran.rstudio.com"
 )
 
-build <- function(type = "binary", os="") {
+build <- function(type = "binary", os = "") {
 
   repos_fun <- ifelse(os == "Linux", repos[2], repos[1])
   update.packages(lib.loc = .libPaths()[1], ask = FALSE, repos = repos_fun, type = type)

@@ -4,7 +4,11 @@
 # installing and loading packages
 # repos <- c("file:///Users/vnijs/Desktop/Github/minicran/",
 
+# install.packages("miniCRAN")
 # install.packages("rprojroot")
+# install.packages("dplyr")
+# install.packages("magrittr")
+
 minicran <- "https://radiant-rstats.github.io/minicran/"
 repos <- c(
   "https://cloud.r-project.org",
@@ -76,10 +80,12 @@ to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, t
 
 
 ## only needed when a new major R-version comes out
-# download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.0")
-# download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "4.0")
+# download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.1")
+# download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "4.1")
+download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.0")
+download <- makeRepo(pkgs, path = pth, type = "mac.binary.el-capitan", Rversion = "4.0")
 
-versions <- c("3.5", "3.6")
+versions <- c("3.5", "3.6", "4.0")
 for (ver in versions) {
   ## building minicran for windows binaries
   pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = ver)

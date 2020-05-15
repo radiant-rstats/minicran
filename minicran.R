@@ -93,7 +93,7 @@ for (ver in versions) {
   sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/el-capitan/contrib", ver, paste0(x, "_*")), force = TRUE))
 }
 
-pkgs <- c(pkgs, c("GPArotation", "pdp"))
+pkgs <- unique(c(pkgs, c("GPArotation", "pdp")))
 
 versions <- c("4.0")
 for (ver in versions) {

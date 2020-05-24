@@ -118,13 +118,13 @@ for (ver in versions) {
 # to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary", Rversion = ver)
 # sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/contrib", ver, paste0(x, "_*")), force = TRUE))
 
-
 ## cleanup
 library(dplyr)
 library(magrittr)
 
 win_dirs <- list.dirs("bin/windows/contrib")[-1]
 mac_dirs <- list.dirs("bin/macosx/el-capitan/contrib")[-1]
+mac_dirs <- c(mac_dirs, list.dirs("bin/macosx/contrib")[-1])
 pdirs <- c("src/contrib", win_dirs, mac_dirs)
 
 for (pdir in pdirs) {

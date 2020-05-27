@@ -63,7 +63,8 @@ build <- function(type = "binary", os = "") {
 
 os <- Sys.info()["sysname"]
 if (os == "Linux") {
-  build(type = "source", os = "Linux")
+  # build(type = "source", os = "Linux")
+  build(os = "Linux")
 } else {
   build(type = "binary")
 }

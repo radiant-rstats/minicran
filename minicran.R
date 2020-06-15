@@ -107,8 +107,10 @@ for (ver in versions) {
   to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary", Rversion = ver)
   sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/contrib", ver, paste0(x, "_*")), force = TRUE))
 
-  cat(paste0("pkgs <- c('", paste0(pkgList, collapse = "', '"), "')", collapse = ","), file = "pkgs.R")
 }
+
+pkgList <- pkgDep("radiant", repos = repos, type = "mac.binary", suggests = FALSE, Rversion = "4.0")
+cat(paste0("pkgs <- c('", paste0(pkgList, collapse = "', '"), "')", collapse = ","), file = "pkgs.R")
 
 # repos <- c(
 #   "https://cloud.r-project.org",

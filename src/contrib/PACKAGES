@@ -2293,12 +2293,12 @@ MD5sum: f1a699be6dd8f0bfaaf47a11f9c67e90
 NeedsCompilation: no
 
 Package: radiant.update
-Version: 1.3.0
-Depends: R (>= 3.5.0)
+Version: 1.4.1
+Depends: R (>= 4.0.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 989dd45a2b375f2dc6eacd4020bd623d
+MD5sum: 5e2ba54981fc5e9369c70dc8b8f4dfbb
 NeedsCompilation: no
 
 Package: randomForest

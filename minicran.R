@@ -90,7 +90,7 @@ for (ver in versions) {
   ## building minicran for mac el-capitan binaries
   pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = ver)
   to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = ver)
-  sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/el-capitan/contrib", ver, paste0(x, "_*")), force = TRUE))
+  sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/el-capitan/contrib", ver, paste1(x, "_*")), force = TRUE))
 }
 
 pkgs <- unique(c(pkgs, c("GPArotation", "pdp")))

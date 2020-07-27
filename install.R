@@ -3,7 +3,7 @@ owd <- getwd()
 options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
 repos <- c(
   "https://radiant-rstats.github.io/minicran/",
-  "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/bionic/latest",
+  "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/focal/latest",
   "https://cran.rstudio.com"
 )
 
@@ -53,14 +53,14 @@ if (as.numeric(rv$major) < 3 || (as.numeric(rv$major) == 3 && as.numeric(rv$mino
       install.packages("installr")
 
       ## get rstudio - release
-      # page <- readLines("https://www.rstudio.com/products/rstudio/download", warn = FALSE)
-      # pat <- "//download1.rstudio.org/desktop/windows/RStudio-[0-9.]+.exe";
-      # URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+      page <- readLines("https://www.rstudio.com/products/rstudio/download", warn = FALSE)
+      pat <- "//download1.rstudio.org/desktop/windows/RStudio-[0-9.]+.exe";
+      URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
 
       ## get rstudio - preview
-      page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
-      pat <- "//s3.amazonaws.com/rstudio-ide-build/desktop/windows/RStudio-[0-9.]+exe"
-      URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+      # page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
+      # pat <- "//s3.amazonaws.com/rstudio-ide-build/desktop/windows/RStudio-[0-9.]+exe"
+      # URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
 
       ## install
       installr::install.URL(URL, installer_option = "/S")
@@ -100,14 +100,14 @@ if (as.numeric(rv$major) < 3 || (as.numeric(rv$major) == 3 && as.numeric(rv$mino
       ##  based on https://github.com/talgalili/installr/blob/82bf5b542ce6d2ef4ebc6359a4772e0c87427b64/R/install.R#L805-L813
 
       ## get rstudio - release
-      # page <- readLines("https://www.rstudio.com/products/rstudio/download", warn = FALSE)
-      # pat <- "//download1.rstudio.org/desktop/macos/RStudio-[0-9.]+.dmg";
-      # URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+      page <- readLines("https://www.rstudio.com/products/rstudio/download", warn = FALSE)
+      pat <- "//download1.rstudio.org/desktop/macos/RStudio-[0-9.]+.dmg";
+      URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
 
       ## get rstudio - preview
-      page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
-      pat <- "//s3.amazonaws.com/rstudio-ide-build/desktop/macos/RStudio-[0-9.]+dmg"
-      URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+      # page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
+      # pat <- "//s3.amazonaws.com/rstudio-ide-build/desktop/macos/RStudio-[0-9.]+dmg"
+      # URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
 
       setwd(tempdir())
       download.file(URL,"Rstudio.dmg")

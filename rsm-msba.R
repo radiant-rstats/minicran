@@ -1,6 +1,6 @@
 options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
 repos <- c(
-  "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/bionic/latest",
+  "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/focal/latest",
   "https://radiant-rstats.github.io/minicran/",
   "https://cloud.r-project.org"
 )

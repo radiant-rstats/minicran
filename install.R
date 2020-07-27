@@ -34,9 +34,10 @@ readliner <- function(text, inp = "", resp = "[yYnN]") {
 }
 
 rv <- R.Version()
+rv <- paste(rv$major, rv$minor, sep = ".")
 
-if (as.numeric(rv$major) < 3 || (as.numeric(rv$major) == 3 && as.numeric(rv$minor) < 5)) {
-  cat("Radiant requires R-3.5.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
+if (rv < "3.6") {
+  cat("Radiant requires R-3.6.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
 } else {
 
   os <- Sys.info()["sysname"]

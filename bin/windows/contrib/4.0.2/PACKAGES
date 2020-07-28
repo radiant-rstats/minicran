@@ -1,0 +1,5 @@
+Package: shinyFiles
+Version: 0.8.0.9003
+Imports: htmltools, jsonlite, tools, shiny (>= 1.1.0), fs
+      (>= 1.2.6), tibble (>= 1.4.2)
+License: GPL (>= 2)

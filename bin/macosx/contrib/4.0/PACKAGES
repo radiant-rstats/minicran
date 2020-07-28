@@ -218,7 +218,7 @@ License: MIT + file LICENSE
 MD5sum: c1ca5fc5f0082ba68be2c3ddb8a2be4e
 
 Package: DiagrammeR
-Version: 1.0.6.1
+Version: 1.0.6.1.9000
 Depends: R (>= 3.2.0)
 Imports: dplyr (>= 0.7.6), downloader (>= 0.4), glue (>= 1.3.0), htmltools
         (>= 0.3.6), htmlwidgets (>= 1.2), igraph (>= 1.2.2), influenceR (>=
@@ -228,7 +228,7 @@ Imports: dplyr (>= 0.7.6), downloader (>= 0.4), glue (>= 1.3.0), htmltools
         0.8.1), viridis (>= 0.5.1), visNetwork (>= 2.0.4)
 Suggests: covr, DiagrammeRsvg, rsvg, knitr, testthat, rmarkdown
 License: MIT + file LICENSE
-MD5sum: 4557ced43a934aac78190dd016912588
+MD5sum: 51368226b4003c1a82aeaf470092137d
 
 Package: digest
 Version: 0.6.25
@@ -1271,11 +1271,11 @@ License: MIT + file LICENSE
 MD5sum: 0376c5922454d78c1d4b5ac5ab1d8f30
 
 Package: shinyFiles
-Version: 0.8.0
+Version: 0.8.0.9003
 Imports: htmltools, jsonlite, tools, shiny (>= 1.1.0), fs (>= 1.2.6), tibble
         (>= 1.4.2)
 License: GPL (>= 2)
-MD5sum: 19a1b3fb3ebb5fd969f3a1f36882e614
+MD5sum: 676ede898526f1d6400aaae71da6b46d
 
 Package: sourcetools
 Version: 0.1.7

@@ -77,12 +77,12 @@ License: MIT + file LICENSE
 MD5sum: f5e2882d2b7f98f60405310ddb34ef7f
 
 Package: car
-Version: 3.0-8
+Version: 3.0-9
 Depends: R (>= 3.5.0), carData (>= 3.0-0)
 Imports: abind, MASS, mgcv, nnet, pbkrtest (>= 0.4-4), quantreg, grDevices, utils, stats, graphics, maptools, rio, lme4, nlme
 Suggests: alr4, boot, coxme, knitr, leaps, lmtest, Matrix, MatrixModels, rgl (>= 0.93.960), sandwich, SparseM, survival, survey
 License: GPL (>= 2)
-MD5sum: 3ce7393d57c720e41108952ec1a3cacd
+MD5sum: f9f920f57de41757bb5010331207272d
 
 Package: carData
 Version: 3.0-4
@@ -156,11 +156,11 @@ Archs: conquer.so.dSYM
 MD5sum: 413a49eee563793fb1f2052ec5d80aff
 
 Package: cpp11
-Version: 0.1.0
-Suggests: bench, brio, cli, callr, covr, decor, desc, glue, ggplot2, knitr, lobstr, mockery, scales, testthat, tibble, utils,
-              vctrs, withr, xml2, rmarkdown
+Version: 0.2.1
+Suggests: bench, brio, callr, cli, covr, decor, desc, ggplot2, glue, knitr, lobstr, mockery, progress, rmarkdown, scales,
+              testthat, tibble, utils, vctrs, withr
 License: MIT + file LICENSE
-MD5sum: e9bceabc3cca96e61407938b2799b2f2
+MD5sum: fc863ae8ac218210b9d6d6834814f513
 
 Package: crayon
 Version: 1.3.4
@@ -250,11 +250,11 @@ Archs: dplyr.so.dSYM
 MD5sum: 172f836d98075f77734790b4a8e260df
 
 Package: DT
-Version: 0.14
+Version: 0.15
 Imports: htmltools (>= 0.3.6), htmlwidgets (>= 1.3), jsonlite (>= 0.9.16), magrittr, crosstalk, promises
 Suggests: knitr (>= 1.8), rmarkdown, shiny (>= 1.2.0), testit
 License: GPL-3 | file LICENSE
-MD5sum: 4b06c50ddb314f55c442d7dd0bd1d1d3
+MD5sum: b0c89c2fd2088c0eab4cce286cded069
 
 Package: e1071
 Version: 1.7-3
@@ -909,12 +909,12 @@ Archs: promises.so.dSYM
 MD5sum: b4ffc1fc5642c129ceedba6a16fc72e1
 
 Package: ps
-Version: 1.3.3
+Version: 1.3.4
 Depends: R (>= 3.1)
 Imports: utils
 Suggests: callr, covr, curl, pingr, processx (>= 3.1.0), R6, rlang, testthat, tibble
 License: BSD_3_clause + file LICENSE
-MD5sum: 39f6550f094fbea66e19f255e005b6d5
+MD5sum: ba87a64550a56b332c6621c223b8dbd5
 
 Package: psych
 Version: 2.0.7
@@ -954,6 +954,69 @@ Depends: R (>= 3.0)
 Suggests: knitr, microbenchmark, pryr, testthat, ggplot2, scales
 License: MIT + file LICENSE
 MD5sum: 9a869b76bdd4eb92c50339b4ca3baa42
+
+Package: radiant
+Version: 1.3.2
+Depends: R (>= 3.4.0), radiant.data (>= 1.3.0), radiant.design (>= 1.3.0), radiant.basics (>= 1.3.0), radiant.model (>= 1.3.0),
+              radiant.multivariate (>= 1.3.0)
+Imports: shiny (>= 1.4.0), import (>= 1.1.0)
+Suggests: testthat (>= 2.0.0), knitr, rmarkdown
+License: AGPL-3 | file LICENSE
+MD5sum: 9c4ca6131268e366a3c6cdf55d26bcd6
+
+Package: radiant.basics
+Version: 1.3.4
+Depends: R (>= 3.4.0), radiant.data (>= 1.2.0)
+Imports: ggplot2 (>= 2.2.1), scales (>= 0.4.0), dplyr (>= 0.8.3), tidyr (>= 0.8.2), magrittr (>= 1.5), shiny (>= 1.4.0), psych (>=
+              1.8.3.3), import (>= 1.1.0), lubridate (>= 1.7.4), polycor (>= 0.7.10), patchwork (>= 1.0.0)
+Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
+License: AGPL-3 | file LICENSE
+MD5sum: 5a1d4693cfc51d31834d05271c14e6b1
+
+Package: radiant.data
+Version: 1.3.10
+Depends: R (>= 3.4.0), magrittr (>= 1.5), ggplot2 (>= 2.2.1), lubridate (>= 1.7.4), tidyr (>= 0.8.2), dplyr (>= 1.0.1)
+Imports: tibble (>= 1.4.2), rlang (>= 0.4.0), broom (>= 0.5.2), car (>= 3.0-0), knitr (>= 1.20), markdown (>= 1.0), rmarkdown(>=
+              1.14), shiny (>= 1.4.0), jsonlite (>= 1.0), shinyAce (>= 0.4.1), psych (>= 1.8.4), DT (>= 0.9), readr (>= 1.1.1),
+              readxl (>= 1.0.0), writexl (>= 0.2), scales (>= 0.4.0), curl (>= 2.5), rstudioapi (>= 0.7), import (>= 1.1.0),
+              plotly (>= 4.7.1), glue (>= 1.3.0), shinyFiles (>= 0.7.3), stringi (>= 1.2.4), randomizr (>= 0.20.0), patchwork (>=
+              1.0.0), MASS, base64enc
+Suggests: svglite (>= 1.2.1), DBI (>= 0.7), RSQLite (>= 2.0), RPostgreSQL (>= 0.6.2), odbc (>= 1.1.4), webshot (>= 0.5.0),
+              testthat (>= 2.0.0), pkgdown (>= 1.1.0)
+License: AGPL-3 | file LICENSE
+MD5sum: fa9d620aef2348960302d108b0390060
+
+Package: radiant.design
+Version: 1.3.5
+Depends: R (>= 3.4.0), radiant.data (>= 1.3.0), mvtnorm
+Imports: dplyr (>= 0.8.3), magrittr (>= 1.5), shiny (>= 1.4.0), AlgDesign (>= 1.1.7.3), import (>= 1.1.0), pwr (>= 1.1.2),
+              randomizr (>= 0.20.0), polycor
+Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
+License: AGPL-3 | file LICENSE
+MD5sum: af1d39f843de1c5dc3f2bdaf05056c0a
+
+Package: radiant.model
+Version: 1.3.13
+Depends: R (>= 3.4.0), radiant.data (>= 1.3.0)
+Imports: radiant.basics (>= 1.3.0), shiny (>= 1.4.0), nnet (>= 7.3.12), NeuralNetTools (>= 1.5.1), sandwich (>= 2.3.4), car (>=
+              2.1.3), ggplot2 (>= 2.2.1), data.tree (>= 0.7.4), stringr (>= 1.1.0), lubridate (>= 1.7.2), tidyr (>= 0.8.2), dplyr
+              (>= 0.8.3), rlang (>= 0.4.0), magrittr (>= 1.5), DiagrammeR (>= 1.0.0), import (>= 1.1.0), psych (>= 1.8.4), e1071
+              (>= 1.6.8), rpart (>= 4.1.11), ggrepel (>= 0.8), broom (>= 0.7.0), patchwork (>= 1.0.0), ranger (>= 0.11.2),
+              xgboost (>= 0.90.0.2), pdp (>= 0.7.0), yaml
+Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
+License: AGPL-3 | file LICENSE
+MD5sum: 4b48cb73fc0cc29342515ca941078dba
+
+Package: radiant.multivariate
+Version: 1.3.5
+Depends: R (>= 3.4.0), radiant.data (>= 1.3.0)
+Imports: radiant.model (>= 1.3.0), shiny (>= 1.4.0), dplyr (>= 0.8.3), rlang (>= 0.4.0), ggplot2 (>= 2.2.1), scales (>= 0.4.0),
+              magrittr (>= 1.5), psych (>= 1.8.4), GPArotation (>= 2014.11-1), car (>= 2.1.1), MASS (>= 7.3), import (>= 1.1.0),
+              ggrepel (>= 0.8), lubridate (>= 1.7.4), polycor (>= 0.7.10), gower (>= 0.2.1), clustMixType (>= 0.2.1), patchwork
+              (>= 1.0.0)
+Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
+License: AGPL-3 | file LICENSE
+MD5sum: ea34034ef3fc5638d37f1e21317a9efa
 
 Package: randomizr
 Version: 0.20.0
@@ -1124,6 +1187,14 @@ Suggests: datasets, Cairo (>= 1.5-5), testthat (>= 2.1.1), knitr (>= 1.6), markd
               magrittr, shinytest, yaml, future, dygraphs, ragg, showtext
 License: GPL-3 | file LICENSE
 MD5sum: a8ce487cefdea5f48d9c69f669680f08
+
+Package: shinyAce
+Version: 0.4.1
+Depends: R (>= 3.3.0)
+Imports: shiny (>= 1.0.5), jsonlite, utils, tools
+Suggests: testthat (>= 2.0.0), dplyr (>= 0.8.3)
+License: MIT + file LICENSE
+MD5sum: 20e292dd780597f1bb80b08f9c3f6f60
 
 Package: sourcetools
 Version: 0.1.7

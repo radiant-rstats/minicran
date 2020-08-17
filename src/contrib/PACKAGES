@@ -2950,13 +2950,13 @@ MD5sum: 0077f3b88ae1e1e1ef2788a3d828ef3a
 NeedsCompilation: no
 
 Package: StanHeaders
-Version: 2.21.0-5
+Version: 2.21.0-6
 Depends: R (>= 3.4.0)
 Imports: RcppParallel (>= 5.0.1)
 LinkingTo: RcppEigen, RcppParallel (>= 5.0.1)
 Suggests: Rcpp, BH, knitr (>= 1.15.1), rmarkdown, Matrix, methods, rstan
 License: BSD_3_clause + file LICENSE
-MD5sum: dd8e2c5c01220975f0be55b183f877b5
+MD5sum: 9a7c63223aa296e4757913836a04a275
 NeedsCompilation: yes
 
 Package: stargazer

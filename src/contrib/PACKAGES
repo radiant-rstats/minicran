@@ -2226,6 +2226,15 @@ License: MIT + file LICENSE
 MD5sum: 78cabfb5a4e18fab29659752271ab4af
 NeedsCompilation: no
 
+Package: radiant.update
+Version: 1.4.1
+Depends: R (>= 4.0.0)
+Imports: utils, import
+Suggests: testthat (>= 2.0.0)
+License: AGPL-3 | file LICENSE
+MD5sum: ead9de69fa1c4a53cac1bb290c4e964c
+NeedsCompilation: no
+
 Package: randomForest
 Version: 4.6-14
 Depends: R (>= 3.2.2), stats

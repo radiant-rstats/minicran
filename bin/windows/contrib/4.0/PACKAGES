@@ -888,6 +888,13 @@ Imports: radiant.basics (>= 1.3.0), shiny (>= 1.4.0), nnet (>= 7.3.12), NeuralNe
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 
+Package: radiant.update
+Version: 1.4.1
+Depends: R (>= 4.0.0)
+Imports: utils, import
+Suggests: testthat (>= 2.0.0)
+License: AGPL-3 | file LICENSE
+
 Package: randomizr
 Version: 0.20.0
 Depends: R (>= 3.5.0)

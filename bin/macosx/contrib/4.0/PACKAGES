@@ -1018,6 +1018,14 @@ Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 MD5sum: ea34034ef3fc5638d37f1e21317a9efa
 
+Package: radiant.update
+Version: 1.4.1
+Depends: R (>= 4.0.0)
+Imports: utils, import
+Suggests: testthat (>= 2.0.0)
+License: AGPL-3 | file LICENSE
+MD5sum: 9b413c00d0b81c8eeafd678998aa96d7
+
 Package: randomizr
 Version: 0.20.0
 Depends: R (>= 3.5.0)

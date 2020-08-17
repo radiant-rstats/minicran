@@ -1196,6 +1196,12 @@ Suggests: testthat (>= 2.0.0), dplyr (>= 0.8.3)
 License: MIT + file LICENSE
 MD5sum: 20e292dd780597f1bb80b08f9c3f6f60
 
+Package: shinyFiles
+Version: 0.8.0.9003
+Imports: htmltools, jsonlite, tools, shiny (>= 1.1.0), fs (>= 1.2.6), tibble (>= 1.4.2)
+License: GPL (>= 2)
+MD5sum: d4cd717d36385e6a0371ee3c18b2e230
+
 Package: sourcetools
 Version: 0.1.7
 Depends: R (>= 3.0.2)

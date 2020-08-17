@@ -2232,7 +2232,7 @@ Depends: R (>= 4.0.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: ead9de69fa1c4a53cac1bb290c4e964c
+MD5sum: 475858e9b4dfe2a32dd1ef153dbf6e53
 NeedsCompilation: no
 
 Package: randomForest

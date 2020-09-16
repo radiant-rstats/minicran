@@ -358,6 +358,15 @@ Suggests: getPass
 License: GPL-2
 Archs: i386, x64
 
+Package: gitgadget
+Version: 0.6.0
+Depends: R (>= 3.6.0)
+Imports: shiny (>= 1.4.0), miniUI (>= 0.1.1.1), rstudioapi (>= 0.7), curl (>= 3.2),
+         jsonlite (>= 1.5), dplyr (>= 0.8.3), shinyFiles (>= 0.7.5), callr (>=
+         2.0.4), usethis (>= 1.5.1), markdown
+Suggests: knitr, rmarkdown
+License: GPL-3
+
 Package: glue
 Version: 1.4.2
 Depends: R (>= 3.2)

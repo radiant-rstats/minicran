@@ -63,6 +63,11 @@ pkgs_src <- c(
   pkgs_src, "stargazer", "lfe"
 )
 
+# for Terry
+pkgs_src <- c(
+  pkgs_src, "simmer",  "simmer.plot", "EnvStats"
+)
+
 ## if you have removed a radiant dependency **but**
 ## the change is not yet on CRAN use the below as repo
 # repos <- minicran

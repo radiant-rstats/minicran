@@ -44,7 +44,7 @@ if (rv < "3.6") {
   if (os == "Windows") {
     lp <- .libPaths()[grepl("Documents",.libPaths())]
     if (grepl("(Prog)|(PROG)", Sys.getenv("R_HOME"))) {
-      rv <- paste(rv$major, rv$minor, sep = ".")
+      # rv <- paste(rv$major, rv$minor, sep = ".")
       cat(paste0("It seems you installed R in the Program Files directory. This can\ncause problems so we recommend you uninstall R, delete the Documents/R\ndirectory on your computer, and then re-install the latest version of R.\n\nThe most convenient way to install all required tools on Windows\nis to use the all-in-one-installer linked on the page below (see\nthe section on 'Installing Radiant on Windows')\n\n https://radiant-rstats.github.io/docs/install.html" ),"\n\n")
     } else if (length(lp) > 0) {
       cat("Installing R-packages in the directory printed below often causes\nproblems on Windows. Please remove the 'Documents/R' directory\non your computer, close and restart R(studio), and then run the\ncommand below:\n\nsource(\"https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/install.R\").\n\n")
@@ -92,9 +92,9 @@ if (rv < "3.6") {
   } else if (os == "Darwin") {
 
     resp <- system("sw_vers -productVersion", intern = TRUE)
-    if (as.integer(strsplit(resp, "\\.")[[1]][2]) < 9) {
-      cat("The version of OSX on your mac is no longer supported by R. You will need to upgrade the OS before proceeding\n\n")
-    } else {
+    # if (as.integer(strsplit(resp, "\\.")[[1]][2]) < 9) {
+    #   cat("The version of OSX on your mac is no longer supported by R. You will need to upgrade the OS before proceeding\n\n")
+    # } else {
 
       build()
 
@@ -128,7 +128,7 @@ if (rv < "3.6") {
         }
       }
       cat("\n\nInstallation on Mac complete. Close R, (re)start Rstudio, and select 'Start radiant'\nfrom the Addins menu to get started\n\n")
-    }
+    #}
   } else {
     cat("\n\nThe install script only partially supports your OS\n")
     cat("You may prefer to use a docker image of Radiant and related software\nSee https://github.com/radiant-rstats/docker/blob/master/install/rsm-msba-linux.md for details\n\n")

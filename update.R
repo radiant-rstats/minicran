@@ -143,7 +143,7 @@ updater <- function() {
       build()
     } else if (os == "Darwin") {
       resp <- system("sw_vers -productVersion", intern = TRUE)
-      if (as.integer(strsplit(resp, "\\.")[[1]][2]) < 9) {
+      if (resp < "10.9") {
         message("Your version of macOS is no longer supported by R. You will need to upgrade the OS before proceeding\n\n")
       } else {
         build()

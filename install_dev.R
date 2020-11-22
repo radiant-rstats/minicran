@@ -84,7 +84,7 @@ if (rv < "3.6") {
     ## from http://unix.stackexchange.com/a/712
     resp <- system("sw_vers -productVersion", intern = TRUE)
 
-    if (as.integer(strsplit(resp, "\\.")[[1]][2]) < 9) {
+    if (resp < "10.9") {
       cat("The version of OSX on your mac is no longer supported by R. You will need to upgrade the OS before proceeding\n\n")
     } else {
 

@@ -92,14 +92,12 @@ if (rv < "3.6") {
   } else if (os == "Darwin") {
 
     resp <- system("sw_vers -productVersion", intern = TRUE)
-    # if (as.integer(strsplit(resp, "\\.")[[1]][2]) < 9) {
-    #   cat("The version of OSX on your mac is no longer supported by R. You will need to upgrade the OS before proceeding\n\n")
-    # } else {
+    if (resp < "10.9") {
+      cat("The version of OSX on your mac is no longer supported by R. You will need to upgrade the OS before proceeding\n\n")
+    } else {
 
       build()
-
       ##  based on https://github.com/talgalili/installr/blob/82bf5b542ce6d2ef4ebc6359a4772e0c87427b64/R/install.R#L805-L813
-
       ## get rstudio - release
       page <- readLines("https://www.rstudio.com/products/rstudio/download", warn = FALSE)
       pat <- "//download1.rstudio.org/desktop/macos/RStudio-[0-9.]+.dmg";
@@ -128,7 +126,7 @@ if (rv < "3.6") {
         }
       }
       cat("\n\nInstallation on Mac complete. Close R, (re)start Rstudio, and select 'Start radiant'\nfrom the Addins menu to get started\n\n")
-    #}
+    }
   } else {
     cat("\n\nThe install script only partially supports your OS\n")
     cat("You may prefer to use a docker image of Radiant and related software\nSee https://github.com/radiant-rstats/docker/blob/master/install/rsm-msba-linux.md for details\n\n")

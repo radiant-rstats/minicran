@@ -55,16 +55,15 @@ build <- function(type = "binary", os = "") {
   #   ask = FALSE
   # )
 
-  update.packages(
-    lib.loc = .libPaths()[1],
-    ask = FALSE,
-    repos = repos["RSPM"]
-  )
+  # update.packages(
+  #   lib.loc = .libPaths()[1],
+  #   ask = FALSE,
+  #   repos = repos["RSPM"]
+  # )
 
   pkgs <- new.packages(
     lib.loc = .libPaths()[1],
     repos = repos["RSMCRAN"],
-    type = type,
     ask = FALSE
   )
 

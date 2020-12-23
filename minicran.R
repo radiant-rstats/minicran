@@ -103,6 +103,7 @@ pkgs <- unique(c(pkgs, c("GPArotation", "pdp")))
 
 versions <- c("4.0")
 for (ver in versions) {
+  # ver <- versions
   ## building minicran for windows binaries
   pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = ver)
   to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "win.binary", Rversion = ver)

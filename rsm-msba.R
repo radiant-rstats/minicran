@@ -1,9 +1,11 @@
 # options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
-repos <- c(
-  RSM = "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/focal/latest",
-  RSMCRAN = "https://radiant-rstats.github.io/minicran/",
-  CRAN = "https://cloud.r-project.org"
-)
+# repos <- c(
+#   RSM = "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/focal/latest",
+#   RSMCRAN = "https://radiant-rstats.github.io/minicran/",
+#   CRAN = "https://cloud.r-project.org"
+# )
+
+repos <- c(RSPM = "https://packagemanager.rstudio.com/all/__linux__/focal/latest")
 
 options(repos = repos)
 

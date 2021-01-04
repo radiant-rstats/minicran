@@ -92,7 +92,7 @@ if (rv < "3.6") {
   } else if (os == "Darwin") {
 
     resp <- system("sw_vers -productVersion", intern = TRUE)
-    if (resp < "10.9") {
+    if (as.numeric_version(resp) < as.numeric_version("10.9")) {
       cat("The version of OSX on your mac is no longer supported by R. You will need to upgrade the OS before proceeding\n\n")
     } else {
 

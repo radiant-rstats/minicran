@@ -55,13 +55,13 @@ pkgs_src <- c(
 pkgs_src <- c(
   pkgs_src, "ggmap", "leaflet", "tm", "wordcloud", "rvest", "tidytext",
   "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal", "topicmodels", "rtweet",
-  "pageviews", "googleAuthR", "tidymodels", "V8"
+  "pageviews", "googleAuthR", "tidymodels"
 )
 
 # for Ken
-pkgs_src <- c(
-  pkgs_src, "stargazer", "lfe"
-)
+# pkgs_src <- c(
+#   pkgs_src, "stargazer", "lfe"
+# )
 
 # for Terry
 pkgs_src <- c(

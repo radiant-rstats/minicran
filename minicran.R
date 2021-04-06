@@ -48,7 +48,7 @@ pkgs_src <- c(
   "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip", "kableExtra",
   "ggraph", "tidygraph", "bookdown", "lintr", "languageserver", "rprojroot", "iml",
   "xaringan", "magick", "arm", "rstan", "dtplyr", "renv", "RSelenium", "stringi",
-  "sf", "rpart.plot", "formatR", "RhpcBLASctl", "V8"
+  "sf", "rpart.plot", "formatR", "RhpcBLASctl", "V8", "tidybayes"
 )
 
 # for Karsten
@@ -116,8 +116,8 @@ for (ver in versions) {
 
 }
 
-pkgList <- pkgDep("radiant", repos = repos, type = "mac.binary", suggests = FALSE, Rversion = "4.0")
-cat(paste0("pkgs <- c('", paste0(pkgList, collapse = "', '"), "')", collapse = ","), file = "pkgs.R")
+# pkgList <- pkgDep("radiant", repos = repos, type = "mac.binary", suggests = FALSE, Rversion = "4.0")
+# cat(paste0("pkgs <- c('", paste0(pkgList, collapse = "', '"), "')", collapse = ","), file = "pkgs.R")
 
 # repos <- c(
 #   "https://cloud.r-project.org",

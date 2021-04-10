@@ -1,4 +1,4 @@
-# options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
+options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
 repos <- c(
   RSM = "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/focal/latest",
   RSPM = "https://packagemanager.rstudio.com/all/__linux__/focal/latest",
@@ -39,37 +39,24 @@ install_phantomjs <- function(version, baseURL) {
 }
 
 build <- function(type = "binary", os = "") {
-  repos_fun <- ifelse(os == "Linux", repos[1], repos[2])
+  repos_fun <- ifelse(os == "Linux", repos[1], repos[3])
 
-  # update.packages(
-  #   lib.loc = .libPaths()[1],
-  #   ask = FALSE,
-  #   repos = repos_fun,
-  #   type = type
-  # )
-
-  # pkgs <- new.packages(
-  #   lib.loc = .libPaths()[1],
-  #   repos = repos_fun,
-  #   type = type,
-  #   ask = FALSE
-  # )
-
-  # update.packages(
-  #   lib.loc = .libPaths()[1],
-  #   ask = FALSE,
-  #   repos = repos["RSPM"]
-  # )
+  update.packages(
+    lib.loc = .libPaths()[1],
+    ask = FALSE,
+    repos = repos_fun,
+    type = type
+  )
 
   pkgs <- new.packages(
     lib.loc = .libPaths()[1],
-    repos = repos["RSMCRAN"],
+    repos = repos_fun,
+    type = type,
     ask = FALSE
   )
 
   if (length(pkgs) > 0) {
-    # install.packages(pkgs, repos = repos_fun, type = type)
-    install.packages(pkgs, repos = repos["RSPM"])
+    install.packages(pkgs, repos = repos_fun, type = type)
   }
 
   # see https://github.com/wch/webshot/issues/25#event-740360519

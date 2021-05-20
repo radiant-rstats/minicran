@@ -101,7 +101,7 @@ for (ver in versions) {
 
 pkgs <- unique(c(pkgs, c("GPArotation", "pdp")))
 
-versions <- c("4.0")
+versions <- c("4.0", "4.1")
 for (ver in versions) {
   # ver <- versions
   ## building minicran for windows binaries

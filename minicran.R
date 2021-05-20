@@ -83,7 +83,7 @@ pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
 to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "source")
 
 ## only needed when a new major R-version comes out
-# download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "5.1")
+# download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.1")
 # download <- makeRepo(pkgs, path = pth, type = "mac.binary", Rversion = "4.1")
 
 versions <- c("3.5", "3.6")

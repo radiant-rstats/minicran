@@ -39,7 +39,7 @@ install_phantomjs <- function(version, baseURL) {
 }
 
 build <- function(type = "binary", os = "") {
-  repos_fun <- ifelse(os == "Linux", repos[c(1, 2, 4)], repos[3:4])
+  repos_fun <- ifelse(os == "Linux", repos[1], repos[3])
 
   update.packages(
     lib.loc = .libPaths()[1],

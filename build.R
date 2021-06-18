@@ -2,15 +2,15 @@
 cdir <- getwd()
 options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
 repos <- c(
-  "https://radiant-rstats.github.io/minicran/",
   "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/focal/latest",
   "https://packagemanager.rstudio.com/all/__linux__/focal/latest",
+  "https://radiant-rstats.github.io/minicran/",
   "https://cran.rstudio.com"
 )
 
 build <- function(type = "binary", os="") {
 
-  repos_fun <- ifelse(os == "Linux", repos[2:4], repos[c(1, 4)])
+  repos_fun <- ifelse(os == "Linux", repos[1], repos[3])
   update.packages(lib.loc = .libPaths()[1], ask = FALSE, repos = repos_fun, type = type)
 
   install <- function(x) if (!x %in% installed.packages()) install.packages(x, lib = .libPaths()[1], repos = repos_fun, type = type)

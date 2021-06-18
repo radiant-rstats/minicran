@@ -1,14 +1,14 @@
 options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
 repos <- c(
-  "https://radiant-rstats.github.io/minicran/",
   "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/focal/latest",
   "https://packagemanager.rstudio.com/all/__linux__/focal/latest",
+  "https://radiant-rstats.github.io/minicran/",
   "https://cran.rstudio.com"
 )
 
 ## install script for R(adiant) @ Rady School of Management (MBA and MSBA)
 build <- function(type = "binary", os = "") {
-  repos_fun <- ifelse(os == "Linux", repos[2:3], repos[c(1, 4)])
+  repos_fun <- ifelse(os == "Linux", repos[1], repos[3])
 
   install.packages("remotes", repos = repos_fun, type = type, dependencies = FALSE)
   remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")

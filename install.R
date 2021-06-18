@@ -4,19 +4,22 @@ options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(
 repos <- c(
   "https://radiant-rstats.github.io/minicran/",
   "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/focal/latest",
+  "https://packagemanager.rstudio.com/all/__linux__/focal/latest",
   "https://cran.rstudio.com"
 )
 
 build <- function(type = "binary", os = "") {
 
-  repos_fun <- ifelse(os == "Linux", repos[2], repos[1])
+  repos_fun <- ifelse(os == "Linux", repos[2:4], repos[c(1, 4)])
   update.packages(lib.loc = .libPaths()[1], ask = FALSE, repos = repos_fun, type = type)
 
   install <- function(x) if (!x %in% installed.packages()) install.packages(x, lib = .libPaths()[1], repos = repos_fun, type = type)
   resp <- sapply(
-    c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "radiant.update", "svglite"),
+    c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "svglite", "remotes"),
     install
   )
+  remotes::install_github("radiant-rstats/radiant.update")
+
 
   ## needed for windoze
   pkgs <- new.packages(lib.loc = .libPaths()[1], repos = repos_fun, type = type, ask = FALSE)

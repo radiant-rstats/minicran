@@ -28,9 +28,11 @@ pth <- rprojroot::find_root(rprojroot::has_file("README.md"))
 
 pkgs <- c(
   "radiant", "miniUI", "webshot", "tinytex",
-  "usethis", "radiant.update", "svglite", "ranger",
+  "usethis", "svglite", "ranger",
   "xgboost", "pdp", "patchwork", "lobstr"
 )
+
+  # "usethis", "radiant.update", "svglite", "ranger",
 
 # check only files that needed updating or adding
 # see PR https://github.com/RevolutionAnalytics/miniCRAN/pull/15/files
@@ -85,6 +87,7 @@ to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, t
 ## only needed when a new major R-version comes out
 # download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.1")
 # download <- makeRepo(pkgs, path = pth, type = "mac.binary", Rversion = "4.1")
+# download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-arm64", Rversion = "4.1")
 
 versions <- c("3.5", "3.6")
 for (ver in versions) {
@@ -116,6 +119,13 @@ for (ver in versions) {
 
 }
 
+## building minicran for mac arm64 binaries
+pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.big-sur-arm64", suggests = FALSE, Rversion = ver)
+to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary.big-sur-arm64", Rversion = ver)
+sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/big-sur-arm64/contrib", ver, paste0(x, "_*")), force = TRUE))
+
+# https://cran.r-project.org/bin/macosx/big-sur-arm64/contrib/4.1/radiant_1.3.2.tgz
+
 # pkgList <- pkgDep("radiant", repos = repos, type = "mac.binary", suggests = FALSE, Rversion = "4.0")
 # cat(paste0("pkgs <- c('", paste0(pkgList, collapse = "', '"), "')", collapse = ","), file = "pkgs.R")
 
@@ -136,6 +146,7 @@ library(magrittr)
 win_dirs <- list.dirs("bin/windows/contrib")[-1]
 mac_dirs <- list.dirs("bin/macosx/el-capitan/contrib")[-1]
 mac_dirs <- c(mac_dirs, list.dirs("bin/macosx/contrib")[-1])
+mac_dirs <- c(mac_dirs, list.dirs("bin/macosx/big-sur-arm64/contrib")[-1])
 pdirs <- c("src/contrib", win_dirs, mac_dirs)
 
 for (pdir in pdirs) {

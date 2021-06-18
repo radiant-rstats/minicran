@@ -33,7 +33,7 @@ build <- function(type = "binary", os = "") {
     install, repos = repos_fun
   )
 
-  remotes::install_github("radiant-rstats/radiant.update")
+  remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")
 
   pkgs <- new.packages(
     lib.loc = .libPaths()[1],

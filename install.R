@@ -18,7 +18,7 @@ build <- function(type = "binary", os = "") {
     c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "svglite", "remotes"),
     install
   )
-  remotes::install_github("radiant-rstats/radiant.update")
+  remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")
 
 
   ## needed for windoze

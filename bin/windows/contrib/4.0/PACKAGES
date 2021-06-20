@@ -314,11 +314,11 @@ License: MIT + file LICENSE
 Archs: i386, x64
 
 Package: ggplot2
-Version: 3.3.3
-Depends: R (>= 3.2)
-Imports: digest, glue, grDevices, grid, gtable (>= 0.1.1), isoband, MASS, mgcv, rlang (>= 0.3.0), scales (>= 0.5.0), stats, tibble, withr (>= 2.0.0)
-Suggests: covr, dplyr, ggplot2movies, hexbin, Hmisc, knitr, lattice, mapproj, maps, maptools, multcomp, munsell, nlme, profvis, quantreg, RColorBrewer, rgeos,
-                  rmarkdown, rpart, sf (>= 0.7-3), svglite (>= 1.2.0.9001), testthat (>= 2.1.0), vdiffr (>= 0.3.0)
+Version: 3.3.4
+Depends: R (>= 3.3)
+Imports: digest, glue, grDevices, grid, gtable (>= 0.1.1), isoband, MASS, mgcv, rlang (>= 0.4.10), scales (>= 0.5.0), stats, tibble, withr (>= 2.0.0)
+Suggests: covr, ragg, dplyr, ggplot2movies, hexbin, Hmisc, interp, knitr, lattice, mapproj, maps, maptools, multcomp, munsell, nlme, profvis, quantreg, RColorBrewer,
+                  rgeos, rmarkdown, rpart, sf (>= 0.7-3), svglite (>= 1.2.0.9001), testthat (>= 2.1.0), vdiffr (>= 0.3.0), xml2
 Enhances: sp
 License: MIT + file LICENSE
 
@@ -703,7 +703,7 @@ License: MIT + file LICENSE
 Archs: i386, x64
 
 Package: openxlsx
-Version: 4.2.3
+Version: 4.2.4
 Depends: R (>= 3.3.0)
 Imports: grDevices, methods, Rcpp, stats, utils, zip, stringi
 LinkingTo: Rcpp
@@ -997,11 +997,11 @@ License: MIT + file LICENSE
 Archs: i386, x64
 
 Package: rmarkdown
-Version: 2.8
+Version: 2.9
 Depends: R (>= 3.0)
 Imports: tools, utils, knitr (>= 1.22), yaml (>= 2.1.19), htmltools (>= 0.3.5), evaluate (>= 0.13), jsonlite, tinytex (>= 0.31), xfun (>= 0.21), methods, stringr (>=
                   1.2.0)
-Suggests: shiny (>= 1.6.0), tufte, testthat (>= 3.0.0), digest, dygraphs, vctrs, tibble, fs, rsconnect, withr (>= 2.4.2), bslib (>= 0.2.4), sass (>= 0.3.1)
+Suggests: shiny (>= 1.6.0), tufte, testthat (>= 3.0.0), digest, dygraphs, vctrs, tibble, fs, rsconnect, withr (>= 2.4.2), bslib (>= 0.2.5.1), sass (>= 0.4.0)
 License: GPL-3
 
 Package: rpart
@@ -1086,14 +1086,6 @@ Version: 1.81
 Depends: R (>= 2.15), methods
 Imports: graphics, stats, utils
 License: GPL (>= 2)
-Archs: i386, x64
-
-Package: statmod
-Version: 1.4.36
-Depends: R (>= 3.0.0)
-Imports: stats, graphics
-Suggests: MASS, tweedie
-License: GPL-2 | GPL-3
 Archs: i386, x64
 
 Package: stringi
@@ -1239,7 +1231,7 @@ License: BSD_2_clause + file LICENSE
 Archs: i386, x64
 
 Package: xfun
-Version: 0.23
+Version: 0.24
 Imports: stats, tools
 Suggests: testit, parallel, codetools, rstudioapi, tinytex (>= 0.30), mime, markdown, knitr, htmltools, remotes, pak, renv, curl, jsonlite, rmarkdown
 License: MIT + file LICENSE

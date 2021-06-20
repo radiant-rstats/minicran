@@ -251,7 +251,7 @@ License: GPL-2
 MD5sum: f211e8da7f67fe15ad44fbf680b7be0d
 
 Package: dplyr
-Version: 1.0.6
+Version: 1.0.7
 Depends: R (>= 3.3.0)
 Imports: ellipsis, generics, glue (>= 1.3.2), lifecycle (>= 1.0.0), magrittr (>= 1.5), methods, R6, rlang (>= 0.4.10), tibble (>= 2.1.3), tidyselect (>= 1.1.0),
                   utils, vctrs (>= 0.3.5), pillar (>= 1.5.1)
@@ -259,7 +259,7 @@ Suggests: bench, broom, callr, covr, DBI, dbplyr (>= 1.4.3), knitr, Lahman, lobs
                   testthat (>= 3.0.2), tidyr, withr
 License: MIT + file LICENSE
 Archs: dplyr.so.dSYM
-MD5sum: caee3afda3130bd7fadc90c6e4a35652
+MD5sum: 3f0cc8311f08570f0c26b39f191b6245
 
 Package: DT
 Version: 0.18
@@ -850,14 +850,14 @@ License: MIT + file LICENSE
 MD5sum: 9d2fe700f861569c3df370bfdf4a0110
 
 Package: plotly
-Version: 4.9.4
+Version: 4.9.4.1
 Depends: R (>= 3.2.0), ggplot2 (>= 3.0.0)
-Imports: tools, scales, httr (>= 1.3.0), jsonlite (>= 1.6), magrittr, digest, viridisLite, base64enc, htmltools (>= 0.3.6), htmlwidgets (>= 1.5.2.9001), tidyr,
-                  RColorBrewer, dplyr, vctrs, tibble, lazyeval (>= 0.2.0), rlang (>= 0.4.10), crosstalk, purrr, data.table, promises
+Imports: tools, scales, httr (>= 1.3.0), jsonlite (>= 1.6), magrittr, digest, viridisLite, base64enc, htmltools (>= 0.3.6), htmlwidgets (>= 1.5.2.9001), tidyr (>=
+                  1.0.0), RColorBrewer, dplyr, vctrs, tibble, lazyeval (>= 0.2.0), rlang (>= 0.4.10), crosstalk, purrr, data.table, promises
 Suggests: MASS, maps, hexbin, ggthemes, GGally, testthat, knitr, devtools, shiny (>= 1.1.0), shinytest (>= 1.3.0), curl, rmarkdown, vdiffr, Cairo, broom, webshot,
                   listviewer, dendextend, sf, maptools, rgeos, png, IRdisplay, processx, plotlyGeoAssets, forcats, palmerpenguins
 License: MIT + file LICENSE
-MD5sum: b99f203aa1ee56f410c57dddd89c17ac
+MD5sum: 1041fc5e3878bdbabdd3160ff5b032da
 
 Package: plyr
 Version: 1.8.6
@@ -923,11 +923,11 @@ License: MIT + file LICENSE
 MD5sum: 817dcff02453d5027674f8eee371dacf
 
 Package: psych
-Version: 2.1.3
+Version: 2.1.6
 Imports: mnormt,parallel,stats,graphics,grDevices,methods,lattice,nlme
 Suggests: psychTools, GPArotation, lavaan, lme4, Rcsdp, graph, knitr, Rgraphviz
 License: GPL (>= 2)
-MD5sum: 360e5345cb81673805fe16338bda7a94
+MD5sum: 757b7fc07482c6e89b1f4fe9086ea297
 
 Package: purrr
 Version: 0.3.4

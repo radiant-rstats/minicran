@@ -48,17 +48,17 @@ License: Unlimited
 MD5sum: ceaac46ad6566409beefcde00762753d
 
 Package: broom
-Version: 0.7.6
+Version: 0.7.7
 Depends: R (>= 3.1)
 Imports: backports, dplyr (>= 1.0.0), ellipsis, generics (>= 0.0.2), glue, methods, purrr, rlang, stringr, tibble (>= 3.0.0), tidyr (>= 1.0.0)
 Suggests: AER, akima, AUC, bbmle, betareg, biglm, binGroup, boot, btergm, car, caret, cluster, cmprsk, coda, covr, drc, e1071, emmeans, epiR, ergm (>= 3.10.4),
                   fixest (>= 0.8.1), gam (>= 1.15), gee, geepack, ggplot2, glmnet, glmnetUtils, gmm, Hmisc, irlba, joineRML, Kendall, knitr, ks, Lahman, lavaan,
                   leaps, lfe, lm.beta, lme4, lmodel2, lmtest (>= 0.9.38), lsmeans, maps, maptools, margins, MASS, Matrix, mclust, mediation, metafor, mfx, mgcv,
                   mlogit, modeldata, modeltests, muhaz, multcomp, network, nnet, orcutt (>= 2.2), ordinal, plm, poLCA, psych, quantreg, Rchoice, rgeos, rmarkdown,
-                  robust, robustbase, rsample, sandwich, sp, spdep, spatialreg, speedglm, spelling, survey, survival, systemfit, testthat (>= 2.1.0), tseries, vars,
-                  zoo
+                  robust, robustbase, rsample, sandwich, sp, spdep (>= 1.1), spatialreg, speedglm, spelling, survey, survival, systemfit, testthat (>= 2.1.0),
+                  tseries, vars, zoo
 License: MIT + file LICENSE
-MD5sum: 284e8f0978521b9ab573448bf7bc45d5
+MD5sum: 79adc455166b72f57fa16d75891ed180
 
 Package: bslib
 Version: 0.2.5.1
@@ -359,14 +359,14 @@ Archs: gert.so.dSYM
 MD5sum: 0bc1197bd37fbedd0e375601814487ab
 
 Package: ggplot2
-Version: 3.3.3
-Depends: R (>= 3.2)
-Imports: digest, glue, grDevices, grid, gtable (>= 0.1.1), isoband, MASS, mgcv, rlang (>= 0.3.0), scales (>= 0.5.0), stats, tibble, withr (>= 2.0.0)
-Suggests: covr, dplyr, ggplot2movies, hexbin, Hmisc, knitr, lattice, mapproj, maps, maptools, multcomp, munsell, nlme, profvis, quantreg, RColorBrewer, rgeos,
-                  rmarkdown, rpart, sf (>= 0.7-3), svglite (>= 1.2.0.9001), testthat (>= 2.1.0), vdiffr (>= 0.3.0)
+Version: 3.3.4
+Depends: R (>= 3.3)
+Imports: digest, glue, grDevices, grid, gtable (>= 0.1.1), isoband, MASS, mgcv, rlang (>= 0.4.10), scales (>= 0.5.0), stats, tibble, withr (>= 2.0.0)
+Suggests: covr, ragg, dplyr, ggplot2movies, hexbin, Hmisc, interp, knitr, lattice, mapproj, maps, maptools, multcomp, munsell, nlme, profvis, quantreg, RColorBrewer,
+                  rgeos, rmarkdown, rpart, sf (>= 0.7-3), svglite (>= 1.2.0.9001), testthat (>= 2.1.0), vdiffr (>= 0.3.0), xml2
 Enhances: sp
 License: MIT + file LICENSE
-MD5sum: 7775c1e022a70c527bce4452ce7163f2
+MD5sum: ee4106fdc0b3f56250ba4a1e09633286
 
 Package: ggrepel
 Version: 0.9.1
@@ -664,7 +664,7 @@ Archs: MASS.so.dSYM
 MD5sum: 2cce0e4444a19945c960027a260b200d
 
 Package: Matrix
-Version: 1.3-3
+Version: 1.3-4
 Priority: recommended
 Depends: R (>= 3.5.0)
 Imports: methods, graphics, grid, stats, utils, lattice
@@ -672,7 +672,7 @@ Suggests: expm, MASS
 Enhances: MatrixModels, graph, SparseM, sfsmisc, igraph, maptools, sp, spdep
 License: GPL (>= 2) | file LICENCE
 Archs: Matrix.so.dSYM
-MD5sum: 567c639b607a6375c8815d6eff23fb23
+MD5sum: 590ba2f391a5ca5ce421416432865a10
 
 Package: MatrixModels
 Version: 0.5-0
@@ -682,22 +682,22 @@ License: GPL (>= 2)
 MD5sum: f5748aef3ef07212198bb35af6c69c7c
 
 Package: matrixStats
-Version: 0.58.0
+Version: 0.59.0
 Depends: R (>= 2.12.0)
 Suggests: base64enc, ggplot2, knitr, microbenchmark, R.devices, R.rsp
 License: Artistic-2.0
 Archs: matrixStats.so.dSYM
-MD5sum: d0de0f281afbf2af99646aea09a6b499
+MD5sum: 5b51cd7c5c50ef949820a7ddcf0ebdf8
 
 Package: mgcv
-Version: 1.8-35
+Version: 1.8-36
 Priority: recommended
 Depends: R (>= 3.6.0), nlme (>= 3.1-64)
 Imports: methods, stats, graphics, Matrix, splines, utils
 Suggests: parallel, survival, MASS
 License: GPL (>= 2)
 Archs: mgcv.so.dSYM
-MD5sum: 2fd048f57230280b7fe884a8ed9e8b62
+MD5sum: eca6f9af7c8d84891a7e86b81f0bbf08
 
 Package: mime
 Version: 0.10
@@ -736,12 +736,12 @@ License: MIT + file LICENSE
 MD5sum: aecf9423fe0abbfe0893bd4391f6fa43
 
 Package: mvtnorm
-Version: 1.1-1
+Version: 1.1-2
 Depends: R(>= 3.5.0)
 Imports: stats, methods
 License: GPL-2
 Archs: mvtnorm.so.dSYM
-MD5sum: 30d8c1513f84698b42fcc11e519f5d7c
+MD5sum: 2de746727b25e8c7aa65799643a74595
 
 Package: NeuralNetTools
 Version: 1.5.2
@@ -792,14 +792,14 @@ Archs: openssl.so.dSYM
 MD5sum: f9c696bcda10d2b76636e72cd5ebae7a
 
 Package: openxlsx
-Version: 4.2.3
+Version: 4.2.4
 Depends: R (>= 3.3.0)
 Imports: grDevices, methods, Rcpp, stats, utils, zip, stringi
 LinkingTo: Rcpp
 Suggests: knitr, testthat, roxygen2, rmarkdown
 License: MIT + file LICENSE
 Archs: openxlsx.so.dSYM
-MD5sum: ca209b3f2d24cdd3d0de4d8ff55776cd
+MD5sum: 2379e087857bfb25dc9fb22df7145ff0
 
 Package: patchwork
 Version: 1.1.1
@@ -897,13 +897,13 @@ Archs: promises.so.dSYM
 MD5sum: db9801e552725e0738c57ba6a6787829
 
 Package: proxy
-Version: 0.4-25
+Version: 0.4-26
 Depends: R (>= 3.4.0)
 Imports: stats, utils
 Suggests: cba
 License: GPL-2
 Archs: proxy.so.dSYM
-MD5sum: fb2da88da7862fdcc7b5ce3987e5e6a2
+MD5sum: 3f16d8f8a92ba181965cc3d5a97f8292
 
 Package: ps
 Version: 1.6.0
@@ -937,13 +937,13 @@ License: GPL (>= 3)
 MD5sum: 30f9ea1381a0588a1f9a5657c9246ce7
 
 Package: quantreg
-Version: 5.85
+Version: 5.86
 Depends: R (>= 2.6), stats, SparseM
 Imports: methods, graphics, Matrix, MatrixModels, conquer
 Suggests: tripack, akima, MASS, survival, rgl, logspline, nor1mix, Formula, zoo, R.rsp
 License: GPL (>= 2)
 Archs: quantreg.so.dSYM
-MD5sum: 7073bbd17e70fdea3158296aa8597183
+MD5sum: f33cb28de5d8ef701e2a551e297d977b
 
 Package: R6
 Version: 2.5.0
@@ -953,21 +953,21 @@ License: MIT + file LICENSE
 MD5sum: 2d78c147bdfccfe5a7892caed7bba491
 
 Package: radiant
-Version: 1.3.2
-Depends: R (>= 3.4.0), radiant.data (>= 1.3.0), radiant.design (>= 1.3.0), radiant.basics (>= 1.3.0), radiant.model (>= 1.3.0), radiant.multivariate (>= 1.3.0)
+Version: 1.4.0
+Depends: R (>= 3.6.0), radiant.data (>= 1.3.0), radiant.design (>= 1.3.0), radiant.basics (>= 1.3.0), radiant.model (>= 1.3.0), radiant.multivariate (>= 1.3.0)
 Imports: shiny (>= 1.4.0), import (>= 1.1.0)
-Suggests: testthat (>= 2.0.0), knitr, rmarkdown
+Suggests: testthat (>= 2.0.0), knitr, rmarkdown, markdown
 License: AGPL-3 | file LICENSE
-MD5sum: 1020a966e1b9e3a70765fcb9b985c855
+MD5sum: 42700fe8eca368f6934259a46189fc14
 
 Package: radiant.basics
-Version: 1.3.4
+Version: 1.4.0
 Depends: R (>= 3.4.0), radiant.data (>= 1.2.0)
 Imports: ggplot2 (>= 2.2.1), scales (>= 0.4.0), dplyr (>= 0.8.3), tidyr (>= 0.8.2), magrittr (>= 1.5), shiny (>= 1.4.0), psych (>= 1.8.3.3), import (>= 1.1.0),
                   lubridate (>= 1.7.4), polycor (>= 0.7.10), patchwork (>= 1.0.0)
-Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
+Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0), markdown
 License: AGPL-3 | file LICENSE
-MD5sum: c9e4f83de39ecbdabc082d70bcf4e654
+MD5sum: 63cb9e71195ae9679ac3001ce46ebad4
 
 Package: radiant.data
 Version: 1.3.12
@@ -1123,13 +1123,13 @@ Archs: rlang.so.dSYM
 MD5sum: 3ebbfa13755ca60f174c9520896438c7
 
 Package: rmarkdown
-Version: 2.8
+Version: 2.9
 Depends: R (>= 3.0)
 Imports: tools, utils, knitr (>= 1.22), yaml (>= 2.1.19), htmltools (>= 0.3.5), evaluate (>= 0.13), jsonlite, tinytex (>= 0.31), xfun (>= 0.21), methods, stringr (>=
                   1.2.0)
-Suggests: shiny (>= 1.6.0), tufte, testthat (>= 3.0.0), digest, dygraphs, vctrs, tibble, fs, rsconnect, withr (>= 2.4.2), bslib (>= 0.2.4), sass (>= 0.3.1)
+Suggests: shiny (>= 1.6.0), tufte, testthat (>= 3.0.0), digest, dygraphs, vctrs, tibble, fs, rsconnect, withr (>= 2.4.2), bslib (>= 0.2.5.1), sass (>= 0.4.0)
 License: GPL-3
-MD5sum: 9c2387cf0342097d0d468df408d48f4e
+MD5sum: 4a0052ce37cf3a940719bc6362c5524d
 
 Package: rpart
 Version: 4.1-15
@@ -1390,12 +1390,12 @@ Archs: writexl.so.dSYM
 MD5sum: e28030a04205d6ab9a9f4e257d682c26
 
 Package: xfun
-Version: 0.23
+Version: 0.24
 Imports: stats, tools
 Suggests: testit, parallel, codetools, rstudioapi, tinytex (>= 0.30), mime, markdown, knitr, htmltools, remotes, pak, renv, curl, jsonlite, rmarkdown
 License: MIT + file LICENSE
 Archs: xfun.so.dSYM
-MD5sum: 451e430ce38e43ef823b59c2ec91773c
+MD5sum: c35c8643d5d4bffa48c77a3881c499c8
 
 Package: xgboost
 Version: 1.4.1.1

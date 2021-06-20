@@ -117,12 +117,14 @@ for (ver in versions) {
   to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary", Rversion = ver)
   sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/contrib", ver, paste0(x, "_*")), force = TRUE))
 
+  if (ver >= "4.1") {
+    ## building minicran for mac arm64 binaries
+    pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.big-sur-arm64", suggests = FALSE, Rversion = ver)
+    to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary.big-sur-arm64", Rversion = ver)
+    sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/big-sur-arm64/contrib", ver, paste0(x, "_*")), force = TRUE))
+  }
 }
 
-## building minicran for mac arm64 binaries
-pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.big-sur-arm64", suggests = FALSE, Rversion = ver)
-to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary.big-sur-arm64", Rversion = ver)
-sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/big-sur-arm64/contrib", ver, paste0(x, "_*")), force = TRUE))
 
 # https://cran.r-project.org/bin/macosx/big-sur-arm64/contrib/4.1/radiant_1.3.2.tgz
 

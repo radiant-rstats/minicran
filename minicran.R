@@ -28,8 +28,8 @@ pth <- rprojroot::find_root(rprojroot::has_file("README.md"))
 
 pkgs <- c(
   "radiant", "miniUI", "webshot", "tinytex",
-  "usethis", "svglite", "ranger",
-  "xgboost", "pdp", "patchwork", "lobstr"
+  "usethis", "svglite", "ranger", "xgboost",
+  "pdp", "patchwork", "lobstr", "remotes"
 )
 
   # "usethis", "radiant.update", "svglite", "ranger",

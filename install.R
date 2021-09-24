@@ -58,7 +58,7 @@ if (rv < "3.6") {
 
       ## get rstudio - release
       page <- readLines("https://www.rstudio.com/products/rstudio/download", warn = FALSE)
-      pat <- "//download1.rstudio.org/desktop/windows/RStudio-[0-9.]+.exe";
+      pat <- "//download1.rstudio.org/desktop/windows/RStudio-[0-9.]+.[0-9.]+.[0-9]+.exe";
       URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
 
       ## get rstudio - preview
@@ -103,8 +103,8 @@ if (rv < "3.6") {
       ##  based on https://github.com/talgalili/installr/blob/82bf5b542ce6d2ef4ebc6359a4772e0c87427b64/R/install.R#L805-L813
       ## get rstudio - release
       page <- readLines("https://www.rstudio.com/products/rstudio/download", warn = FALSE)
-      pat <- "//download1.rstudio.org/desktop/macos/RStudio-[0-9.]+.dmg";
-      URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+      pat <- "//download1.rstudio.org/desktop/macos/RStudio-[0-9.]+.[0-9.]+.[0-9]+.dmg";
+      URL <- paste0("https:",regmatches(page, regexpr(pat, page))[1])
 
       ## get rstudio - preview
       # page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)

@@ -1,16 +1,19 @@
 options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
-options(repos = c(
+repos = c(
   RSM = "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/focal/latest",
   RSPM = "https://packagemanager.rstudio.com/all/__linux__/focal/latest",
   MINICRAN = "https://radiant-rstats.github.io/minicran/",
   CRAN = "https://cloud.r-project.org"
-))
+)
+
+os <- Sys.info()["sysname"]
+repos <- if (os == "Linux") repos else repos[c(3, 4, 1, 2)]
+options(repos = repos)
+getOption("repos")
 
 ## install script for R(adiant) @ Rady School of Management (MBA and MSBA)
 build <- function(type = "binary", os = "") {
-  repos_fun <- ifelse(os == "Linux", repos[1], repos[3])
-
-  install.packages("remotes", repos = repos_fun, type = type, dependencies = FALSE)
+  install.packages("remotes", dependencies = FALSE)
   remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")
 
   ## get list of packages to update
@@ -88,7 +91,7 @@ build <- function(type = "binary", os = "") {
       ## sometimes trying to install dependencies (e.g., Matrix) causes problems
       ## all deps should already be available in op by using the minicran package
       ## and all packages will be installed 1-by-1
-      install.packages(p, repos = repos_fun, type = type, dependencies = FALSE)
+      install.packages(p, dependencies = FALSE)
     }
   }
 
@@ -162,10 +165,6 @@ updater <- function() {
 }
 
 err <- updater()
-
-# err <- c("yaml", "Matrix", "radiant", "radiant.model")
-# err <- c("yaml", "Matrix")
-# err <- c()
 err <- err[!err %in% installed.packages()]
 
 ## https://stackoverflow.com/questions/50422627/different-results-from-deparse-in-r-3-4-4-and-r-3-5
@@ -180,12 +179,12 @@ if (length(err) > 0) {
     err_radiant <- paste0(deparse(err[rerr], control = dctrl, width.cutoff = 500L), collapse = "")
     err <- paste0(deparse(err[!rerr], control = dctrl, width.cutoff = 500L), collapse = "")
     if (length(err) > 0) {
-      cat(paste0("  install.packages(", err, ", repos = \"https://cran.rstudio.com\", type = \"binary\")\n"))
+      cat(paste0("  install.packages(", err, ")\n"))
     }
-    cat(paste0("  install.packages(", err_radiant, ", repos = \"https://radiant-rstats.github.io/minicran/\", type = \"binary\")\n"))
+    cat(paste0("  install.packages(", err_radiant, ")\n"))
   } else {
     err <- paste0(deparse(err, control = dctrl, width.cutoff = 500L), collapse = "")
-    cat(paste0("  install.packages(", err, ", repos = \"https://cran.rstudio.com\", type = \"binary\")\n"))
+    cat(paste0("  install.packages(", err, ")\n"))
   }
   cat("\n###############################################################\n\n")
 }

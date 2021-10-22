@@ -1,19 +1,22 @@
 ## install script for R(adiant) @ Rady School of Management
 owd <- getwd()
 options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
-options(repos = c(
+repos = c(
   RSM = "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/focal/latest",
   RSPM = "https://packagemanager.rstudio.com/all/__linux__/focal/latest",
   MINICRAN = "https://radiant-rstats.github.io/minicran/",
   CRAN = "https://cloud.r-project.org"
-))
+)
+
+os <- Sys.info()["sysname"]
+repos <- if (os == "Linux") repos else repos[c(3, 4, 1, 2)]
+options(repos = repos)
 
 build <- function(type = "binary", os = "") {
 
-  repos_fun <- ifelse(os == "Linux", repos[1], repos[3])
-  update.packages(lib.loc = .libPaths()[1], ask = FALSE, repos = repos_fun, type = type)
+  update.packages(lib.loc = .libPaths()[1], ask = FALSE)
 
-  install <- function(x) if (!x %in% installed.packages()) install.packages(x, lib = .libPaths()[1], repos = repos_fun, type = type)
+  install <- function(x) if (!x %in% installed.packages()) install.packages(x, lib = .libPaths()[1])
   resp <- sapply(
     c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "svglite", "remotes"),
     install
@@ -22,9 +25,9 @@ build <- function(type = "binary", os = "") {
 
 
   ## needed for windoze
-  pkgs <- new.packages(lib.loc = .libPaths()[1], repos = repos_fun, type = type, ask = FALSE)
+  pkgs <- new.packages(lib.loc = .libPaths()[1], ask = FALSE)
   if (length(pkgs) > 0) {
-    install.packages(pkgs, repos = repos_fun, type = type)
+    install.packages(pkgs)
   }
 
   # see https://github.com/wch/webshot/issues/25#event-740360519
@@ -135,7 +138,7 @@ if (rv < "3.6") {
     cat("You may prefer to use a docker image of Radiant and related software\nSee https://github.com/radiant-rstats/docker/blob/master/install/rsm-msba-linux.md for details\n\n")
     inp <- readliner("Do wish to proceed with the local install of Radiant and its dependencies? Press y or n and then press return: ")
     if (grepl("[yY]", inp)) {
-      build(type = "source", os="linux")
+      build(os="linux")
       pl <- suppressWarnings(system("which pdflatex", intern = TRUE))
       if (length(pl) == 0) {
         cat("To generate PDF reports in Radiant (Report > Rmd) you will need TinyTex (or LaTex).")

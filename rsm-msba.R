@@ -1,10 +1,16 @@
+## install script for R(adiant) @ Rady School of Management (MBA)
+owd <- getwd()
 options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
-options(repos = c(
+repos = c(
   RSM = "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/focal/latest",
   RSPM = "https://packagemanager.rstudio.com/all/__linux__/focal/latest",
   MINICRAN = "https://radiant-rstats.github.io/minicran/",
   CRAN = "https://cloud.r-project.org"
-))
+)
+
+os <- Sys.info()["sysname"]
+repos <- if (os == "Linux") repos else repos[c(3, 4, 1, 2)]
+options(repos = repos)
 
 install_phantomjs <- function(version, baseURL) {
 
@@ -37,24 +43,18 @@ install_phantomjs <- function(version, baseURL) {
 }
 
 build <- function(type = "binary", os = "") {
-  repos_fun <- ifelse(os == "Linux", repos[1], repos[3])
-
   update.packages(
     lib.loc = .libPaths()[1],
     ask = FALSE,
-    repos = repos_fun,
-    type = type
   )
 
   pkgs <- new.packages(
     lib.loc = .libPaths()[1],
-    repos = repos_fun,
-    type = type,
     ask = FALSE
   )
 
   if (length(pkgs) > 0) {
-    install.packages(pkgs, repos = repos_fun, type = type)
+    install.packages(pkgs)
   }
 
   # see https://github.com/wch/webshot/issues/25#event-740360519
@@ -65,7 +65,7 @@ build <- function(type = "binary", os = "") {
 
 os <- Sys.info()["sysname"]
 if (os == "Linux") {
-  build(type = "source", os = "Linux")
+  build(os = "Linux")
 } else {
-  build(type = "binary")
+  build()
 }

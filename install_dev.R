@@ -1,25 +1,22 @@
 ## install script for R(adiant) @ Rady School of Management (MBA)
 owd <- getwd()
-options(repos = repos)
 options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
-options(repos = c(
+repos = c(
   RSM = "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/focal/latest",
   RSPM = "https://packagemanager.rstudio.com/all/__linux__/focal/latest",
   MINICRAN = "https://radiant-rstats.github.io/minicran/",
   CRAN = "https://cloud.r-project.org"
-))
+)
+
+os <- Sys.info()["sysname"]
+repos <- if (os == "Linux") repos else repos[c(3, 4, 1, 2)]
+options(repos = repos)
 
 build <- function(type = "binary", os = "") {
-  repos_fun <- ifelse(os == "Linux", repos[1], repos[3])
-  update.packages(
-    lib.loc = .libPaths()[1],
-    ask = FALSE,
-    repos = repos_fun,
-    type = type
-  )
+  update.packages(lib.loc = .libPaths()[1], ask = FALSE)
 
   install <- function(x) {
-    if (!x %in% installed.packages()) install.packages(x, repos = repos_fun, type = type)
+    if (!x %in% installed.packages()) install.packages(x)
   }
 
   resp <- sapply(
@@ -29,23 +26,17 @@ build <- function(type = "binary", os = "") {
       "caret", "ranger", "gbm", "dbplyr", "DBI", "RSQLite", "usethis",
       "xgboost"
     ),
-    install, repos = repos_fun
+    install
   )
 
   remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")
 
   pkgs <- new.packages(
     lib.loc = .libPaths()[1],
-    repos = repos_fun,
-    type = type,
     ask = FALSE
   )
   if (length(pkgs) > 0) {
-    install.packages(
-      pkgs,
-      repos = repos_fun,
-      type = type
-    )
+    install.packages(pkgs)
   }
 }
 
@@ -142,7 +133,7 @@ if (rv < "3.6") {
     }
   } else {
     cat("\n\nThe install script is only partially supported on your OS\n\n")
-    build(type = "source", os = "Linux")
+    build(os = "Linux")
   }
 }
 

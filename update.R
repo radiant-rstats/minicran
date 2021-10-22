@@ -9,7 +9,6 @@ repos = c(
 os <- Sys.info()["sysname"]
 repos <- if (os == "Linux") repos else repos[c(3, 4, 1, 2)]
 options(repos = repos)
-getOption("repos")
 
 ## install script for R(adiant) @ Rady School of Management (MBA and MSBA)
 build <- function(type = "binary", os = "") {
@@ -17,12 +16,7 @@ build <- function(type = "binary", os = "") {
   remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")
 
   ## get list of packages to update
-  op <- old.packages(
-    lib.loc = .libPaths()[1],
-    repos = repos_fun,
-    type = type
-  )
-
+  op <- old.packages(lib.loc = .libPaths()[1])
 
   ## keep track of any package install issues (windoze)
   err_packages <- c()
@@ -64,14 +58,13 @@ build <- function(type = "binary", os = "") {
       ## all deps should already be available in op by using the minicran package
       ## and all packages will be installed 1-by-1
       update.packages(
-        lib.loc = .libPaths()[1], ask = FALSE, repos = repos_fun,
-        type = type, oldPkgs = p, dependencies = FALSE
+        lib.loc = .libPaths()[1], ask = FALSE, oldPkgs = p, dependencies = FALSE
       )
     }
   }
 
   ## additional packages ... not required but useful
-  np <- new.packages(lib.loc = .libPaths()[1], repos = repos_fun, type = type, ask = FALSE)
+  np <- new.packages(lib.loc = .libPaths()[1], ask = FALSE)
 
   if (length(np) > 0) {
     cat("\n#################################################\n")
@@ -159,7 +152,7 @@ updater <- function() {
         build()
       }
     } else {
-      build(type = "source", os = "Linux")
+      build(os = "Linux")
     }
   }
 }

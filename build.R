@@ -12,11 +12,10 @@ os <- Sys.info()["sysname"]
 repos <- if (os == "Linux") repos else repos[c(3, 4, 1, 2)]
 options(repos = repos)
 
-build <- function(type = "binary", os="") {
+build <- function(type = ifelse(os == "Linux", "source", "binary")) {
+  update.packages(lib.loc = .libPaths()[1], ask = FALSE, type = type)
 
-  update.packages(lib.loc = .libPaths()[1], ask = FALSE)
-
-  install <- function(x) if (!x %in% installed.packages()) install.packages(x, lib = .libPaths()[1])
+  install <- function(x) if (!x %in% installed.packages()) install.packages(x, lib = .libPaths()[1], type = type)
   resp <- sapply(
     c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "svglite", "remotes"),
     install
@@ -26,7 +25,7 @@ build <- function(type = "binary", os="") {
   ## needed for windoze
   pkgs <- new.packages(lib.loc = .libPaths()[1], ask = FALSE)
   if (length(pkgs) > 0) {
-    install.packages(pkgs)
+    install.packages(pkgs, type = type)
   }
 
   # see https://github.com/wch/webshot/issues/25#event-740360519
@@ -62,7 +61,7 @@ if (rv < "3.6") {
       build()
     }
   } else {
-    build(os = "Linux")
+    build()
   }
 }
 

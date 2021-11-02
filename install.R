@@ -12,11 +12,10 @@ os <- Sys.info()["sysname"]
 repos <- if (os == "Linux") repos else repos[c(3, 4, 1, 2)]
 options(repos = repos)
 
-build <- function(type = "binary", os = "") {
+build <- function(type = ifelse(os == "Linux", "source", "binary")) {
+  update.packages(lib.loc = .libPaths()[1], ask = FALSE, type = type)
 
-  update.packages(lib.loc = .libPaths()[1], ask = FALSE)
-
-  install <- function(x) if (!x %in% installed.packages()) install.packages(x, lib = .libPaths()[1])
+  install <- function(x) if (!x %in% installed.packages()) install.packages(x, lib = .libPaths()[1], type = type)
   resp <- sapply(
     c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "svglite", "remotes"),
     install
@@ -27,7 +26,7 @@ build <- function(type = "binary", os = "") {
   ## needed for windoze
   pkgs <- new.packages(lib.loc = .libPaths()[1], ask = FALSE)
   if (length(pkgs) > 0) {
-    install.packages(pkgs)
+    install.packages(pkgs, type = type)
   }
 
   # see https://github.com/wch/webshot/issues/25#event-740360519
@@ -138,7 +137,7 @@ if (rv < "3.6") {
     cat("You may prefer to use a docker image of Radiant and related software\nSee https://github.com/radiant-rstats/docker/blob/master/install/rsm-msba-linux.md for details\n\n")
     inp <- readliner("Do wish to proceed with the local install of Radiant and its dependencies? Press y or n and then press return: ")
     if (grepl("[yY]", inp)) {
-      build(os="linux")
+      build()
       pl <- suppressWarnings(system("which pdflatex", intern = TRUE))
       if (length(pl) == 0) {
         cat("To generate PDF reports in Radiant (Report > Rmd) you will need TinyTex (or LaTex).")

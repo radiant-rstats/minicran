@@ -42,10 +42,11 @@ install_phantomjs <- function(version, baseURL) {
   invisible()
 }
 
-build <- function(type = "binary", os = "") {
+build <- function(type = ifelse(os == "Linux", "source", "binary")) {
   update.packages(
     lib.loc = .libPaths()[1],
     ask = FALSE,
+    type = type
   )
 
   pkgs <- new.packages(
@@ -54,7 +55,7 @@ build <- function(type = "binary", os = "") {
   )
 
   if (length(pkgs) > 0) {
-    install.packages(pkgs)
+    install.packages(pkgs, type = type)
   }
 
   # see https://github.com/wch/webshot/issues/25#event-740360519
@@ -63,9 +64,4 @@ build <- function(type = "binary", os = "") {
   if (is.null(webshot:::find_phantom())) install_phantomjs(ws_args$version, ws_args$baseURL)
 }
 
-os <- Sys.info()["sysname"]
-if (os == "Linux") {
-  build(os = "Linux")
-} else {
-  build()
-}
+build()

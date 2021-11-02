@@ -12,11 +12,10 @@ os <- Sys.info()["sysname"]
 repos <- if (os == "Linux") repos else repos[c(3, 4, 1, 2)]
 options(repos = repos)
 
-build <- function(type = "binary", os = "") {
-  update.packages(lib.loc = .libPaths()[1], ask = FALSE)
-
+build <- function(type = ifelse(os == "Linux", "source", "binary")) {
+  update.packages(lib.loc = .libPaths()[1], ask = FALSE, type = type)
   install <- function(x) {
-    if (!x %in% installed.packages()) install.packages(x)
+    if (!x %in% installed.packages()) install.packages(x, type = type)
   }
 
   resp <- sapply(
@@ -36,7 +35,7 @@ build <- function(type = "binary", os = "") {
     ask = FALSE
   )
   if (length(pkgs) > 0) {
-    install.packages(pkgs)
+    install.packages(pkgs, type = type)
   }
 }
 
@@ -133,7 +132,7 @@ if (rv < "3.6") {
     }
   } else {
     cat("\n\nThe install script is only partially supported on your OS\n\n")
-    build(os = "Linux")
+    build()
   }
 }
 

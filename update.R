@@ -11,8 +11,8 @@ repos <- if (os == "Linux") repos else repos[c(3, 4, 1, 2)]
 options(repos = repos)
 
 ## install script for R(adiant) @ Rady School of Management (MBA and MSBA)
-build <- function(type = "binary", os = "") {
-  install.packages("remotes", dependencies = FALSE)
+build <- function(type = ifelse(os == "Linux", "source", "binary")) {
+  install.packages("remotes", dependencies = FALSE, type = type)
   remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")
 
   ## get list of packages to update
@@ -58,7 +58,8 @@ build <- function(type = "binary", os = "") {
       ## all deps should already be available in op by using the minicran package
       ## and all packages will be installed 1-by-1
       update.packages(
-        lib.loc = .libPaths()[1], ask = FALSE, oldPkgs = p, dependencies = FALSE
+        lib.loc = .libPaths()[1], ask = FALSE, oldPkgs = p, dependencies = FALSE,
+        type = type
       )
     }
   }
@@ -84,7 +85,7 @@ build <- function(type = "binary", os = "") {
       ## sometimes trying to install dependencies (e.g., Matrix) causes problems
       ## all deps should already be available in op by using the minicran package
       ## and all packages will be installed 1-by-1
-      install.packages(p, dependencies = FALSE)
+      install.packages(p, dependencies = FALSE, type = type)
     }
   }
 
@@ -152,7 +153,7 @@ updater <- function() {
         build()
       }
     } else {
-      build(os = "Linux")
+      build()
     }
   }
 }

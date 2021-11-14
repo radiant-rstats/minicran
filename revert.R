@@ -7,8 +7,9 @@ rem <- base::setdiff(inst, base)
 
 ## remove all but the base packages
 remove.packages(rem)
+install.packages("tinytex") # wbn
 
-cmd <- "source('https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/update.R'); counter = 'once already'"
+cmd <- "source('https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/install.R')"
 ret <- .rs.restartR(cmd)
 
 # sudo su -c "R -e \"install.packages('radiant.update', repos = 'https://radiant-rstats.github.io/minicran/')\""

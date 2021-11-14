@@ -14,18 +14,18 @@ options(repos = repos)
 
 build <- function(type = ifelse(os == "Linux", "source", "binary")) {
   update.packages(lib.loc = .libPaths()[1], ask = FALSE, type = type)
-  install <- function(x) {
-    if (!x %in% installed.packages()) install.packages(x, type = type)
-  }
 
-  resp <- sapply(
+  install <- function(x) {
+    pkgs <- x[!x %in% installed.packages()]
+    if (length(pkgs) > 0) install.packages(pkgs, lib = .libPaths()[1], type = type)
+  }
+  install(
     c(
       "radiant", "remotes", "devtools", "roxygen2", "testthat",
       "gitgadget", "tinytex", "haven", "readxl", "writexl", "miniUI",
       "caret", "ranger", "gbm", "dbplyr", "DBI", "RSQLite", "usethis",
       "xgboost"
-    ),
-    install
+    )
   )
 
   remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")

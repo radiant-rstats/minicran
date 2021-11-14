@@ -32,8 +32,10 @@ build <- function(type = ifelse(os == "Linux", "source", "binary")) {
 
   pkgs <- new.packages(
     lib.loc = .libPaths()[1],
+    repos = repos[1],
     ask = FALSE
   )
+
   if (length(pkgs) > 0) {
     install.packages(pkgs, type = type)
   }

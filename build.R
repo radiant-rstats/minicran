@@ -23,10 +23,10 @@ build <- function(type = ifelse(os == "Linux", "source", "binary")) {
   remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")
 
   ## needed for windoze
-  pkgs <- new.packages(lib.loc = .libPaths()[1], ask = FALSE)
-  if (length(pkgs) > 0) {
-    install.packages(pkgs, type = type)
-  }
+  # pkgs <- new.packages(lib.loc = .libPaths()[1], ask = FALSE)
+  # if (length(pkgs) > 0) {
+  #   install.packages(pkgs, type = type)
+  # }
 
   # see https://github.com/wch/webshot/issues/25#event-740360519
   if (is.null(webshot:::find_phantom())) webshot::install_phantomjs()

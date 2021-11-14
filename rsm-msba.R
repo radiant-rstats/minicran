@@ -51,6 +51,7 @@ build <- function(type = ifelse(os == "Linux", "source", "binary")) {
 
   pkgs <- new.packages(
     lib.loc = .libPaths()[1],
+    repos = repos[1],
     ask = FALSE
   )
 

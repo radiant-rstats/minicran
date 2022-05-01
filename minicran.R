@@ -4,11 +4,13 @@
 # installing and loading packages
 # repos <- c("file:///Users/vnijs/Desktop/Github/minicran/",
 
-# install.packages("miniCRAN")
 # install.packages("rprojroot")
 # install.packages("dplyr")
 # install.packages("magrittr")
 # install.packages("devtools")
+
+# use locally build miniCRAN so the latest R versions work
+# install.packages("miniCRAN")
 
 minicran <- "https://radiant-rstats.github.io/minicran/"
 repos <- c(
@@ -32,8 +34,6 @@ pkgs <- c(
   "pdp", "patchwork", "lobstr", "remotes"
 )
 
-  # "usethis", "radiant.update", "svglite", "ranger",
-
 # check only files that needed updating or adding
 # see PR https://github.com/RevolutionAnalytics/miniCRAN/pull/15/files
 # not sure if ever merged
@@ -44,8 +44,8 @@ pkgs <- c(
 pkgs_src <- c(
   pkgs, "gitgadget", "devtools", "roxygen2", "caret", "ranger", "randomForest",
   "gbm", "dbplyr", "DBI", "RSQLite", "RPostgreSQL", "pool", "odbc", "xgboost",
-  "png", "shinydashboard", "flexdashboard", "reticulate", "styler", "caTools",
-  "tidyverse", "testthat", "tfestimators", "keras", "packrat", "sparklyr", "sparkxgb",
+  "png", "reticulate", "styler", "caTools",
+  "tidyverse", "testthat",
   "forge", "gganimate", "gifski", "here", "zipcode", "forcats", "future", "parsnip",
   "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip", "kableExtra",
   "ggraph", "tidygraph", "bookdown", "lintr", "languageserver", "rprojroot", "iml",
@@ -85,9 +85,11 @@ pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
 to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "source")
 
 ## only needed when a new major R-version comes out
-# download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.1")
-# download <- makeRepo(pkgs, path = pth, type = "mac.binary", Rversion = "4.1")
-# download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-arm64", Rversion = "4.1")
+download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.2")
+download <- makeRepo(pkgs, path = pth, type = "mac.binary", Rversion = "4.2")
+
+# See https://github.com/andrie/miniCRAN/issues/142
+download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-arm64", Rversion = "4.2")
 
 versions <- c("3.5", "3.6")
 for (ver in versions) {
@@ -104,7 +106,7 @@ for (ver in versions) {
 
 pkgs <- unique(c(pkgs, c("GPArotation", "pdp")))
 
-versions <- c("4.0", "4.1")
+versions <- c("4.0", "4.1", "4.2")
 for (ver in versions) {
   # ver <- versions
   ## building minicran for windows binaries

@@ -74,7 +74,9 @@ if (rv < "3.6") {
       wz <- suppressWarnings(system("where R", intern = TRUE))
       w7z <- suppressWarnings(system("where 7z", intern = TRUE))
       if (!grepl("zip", wz) && !grepl("7-Zip", w7z)) {
-        URL <- "http://rady.ucsd.edu/faculty/directory/nijs/pub/docs/radiant/7z1604-x64.exe"
+        # URL <- "http://rady.ucsd.edu/faculty/directory/nijs/pub/docs/radiant/7z1604-x64.exe"
+        # URL <- "https://www.7-zip.org/a/7z1604-x64.exe"
+        URL <- "https://www.7-zip.org/a/7z2200-x64.exe"
         installr::install.URL(URL)
         if (file.exists(file.path(Sys.getenv("ProgramFiles"), "7-Zip"))) {
           ## update path

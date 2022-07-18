@@ -31,7 +31,8 @@ pth <- rprojroot::find_root(rprojroot::has_file("README.md"))
 pkgs <- c(
   "radiant", "miniUI", "webshot", "tinytex",
   "usethis", "svglite", "ranger", "xgboost",
-  "pdp", "patchwork", "lobstr", "remotes"
+  "pdp", "patchwork", "lobstr", "remotes",
+  "bslib", "png"
 )
 
 # check only files that needed updating or adding

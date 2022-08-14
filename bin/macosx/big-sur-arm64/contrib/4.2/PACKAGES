@@ -844,6 +844,14 @@ License: MIT + file LICENSE
 Archs: openssl.so.dSYM
 MD5sum: b0110fced217d5c99410610d384711b2
 
+Package: packrat
+Version: 0.8.1
+Depends: R (>= 3.0.0)
+Imports: tools, utils
+Suggests: testthat (>= 3.0.0), devtools, httr, knitr, rmarkdown
+License: GPL-2
+MD5sum: ddd8570f051e2ca0873d1d179af1f5be
+
 Package: patchwork
 Version: 1.1.1
 Imports: ggplot2 (>= 3.0.0), gtable, grid, stats, grDevices, utils, graphics
@@ -1014,6 +1022,13 @@ Suggests: tripack, interp, rgl, logspline, nor1mix, Formula, zoo, R.rsp, conquer
 License: GPL (>= 2)
 Archs: quantreg.so.dSYM
 MD5sum: df8fa2f5290a236a3f9f00fee8e73ecd
+
+Package: quarto
+Version: 1.2
+Imports: utils,rmarkdown,jsonlite,yaml,processx,rstudioapi,later,rsconnect (>= 0.8.26)
+Suggests: knitr, testthat (>= 3.1.0)
+License: GPL (>= 2)
+MD5sum: c0dc591fc1563759f1427a47fb64dea0
 
 Package: R6
 Version: 2.5.1
@@ -1224,6 +1239,15 @@ Depends: R (>= 3.0.0)
 Suggests: covr, knitr, lifecycle, mockr, rmarkdown, testthat (>= 3.0.0), withr
 License: MIT + file LICENSE
 MD5sum: 3ad77365e8784ef780a899abb60a3022
+
+Package: rsconnect
+Version: 0.8.27
+Depends: R (>= 3.0.0)
+Imports: curl, digest, jsonlite, openssl (>= 2.0.0), packrat (>= 0.6), rstudioapi (>= 0.5), tools, yaml (>= 2.1.5)
+Suggests: MASS, RCurl, callr, httpuv, knitr, plumber (>= 0.3.2), reticulate, rmarkdown (>= 1.1), shiny, sourcetools,
+             testthat, xtable
+License: GPL-2
+MD5sum: 0e577b3a4f44200f6a8b8dd67af46d38
 
 Package: rstudioapi
 Version: 0.13

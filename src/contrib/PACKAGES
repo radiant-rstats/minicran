@@ -2626,6 +2626,14 @@ License: GPL (>= 2)
 MD5sum: a2ea6b7e571ddffe9f29ac14bb3e0b96
 NeedsCompilation: yes
 
+Package: quarto
+Version: 1.2
+Imports: utils,rmarkdown,jsonlite,yaml,processx,rstudioapi,later,rsconnect (>= 0.8.26)
+Suggests: knitr, testthat (>= 3.1.0)
+License: GPL (>= 2)
+MD5sum: 1a9745ff1cd493b45e54d5180f97ec3f
+NeedsCompilation: no
+
 Package: R.cache
 Version: 0.16.0
 Depends: R (>= 2.14.0)

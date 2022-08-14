@@ -859,6 +859,12 @@ Suggests: tripack, akima, MASS, survival, rgl, logspline, nor1mix, Formula, zoo,
 License: GPL (>= 2)
 Archs: i386, x64
 
+Package: quarto
+Version: 0.1
+Imports: rmarkdown,jsonlite,yaml
+Suggests: testthat
+License: GPL (>= 2)
+
 Package: R6
 Version: 2.5.0
 Depends: R (>= 3.0)

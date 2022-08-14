@@ -993,6 +993,13 @@ License: GPL (>= 2)
 Archs: quantreg.so.dSYM
 MD5sum: 8562119758d7bae6a3c315cd08a18106
 
+Package: quarto
+Version: 1.1
+Imports: utils,rmarkdown,jsonlite,yaml,processx,rstudioapi,later
+Suggests: testthat, rsconnect
+License: GPL (>= 2)
+MD5sum: 059c7d0b2441fd8b2519a51d71baeafc
+
 Package: R6
 Version: 2.5.1
 Depends: R (>= 3.0)

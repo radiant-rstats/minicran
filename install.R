@@ -15,13 +15,17 @@ options(repos = repos)
 build <- function(type = ifelse(os == "Linux", "source", "binary")) {
   update.packages(lib.loc = .libPaths()[1], ask = FALSE, type = type)
 
+  ipkgs <- rownames(installed.packages())
   install <- function(x) {
-    pkgs <- x[!x %in% installed.packages()]
+    pkgs <- x[!x %in% ipkgs]
     if (length(pkgs) > 0) install.packages(pkgs, lib = .libPaths()[1], type = type)
   }
   install(c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "svglite", "remotes"))
 
-  remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")
+  ru <- try(remotes::install_github("radiant-rstats/radiant.update", upgrade = "never"))
+  if (inherits(ru, "try-error")) {
+    ru <- install.packages("radiant.update", lib = .libPaths()[1], repos = repos)
+  }
 
   ## needed for windoze
   # pkgs <- new.packages(lib.loc = .libPaths()[1], repos = repos[c(1, 3)], ask = FALSE)

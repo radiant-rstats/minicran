@@ -9,7 +9,7 @@ repos = c(
 )
 
 os <- Sys.info()["sysname"]
-repos <- if (os == "Linux") repos else repos[c(3, 4, 1, 2)]
+repos <- if (os == "Linux") repos else repos[c(3, 4)]
 options(repos = repos)
 
 build <- function(type = ifelse(os == "Linux", "source", "binary")) {
@@ -22,9 +22,14 @@ build <- function(type = ifelse(os == "Linux", "source", "binary")) {
   }
   install(c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "svglite", "remotes"))
 
-  ru <- try(remotes::install_github("radiant-rstats/radiant.update", upgrade = "never"))
-  if (inherits(ru, "try-error")) {
-    ru <- install.packages("radiant.update", lib = .libPaths()[1], repos = repos)
+  ap <- available.packages(repos = repos)[,"Package"]
+  if ("radiant.update" %in% ap) {
+    install.packages("radiant.update", lib = .libPaths()[1], repos = repos)
+  } else {
+    ru <- try(remotes::install_github("radiant-rstats/radiant.update", upgrade = "never"))
+    if (inherits("try-error", ru)) {
+      print("radiant.update cannot be installed on your system at this time")
+    }
   }
 
   ## needed for windoze

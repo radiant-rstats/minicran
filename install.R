@@ -22,14 +22,21 @@ build <- function(type = ifelse(os == "Linux", "source", "binary")) {
   }
   install(c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "svglite", "remotes"))
 
-  ap <- available.packages(repos = repos)[,"Package"]
-  if ("radiant.update" %in% ap) {
-    install.packages("radiant.update", lib = .libPaths()[1], repos = repos)
-  } else {
-    ru <- try(remotes::install_github("radiant-rstats/radiant.update", upgrade = "never"))
-    if (inherits("try-error", ru)) {
-      print("radiant.update cannot be installed on your system at this time")
+  if (!"radiant.update" %in% ipkgs) {
+    ap <- available.packages(repos = repos)[,"Package"]
+    if ("radiant.update" %in% ap) {
+      install.packages("radiant.update", lib = .libPaths()[1], repos = repos)
+      radiant.update::radiant.update()
+    } else {
+      ru <- try(remotes::install_github("radiant-rstats/radiant.update", upgrade = "never"))
+      if (inherits("try-error", ru)) {
+        print("radiant.update cannot be installed on your system at this time")
+      } else {
+        radiant.update::radiant.update()
+      }
     }
+  } else {
+    radiant.update::radiant.update()
   }
 
   ## needed for windoze

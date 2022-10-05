@@ -2717,7 +2717,7 @@ MD5sum: 5a27e637cdd32f8b7de486109f09cad8
 NeedsCompilation: no
 
 Package: radiant.model
-Version: 1.4.9
+Version: 1.4.10
 Depends: R (>= 3.4.0), radiant.data (>= 1.4.4)
 Imports: radiant.basics (>= 1.4.4), shiny (>= 1.7.1), nnet (>= 7.3.12), NeuralNetTools (>= 1.5.1), sandwich (>= 2.3.4), car (>= 2.1.3),
                ggplot2 (>= 2.2.1), data.tree (>= 0.7.4), stringr (>= 1.1.0), lubridate (>= 1.7.2), tidyr (>= 0.8.2), dplyr (>= 1.0.7),
@@ -2726,7 +2726,7 @@ Imports: radiant.basics (>= 1.4.4), shiny (>= 1.7.1), nnet (>= 7.3.12), NeuralNe
                0.7.0), stringi, yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: d0699311ce3868aab61527fd932ee262
+MD5sum: 72b045dad5c417d1ec429ee51fbc954c
 NeedsCompilation: no
 
 Package: radiant.multivariate

@@ -86,24 +86,11 @@ pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
 to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "source")
 
 ## only needed when a new major R-version comes out
-download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.2")
-download <- makeRepo(pkgs, path = pth, type = "mac.binary", Rversion = "4.2")
+# download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.2")
+# download <- makeRepo(pkgs, path = pth, type = "mac.binary", Rversion = "4.2")
 
 # See https://github.com/andrie/miniCRAN/issues/142
-download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-arm64", Rversion = "4.2")
-
-versions <- c("3.5", "3.6")
-for (ver in versions) {
-  ## building minicran for windows binaries
-  pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = ver)
-  to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "win.binary", Rversion = ver)
-  sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/windows/contrib", ver, paste0(x, "_*")), force = TRUE))
-
-  ## building minicran for mac el-capitan binaries
-  pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.el-capitan", suggests = FALSE, Rversion = ver)
-  to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary.el-capitan", Rversion = ver)
-  sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/el-capitan/contrib", ver, paste0(x, "_*")), force = TRUE))
-}
+# download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-arm64", Rversion = "4.2")
 
 pkgs <- unique(c(pkgs, c("GPArotation", "pdp")))
 

@@ -2902,7 +2902,7 @@ Imports: radiant.basics (>= 1.5.0), shiny (>= 1.7.1), nnet (>= 7.3.12), NeuralNe
          yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 2c1640f2e9e545c47255daa9756f9acf
+MD5sum: 70f0d205c608e91a0fea96d28f1250c0
 NeedsCompilation: no
 
 Package: radiant.multivariate
@@ -4742,6 +4742,7 @@ NeedsCompilation: yes
 Package: zipcode
 Version: 1.0
 Depends: R (>= 2.10)
+License: CC BY-SA 2.0 + file LICENSE
 MD5sum: 0207539b2d4edadd5c2446f8d0427eb7
 NeedsCompilation: no
 

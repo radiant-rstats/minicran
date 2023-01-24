@@ -4742,7 +4742,6 @@ NeedsCompilation: yes
 Package: zipcode
 Version: 1.0
 Depends: R (>= 2.10)
-License: CC BY-SA 2.0 + file LICENSE
 MD5sum: 0207539b2d4edadd5c2446f8d0427eb7
 NeedsCompilation: no
 

@@ -1051,7 +1051,7 @@ Depends: R (>= 4.0.0), radiant.data (>= 1.5.1), radiant.design (>= 1.5.0), radia
 Imports: shiny (>= 1.7.1), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown, markdown (>= 1.3)
 License: AGPL-3 | file LICENSE
-MD5sum: dce6656434ced7a43787e5f0246c8780
+MD5sum: 4a761da539dd9b201814d60d874936dc
 
 Package: radiant.basics
 Version: 1.5.0
@@ -1061,7 +1061,7 @@ Imports: ggplot2 (>= 2.2.1), scales (>= 0.4.0), dplyr (>= 1.0.7), tidyr (>= 0.8.
            0.7.10), patchwork (>= 1.0.0), rlang (>= 1.0.6)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0), markdown (>= 1.3)
 License: AGPL-3 | file LICENSE
-MD5sum: cab2868e5e57f0af6c41577a1099ee2b
+MD5sum: 998894e2532c27ff8cc996765845ec6f
 
 Package: radiant.data
 Version: 1.5.4
@@ -1076,7 +1076,7 @@ Imports: tibble (>= 1.4.2), rlang (>= 0.4.10), broom (>= 0.5.2), car (>= 3.0-0),
 Suggests: dbplyr (>= 2.1.1), DBI (>= 0.7), RSQLite (>= 2.0), RPostgres (>= 1.4.4), webshot (>= 0.5.0),
            testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: f0c65f7a9fa9acf94198b48c4e7c8480
+MD5sum: ef1f9d419412a81e47222cb45435b153
 
 Package: radiant.design
 Version: 1.5.0
@@ -1085,7 +1085,7 @@ Imports: dplyr (>= 1.0.7), magrittr (>= 1.5), shiny (>= 1.7.1), AlgDesign (>= 1.
            1.1.0), pwr (>= 1.1.2), randomizr (>= 0.20.0), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 2a8caa7c208da87b4ec7c4095d8414d6
+MD5sum: 10c620b221e8abecd90874b217ada8ba
 
 Package: radiant.model
 Version: 1.5.3
@@ -1099,7 +1099,7 @@ Imports: radiant.basics (>= 1.5.0), shiny (>= 1.7.1), nnet (>= 7.3.12), NeuralNe
            stringi, yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 14a6c12ed7b4d3a7fca6f23c50a263ad
+MD5sum: b018c8bf62b561ea0c50490ecd2374bc
 
 Package: radiant.multivariate
 Version: 1.5.0
@@ -1110,7 +1110,7 @@ Imports: radiant.model (>= 1.5.0), shiny (>= 1.7.1), dplyr (>= 1.0.7), rlang (>=
            polycor (>= 0.7.10), gower (>= 0.2.1), clustMixType (>= 0.2.1), patchwork (>= 1.0.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 4b1e2f21b7aa180550b709b41d9a64aa
+MD5sum: 33e08be57e40467e716314b2fbc0843c
 
 Package: radiant.update
 Version: 1.5.0
@@ -1118,7 +1118,7 @@ Depends: R (>= 4.0.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 28f3344e1cb423c5fde60bf3b7a6da9c
+MD5sum: 824f29313ac57744f3f47462ee5e5af3
 
 Package: randomizr
 Version: 0.22.0

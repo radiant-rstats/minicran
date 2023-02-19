@@ -3127,7 +3127,7 @@ Imports: shiny (>= 1.7.1), import (>= 1.1.0)
 Suggests: testthat (>= 2.0.0), knitr, rmarkdown,
       markdown (>= 1.3)
 License: AGPL-3 | file LICENSE
-MD5sum: e9779b4bf7308e1c95b97e5660999e38
+MD5sum: c8d7d80fbe5cdd07c53a086d77110e07
 NeedsCompilation: no
 
 Package: radiant.basics
@@ -3141,7 +3141,7 @@ Imports: ggplot2 (>= 2.2.1), scales (>= 0.4.0), dplyr
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0),
       markdown (>= 1.3)
 License: AGPL-3 | file LICENSE
-MD5sum: f669d523bcda86fc2277308e3c57154d
+MD5sum: 84fdcd11097fb84b95c9aac6cfb6ef9a
 NeedsCompilation: no
 
 Package: radiant.data
@@ -3164,7 +3164,7 @@ Suggests: dbplyr (>= 2.1.1), DBI (>= 0.7), RSQLite (>=
       2.0), RPostgres (>= 1.4.4), webshot (>= 0.5.0),
       testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 19e1e3582b372df574bdfbeea507c9fd
+MD5sum: 1f9371c347f3571033257d4fbb6ea31c
 NeedsCompilation: no
 
 Package: radiant.design
@@ -3175,7 +3175,7 @@ Imports: dplyr (>= 1.0.7), magrittr (>= 1.5), shiny (>=
       pwr (>= 1.1.2), randomizr (>= 0.20.0), polycor
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: c160944f27be5ead3d4692deb3e488e6
+MD5sum: c833950c1b4b4cd00e7d57ce911d2dec
 NeedsCompilation: no
 
 Package: radiant.model
@@ -3191,11 +3191,11 @@ Imports: radiant.basics (>= 1.5.0), shiny (>= 1.7.1),
       DiagrammeR (>= 1.0.9), import (>= 1.1.0), psych
       (>= 1.8.4), e1071 (>= 1.6.8), rpart (>= 4.1.11),
       ggrepel (>= 0.8), broom (>= 0.7.0), patchwork (>=
-      1.0.0), ranger (>= 0.11.2), xgboost (>= 1.7.3.1),
+      1.0.0), ranger (>= 0.11.2), xgboost (>= 1.6.0.1),
       pdp (>= 0.8.1), vip (>= 0.3.2), stringi, yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: efee25606c5c3e57cc7df4917ad83f38
+MD5sum: dc4123a9130e1bbfcef34275e37da16b
 NeedsCompilation: no
 
 Package: radiant.multivariate
@@ -3211,7 +3211,7 @@ Imports: radiant.model (>= 1.5.0), shiny (>= 1.7.1),
       0.2.1), patchwork (>= 1.0.0)
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 1c1bdd63f53487419459238f666f8900
+MD5sum: df0180de2f230c3a98054503785af63d
 NeedsCompilation: no
 
 Package: radiant.update
@@ -3220,7 +3220,7 @@ Depends: R (>= 4.0.0)
 Imports: utils, import
 Suggests: testthat (>= 2.0.0)
 License: AGPL-3 | file LICENSE
-MD5sum: bc7c792cef31b465cba799960bafeb11
+MD5sum: ab7f5e21d85802b9e1b7b98c63c91b9f
 NeedsCompilation: no
 
 Package: ragg
@@ -5246,6 +5246,7 @@ NeedsCompilation: yes
 Package: zipcode
 Version: 1.0
 Depends: R (>= 2.10)
+License: CC BY-SA 2.0 + file LICENSE
 MD5sum: 0207539b2d4edadd5c2446f8d0427eb7
 NeedsCompilation: no
 

@@ -43,22 +43,16 @@ pkgs <- c(
 # pkgList <- pkgDep(pkgs, availPkgs=pdb, repos=revolution, type="source", suggests=FALSE)
 
 pkgs_src <- c(
-  pkgs, "gitgadget", "devtools", "roxygen2", "caret", "ranger", "randomForest",
-  "gbm", "dbplyr", "DBI", "RSQLite", "RPostgreSQL", "pool", "odbc", "xgboost",
-  "png", "reticulate", "styler", "caTools",
-  "tidyverse", "testthat",
-  "forge", "gganimate", "gifski", "here", "zipcode", "forcats", "future", "parsnip",
-  "lime", "rsample", "infer", "yardstick", "tidyquant", "recipes", "vip", "kableExtra",
-  "ggraph", "tidygraph", "bookdown", "lintr", "languageserver", "rprojroot", "iml",
-  "xaringan", "magick", "arm", "rstan", "dtplyr", "renv", "RSelenium", "stringi",
-  "sf", "rpart.plot", "formatR", "RhpcBLASctl", "V8", "tidybayes"
+  pkgs, "gitgadget", "ranger", "dbplyr", "DBI", "RSQLite", "RPostgres", "pool",
+  "odbc", "xgboost", "png", "reticulate", "styler", "caTools",
+  "tidyverse", "rsample", "vip", "kableExtra", "languageserver", "iml",
+  "xaringan", "magick", "stringi", "RhpcBLASctl", "V8"
 )
 
 # for Karsten
 pkgs_src <- c(
   pkgs_src, "ggmap", "leaflet", "tm", "wordcloud", "rvest", "tidytext",
-  "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal", "topicmodels", "rtweet",
-  "pageviews", "googleAuthR", "tidymodels"
+  "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal"
 )
 
 # for Ken
@@ -86,15 +80,15 @@ pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
 to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "source")
 
 ## only needed when a new major R-version comes out
-# download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.2")
-# download <- makeRepo(pkgs, path = pth, type = "mac.binary", Rversion = "4.2")
+# download <- makeRepo(pkgs, path = pth, type = "win.binary", Rversion = "4.3")
+# download <- makeRepo(pkgs, path = pth, type = "mac.binary", Rversion = "4.3")
 
 # See https://github.com/andrie/miniCRAN/issues/142
-# download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-arm64", Rversion = "4.2")
+# download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-arm64", Rversion = "4.3")
 
 pkgs <- unique(c(pkgs, c("GPArotation", "pdp")))
 
-versions <- c("4.0", "4.1", "4.2")
+versions <- c("4.0", "4.1", "4.2", "4.3")
 for (ver in versions) {
   # ver <- versions
   ## building minicran for windows binaries

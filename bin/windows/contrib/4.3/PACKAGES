@@ -1,0 +1,127 @@
+Package: bslib
+Version: 0.5.0
+Depends: R (>= 2.10)
+Imports: base64enc, cachem, grDevices, htmltools (>= 0.5.4), jquerylib (>= 0.1.3), jsonlite,
+          memoise (>= 2.0.1), mime, rlang, sass (>= 0.4.0)
+Suggests: bsicons, curl, fontawesome, ggplot2, knitr, magrittr, rappdirs, rmarkdown (>= 2.7),
+          shiny (>= 1.6.0), testthat, thematic, withr
+License: MIT + file LICENSE
+
+Package: lobstr
+Version: 1.1.2
+Depends: R (>= 3.2)
+Imports: crayon, methods, prettyunits, rlang (>= 1.0.0)
+LinkingTo: cpp11 (>= 0.4.2)
+Suggests: covr, pillar, pkgdown, testthat (>= 3.0.0)
+License: MIT + file LICENSE
+Archs: x64
+
+Package: miniUI
+Version: 0.1.1.1
+Imports: shiny (>= 0.13), htmltools (>= 0.3), utils
+License: GPL-3
+
+Package: patchwork
+Version: 1.1.2
+Imports: ggplot2 (>= 3.0.0), gtable, grid, stats, grDevices, utils, graphics
+Suggests: knitr, rmarkdown, gridGraphics, gridExtra, ragg, testthat (>= 2.1.0), vdiffr, covr, png
+License: MIT + file LICENSE
+
+Package: pdp
+Version: 0.8.1
+Depends: R (>= 3.6.0)
+Imports: foreach, ggplot2 (>= 3.0.0), grDevices, lattice, methods, rlang (>= 0.3.0), stats, utils
+Suggests: adabag, AmesHousing, C50, caret, covr, Cubist, doParallel, dplyr, e1071, earth, gbm,
+          gridExtra, ICEbox, ipred, keras, kernlab, magrittr, MASS, Matrix, mda, mlbench, nnet,
+          party, partykit, randomForest, ranger, reticulate, rpart, tinytest, xgboost (>=
+          0.6-0), knitr, rmarkdown, vip
+License: GPL (>= 2)
+Archs: x64
+
+Package: png
+Version: 0.1-8
+Depends: R (>= 2.9.0)
+License: GPL-2 | GPL-3
+Archs: x64
+
+Package: quarto
+Version: 1.2
+Imports: utils,rmarkdown,jsonlite,yaml,processx,rstudioapi,later,rsconnect (>= 0.8.26)
+Suggests: knitr, testthat (>= 3.1.0)
+License: GPL (>= 2)
+
+Package: radiant
+Version: 1.5.0
+Depends: R (>= 4.0.0), radiant.data (>= 1.5.1), radiant.design (>= 1.5.0), radiant.basics (>=
+          1.5.0), radiant.model (>= 1.5.0), radiant.multivariate (>= 1.5.0)
+Imports: shiny (>= 1.7.1), import (>= 1.1.0)
+Suggests: testthat (>= 2.0.0), knitr, rmarkdown, markdown (>= 1.3)
+License: AGPL-3 | file LICENSE
+
+Package: ranger
+Version: 0.15.1
+Depends: R (>= 3.1)
+Imports: Rcpp (>= 0.11.2), Matrix
+LinkingTo: Rcpp, RcppEigen
+Suggests: survival, testthat
+License: GPL-3
+Archs: x64
+
+Package: remotes
+Version: 2.4.2
+Depends: R (>= 3.0.0)
+Imports: methods, stats, tools, utils
+Suggests: brew, callr, codetools, curl, covr, git2r (>= 0.23.0), knitr, mockery, pkgbuild (>=
+          1.0.1), pingr, rmarkdown, rprojroot, testthat, webfakes, withr
+License: MIT + file LICENSE
+
+Package: svglite
+Version: 2.1.1
+Depends: R (>= 3.0.0)
+Imports: systemfonts (>= 1.0.0)
+LinkingTo: cpp11, systemfonts
+Suggests: covr, fontquiver (>= 0.2.0), htmltools, knitr, rmarkdown, testthat, xml2 (>= 1.0.0)
+License: GPL (>= 2)
+Archs: x64
+
+Package: tinytex
+Version: 0.45
+Imports: xfun (>= 0.29)
+Suggests: testit, rstudioapi
+License: MIT + file LICENSE
+
+Package: usethis
+Version: 2.2.0
+Depends: R (>= 3.6)
+Imports: cli (>= 3.0.1), clipr (>= 0.3.0), crayon, curl (>= 2.7), desc (>= 1.4.2), fs (>= 1.3.0),
+          gert (>= 1.4.1), gh (>= 1.2.1), glue (>= 1.3.0), jsonlite, lifecycle (>= 1.0.0),
+          purrr, rappdirs, rlang (>= 1.1.0), rprojroot (>= 1.2), rstudioapi, stats, utils,
+          whisker, withr (>= 2.3.0), yaml
+Suggests: covr, knitr, magick, pkgload, rmarkdown, roxygen2 (>= 7.1.2), spelling (>= 1.2), styler
+          (>= 1.2.0), testthat (>= 3.1.8)
+License: MIT + file LICENSE
+
+Package: vip
+Version: 0.3.2
+Imports: ggplot2 (>= 0.9.0), gridExtra, magrittr, plyr, stats, tibble, utils
+Suggests: DT, C50, caret, Ckmeans.1d.dp, covr, Cubist, doParallel, dplyr, earth, fastshap, gbm,
+          glmnet, h2o, htmlwidgets, keras, knitr, lattice, mlbench, mlr, mlr3, neuralnet,
+          NeuralNetTools, nnet, parsnip, party, partykit, pdp, pls, randomForest, ranger,
+          rmarkdown, rpart, RSNNS, sparkline, sparklyr (>= 0.8.0), tinytest, varImp, xgboost
+License: GPL (>= 2)
+
+Package: webshot
+Version: 0.5.4
+Depends: R (>= 3.0)
+Imports: magrittr, jsonlite, callr
+Suggests: httpuv, knitr, rmarkdown, shiny, testthat (>= 3.0.0)
+License: GPL-2
+
+Package: xgboost
+Version: 1.7.5.1
+Depends: R (>= 3.3.0)
+Imports: Matrix (>= 1.1-0), methods, data.table (>= 1.9.6), jsonlite (>= 1.0),
+Suggests: knitr, rmarkdown, ggplot2 (>= 1.0.1), DiagrammeR (>= 0.9.0), Ckmeans.1d.dp (>= 3.3.1),
+          vcd (>= 1.3), testthat, lintr, igraph (>= 1.0.1), float, crayon, titanic
+License: Apache License (== 2.0) | file LICENSE
+Archs: x64

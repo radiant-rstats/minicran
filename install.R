@@ -1,7 +1,7 @@
 ## install script for R(adiant) @ Rady School of Management
 owd <- getwd()
 options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
-repos = c(
+repos <- c(
   RSM = "https://rsm-compute-01.ucsd.edu:4242/rsm-msba/__linux__/focal/latest",
   RSPM = "https://packagemanager.rstudio.com/all/__linux__/focal/latest",
   MINICRAN = "https://radiant-rstats.github.io/minicran/",
@@ -23,7 +23,7 @@ build <- function(type = ifelse(os == "Linux", "source", "binary")) {
   install(c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "svglite", "remotes"))
 
   if (!"radiant.update" %in% ipkgs) {
-    ap <- available.packages(repos = repos)[,"Package"]
+    ap <- available.packages(repos = repos)[, "Package"]
     if ("radiant.update" %in% ap) {
       install.packages("radiant.update", lib = .libPaths()[1], repos = repos)
       radiant.update::radiant.update()
@@ -60,30 +60,24 @@ rv <- paste(rv$major, rv$minor, sep = ".")
 if (rv < "3.6") {
   cat("Radiant requires R-3.6.0 or later. Please install the latest\nversion of R from https://cloud.r-project.org/")
 } else {
-
   os <- Sys.info()["sysname"]
   if (os == "Windows") {
-    lp <- .libPaths()[grepl("Documents",.libPaths())]
+    lp <- .libPaths()[grepl("Documents", .libPaths())]
     if (grepl("(Prog)|(PROG)", Sys.getenv("R_HOME"))) {
       # rv <- paste(rv$major, rv$minor, sep = ".")
-      cat(paste0("It seems you installed R in the Program Files directory. This can\ncause problems so we recommend you uninstall R, delete the Documents/R\ndirectory on your computer, and then re-install the latest version of R.\n\nThe most convenient way to install all required tools on Windows\nis to use the all-in-one-installer linked on the page below (see\nthe section on 'Installing Radiant on Windows')\n\n https://radiant-rstats.github.io/docs/install.html" ),"\n\n")
+      cat(paste0("It seems you installed R in the Program Files directory. This can\ncause problems so we recommend you uninstall R, delete the Documents/R\ndirectory on your computer, and then re-install the latest version of R.\n\nThe most convenient way to install all required tools on Windows\nis to use the all-in-one-installer linked on the page below (see\nthe section on 'Installing Radiant on Windows')\n\n https://radiant-rstats.github.io/docs/install.html"), "\n\n")
     } else if (length(lp) > 0) {
       cat("Installing R-packages in the directory printed below often causes\nproblems on Windows. Please remove the 'Documents/R' directory\non your computer, close and restart R(studio), and then run the\ncommand below:\n\nsource(\"https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/install.R\").\n\n")
-      cat(paste0(lp, collapse = "\n"),"\n\n")
+      cat(paste0(lp, collapse = "\n"), "\n\n")
     } else {
       build()
       install.packages("installr")
 
-      ## get rstudio - release
-      page_with_download_url <- "https://www.rstudio.com/products/rstudio/download/#download"
-      page <- readLines(page_with_download_url)
-      pat <- "//download1.rstudio.org/electron/windows/RStudio-[0-9.]+.[0-9.]+.[0-9]+.exe";
-      URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
 
-      ## get rstudio - preview
-      # page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
-      # pat <- "//s3.amazonaws.com/rstudio-ide-build/desktop/windows/RStudio-[0-9.]+exe"
-      # URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+      ## get rstudio - release
+      page <- readLines("https://posit.co/download/rstudio-desktop/", warn = FALSE)
+      pat <- "//download1.rstudio.org/electron/windows/RStudio-[0-9.]+.[0-9.]+.[0-9]+-[0-9]+.exe"
+      URL <- paste0("https:", regmatches(page, regexpr(pat, page))[1])
 
       ## install
       installr::install.URL(URL, installer_option = "/S")
@@ -114,27 +108,18 @@ if (rv < "3.6") {
       cat("\n\nInstallation on Windows complete. Close R, (re)start Rstudio, and select 'Start radiant'\nfrom the Addins menu to get started\n\n")
     }
   } else if (os == "Darwin") {
-
     resp <- system("sw_vers -productVersion", intern = TRUE)
     if (as.numeric_version(resp) < as.numeric_version("10.9")) {
       cat("The version of OSX on your mac is no longer supported by R. You will need to upgrade the OS before proceeding\n\n")
     } else {
-
       build()
       ##  based on https://github.com/talgalili/installr/blob/82bf5b542ce6d2ef4ebc6359a4772e0c87427b64/R/install.R#L805-L813
-      ## get rstudio - release
-      page_with_download_url <- "https://www.rstudio.com/products/rstudio/download/#download"
-      page <- readLines(page_with_download_url)
-      pat <- "//download1.rstudio.org/electron/macos/RStudio-[0-9.]+.[0-9.]+.[0-9]+.dmg";
-      URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
-
-      ## get rstudio - preview
-      # page <- readLines("https://www.rstudio.com/products/rstudio/download/preview/", warn = FALSE)
-      # pat <- "//s3.amazonaws.com/rstudio-ide-build/desktop/macos/RStudio-[0-9.]+dmg"
-      # URL <- paste0("https:",regmatches(page,regexpr(pat,page))[1])
+      page <- readLines("https://posit.co/download/rstudio-desktop/", warn = FALSE)
+      pat <- "//download1.rstudio.org/electron/macos/RStudio-[0-9.]+.[0-9.]+.[0-9]+.dmg"
+      URL <- paste0("https:", regmatches(page, regexpr(pat, page))[1])
 
       setwd(tempdir())
-      download.file(URL,"Rstudio.dmg")
+      download.file(URL, "Rstudio.dmg")
       system("open Rstudio.dmg")
       cat("Please drag-and-drop the Rstudio image to the Applications folder on your Mac\n")
 

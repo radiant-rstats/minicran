@@ -19,7 +19,7 @@ build <- function(type = ifelse(os == "Linux", "source", "binary")) {
     pkgs <- x[!x %in% installed.packages()]
     if (length(pkgs) > 0) install.packages(pkgs, lib = .libPaths()[1], type = type)
   }
-  install(c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "svglite", "remotes"))
+  install(c("radiant", "miniUI", "webshot", "tinytex", "usethis", "svglite", "remotes"))
 
   remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")
 

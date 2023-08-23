@@ -20,7 +20,7 @@ build <- function(type = ifelse(os == "Linux", "source", "binary")) {
     pkgs <- x[!x %in% ipkgs]
     if (length(pkgs) > 0) install.packages(pkgs, lib = .libPaths()[1], type = type)
   }
-  install(c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "usethis", "svglite", "remotes"))
+  install(c("radiant", "miniUI", "webshot", "tinytex", "usethis", "svglite", "remotes"))
 
   if (!"radiant.update" %in% ipkgs) {
     ap <- available.packages(repos = repos)[, "Package"]

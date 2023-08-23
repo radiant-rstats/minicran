@@ -62,7 +62,7 @@ pkgs_src <- c(
 
 # for Terry
 pkgs_src <- c(
-  pkgs_src, "simmer",  "simmer.plot", "EnvStats", "ggfortify",
+  pkgs_src, "simmer", "simmer.plot", "EnvStats", "ggfortify",
   "linprog", "lpSolve"
 )
 
@@ -142,8 +142,10 @@ for (pdir in pdirs) {
   print(pdir)
   old <- list.files(file.path(pth, pdir)) %>%
     data.frame(fn = ., stringsAsFactors = FALSE) %>%
-    mutate(pkg_file = fn, pkg_name = strsplit(fn, "_") %>% sapply("[",1),
-           pkg_version = strsplit(fn, "_") %>% sapply("[",2) %>% gsub("(.zip)|(.tar.gz)|(.tgz)","",.)) %>%
+    mutate(
+      pkg_file = fn, pkg_name = strsplit(fn, "_") %>% sapply("[", 1),
+      pkg_version = strsplit(fn, "_") %>% sapply("[", 2) %>% gsub("(.zip)|(.tar.gz)|(.tgz)", "", .)
+    ) %>%
     filter(!is.na(pkg_version))
   old <- old[order(old$pkg_name, package_version(old$pkg_version)), ] %>%
     group_by(pkg_name) %>%
@@ -172,4 +174,3 @@ system("git add --all .")
 mess <- paste0("update for: ", paste0(pkgs, collapse = ", "), " (", format(Sys.Date(), format = "%m-%d-%Y"), ")")
 system(paste0("git commit -m '", mess, "'"))
 system("git push")
-

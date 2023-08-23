@@ -21,7 +21,7 @@ build <- function(type = "binary") {
   install.packages(c("dbplyr", "DBI", "dtplyr", "RPostgres", "RSQLite", "fst"), Ncpus = -1)
 
   # radiant
-  install.packages(c("radiant", "gitgadget", "miniUI", "webshot", "tinytex", "svglite", "readxl", "writexl"), Ncpus = -1)
+  install.packages(c("radiant", "miniUI", "webshot", "tinytex", "svglite", "readxl", "writexl"), Ncpus = -1)
   install.packages(c("devtools", "remotes", "formatR", "styler", "reticulate", "renv"), Ncpus = -1)
   install.packages(c("arrow", "duckdb", "fs", "janitor", "palmerpenguins", "stringr", "tictoc"), Ncpus = -1)
   install.packages(c("httpgd", "languageserver"), Ncpus = -1)

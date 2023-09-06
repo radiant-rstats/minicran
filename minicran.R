@@ -32,7 +32,8 @@ pkgs <- c(
   "radiant", "miniUI", "webshot", "tinytex",
   "usethis", "svglite", "ranger", "xgboost",
   "pdp", "patchwork", "lobstr", "remotes",
-  "bslib", "png", "quarto", "vip", "arrow"
+  "bslib", "png", "quarto", "vip", "arrow",
+  "rlang"
 )
 
 # check only files that needed updating or adding

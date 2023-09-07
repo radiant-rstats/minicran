@@ -2669,7 +2669,7 @@ Imports: tibble (>= 1.4.2), rlang (>= 0.4.10), arrow (>= 12.0.1), broom (>= 0.5.
                          (>= 0.9.1), stringi (>= 1.2.4), randomizr (>= 0.20.0), patchwork (>= 1.0.0), bslib (>= 0.5.0), png, MASS, base64enc
 Suggests: dbplyr (>= 2.1.1), DBI (>= 0.7), RSQLite (>= 2.0), RPostgres (>= 1.4.4), webshot (>= 0.5.0), testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: a76d96bb48cc93ec5b27e09e85559a38
+MD5sum: e0886ccda960f50cd071ff4743b53bf2
 NeedsCompilation: no
 
 Package: radiant.design

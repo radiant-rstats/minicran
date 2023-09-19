@@ -246,11 +246,11 @@ License: MIT + file LICENSE
 MD5sum: 2e71196ad3f3696e8ed06fb1c0d2cc0c
 
 Package: credentials
-Version: 1.3.2
+Version: 2.0.1
 Imports: openssl (>= 1.3), sys (>= 2.1), curl, jsonlite, askpass
 Suggests: testthat, knitr, rmarkdown
 License: MIT + file LICENSE
-MD5sum: 53ea954163be8cc9d703d98e7d606b51
+MD5sum: 257d4c60dec64ddabfcc1a5b1b11162a
 
 Package: crosstalk
 Version: 1.2.0
@@ -667,7 +667,7 @@ Archs: jsonlite.so.dSYM
 MD5sum: 2a3edbe48e896c40ef5c37cc6de9c58b
 
 Package: knitr
-Version: 1.43
+Version: 1.44
 Depends: R (>= 3.3.0)
 Imports: evaluate (>= 0.15), highr, methods, tools, xfun (>= 0.39), yaml
         (>= 2.1.19)
@@ -675,10 +675,10 @@ Suggests: bslib, codetools, DBI (>= 0.4-1), digest, formatR, gifski,
         gridSVG, htmlwidgets (>= 0.7), curl, jpeg, JuliaCall (>= 0.11.1),
         magick, markdown (>= 1.3), png, ragg, reticulate (>= 1.4), rgl (>=
         0.95.1201), rlang, rmarkdown, sass, showtext, styler (>= 1.2.0),
-        targets (>= 0.6.0), testit, tibble, tikzDevice (>= 0.10), tinytex,
-        webshot, rstudioapi, xml2 (>= 1.2.0)
+        targets (>= 0.6.0), testit, tibble, tikzDevice (>= 0.10), tinytex
+        (>= 0.46), webshot, rstudioapi, svglite, xml2 (>= 1.2.0)
 License: GPL
-MD5sum: 82c3447111e29dfd1b8d0669721a4d68
+MD5sum: c50863c7c4a443c1b79e73a8fba0f853
 
 Package: labeling
 Version: 0.4.3
@@ -833,12 +833,12 @@ License: GPL-3
 MD5sum: 0e63d947673f16626b820361c537e5b3
 
 Package: minqa
-Version: 1.2.5
+Version: 1.2.6
 Imports: Rcpp (>= 0.9.10)
 LinkingTo: Rcpp
 License: GPL-2
 Archs: minqa.so.dSYM
-MD5sum: 1e8e5915cde6d1276423fb56a4f7aeb5
+MD5sum: 83d9f6d011fae1c1cf0ad0c953148bec
 
 Package: mnormt
 Version: 2.1.1
@@ -914,12 +914,12 @@ Archs: openssl.so.dSYM
 MD5sum: c0cd3d251e180068cc32316d69d0766f
 
 Package: packrat
-Version: 0.9.1
+Version: 0.9.2
 Depends: R (>= 3.0.0)
 Imports: tools, utils
 Suggests: devtools, httr, knitr, mockery, rmarkdown, testthat (>= 3.0.0)
 License: GPL-2
-MD5sum: 4d7471f974b221e4665488ae73c99dae
+MD5sum: 2afdb51932ec71163aec0d6d924c62c0
 
 Package: patchwork
 Version: 1.1.3
@@ -1207,14 +1207,6 @@ Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
 MD5sum: 2b4cc63df4bdc326542c49ce4ccfcfad
 
-Package: radiant.update
-Version: 1.5.0
-Depends: R (>= 4.0.0)
-Imports: utils, import
-Suggests: testthat (>= 2.0.0)
-License: AGPL-3 | file LICENSE
-MD5sum: ccd798c84d0b522b6711b67ded9a0586
-
 Package: randomizr
 Version: 1.0.0
 Depends: R (>= 3.5.0)
@@ -1342,7 +1334,7 @@ Archs: rlang.so.dSYM
 MD5sum: 1974530dd22bd76b9985c1ef1fdc7b2a
 
 Package: rmarkdown
-Version: 2.24
+Version: 2.25
 Depends: R (>= 3.0)
 Imports: bslib (>= 0.2.5.1), evaluate (>= 0.13), fontawesome (>= 0.5.0),
         htmltools (>= 0.5.1), jquerylib, jsonlite, knitr (>= 1.22),
@@ -1352,7 +1344,7 @@ Suggests: digest, dygraphs, fs, rsconnect, downlit (>= 0.4.0), katex (>=
         1.4.0), sass (>= 0.4.0), shiny (>= 1.6.0), testthat (>= 3.0.3),
         tibble, vctrs, cleanrmd, withr (>= 2.4.2)
 License: GPL-3
-MD5sum: 93cfc5016efccea0d749e90ab4f8f541
+MD5sum: e0b996241c49e9eee47a2e599bcc0028
 
 Package: rpart
 Version: 4.1.19
@@ -1372,7 +1364,7 @@ License: MIT + file LICENSE
 MD5sum: 3ad77365e8784ef780a899abb60a3022
 
 Package: rsconnect
-Version: 1.0.2
+Version: 1.1.0
 Depends: R (>= 3.5.0)
 Imports: cli, curl, digest, jsonlite, lifecycle, openssl (>= 2.0.0),
         packrat (>= 0.6), renv (>= 1.0.0), rlang (>= 1.0.0), rstudioapi (>=
@@ -1381,7 +1373,7 @@ Suggests: Biobase, BiocManager, foreign, knitr, MASS, plumber (>= 0.3.2),
         quarto, RCurl, reticulate, rmarkdown (>= 1.1), shiny, testthat (>=
         3.1.9), webfakes, withr
 License: GPL-2
-MD5sum: a6e1ee1ee3725bd3b0eea71564c15bc4
+MD5sum: 9c5a070e1e7d2a2c83aec3b304db3f42
 
 Package: rstudioapi
 Version: 0.15.0

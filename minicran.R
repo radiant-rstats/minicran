@@ -12,6 +12,8 @@
 # use locally build miniCRAN so the latest R versions work
 # install.packages("miniCRAN")
 
+# See if this can be useful: https://packagemanager.posit.co/client/#/
+
 minicran <- "https://radiant-rstats.github.io/minicran/"
 repos <- c(
   "https://cloud.r-project.org",
@@ -20,11 +22,15 @@ repos <- c(
 )
 
 options(repos = c(CRAN = repos))
-# options(repos = c(CRAN = minicran))
+
+# repos = "https://packagemanager.posit.co/cran/2023-08-11"
+# options(repos = c(CRAN = "https://packagemanager.posit.co/cran/2023-08-11"))
+# install.packages("shiny")
 
 library(devtools)
 library(miniCRAN)
 source("selMakeRepo.R", local = TRUE)
+
 
 pth <- rprojroot::find_root(rprojroot::has_file("README.md"))
 
@@ -76,6 +82,10 @@ clean_pkgs <- function(pkl) {
   setdiff(pkl, c("Gmedian", "RSpectra"))
 }
 
+pkgs <- pkgs_src <- "shiny"
+
+repos
+
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
 to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "source")
@@ -94,33 +104,37 @@ to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, t
 pkgs <- unique(c(pkgs, c("GPArotation", "pdp")))
 
 versions <- c("4.0", "4.1", "4.2", "4.3")
+# versions <- c("4.2", "4.3")
 for (ver in versions) {
   # ver <- versions
   ## building minicran for windows binaries
+  ver = "4.2"
+  repos
+  pkgs
   pkgList <- pkgDep(pkgs, repos = repos, type = "win.binary", suggests = FALSE, Rversion = ver)
   to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "win.binary", Rversion = ver)
-  sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/windows/contrib", ver, paste0(x, "_*")), force = TRUE))
+  # sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/windows/contrib", ver, paste0(x, "_*")), force = TRUE))
 
   ## building minicran for mac el-capitan binaries
-  if (ver <= "4.2") {
-    pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary", suggests = FALSE, Rversion = ver)
-    to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary", Rversion = ver)
-    sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/contrib", ver, paste0(x, "_*")), force = TRUE))
-  }
-
-  if (ver >= "4.2") {
-    ## building minicran for mac arm64 binaries
-    pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.big-sur-arm64", suggests = FALSE, Rversion = ver)
-    to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary.big-sur-arm64", Rversion = ver)
-    sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/big-sur-arm64/contrib", ver, paste0(x, "_*")), force = TRUE))
-  }
-
-  if (ver >= "4.3") {
-    ## building minicran for mac arm64 binaries
-    pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.big-sur-x86_64", suggests = FALSE, Rversion = ver)
-    to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary.big-sur-x86_64", Rversion = ver)
-    sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/big-sur-x86_64/contrib", ver, paste0(x, "_*")), force = TRUE))
-  }
+  # if (ver <= "4.2") {
+  #   pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary", suggests = FALSE, Rversion = ver)
+  #   to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary", Rversion = ver)
+  #   sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/contrib", ver, paste0(x, "_*")), force = TRUE))
+  # }
+  #
+  # if (ver >= "4.2") {
+  #   ## building minicran for mac arm64 binaries
+  #   pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.big-sur-arm64", suggests = FALSE, Rversion = ver)
+  #   to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary.big-sur-arm64", Rversion = ver)
+  #   sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/big-sur-arm64/contrib", ver, paste0(x, "_*")), force = TRUE))
+  # }
+  #
+  # if (ver >= "4.3") {
+  #   ## building minicran for mac arm64 binaries
+  #   pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.big-sur-x86_64", suggests = FALSE, Rversion = ver)
+  #   to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary.big-sur-x86_64", Rversion = ver)
+  #   sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/big-sur-x86_64/contrib", ver, paste0(x, "_*")), force = TRUE))
+  # }
 }
 
 

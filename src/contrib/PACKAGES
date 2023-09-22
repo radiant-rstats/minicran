@@ -2863,7 +2863,7 @@ Imports: radiant.basics (>= 1.5.0), shiny (>= 1.7.4), nnet (>= 7.3.12), NeuralNe
            pdp (>= 0.8.1), vip (>= 0.3.2), stringi, yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 81aeeaf6e07be2f7dd5dc8396088f431
+MD5sum: 658170587ca35dd37a54f413f630defd
 NeedsCompilation: no
 
 Package: radiant.multivariate
@@ -3585,7 +3585,7 @@ Imports: utils, grDevices, httpuv (>= 1.5.2), mime (>= 0.3), jsonlite (>= 0.9.16
 Suggests: datasets, Cairo (>= 1.5-5), testthat (>= 3.0.0), knitr (>= 1.6), markdown, rmarkdown,
            ggplot2, reactlog (>= 1.0.0), magrittr, yaml, future, dygraphs, ragg, showtext, sass
 License: GPL-3 | file LICENSE
-MD5sum: e3270f20b7114bc23db0e0d7b7e4c271
+MD5sum: f3a67865f988f7f3d596b9b89d2cdd9f
 NeedsCompilation: no
 
 Package: shinyAce

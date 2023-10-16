@@ -2894,7 +2894,7 @@ Imports: tibble (>= 1.4.2), rlang (>= 0.4.10), arrow (>= 12.0.1), broom (>= 0.5.
 Suggests: dbplyr (>= 2.1.1), DBI (>= 0.7), RSQLite (>= 2.0), RPostgres (>= 1.4.4),
           webshot (>= 0.5.0), testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: e9f2d46e36701550d98fc65c3685b80f
+MD5sum: 97977b16f87f446948434f52dee59235
 NeedsCompilation: no
 
 Package: radiant.design
@@ -2921,7 +2921,7 @@ Imports: radiant.basics (>= 1.5.0), shiny (>= 1.7.4), nnet (>= 7.3.12), NeuralNe
           vip (>= 0.3.2), stringi, yaml
 Suggests: testthat (>= 2.0.0), pkgdown (>= 1.1.0)
 License: AGPL-3 | file LICENSE
-MD5sum: 41e9c344ebf831bf046fabf0d0fb4ba7
+MD5sum: dd94b600440a8a047893beb54b9bcece
 NeedsCompilation: no
 
 Package: radiant.multivariate

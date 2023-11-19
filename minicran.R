@@ -82,7 +82,7 @@ clean_pkgs <- function(pkl) {
   setdiff(pkl, c("Gmedian", "RSpectra"))
 }
 
-pkgs <- pkgs_src <- "shiny"
+# pkgs <- pkgs_src <- "shiny"
 
 repos
 

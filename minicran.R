@@ -39,7 +39,7 @@ pkgs <- c(
   "usethis", "svglite", "ranger", "xgboost",
   "pdp", "patchwork", "lobstr", "remotes",
   "bslib", "png", "quarto", "vip", "arrow",
-  "rlang"
+  "rlang", "shiny"
 )
 
 # check only files that needed updating or adding

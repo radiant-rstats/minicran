@@ -82,10 +82,6 @@ clean_pkgs <- function(pkl) {
   setdiff(pkl, c("Gmedian", "RSpectra"))
 }
 
-# pkgs <- pkgs_src <- "shiny"
-
-repos
-
 # building minicran for source packages
 pkgList <- pkgDep(pkgs_src, repos = repos, type = "source", suggests = FALSE)
 to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "source")
@@ -126,7 +122,7 @@ for (ver in versions) {
     sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/big-sur-arm64/contrib", ver, paste0(x, "_*")), force = TRUE))
   }
   #
-  if (ver >= "4.3") {
+  if (ver >= "4.2") {
     ## building minicran for mac arm64 binaries
     pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.big-sur-x86_64", suggests = FALSE, Rversion = ver)
     to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary.big-sur-x86_64", Rversion = ver)
@@ -159,7 +155,6 @@ mac_dirs <- list.dirs("bin/macosx/el-capitan/contrib")[-1]
 mac_dirs <- c(mac_dirs, list.dirs("bin/macosx/contrib")[-1])
 mac_dirs <- c(mac_dirs, list.dirs("bin/macosx/big-sur-arm64/contrib")[-1])
 mac_dirs <- c(mac_dirs, list.dirs("bin/macosx/big-sur-x86_64/contrib")[-1])
-mac_dirs
 pdirs <- c("src/contrib", win_dirs, mac_dirs)
 
 for (pdir in pdirs) {

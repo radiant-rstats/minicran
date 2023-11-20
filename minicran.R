@@ -109,12 +109,12 @@ for (ver in versions) {
   # sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/windows/contrib", ver, paste0(x, "_*")), force = TRUE))
 
   ## building minicran for mac el-capitan binaries
-  # if (ver <= "4.2") {
-  #   pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary", suggests = FALSE, Rversion = ver)
-  #   to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary", Rversion = ver)
-  #   sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/contrib", ver, paste0(x, "_*")), force = TRUE))
-  # }
-  #
+  if (ver <= "4.2") {
+    pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary", suggests = FALSE, Rversion = ver)
+    to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, type = "mac.binary", Rversion = ver)
+    sapply(setdiff(names(to_rm), "gitgadget"), function(x) unlink(file.path(pth, "bin/macosx/contrib", ver, paste0(x, "_*")), force = TRUE))
+  }
+
   if (ver >= "4.2") {
     ## building minicran for mac arm64 binaries
     pkgList <- pkgDep(pkgs, repos = repos, type = "mac.binary.big-sur-arm64", suggests = FALSE, Rversion = ver)

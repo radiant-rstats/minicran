@@ -94,8 +94,8 @@ to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, t
 # make sure to install miniCRAN from source in the gh/ directory first
 # you main also need to edit the internal.R file in miniCRAN_pkg so it
 # knows what to do with the newly supported platform
-download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-arm64", Rversion = "4.4")
-download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-x86_64", Rversion = "4.4")
+# download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-arm64", Rversion = "4.4")
+# download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-x86_64", Rversion = "4.4")
 
 pkgs <- unique(c(pkgs, c("GPArotation", "pdp")))
 

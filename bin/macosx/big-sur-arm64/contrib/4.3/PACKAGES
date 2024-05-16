@@ -367,11 +367,11 @@ Archs: farver.so.dSYM
 MD5sum: 9bdc6911230830970173e6c7f0024940
 
 Package: fastmap
-Version: 1.1.1
+Version: 1.2.0
 Suggests: testthat (>= 2.1.1)
 License: MIT + file LICENSE
 Archs: fastmap.so.dSYM
-MD5sum: 104ff648bbc6ddf712defacbcb9f2885
+MD5sum: 7d0625cdd878b0c4958e4e741a57e1b8
 
 Package: fontawesome
 Version: 0.5.2
@@ -1355,13 +1355,14 @@ Archs: sys.so.dSYM
 MD5sum: 90b4e061d9fe542cd8d96dab4face6e2
 
 Package: systemfonts
-Version: 1.0.6
+Version: 1.1.0
 Depends: R (>= 3.2.0)
+Imports: lifecycle
 LinkingTo: cpp11 (>= 0.2.1)
 Suggests: covr, knitr, rmarkdown, testthat (>= 2.1.0), tools
 License: MIT + file LICENSE
 Archs: systemfonts.so.dSYM
-MD5sum: bc4a971622db15a20dc9868725e92e55
+MD5sum: 38eeec3608b9c36b0c58d6b2da70a3e1
 
 Package: testthat
 Version: 3.2.1.1
@@ -1532,13 +1533,13 @@ Archs: writexl.so.dSYM
 MD5sum: fbddc6ecff7838a9425ed6b99e7ab33e
 
 Package: xfun
-Version: 0.43
+Version: 0.44
 Imports: grDevices, stats, tools
-Suggests: testit, parallel, codetools, rstudioapi, tinytex (>= 0.30), mime, markdown (>= 1.5), knitr (>= 1.42), htmltools, remotes, pak, rhub, renv,
-                 curl, xml2, jsonlite, magick, yaml, rmarkdown
+Suggests: testit, parallel, codetools, methods, rstudioapi, tinytex (>= 0.30), mime, markdown (>= 1.5), knitr (>= 1.42), htmltools, remotes, pak, rhub,
+                 renv, curl, xml2, jsonlite, magick, yaml, qs, rmarkdown
 License: MIT + file LICENSE
 Archs: xfun.so.dSYM
-MD5sum: e79f81537540da3efc6983f6970e35a5
+MD5sum: afa3819541990e4ca90d9b5f9354eb34
 
 Package: xgboost
 Version: 1.7.7.1

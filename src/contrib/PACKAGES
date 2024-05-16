@@ -784,10 +784,10 @@ MD5sum: 1fa98878bb985e28d968630c7e7597b6
 NeedsCompilation: yes
 
 Package: fastmap
-Version: 1.1.1
+Version: 1.2.0
 Suggests: testthat (>= 2.1.1)
 License: MIT + file LICENSE
-MD5sum: 57a70be74ce88c5dc7e97c5547526f9f
+MD5sum: f53773acd6ba9a86413e8c2dc6441544
 NeedsCompilation: yes
 
 Package: fastmatch
@@ -2788,12 +2788,12 @@ MD5sum: 42434a69faa68c7ba205999b0de3261a
 NeedsCompilation: no
 
 Package: ragg
-Version: 1.3.1
+Version: 1.3.2
 Imports: systemfonts (>= 1.0.3), textshaping (>= 0.3.0)
 LinkingTo: systemfonts, textshaping
 Suggests: covr, graphics, grid, testthat (>= 3.0.0)
 License: MIT + file LICENSE
-MD5sum: ca13c422a44c62cb97dc8e26ea67adc1
+MD5sum: 50f4afaee72d2de2109e0a4065233aae
 NeedsCompilation: yes
 
 Package: rainbow
@@ -3777,12 +3777,13 @@ MD5sum: 79b75f8ec16557df22600458b6044ebe
 NeedsCompilation: yes
 
 Package: systemfonts
-Version: 1.0.6
+Version: 1.1.0
 Depends: R (>= 3.2.0)
+Imports: lifecycle
 LinkingTo: cpp11 (>= 0.2.1)
 Suggests: covr, knitr, rmarkdown, testthat (>= 2.1.0), tools
 License: MIT + file LICENSE
-MD5sum: a64862faca6ec5e67a0381bc0eb300be
+MD5sum: 4d61e295aec92fe75f388ad4b4c67736
 NeedsCompilation: yes
 
 Package: tensorA
@@ -4376,12 +4377,12 @@ MD5sum: 49ff7b601b05c68bf6165ade30a4a6f7
 NeedsCompilation: no
 
 Package: xfun
-Version: 0.43
+Version: 0.44
 Imports: grDevices, stats, tools
-Suggests: testit, parallel, codetools, rstudioapi, tinytex (>= 0.30), mime, markdown (>= 1.5), knitr (>= 1.42), htmltools, remotes, pak, rhub, renv,
-                 curl, xml2, jsonlite, magick, yaml, rmarkdown
+Suggests: testit, parallel, codetools, methods, rstudioapi, tinytex (>= 0.30), mime, markdown (>= 1.5), knitr (>= 1.42), htmltools, remotes, pak, rhub,
+                 renv, curl, xml2, jsonlite, magick, yaml, qs, rmarkdown
 License: MIT + file LICENSE
-MD5sum: c2e6667f325c61266d8d6ff204e52a6e
+MD5sum: 3e566d8d5e301162d15fa7460f4a52ed
 NeedsCompilation: yes
 
 Package: xgboost

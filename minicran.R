@@ -57,10 +57,16 @@ pkgs_src <- c(
 )
 
 # for Karsten
-pkgs_src <- c(
-  pkgs_src, "ggmap", "leaflet", "tm", "wordcloud", "rvest", "tidytext",
-  "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal"
+pkgs_karsten <- c(
+  "ggmap", "leaflet", "tm", "wordcloud", "stm", "Hmisc",
+  "SDMTools", "gtrendsR", "rgdal"
 )
+
+# pkgs_src <- c(
+#   pkgs_src, "ggmap", "leaflet", "tm", "wordcloud", "rvest", "tidytext",
+#   "stm", "Hmisc", "SDMTools", "gtrendsR", "rgdal"
+# )
+
 
 # for Ken
 # pkgs_src <- c(
@@ -68,18 +74,24 @@ pkgs_src <- c(
 # )
 
 # for Terry
-pkgs_src <- c(
-  pkgs_src, "simmer", "simmer.plot", "EnvStats", "ggfortify",
-  "linprog", "lpSolve"
-)
+pkgs_terry <- c("simmer", "simmer.plot", "EnvStats", "ggfortify", "linprog", "lpSolve")
+
+# pkgs_src <- c(
+#   pkgs_src, "simmer", "simmer.plot", "EnvStats", "ggfortify",
+#   "linprog", "lpSolve"
+# )
 
 ## if you have removed a radiant dependency **but**
 ## the change is not yet on CRAN use the below as repo
 # repos <- minicran
 # pkgs <- pkgs_src <- c("ranger", "xgboost", "pdp", "patchwork", "clustMixType")
 
+to_remove <- c("Gmedian", "RSpectra")
+to_remove <- c(to_remove, pkgs_terry)
+to_remove <- c(to_remove, pkgs_karsten)
+
 clean_pkgs <- function(pkl) {
-  setdiff(pkl, c("Gmedian", "RSpectra"))
+  setdiff(pkl, to_remove)
 }
 
 # building minicran for source packages

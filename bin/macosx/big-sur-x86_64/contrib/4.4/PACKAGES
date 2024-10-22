@@ -20,6 +20,20 @@ License: GPL (>= 2)
 Archs: AlgDesign.so.dSYM
 MD5sum: d33e9b9d8299e9b767315aa5a0bbca68
 
+Package: arrow
+Version: 17.0.0
+Depends: R (>= 4.0)
+Imports: assertthat, bit64 (>= 0.9-7), glue, methods, purrr, R6,
+       rlang (>= 1.0.0), stats, tidyselect (>= 1.0.0), utils,
+       vctrs
+LinkingTo: cpp11 (>= 0.4.2)
+Suggests: blob, curl, cli, DBI, dbplyr, decor, distro, dplyr,
+       duckdb (>= 0.2.8), hms, jsonlite, knitr, lubridate,
+       pillar, pkgload, reticulate, rmarkdown, stringi, stringr,
+       sys, testthat (>= 3.1.0), tibble, tzdb, withr
+License: Apache License (>= 2.0)
+MD5sum: 970daa486bba21c6eb82adcc87876bf3
+
 Package: askpass
 Version: 1.2.1
 Imports: sys (>= 2.1)

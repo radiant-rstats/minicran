@@ -38,7 +38,7 @@ pkgs <- c(
   "radiant", "miniUI", "webshot", "tinytex",
   "usethis", "svglite", "ranger", "xgboost",
   "pdp", "patchwork", "lobstr", "remotes",
-  "bslib", "png", "quarto", "vip", "arrow",
+  "bslib", "png", "quarto", "vip",
   "rlang", "shiny"
 )
 
@@ -109,7 +109,7 @@ to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, t
 # download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-arm64", Rversion = "4.4")
 # download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-x86_64", Rversion = "4.4")
 
-pkgs <- unique(c(pkgs, c("arrow", "GPArotation", "pdp")))
+pkgs <- unique(c(pkgs, c("GPArotation", "pdp")))
 # pkgs <- "arrow"
 
 # versions <- c("4.0", "4.1", "4.2", "4.3")

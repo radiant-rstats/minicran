@@ -109,7 +109,8 @@ to_rm <- selMakeRepo(clean_pkgs(pkgList), path = pth, minicran, repos = repos, t
 # download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-arm64", Rversion = "4.4")
 # download <- makeRepo(pkgs, path = pth, type = "mac.binary.big-sur-x86_64", Rversion = "4.4")
 
-pkgs <- unique(c(pkgs, c("GPArotation", "pdp")))
+pkgs <- unique(c(pkgs, c("arrow", "GPArotation", "pdp")))
+# pkgs <- "arrow"
 
 # versions <- c("4.0", "4.1", "4.2", "4.3")
 versions <- c("4.3", "4.4")

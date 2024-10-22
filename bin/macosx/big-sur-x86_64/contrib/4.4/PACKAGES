@@ -637,17 +637,18 @@ License: MIT + file LICENSE
 MD5sum: 9deeeace71111dfb48bcaa3a0ede78a9
 
 Package: igraph
-Version: 2.0.3
+Version: 2.1.1
 Depends: methods, R (>= 3.5.0)
 Imports: cli, graphics, grDevices, lifecycle, magrittr, Matrix,
        pkgconfig (>= 2.0.0), rlang, stats, utils, vctrs
-LinkingTo: cpp11 (>= 0.4.7)
-Suggests: ape (>= 5.7-0.1), callr, decor, digest, graph,
-       igraphdata, knitr, rgl, rmarkdown, scales, stats4, tcltk,
-       testthat, vdiffr, withr
+LinkingTo: cpp11 (>= 0.5.0)
+Suggests: ape (>= 5.7-0.1), callr, decor, digest, igraphdata,
+       knitr, rgl, rmarkdown, scales, stats4, tcltk, testthat,
+       vdiffr, withr
+Enhances: graph
 License: GPL (>= 2)
 Archs: igraph.so.dSYM
-MD5sum: e3647e8e98abd124a4f650ea6fd1055d
+MD5sum: 63cc5331a7d3965e191ba952d2a38de9
 
 Package: import
 Version: 1.3.2
@@ -1447,12 +1448,12 @@ License: GPL-3 | file LICENSE
 MD5sum: 980b2a12294fcc8ae402589a08776a50
 
 Package: shinyAce
-Version: 0.4.2
+Version: 0.4.3
 Depends: R (>= 3.3.0)
 Imports: shiny (>= 1.0.5), jsonlite, utils, tools
 Suggests: testthat (>= 2.0.0), dplyr (>= 0.8.3)
 License: MIT + file LICENSE
-MD5sum: 2c96423df6592266e5d45afde4d62447
+MD5sum: 490c334351c7d50aff4cbfa407871da9
 
 Package: shinyFiles
 Version: 0.9.3

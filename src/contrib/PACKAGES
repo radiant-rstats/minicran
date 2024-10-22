@@ -1291,12 +1291,12 @@ MD5sum: 42679b0644126790acfb5fe6274d767f
 NeedsCompilation: yes
 
 Package: git2r
-Version: 0.33.0
+Version: 0.35.0
 Depends: R (>= 4.0)
 Imports: graphics, utils
 Suggests: getPass
 License: GPL-2
-MD5sum: 5bb26ea3f304fd762ecc3a770fc94a8a
+MD5sum: ea50be039ec05952a9d5553edc905028
 NeedsCompilation: yes
 
 Package: gitcreds
@@ -1635,16 +1635,17 @@ MD5sum: da97e1c97b795a9c0e4f51dcb1d928bb
 NeedsCompilation: no
 
 Package: igraph
-Version: 2.0.3
+Version: 2.1.1
 Depends: methods, R (>= 3.5.0)
 Imports: cli, graphics, grDevices, lifecycle, magrittr, Matrix,
        pkgconfig (>= 2.0.0), rlang, stats, utils, vctrs
-LinkingTo: cpp11 (>= 0.4.7)
-Suggests: ape (>= 5.7-0.1), callr, decor, digest, graph,
-       igraphdata, knitr, rgl, rmarkdown, scales, stats4, tcltk,
-       testthat, vdiffr, withr
+LinkingTo: cpp11 (>= 0.5.0)
+Suggests: ape (>= 5.7-0.1), callr, decor, digest, igraphdata,
+       knitr, rgl, rmarkdown, scales, stats4, tcltk, testthat,
+       vdiffr, withr
+Enhances: graph
 License: GPL (>= 2)
-MD5sum: 36b28af2a8910060551629b306165f75
+MD5sum: 63450fc24783ac275bdc256662622241
 NeedsCompilation: yes
 
 Package: iml
@@ -3955,12 +3956,12 @@ MD5sum: 37ec5947b5486c468273de92b4e809f2
 NeedsCompilation: no
 
 Package: shinyAce
-Version: 0.4.2
+Version: 0.4.3
 Depends: R (>= 3.3.0)
 Imports: shiny (>= 1.0.5), jsonlite, utils, tools
 Suggests: testthat (>= 2.0.0), dplyr (>= 0.8.3)
 License: MIT + file LICENSE
-MD5sum: 7c7bcf9f5d57f510368d30ba71847dc8
+MD5sum: f3df3a5a05382a2cad19d665a559f447
 NeedsCompilation: no
 
 Package: shinydashboard

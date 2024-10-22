@@ -592,14 +592,15 @@ Suggests: askpass, bench, clipr, covr, docopt, httpuv, jose,
 License: MIT + file LICENSE
 
 Package: igraph
-Version: 2.0.3
+Version: 2.1.1
 Depends: methods, R (>= 3.5.0)
 Imports: cli, graphics, grDevices, lifecycle, magrittr, Matrix,
        pkgconfig (>= 2.0.0), rlang, stats, utils, vctrs
-LinkingTo: cpp11 (>= 0.4.7)
-Suggests: ape (>= 5.7-0.1), callr, decor, digest, graph,
-       igraphdata, knitr, rgl, rmarkdown, scales, stats4, tcltk,
-       testthat, vdiffr, withr
+LinkingTo: cpp11 (>= 0.5.0)
+Suggests: ape (>= 5.7-0.1), callr, decor, digest, igraphdata,
+       knitr, rgl, rmarkdown, scales, stats4, tcltk, testthat,
+       vdiffr, withr
+Enhances: graph
 License: GPL (>= 2)
 Archs: x64
 
@@ -1349,7 +1350,7 @@ Suggests: datasets, DT, Cairo (>= 1.5-5), testthat (>= 3.0.0),
 License: GPL-3 | file LICENSE
 
 Package: shinyAce
-Version: 0.4.2
+Version: 0.4.3
 Depends: R (>= 3.3.0)
 Imports: shiny (>= 1.0.5), jsonlite, utils, tools
 Suggests: testthat (>= 2.0.0), dplyr (>= 0.8.3)

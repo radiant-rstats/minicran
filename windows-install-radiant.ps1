@@ -46,8 +46,34 @@ $RInProgramFiles = $false
 # Check if R is in Program Files (bad location)
 if (Test-Path "$env:ProgramFiles\R\R-*\bin\R.exe") {
     $RInProgramFiles = $true
-    Write-Host "⚠️  R is installed in Program Files - this causes problems!" -ForegroundColor Red
-    Write-Host "   R should be installed in $SystemDrive\R instead" -ForegroundColor Yellow
+    Write-Host "⚠️  R is installed in Program Files - this can cause problems!" -ForegroundColor Yellow
+    Write-Host ""
+    Write-Host "   R works best when installed in $SystemDrive\R instead of Program Files." -ForegroundColor Gray
+    Write-Host "   This avoids permission issues with package installation." -ForegroundColor Gray
+    Write-Host ""
+    
+    # Ask about R experience
+    $response = ""
+    while ($response -notmatch "^[YyNn]$") {
+        $response = Read-Host "   Have you used R successfully from this location before? (Y/N)"
+    }
+    
+    if ($response -match "^[Yy]$") {
+        Write-Host "   Proceeding with existing R installation..." -ForegroundColor Gray
+        $RInProgramFiles = $false  # User says it works, so don't force reinstall
+        
+        # Try to get version from Program Files location
+        $RProgramFilesPath = Get-ChildItem "$env:ProgramFiles\R\R-*\bin\R.exe" | Select-Object -First 1
+        if ($RProgramFilesPath) {
+            $VersionOutput = & $RProgramFilesPath.FullName --version 2>&1
+            if ($VersionOutput -match "R version (\d+\.\d+\.\d+)") {
+                $CurrentRVersion = $matches[1]
+                Write-Host "   Current R version: $CurrentRVersion (in Program Files)" -ForegroundColor Gray
+            }
+        }
+    } else {
+        Write-Host "   R should be reinstalled in $SystemDrive\R for best results" -ForegroundColor Yellow
+    }
 }
 
 # Check for R in correct location
@@ -64,10 +90,34 @@ if (Test-Path $RPath) {
 
 # Get latest R version from CRAN
 Write-Host "   Checking latest R version from CRAN..." -ForegroundColor Gray
-$CRANPage = Invoke-WebRequest -Uri "https://cloud.r-project.org/bin/windows/base/" -UseBasicParsing
-if ($CRANPage.Content -match "R-(\d+\.\d+\.\d+)-win.exe") {
-    $LatestRVersion = $matches[1]
-    Write-Host "   Latest R version: $LatestRVersion" -ForegroundColor Gray
+$ReleasePage = Invoke-WebRequest -Uri "https://cloud.r-project.org/bin/windows/base/release.html" -UseBasicParsing
+$RURL = $null
+$LatestRVersion = $null
+
+# The release.html page redirects to the actual installer
+# We need to get the redirect URL
+try {
+    $Response = Invoke-WebRequest -Uri "https://cloud.r-project.org/bin/windows/base/release.html" -MaximumRedirection 0 -ErrorAction SilentlyContinue
+} catch {
+    if ($_.Exception.Response.StatusCode -eq 302) {
+        $RURL = $_.Exception.Response.Headers.Location.ToString()
+        if ($RURL -match "R-(\d+\.\d+\.\d+)-win.exe") {
+            $LatestRVersion = $matches[1]
+            Write-Host "   Latest R version: $LatestRVersion" -ForegroundColor Gray
+        }
+    }
+}
+
+# Fallback if redirect didn't work
+if (-not $RURL) {
+    $CRANPage = Invoke-WebRequest -Uri "https://cloud.r-project.org/bin/windows/base/" -UseBasicParsing
+    if ($CRANPage.Content -match 'href="(R-\d+\.\d+\.\d+-win.exe)"') {
+        $RURL = "https://cloud.r-project.org/bin/windows/base/$($matches[1])"
+        if ($matches[1] -match "R-(\d+\.\d+\.\d+)-win.exe") {
+            $LatestRVersion = $matches[1]
+            Write-Host "   Latest R version: $LatestRVersion" -ForegroundColor Gray
+        }
+    }
 }
 
 if ($CurrentRVersion -eq $LatestRVersion -and -not $RInProgramFiles) {
@@ -91,7 +141,10 @@ if ($CurrentRVersion -eq $LatestRVersion -and -not $RInProgramFiles) {
     }
     
     Write-Host "   Downloading R installer from CRAN..." -ForegroundColor Gray
-    $RURL = "https://cloud.r-project.org/bin/windows/base/R-$LatestRVersion-win.exe"
+    if (-not $RURL) {
+        Write-Host "❌ Could not determine R download URL" -ForegroundColor Red
+        exit 1
+    }
     Invoke-WebRequest -Uri $RURL -OutFile "R-installer.exe"
     Check-Success "R download"
     

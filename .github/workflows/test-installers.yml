@@ -2,15 +2,9 @@ name: Test Installation Scripts
 
 on:
   push:
-    paths:
-      - 'windows-install-radiant.ps1'
-      - 'macos-install-radiant.sh'
-      - '.github/workflows/test-installers.yml'
+    branches: [ gh-pages ]
   pull_request:
-    paths:
-      - 'windows-install-radiant.ps1'
-      - 'macos-install-radiant.sh'
-      - '.github/workflows/test-installers.yml'
+    branches: [ gh-pages ]
   workflow_dispatch:
 
 jobs:

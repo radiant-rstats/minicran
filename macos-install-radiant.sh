@@ -58,17 +58,17 @@ else
         echo "   R update available: $CURRENT_R_VERSION → $LATEST_R_VERSION"
     fi
     echo "   Downloading R installer from CRAN..."
-    
+
     # Check if we're on Intel Mac and adjust URL
     if [[ $(uname -m) == "x86_64" ]]; then
         R_PKG_URL="https://cloud.r-project.org/bin/macosx/big-sur-x86_64/base/R-release.pkg"
     else
         R_PKG_URL="https://cloud.r-project.org/bin/macosx/big-sur-arm64/base/R-release.pkg"
     fi
-    
+
     curl -L -o "R-installer.pkg" "$R_PKG_URL"
     check_success "R download"
-    
+
     echo "   Installing R (requires admin password)..."
     sudo installer -pkg "R-installer.pkg" -target /
     check_success "R installation"
@@ -99,14 +99,14 @@ else
         echo "   RStudio update available: $CURRENT_RSTUDIO_VERSION → $LATEST_RSTUDIO_VERSION"
     fi
     echo "   Downloading RStudio from Posit..."
-    
+
     curl -L -o "RStudio.dmg" "$RSTUDIO_URL"
     check_success "RStudio download"
-    
+
     echo "   Mounting and installing RStudio..."
     hdiutil attach "RStudio.dmg" -quiet
     RSTUDIO_VOLUME=$(ls /Volumes/ | grep RStudio | head -n1)
-    
+
     if [ -n "$RSTUDIO_VOLUME" ]; then
         # Try to copy without sudo first
         if cp -R "/Volumes/$RSTUDIO_VOLUME/RStudio.app" /Applications/ 2>/dev/null; then
@@ -115,7 +115,7 @@ else
             echo "   Installing RStudio (requires admin password)..."
             sudo cp -R "/Volumes/$RSTUDIO_VOLUME/RStudio.app" /Applications/
         fi
-        
+
         hdiutil detach "/Volumes/$RSTUDIO_VOLUME" -quiet
         check_success "RStudio installation"
     else
@@ -200,6 +200,6 @@ echo "✅ TinyTeX installed for PDF reports"
 echo ""
 echo "📋 Next Steps:"
 echo "   1. Open RStudio from Applications folder"
-echo "   2. In RStudio, go to: Addins → Start radiant"
+echo "   2. In RStudio, go to: Addins → Start radiant or type 'radiant::radiant()' in the R-console"
 echo "   3. Radiant will open in your web browser"
 echo ""

@@ -79,7 +79,6 @@ if (rv < "4.2") {
     }
   } else if (os == "Darwin") {
     resp <- system("sw_vers -productVersion", intern = TRUE)
-    resp
     if (as.numeric_version(resp) < as.numeric_version("10.9")) {
       cat("The version of OSX on your mac is no longer supported by R. You will need to upgrade the OS before proceeding\n\n")
     } else {
@@ -92,31 +91,38 @@ if (rv < "4.2") {
       setwd(tempdir())
       download.file(URL, "Rstudio.dmg")
       # Mount the DMG
-      system("hdiutil attach Rstudio.dmg")
+      cat("Attaching the Rstudio dmg file ...\n")
+      system("hdiutil attach Rstudio.dmg > /dev/null 2>&1")
       # Find the mounted volume name
       vols <- list.files("/Volumes", pattern = "^RStudio", full.names = TRUE)
+      vols
       if (length(vols) > 0) {
         rstudio_app <- file.path(vols[1], "RStudio.app")
-        # Copy to /Applications (may require admin rights)
-        res <- system(paste0("cp -R '\"", rstudio_app, "\"' /Applications/"))
+        # Try to copy to /Applications without sudo, hide output
+        res <- system(paste0("cp -R '", rstudio_app, "' /Applications/ > /dev/null 2>&1"))
         if (res == 0) {
           cat("RStudio.app was copied to /Applications.\n")
           # Unmount the DMG
-          system(paste0("hdiutil detach '\"", vols[1], "\"'"))
+          system(paste0("hdiutil detach '", vols[1], "' > /dev/null 2>&1"))
         } else {
-          # Fallback: open DMG and show drag-and-drop message
-          system("open Rstudio.dmg")
-          cat("Automatic copy to /Applications failed. Please drag-and-drop the Rstudio image to the Applications folder on your Mac\n")
+          # Prompt for sudo password and try again
+          cat("Copying to /Applications requires your password.\n")
+          res2 <- system(paste0("sudo cp -R '", rstudio_app, "' /Applications/"))
+          if (res2 == 0) {
+            cat("RStudio.app was copied to /Applications.\n")
+            # Unmount the DMG
+            system(paste0("hdiutil detach '", vols[1], "' > /dev/null 2>&1"))
+          } else {
+            # Fallback: open DMG and show drag-and-drop message
+            system("open Rstudio.dmg")
+            cat("Please drag-and-drop the Rstudio image to the Applications folder on your Mac\n")
+          }
         }
       } else {
         # Fallback: open DMG and show drag-and-drop message if volume not found
         system("open Rstudio.dmg")
-        cat("Could not find mounted RStudio volume. Please drag-and-drop the Rstudio image to the Applications folder on your Mac\n")
+        cat("Please drag-and-drop the Rstudio image to the Applications folder on your Mac\n")
       }
-
-      ## moving Rstudio.app doesn't seem to work just yet
-      # rstudio <- file.path("/Volumes", list.files("/Volumes", pattern = "^RStudio-*"), "RStudio.app")
-      # system(paste0("cp -r ", rstudio, " /Applications", intern = TRUE))
 
       pl <- suppressWarnings(system("which pdflatex", intern = TRUE))
       if (length(pl) == 0) {
